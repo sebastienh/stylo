@@ -29,6 +29,7 @@ certificates/
 *.provisionprofile
 
 # Local/private project history
+private/
 builds/
 crash-reports/
 old jira issues/
