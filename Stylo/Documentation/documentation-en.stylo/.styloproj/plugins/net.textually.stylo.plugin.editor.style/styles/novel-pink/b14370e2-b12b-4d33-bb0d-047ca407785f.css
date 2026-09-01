@@ -1,0 +1,99 @@
+
+
+body, th {
+
+    font-family: "IBM Plex Serif";
+    font-size: 1.0vw;
+}
+
+h1 {
+    
+    font-size: 1.3rem;
+}
+
+h1 code, h1 html-block, h1 table, h1 th, h1 table::tag {
+    font-size: 1.6rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h2 code, h2 html-block, h2 table, h2 th, h2 table::tag {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+h3 code, h3 html-block, h3 table, h3 th, h3 table::tag {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h4 code, h4 html-block, h4 table, h4 th, h4 table::tag {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+h5 code, h5 html-block, h5 table, h5 th, h5 table::tag {
+    font-size: 1.4rem;
+}
+
+h6 {
+    font-size: 1.0rem;
+}
+
+h6 code, h6 html-block, h6 table, h6 th, h6 table::tag {
+    font-size: 1.2rem;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+code, html-block, table, th, table::tag {
+    font-family: Inconsolata;
+    font-size: 1.2vw;
+}
+
+em {
+    font-style: italic;
+}
+
+th {
+    font-weight: 600;
+}
+
+strong {
+    font-style: normal;
+    font-weight: bold;
+}
+
+code, html-block {
+    font-family: Inconsolata;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

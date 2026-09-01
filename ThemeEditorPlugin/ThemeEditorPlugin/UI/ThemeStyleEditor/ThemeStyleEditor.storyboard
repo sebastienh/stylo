@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="d30-v1-XzL">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Theme Style Editor View Controller-->
+        <scene sceneID="iQ7-db-0Mk">
+            <objects>
+                <viewController id="d30-v1-XzL" customClass="ThemeStyleEditorViewController" customModule="Nebula_Writer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="gXX-1Y-qXM">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Q0P-Ep-LOq" customClass="ColoredView" customModule="Nebula_Writer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="260" width="450" height="40"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ce-jo-htf">
+                                        <rect key="frame" x="20" y="10" width="19" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="9oG-Jk-8no">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="cellTitle"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="goBack:" target="d30-v1-XzL" id="wF4-XS-EDV"/>
+                                        </connections>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yvw-og-CA8">
+                                        <rect key="frame" x="207" y="12" width="37" height="17"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="7uJ-BR-sG8">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                        <connections>
+                                            <binding destination="d30-v1-XzL" name="value" keyPath="styleTitle" id="HMQ-Rv-Mjx"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7uy-Ys-xIg"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="4MZ-GG-ySc">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="260"/>
+                                <connections>
+                                    <segue destination="jar-CM-h7P" kind="embed" id="aXT-Kt-6Og"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="4MZ-GG-ySc" firstAttribute="top" secondItem="Q0P-Ep-LOq" secondAttribute="bottom" id="Ec0-Lj-VDD"/>
+                            <constraint firstItem="Q0P-Ep-LOq" firstAttribute="top" secondItem="gXX-1Y-qXM" secondAttribute="top" id="M6R-MI-y7W"/>
+                            <constraint firstItem="Q0P-Ep-LOq" firstAttribute="leading" secondItem="gXX-1Y-qXM" secondAttribute="leading" id="Tpj-XZ-iUC"/>
+                            <constraint firstItem="4MZ-GG-ySc" firstAttribute="leading" secondItem="gXX-1Y-qXM" secondAttribute="leading" id="VFO-Ji-gBS"/>
+                            <constraint firstAttribute="bottom" secondItem="4MZ-GG-ySc" secondAttribute="bottom" id="Xrv-4G-fvw"/>
+                            <constraint firstAttribute="trailing" secondItem="4MZ-GG-ySc" secondAttribute="trailing" id="Y31-kM-YAC"/>
+                            <constraint firstAttribute="trailing" secondItem="Q0P-Ep-LOq" secondAttribute="trailing" id="hwg-ER-EO1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="ax2-Gg-zYV" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="r9x-3x-qLT"/>
+            </objects>
+            <point key="canvasLocation" x="1760" y="825"/>
+        </scene>
+        <!--JsonEditor-->
+        <scene sceneID="WpJ-36-c3a">
+            <objects>
+                <controllerPlaceholder storyboardName="JsonEditor" id="jar-CM-h7P" sceneMemberID="viewController"/>
+                <customObject id="laO-AL-jvN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760.5" y="1145"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+    </resources>
+</document>

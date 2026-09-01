@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>Markdown reference element</title>
+		<meta name="description" content="Description and usage examples of the Markdown reference element."></meta>
+		<meta name="KEYWORDS" content="markdown, reference, element, image, link, img, a"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- markdown/mdReference.html -->
+<h1>Reference</h1>
+<p>A reference takes the form: <code>[\&lt;reference label\&gt;]: \&lt;destination uri\&gt; &quot;\&lt;title\&gt;&quot;</code>, where the &lt;reference label&gt; is the name of the reference used in links and images and the &lt;destination uri&gt; is the target URI for this reference. It is possible to style a Markdown reference using the <code>reference</code> element.</p>
+<h2>Syntax</h2>
+<p>An example of a reference to <a href="http://www.textually.net">Textually</a>:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">[textually]: www.textually.net
+</code></pre>
+<p>and how it can be used in a link:</p>
+<pre><code class="language-markdown">This is a link to [textually][textually].
+</code></pre>
+<p>HTML:</p>
+<p>There is no corresponding HTML element for a reference.</p>
+<p>A reference can also have a title:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">[textually]: www.textually.net &quot;Textually website&quot;
+</code></pre>
+<p>Note: A link or an image using a non existing reference label, will be treated as text by Stylo.</p>
+<h2>Pseudo-elements</h2>
+<p>The reference element supports four pseudo-elements:</p>
+<ul>
+<li><code>tag</code>: the region with the start and end square braquet( &quot;[&quot;, &quot;]&quot;) and the colon</li>
+<li><code>label</code>: the part between the two square braquets</li>
+<li><code>destination</code>: the destination URI</li>
+<li><code>title</code>: the reference title</li>
+</ul>
+	</body>
+</html>

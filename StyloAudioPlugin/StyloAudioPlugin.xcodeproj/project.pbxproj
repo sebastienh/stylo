@@ -1,0 +1,792 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E151E8D2366889F0015B93B /* AudioPluginManager+Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E151E8C2366889F0015B93B /* AudioPluginManager+Saving.swift */; };
+		0E151E8F23668A3E0015B93B /* AudioFilesManager+Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E151E8E23668A3E0015B93B /* AudioFilesManager+Saving.swift */; };
+		0E151E9123668B500015B93B /* DocumentAudioFilesManager+Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E151E9023668B500015B93B /* DocumentAudioFilesManager+Saving.swift */; };
+		0E151E9323668B6C0015B93B /* AudioFileManager+Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E151E9223668B6C0015B93B /* AudioFileManager+Saving.swift */; };
+		0E151EF6236AC8B00015B93B /* AudioOutlineTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E151EF5236AC8B00015B93B /* AudioOutlineTitleView.swift */; };
+		0E151EF8236AC8F10015B93B /* AudioOutlineTitleSeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E151EF7236AC8F10015B93B /* AudioOutlineTitleSeparatorView.swift */; };
+		0E151F15236C478E0015B93B /* DocumentAudioFilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E151F14236C478E0015B93B /* DocumentAudioFilesViewController.swift */; };
+		0E151F3D236D589A0015B93B /* DocumentAudioFilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E151F3C236D589A0015B93B /* DocumentAudioFilesView.swift */; };
+		0E151F3F236D58D10015B93B /* DocumentAudioFilesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E151F3E236D58D10015B93B /* DocumentAudioFilesViewDelegate.swift */; };
+		0E151F41236D59650015B93B /* DocumentAudioFilesViewController+DocumentAudioFilesViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E151F40236D59650015B93B /* DocumentAudioFilesViewController+DocumentAudioFilesViewDelegate.swift */; };
+		0E151F53236FF5E80015B93B /* RecordingBackgroundActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E151F52236FF5E70015B93B /* RecordingBackgroundActivity.swift */; };
+		0E160DC423753E960033CF78 /* AudioControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E160DC323753E960033CF78 /* AudioControls.swift */; };
+		0E160DC623753FCF0033CF78 /* RecordTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E160DC523753FCF0033CF78 /* RecordTimer.swift */; };
+		0E19DF1D24B9D627006D831C /* StopRecordingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E19DF1C24B9D627006D831C /* StopRecordingButton.swift */; };
+		0E1EB5D723447E5600C040A6 /* StyloAudioPlugin+TextEditorToolbarPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EB5D623447E5600C040A6 /* StyloAudioPlugin+TextEditorToolbarPlugin.swift */; };
+		0E1EB5E7234483CC00C040A6 /* EditorRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EB5E6234483CC00C040A6 /* EditorRecordButton.swift */; };
+		0E25F04C247D36AA003FEAC6 /* AudioTitleSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25F04B247D36A9003FEAC6 /* AudioTitleSeparator.swift */; };
+		0E31C8142383D4020030BFD1 /* StyloAudioPlugin+DocumentPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E31C8132383D4020030BFD1 /* StyloAudioPlugin+DocumentPlugin.swift */; };
+		0E35BC952317B5AF005A808A /* StyloAudioPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35BC942317B5AF005A808A /* StyloAudioPlugin.swift */; };
+		0E35C6A12317BDEB005A808A /* DocumentAudioFilesManager+AudioOutlineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6942317BDEA005A808A /* DocumentAudioFilesManager+AudioOutlineItem.swift */; };
+		0E35C6A22317BDEB005A808A /* AudioOutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6952317BDEA005A808A /* AudioOutlineView.swift */; };
+		0E35C6A32317BDEB005A808A /* AudioFileManager+AudioOutlineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6962317BDEA005A808A /* AudioFileManager+AudioOutlineItem.swift */; };
+		0E35C6A42317BDEB005A808A /* AudioTools.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E35C6972317BDEA005A808A /* AudioTools.storyboard */; };
+		0E35C6A52317BDEB005A808A /* AudioFileCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6982317BDEA005A808A /* AudioFileCellView.swift */; };
+		0E35C6A62317BDEB005A808A /* DocumentTitleCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6992317BDEA005A808A /* DocumentTitleCellView.swift */; };
+		0E35C6A72317BDEB005A808A /* AudioToolsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C69A2317BDEA005A808A /* AudioToolsViewController.swift */; };
+		0E35C6A82317BDEB005A808A /* AudioFilesOutlineRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C69B2317BDEA005A808A /* AudioFilesOutlineRowView.swift */; };
+		0E35C6A92317BDEB005A808A /* AudioToolsViewController+NSOutlineViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C69C2317BDEA005A808A /* AudioToolsViewController+NSOutlineViewDelegate.swift */; };
+		0E35C6AA2317BDEB005A808A /* AudioOutlineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C69D2317BDEB005A808A /* AudioOutlineItem.swift */; };
+		0E35C6AB2317BDEB005A808A /* CaptureControlsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C69E2317BDEB005A808A /* CaptureControlsCellView.swift */; };
+		0E35C6AC2317BDEB005A808A /* AudioToolsViewController+NSOutlineViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C69F2317BDEB005A808A /* AudioToolsViewController+NSOutlineViewDataSource.swift */; };
+		0E35C6AD2317BDEB005A808A /* PlaybackControlsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6A02317BDEB005A808A /* PlaybackControlsCellView.swift */; };
+		0E35C6AF2317BDFD005A808A /* AudioFileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6AE2317BDFD005A808A /* AudioFileViewController.swift */; };
+		0E35C6B22317BE9B005A808A /* AudioFilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6B12317BE9B005A808A /* AudioFilesManager.swift */; };
+		0E35C6B62317BEBD005A808A /* DocumentAudioFilesManager+MetadataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6B42317BEBD005A808A /* DocumentAudioFilesManager+MetadataProvider.swift */; };
+		0E35C6B72317BEBD005A808A /* DocumentAudioFilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6B52317BEBD005A808A /* DocumentAudioFilesManager.swift */; };
+		0E35C6BB2317BEF0005A808A /* AudioFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6B92317BEF0005A808A /* AudioFileManager.swift */; };
+		0E35C6BC2317BEF0005A808A /* AudioFileManager+MetadataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6BA2317BEF0005A808A /* AudioFileManager+MetadataProvider.swift */; };
+		0E35C6C12317BF98005A808A /* AudioFileStore+MetadataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6BE2317BF98005A808A /* AudioFileStore+MetadataProvider.swift */; };
+		0E35C6C22317BF98005A808A /* AudioFileReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6BF2317BF98005A808A /* AudioFileReducer.swift */; };
+		0E35C6C32317BF98005A808A /* AudioFileStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6C02317BF98005A808A /* AudioFileStore.swift */; };
+		0E35C6CA2317C73D005A808A /* stylo_audio_plugin.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6C92317C73D005A808A /* stylo_audio_plugin.pb.swift */; };
+		0E35C6CC2317C801005A808A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6CB2317C801005A808A /* Constants.swift */; };
+		0E35C6CE2317CC36005A808A /* Igloo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E35C6CD2317CC36005A808A /* Igloo.framework */; };
+		0E35C6D02317CCC4005A808A /* AudioFilesManager+MetadataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6CF2317CCC4005A808A /* AudioFilesManager+MetadataProvider.swift */; };
+		0E35C6D22317D238005A808A /* AudioPluginDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6D12317D238005A808A /* AudioPluginDispatcher.swift */; };
+		0E35C6D42317D26C005A808A /* AudioPluginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6D32317D26C005A808A /* AudioPluginState.swift */; };
+		0E35C6D62317D367005A808A /* AudioPluginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E35C6D52317D367005A808A /* AudioPluginManager.swift */; };
+		0E45967A2335D4C400A83712 /* StyloAudioPlugin+ProjectPanelPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4596792335D4C400A83712 /* StyloAudioPlugin+ProjectPanelPlugin.swift */; };
+		0E4CBA702398F9EB0055F18F /* StyloAudioPlugin+ApplicationMenuPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4CBA6F2398F9EB0055F18F /* StyloAudioPlugin+ApplicationMenuPlugin.swift */; };
+		0E4CBA802398FD5F0055F18F /* MenuItemTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4CBA7F2398FD5F0055F18F /* MenuItemTag.swift */; };
+		0E4CBA822398FDAF0055F18F /* StyloAudioPlugin+NSMenuItemValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4CBA812398FDAF0055F18F /* StyloAudioPlugin+NSMenuItemValidation.swift */; };
+		0E5090072359BEA300FB05F4 /* CustomHighlightRowSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5090062359BEA300FB05F4 /* CustomHighlightRowSelectionView.swift */; };
+		0E67DD86249B3A1900E8A152 /* Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E67DD85249B3A1900E8A152 /* Observer.swift */; };
+		0E67DD88249B3C8C00E8A152 /* StyloCoreMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E67DD87249B3C8C00E8A152 /* StyloCoreMac.framework */; };
+		0E67DD89249B3C8C00E8A152 /* StyloCoreMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E67DD87249B3C8C00E8A152 /* StyloCoreMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E782D192323A85B0083694F /* AudioFilesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E782D182323A85B0083694F /* AudioFilesStore.swift */; };
+		0E782D1B2323A8760083694F /* AudioFilesReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E782D1A2323A8760083694F /* AudioFilesReducer.swift */; };
+		0E782D242324BF5D0083694F /* AudioFilesManager+AVAudioRecorderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E782D232324BF5D0083694F /* AudioFilesManager+AVAudioRecorderDelegate.swift */; };
+		0E782D262324BFE20083694F /* AudioFilesManager+AVAudioPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E782D252324BFE20083694F /* AudioFilesManager+AVAudioPlayerDelegate.swift */; };
+		0EAB3C2323530FB800388184 /* AudioFileTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB3C2223530FB800388184 /* AudioFileTitleView.swift */; };
+		0EAB3C2523543B7200388184 /* AudioSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB3C2423543B7200388184 /* AudioSlider.swift */; };
+		0EAB3C2723543BA200388184 /* AudioSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB3C2623543BA200388184 /* AudioSliderCell.swift */; };
+		0EB89DBE232BA2A4004B9459 /* AudioFilesOutlineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB89DBD232BA2A4004B9459 /* AudioFilesOutlineStore.swift */; };
+		0EB89DC0232BA2B4004B9459 /* AudioFilesOutlineReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB89DBF232BA2B4004B9459 /* AudioFilesOutlineReducer.swift */; };
+		0EB89DCF232BB529004B9459 /* AudioFilesOutlineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB89DCE232BB529004B9459 /* AudioFilesOutlineManager.swift */; };
+		0EB89DD1232CD1BA004B9459 /* colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB89DD0232CD1BA004B9459 /* colors.xcassets */; };
+		0ED05F2A2329F537006A0950 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED05F292329F537006A0950 /* Log.swift */; };
+		0ED8A24E237AAE1F00CD511B /* PlayingBackgroundActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8A24D237AAE1F00CD511B /* PlayingBackgroundActivity.swift */; };
+		0ED8A250237BCD8E00CD511B /* EditorPlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8A24F237BCD8E00CD511B /* EditorPlayPauseButton.swift */; };
+		0ED8A252237BCEB000CD511B /* EditorStopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED8A251237BCEB000CD511B /* EditorStopButton.swift */; };
+		0EE433B6231E4B85007D1EBD /* StyloAudioPlugin+MetadataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE433B5231E4B85007D1EBD /* StyloAudioPlugin+MetadataProvider.swift */; };
+		0EE433B8231E4C25007D1EBD /* StyloAudioPlugin+Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE433B7231E4C25007D1EBD /* StyloAudioPlugin+Saving.swift */; };
+		0EE433BA231E5081007D1EBD /* AudioPluginManager+MetadataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE433B9231E5081007D1EBD /* AudioPluginManager+MetadataProvider.swift */; };
+		0EE433D2231FA77B007D1EBD /* StyloAudioPlugin+ProjectSidebarPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE433D1231FA77B007D1EBD /* StyloAudioPlugin+ProjectSidebarPlugin.swift */; };
+		0EE433DB231FB71E007D1EBD /* WriterCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EE433DA231FB71E007D1EBD /* WriterCommon.framework */; };
+		0EE433E1231FDF45007D1EBD /* StyloAudioPlugin+EdiorToolsSidebarPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE433E0231FDF45007D1EBD /* StyloAudioPlugin+EdiorToolsSidebarPlugin.swift */; };
+		0EE433E32320017C007D1EBD /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EE433E22320017C007D1EBD /* images.xcassets */; };
+		0EE433F123220B8A007D1EBD /* AudioState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE433F023220B8A007D1EBD /* AudioState.swift */; };
+		0EE7A1C7232E1CB500324D23 /* AudioFileTitleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7A1C6232E1CB500324D23 /* AudioFileTitleTextField.swift */; };
+		0EE7A1C9232E3AC500324D23 /* AudioFilesOutlineManager+MetadataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7A1C8232E3AC500324D23 /* AudioFilesOutlineManager+MetadataProvider.swift */; };
+		0EE7A1CB232F481300324D23 /* RecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7A1CA232F481300324D23 /* RecordButton.swift */; };
+		0EEB3B0F23C593010069377F /* StyloAudioPlugin+DataPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEB3B0E23C593010069377F /* StyloAudioPlugin+DataPlugin.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0E452A6E23AA74DC002F675D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0E67DD89249B3C8C00E8A152 /* StyloCoreMac.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0E151E8C2366889F0015B93B /* AudioPluginManager+Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioPluginManager+Saving.swift"; sourceTree = "<group>"; };
+		0E151E8E23668A3E0015B93B /* AudioFilesManager+Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioFilesManager+Saving.swift"; sourceTree = "<group>"; };
+		0E151E9023668B500015B93B /* DocumentAudioFilesManager+Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentAudioFilesManager+Saving.swift"; sourceTree = "<group>"; };
+		0E151E9223668B6C0015B93B /* AudioFileManager+Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioFileManager+Saving.swift"; sourceTree = "<group>"; };
+		0E151EF5236AC8B00015B93B /* AudioOutlineTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioOutlineTitleView.swift; sourceTree = "<group>"; };
+		0E151EF7236AC8F10015B93B /* AudioOutlineTitleSeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioOutlineTitleSeparatorView.swift; sourceTree = "<group>"; };
+		0E151F14236C478E0015B93B /* DocumentAudioFilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentAudioFilesViewController.swift; sourceTree = "<group>"; };
+		0E151F3C236D589A0015B93B /* DocumentAudioFilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentAudioFilesView.swift; sourceTree = "<group>"; };
+		0E151F3E236D58D10015B93B /* DocumentAudioFilesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentAudioFilesViewDelegate.swift; sourceTree = "<group>"; };
+		0E151F40236D59650015B93B /* DocumentAudioFilesViewController+DocumentAudioFilesViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DocumentAudioFilesViewController+DocumentAudioFilesViewDelegate.swift"; sourceTree = "<group>"; };
+		0E151F52236FF5E70015B93B /* RecordingBackgroundActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingBackgroundActivity.swift; sourceTree = "<group>"; };
+		0E160DC323753E960033CF78 /* AudioControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioControls.swift; sourceTree = "<group>"; };
+		0E160DC523753FCF0033CF78 /* RecordTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTimer.swift; sourceTree = "<group>"; };
+		0E19DF1C24B9D627006D831C /* StopRecordingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopRecordingButton.swift; sourceTree = "<group>"; };
+		0E1EB5D623447E5600C040A6 /* StyloAudioPlugin+TextEditorToolbarPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyloAudioPlugin+TextEditorToolbarPlugin.swift"; sourceTree = "<group>"; };
+		0E1EB5E6234483CC00C040A6 /* EditorRecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorRecordButton.swift; sourceTree = "<group>"; };
+		0E25F04B247D36A9003FEAC6 /* AudioTitleSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTitleSeparator.swift; sourceTree = "<group>"; };
+		0E31C8132383D4020030BFD1 /* StyloAudioPlugin+DocumentPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyloAudioPlugin+DocumentPlugin.swift"; sourceTree = "<group>"; };
+		0E35BC8B2317B48B005A808A /* StyloAudioPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StyloAudioPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E35BC8E2317B48B005A808A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E35BC942317B5AF005A808A /* StyloAudioPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyloAudioPlugin.swift; sourceTree = "<group>"; };
+		0E35BCC12317BCDE005A808A /* StyloPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StyloPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E35C6942317BDEA005A808A /* DocumentAudioFilesManager+AudioOutlineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DocumentAudioFilesManager+AudioOutlineItem.swift"; sourceTree = "<group>"; };
+		0E35C6952317BDEA005A808A /* AudioOutlineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioOutlineView.swift; sourceTree = "<group>"; };
+		0E35C6962317BDEA005A808A /* AudioFileManager+AudioOutlineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioFileManager+AudioOutlineItem.swift"; sourceTree = "<group>"; };
+		0E35C6972317BDEA005A808A /* AudioTools.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AudioTools.storyboard; sourceTree = "<group>"; };
+		0E35C6982317BDEA005A808A /* AudioFileCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFileCellView.swift; sourceTree = "<group>"; };
+		0E35C6992317BDEA005A808A /* DocumentTitleCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentTitleCellView.swift; sourceTree = "<group>"; };
+		0E35C69A2317BDEA005A808A /* AudioToolsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioToolsViewController.swift; sourceTree = "<group>"; };
+		0E35C69B2317BDEA005A808A /* AudioFilesOutlineRowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFilesOutlineRowView.swift; sourceTree = "<group>"; };
+		0E35C69C2317BDEA005A808A /* AudioToolsViewController+NSOutlineViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioToolsViewController+NSOutlineViewDelegate.swift"; sourceTree = "<group>"; };
+		0E35C69D2317BDEB005A808A /* AudioOutlineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioOutlineItem.swift; sourceTree = "<group>"; };
+		0E35C69E2317BDEB005A808A /* CaptureControlsCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureControlsCellView.swift; sourceTree = "<group>"; };
+		0E35C69F2317BDEB005A808A /* AudioToolsViewController+NSOutlineViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioToolsViewController+NSOutlineViewDataSource.swift"; sourceTree = "<group>"; };
+		0E35C6A02317BDEB005A808A /* PlaybackControlsCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybackControlsCellView.swift; sourceTree = "<group>"; };
+		0E35C6AE2317BDFD005A808A /* AudioFileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFileViewController.swift; sourceTree = "<group>"; };
+		0E35C6B12317BE9B005A808A /* AudioFilesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFilesManager.swift; sourceTree = "<group>"; };
+		0E35C6B42317BEBD005A808A /* DocumentAudioFilesManager+MetadataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DocumentAudioFilesManager+MetadataProvider.swift"; sourceTree = "<group>"; };
+		0E35C6B52317BEBD005A808A /* DocumentAudioFilesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DocumentAudioFilesManager.swift; sourceTree = "<group>"; };
+		0E35C6B92317BEF0005A808A /* AudioFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFileManager.swift; sourceTree = "<group>"; };
+		0E35C6BA2317BEF0005A808A /* AudioFileManager+MetadataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioFileManager+MetadataProvider.swift"; sourceTree = "<group>"; };
+		0E35C6BE2317BF98005A808A /* AudioFileStore+MetadataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioFileStore+MetadataProvider.swift"; sourceTree = "<group>"; };
+		0E35C6BF2317BF98005A808A /* AudioFileReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFileReducer.swift; sourceTree = "<group>"; };
+		0E35C6C02317BF98005A808A /* AudioFileStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioFileStore.swift; sourceTree = "<group>"; };
+		0E35C6C72317C4EE005A808A /* stylo_audio_plugin.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = stylo_audio_plugin.proto; sourceTree = "<group>"; };
+		0E35C6C92317C73D005A808A /* stylo_audio_plugin.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = stylo_audio_plugin.pb.swift; sourceTree = "<group>"; };
+		0E35C6CB2317C801005A808A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0E35C6CD2317CC36005A808A /* Igloo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Igloo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E35C6CF2317CCC4005A808A /* AudioFilesManager+MetadataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioFilesManager+MetadataProvider.swift"; sourceTree = "<group>"; };
+		0E35C6D12317D238005A808A /* AudioPluginDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPluginDispatcher.swift; sourceTree = "<group>"; };
+		0E35C6D32317D26C005A808A /* AudioPluginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPluginState.swift; sourceTree = "<group>"; };
+		0E35C6D52317D367005A808A /* AudioPluginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPluginManager.swift; sourceTree = "<group>"; };
+		0E452A6B23AA74DC002F675D /* SwiftProtobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftProtobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E4596792335D4C400A83712 /* StyloAudioPlugin+ProjectPanelPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyloAudioPlugin+ProjectPanelPlugin.swift"; sourceTree = "<group>"; };
+		0E4CBA6F2398F9EB0055F18F /* StyloAudioPlugin+ApplicationMenuPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyloAudioPlugin+ApplicationMenuPlugin.swift"; sourceTree = "<group>"; };
+		0E4CBA7F2398FD5F0055F18F /* MenuItemTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTag.swift; sourceTree = "<group>"; };
+		0E4CBA812398FDAF0055F18F /* StyloAudioPlugin+NSMenuItemValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyloAudioPlugin+NSMenuItemValidation.swift"; sourceTree = "<group>"; };
+		0E5090062359BEA300FB05F4 /* CustomHighlightRowSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHighlightRowSelectionView.swift; sourceTree = "<group>"; };
+		0E67DD85249B3A1900E8A152 /* Observer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observer.swift; sourceTree = "<group>"; };
+		0E67DD87249B3C8C00E8A152 /* StyloCoreMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = StyloCoreMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E782D182323A85B0083694F /* AudioFilesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFilesStore.swift; sourceTree = "<group>"; };
+		0E782D1A2323A8760083694F /* AudioFilesReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFilesReducer.swift; sourceTree = "<group>"; };
+		0E782D232324BF5D0083694F /* AudioFilesManager+AVAudioRecorderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioFilesManager+AVAudioRecorderDelegate.swift"; sourceTree = "<group>"; };
+		0E782D252324BFE20083694F /* AudioFilesManager+AVAudioPlayerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioFilesManager+AVAudioPlayerDelegate.swift"; sourceTree = "<group>"; };
+		0EAB3C2223530FB800388184 /* AudioFileTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileTitleView.swift; sourceTree = "<group>"; };
+		0EAB3C2423543B7200388184 /* AudioSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSlider.swift; sourceTree = "<group>"; };
+		0EAB3C2623543BA200388184 /* AudioSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSliderCell.swift; sourceTree = "<group>"; };
+		0EB89DBD232BA2A4004B9459 /* AudioFilesOutlineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFilesOutlineStore.swift; sourceTree = "<group>"; };
+		0EB89DBF232BA2B4004B9459 /* AudioFilesOutlineReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFilesOutlineReducer.swift; sourceTree = "<group>"; };
+		0EB89DCE232BB529004B9459 /* AudioFilesOutlineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFilesOutlineManager.swift; sourceTree = "<group>"; };
+		0EB89DD0232CD1BA004B9459 /* colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = colors.xcassets; sourceTree = "<group>"; };
+		0ED05F292329F537006A0950 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		0ED8A24D237AAE1F00CD511B /* PlayingBackgroundActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingBackgroundActivity.swift; sourceTree = "<group>"; };
+		0ED8A24F237BCD8E00CD511B /* EditorPlayPauseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorPlayPauseButton.swift; sourceTree = "<group>"; };
+		0ED8A251237BCEB000CD511B /* EditorStopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorStopButton.swift; sourceTree = "<group>"; };
+		0EE433B5231E4B85007D1EBD /* StyloAudioPlugin+MetadataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyloAudioPlugin+MetadataProvider.swift"; sourceTree = "<group>"; };
+		0EE433B7231E4C25007D1EBD /* StyloAudioPlugin+Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyloAudioPlugin+Saving.swift"; sourceTree = "<group>"; };
+		0EE433B9231E5081007D1EBD /* AudioPluginManager+MetadataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioPluginManager+MetadataProvider.swift"; sourceTree = "<group>"; };
+		0EE433D1231FA77B007D1EBD /* StyloAudioPlugin+ProjectSidebarPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyloAudioPlugin+ProjectSidebarPlugin.swift"; sourceTree = "<group>"; };
+		0EE433D8231FB704007D1EBD /* SwiftProtobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftProtobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EE433DA231FB71E007D1EBD /* WriterCommon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = WriterCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EE433E0231FDF45007D1EBD /* StyloAudioPlugin+EdiorToolsSidebarPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyloAudioPlugin+EdiorToolsSidebarPlugin.swift"; sourceTree = "<group>"; };
+		0EE433E22320017C007D1EBD /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		0EE433F023220B8A007D1EBD /* AudioState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioState.swift; sourceTree = "<group>"; };
+		0EE7A1C6232E1CB500324D23 /* AudioFileTitleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioFileTitleTextField.swift; sourceTree = "<group>"; };
+		0EE7A1C8232E3AC500324D23 /* AudioFilesOutlineManager+MetadataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioFilesOutlineManager+MetadataProvider.swift"; sourceTree = "<group>"; };
+		0EE7A1CA232F481300324D23 /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
+		0EEB3B0E23C593010069377F /* StyloAudioPlugin+DataPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyloAudioPlugin+DataPlugin.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E35BC882317B48B005A808A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EE433DB231FB71E007D1EBD /* WriterCommon.framework in Frameworks */,
+				0E67DD88249B3C8C00E8A152 /* StyloCoreMac.framework in Frameworks */,
+				0E35C6CE2317CC36005A808A /* Igloo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E151F13236C474B0015B93B /* Document Audio Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EE7A1CA232F481300324D23 /* RecordButton.swift */,
+				0E1EB5E6234483CC00C040A6 /* EditorRecordButton.swift */,
+				0E35C6992317BDEA005A808A /* DocumentTitleCellView.swift */,
+				0E151F14236C478E0015B93B /* DocumentAudioFilesViewController.swift */,
+				0E35C6942317BDEA005A808A /* DocumentAudioFilesManager+AudioOutlineItem.swift */,
+				0E151F40236D59650015B93B /* DocumentAudioFilesViewController+DocumentAudioFilesViewDelegate.swift */,
+				0E151F3C236D589A0015B93B /* DocumentAudioFilesView.swift */,
+				0E151F3E236D58D10015B93B /* DocumentAudioFilesViewDelegate.swift */,
+			);
+			path = "Document Audio Files";
+			sourceTree = "<group>";
+		};
+		0E35BC822317B48B005A808A = {
+			isa = PBXGroup;
+			children = (
+				0E35BC8D2317B48B005A808A /* StyloAudioPlugin */,
+				0E35BC8C2317B48B005A808A /* Products */,
+				0E35BCC02317BCDE005A808A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0E35BC8C2317B48B005A808A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E35BC8B2317B48B005A808A /* StyloAudioPlugin.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E35BC8D2317B48B005A808A /* StyloAudioPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				0E35BC8E2317B48B005A808A /* Info.plist */,
+				0ED05F292329F537006A0950 /* Log.swift */,
+				0E35C6CB2317C801005A808A /* Constants.swift */,
+				0E67DD85249B3A1900E8A152 /* Observer.swift */,
+				0E4596942335EE1900A83712 /* Plugin */,
+				0E35BCC32317BD53005A808A /* UI */,
+				0E35BCC42317BD59005A808A /* Managers */,
+				0E35BCC52317BD63005A808A /* State */,
+				0E35C6C62317C4BF005A808A /* Proto */,
+				0EE433E22320017C007D1EBD /* images.xcassets */,
+				0EB89DD0232CD1BA004B9459 /* colors.xcassets */,
+			);
+			path = StyloAudioPlugin;
+			sourceTree = "<group>";
+		};
+		0E35BCC02317BCDE005A808A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E67DD87249B3C8C00E8A152 /* StyloCoreMac.framework */,
+				0E452A6B23AA74DC002F675D /* SwiftProtobuf.framework */,
+				0EE433DA231FB71E007D1EBD /* WriterCommon.framework */,
+				0EE433D8231FB704007D1EBD /* SwiftProtobuf.framework */,
+				0E35C6CD2317CC36005A808A /* Igloo.framework */,
+				0E35BCC12317BCDE005A808A /* StyloPlugin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0E35BCC32317BD53005A808A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				0E35C6972317BDEA005A808A /* AudioTools.storyboard */,
+				0E25F04B247D36A9003FEAC6 /* AudioTitleSeparator.swift */,
+				0E35C69A2317BDEA005A808A /* AudioToolsViewController.swift */,
+				0E35C69C2317BDEA005A808A /* AudioToolsViewController+NSOutlineViewDelegate.swift */,
+				0E35C69F2317BDEB005A808A /* AudioToolsViewController+NSOutlineViewDataSource.swift */,
+				0E151EF5236AC8B00015B93B /* AudioOutlineTitleView.swift */,
+				0E151EF7236AC8F10015B93B /* AudioOutlineTitleSeparatorView.swift */,
+				0E35C6952317BDEA005A808A /* AudioOutlineView.swift */,
+				0E35C69B2317BDEA005A808A /* AudioFilesOutlineRowView.swift */,
+				0E35C69D2317BDEB005A808A /* AudioOutlineItem.swift */,
+				0E151F13236C474B0015B93B /* Document Audio Files */,
+				0E782D202323D62A0083694F /* Audio File */,
+				0E5090062359BEA300FB05F4 /* CustomHighlightRowSelectionView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0E35BCC42317BD59005A808A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0E35C6D52317D367005A808A /* AudioPluginManager.swift */,
+				0E151E8C2366889F0015B93B /* AudioPluginManager+Saving.swift */,
+				0EE433B9231E5081007D1EBD /* AudioPluginManager+MetadataProvider.swift */,
+				0E35C6B02317BE57005A808A /* Audio Files Manager */,
+				0EB89DCD232BB505004B9459 /* Audio Files Outline Manager */,
+				0E35C6B32317BEA7005A808A /* Document Audio Files Manager */,
+				0E35C6B82317BED4005A808A /* Audio File Manager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0E35BCC52317BD63005A808A /* State */ = {
+			isa = PBXGroup;
+			children = (
+				0E35C6D12317D238005A808A /* AudioPluginDispatcher.swift */,
+				0E35C6D32317D26C005A808A /* AudioPluginState.swift */,
+				0EB89DBC232BA285004B9459 /* Audio Files Outline */,
+				0E782D172323A7B10083694F /* Audio Files Store  */,
+				0E35C6BD2317BF83005A808A /* Audio File Store */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		0E35C6B02317BE57005A808A /* Audio Files Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0E35C6B12317BE9B005A808A /* AudioFilesManager.swift */,
+				0E151E8E23668A3E0015B93B /* AudioFilesManager+Saving.swift */,
+				0E35C6CF2317CCC4005A808A /* AudioFilesManager+MetadataProvider.swift */,
+				0E782D232324BF5D0083694F /* AudioFilesManager+AVAudioRecorderDelegate.swift */,
+				0E782D252324BFE20083694F /* AudioFilesManager+AVAudioPlayerDelegate.swift */,
+			);
+			path = "Audio Files Manager";
+			sourceTree = "<group>";
+		};
+		0E35C6B32317BEA7005A808A /* Document Audio Files Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0E35C6B52317BEBD005A808A /* DocumentAudioFilesManager.swift */,
+				0E151E9023668B500015B93B /* DocumentAudioFilesManager+Saving.swift */,
+				0E35C6B42317BEBD005A808A /* DocumentAudioFilesManager+MetadataProvider.swift */,
+			);
+			path = "Document Audio Files Manager";
+			sourceTree = "<group>";
+		};
+		0E35C6B82317BED4005A808A /* Audio File Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0E35C6B92317BEF0005A808A /* AudioFileManager.swift */,
+				0E151E9223668B6C0015B93B /* AudioFileManager+Saving.swift */,
+				0E35C6BA2317BEF0005A808A /* AudioFileManager+MetadataProvider.swift */,
+			);
+			path = "Audio File Manager";
+			sourceTree = "<group>";
+		};
+		0E35C6BD2317BF83005A808A /* Audio File Store */ = {
+			isa = PBXGroup;
+			children = (
+				0E35C6C02317BF98005A808A /* AudioFileStore.swift */,
+				0E35C6BE2317BF98005A808A /* AudioFileStore+MetadataProvider.swift */,
+				0E35C6BF2317BF98005A808A /* AudioFileReducer.swift */,
+				0EE433F023220B8A007D1EBD /* AudioState.swift */,
+			);
+			path = "Audio File Store";
+			sourceTree = "<group>";
+		};
+		0E35C6C62317C4BF005A808A /* Proto */ = {
+			isa = PBXGroup;
+			children = (
+				0E35C6C72317C4EE005A808A /* stylo_audio_plugin.proto */,
+				0E35C6C92317C73D005A808A /* stylo_audio_plugin.pb.swift */,
+			);
+			path = Proto;
+			sourceTree = "<group>";
+		};
+		0E4596942335EE1900A83712 /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				0E35BC942317B5AF005A808A /* StyloAudioPlugin.swift */,
+				0EEB3B0E23C593010069377F /* StyloAudioPlugin+DataPlugin.swift */,
+				0E4CBA6F2398F9EB0055F18F /* StyloAudioPlugin+ApplicationMenuPlugin.swift */,
+				0E31C8132383D4020030BFD1 /* StyloAudioPlugin+DocumentPlugin.swift */,
+				0E1EB5D623447E5600C040A6 /* StyloAudioPlugin+TextEditorToolbarPlugin.swift */,
+				0EE433E0231FDF45007D1EBD /* StyloAudioPlugin+EdiorToolsSidebarPlugin.swift */,
+				0E4596792335D4C400A83712 /* StyloAudioPlugin+ProjectPanelPlugin.swift */,
+				0EE433D1231FA77B007D1EBD /* StyloAudioPlugin+ProjectSidebarPlugin.swift */,
+				0EE433B5231E4B85007D1EBD /* StyloAudioPlugin+MetadataProvider.swift */,
+				0EE433B7231E4C25007D1EBD /* StyloAudioPlugin+Saving.swift */,
+				0E4CBA812398FDAF0055F18F /* StyloAudioPlugin+NSMenuItemValidation.swift */,
+				0E151F52236FF5E70015B93B /* RecordingBackgroundActivity.swift */,
+				0ED8A24D237AAE1F00CD511B /* PlayingBackgroundActivity.swift */,
+				0E160DC323753E960033CF78 /* AudioControls.swift */,
+				0E160DC523753FCF0033CF78 /* RecordTimer.swift */,
+				0ED8A24F237BCD8E00CD511B /* EditorPlayPauseButton.swift */,
+				0ED8A251237BCEB000CD511B /* EditorStopButton.swift */,
+				0E4CBA7F2398FD5F0055F18F /* MenuItemTag.swift */,
+				0E19DF1C24B9D627006D831C /* StopRecordingButton.swift */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+		0E782D172323A7B10083694F /* Audio Files Store  */ = {
+			isa = PBXGroup;
+			children = (
+				0E782D182323A85B0083694F /* AudioFilesStore.swift */,
+				0E782D1A2323A8760083694F /* AudioFilesReducer.swift */,
+			);
+			path = "Audio Files Store ";
+			sourceTree = "<group>";
+		};
+		0E782D202323D62A0083694F /* Audio File */ = {
+			isa = PBXGroup;
+			children = (
+				0E35C69E2317BDEB005A808A /* CaptureControlsCellView.swift */,
+				0E35C6962317BDEA005A808A /* AudioFileManager+AudioOutlineItem.swift */,
+				0E35C6A02317BDEB005A808A /* PlaybackControlsCellView.swift */,
+				0E35C6982317BDEA005A808A /* AudioFileCellView.swift */,
+				0E35C6AE2317BDFD005A808A /* AudioFileViewController.swift */,
+				0EAB3C2423543B7200388184 /* AudioSlider.swift */,
+				0EAB3C2623543BA200388184 /* AudioSliderCell.swift */,
+				0EAB3C2223530FB800388184 /* AudioFileTitleView.swift */,
+				0EE7A1C6232E1CB500324D23 /* AudioFileTitleTextField.swift */,
+			);
+			path = "Audio File";
+			sourceTree = "<group>";
+		};
+		0EB89DBC232BA285004B9459 /* Audio Files Outline */ = {
+			isa = PBXGroup;
+			children = (
+				0EB89DBD232BA2A4004B9459 /* AudioFilesOutlineStore.swift */,
+				0EB89DBF232BA2B4004B9459 /* AudioFilesOutlineReducer.swift */,
+			);
+			path = "Audio Files Outline";
+			sourceTree = "<group>";
+		};
+		0EB89DCD232BB505004B9459 /* Audio Files Outline Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0EB89DCE232BB529004B9459 /* AudioFilesOutlineManager.swift */,
+				0EE7A1C8232E3AC500324D23 /* AudioFilesOutlineManager+MetadataProvider.swift */,
+			);
+			path = "Audio Files Outline Manager";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E35BC8A2317B48B005A808A /* StyloAudioPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E35BC912317B48B005A808A /* Build configuration list for PBXNativeTarget "StyloAudioPlugin" */;
+			buildPhases = (
+				0E35BC872317B48B005A808A /* Sources */,
+				0E35BC882317B48B005A808A /* Frameworks */,
+				0E35BC892317B48B005A808A /* Resources */,
+				0E452A6E23AA74DC002F675D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StyloAudioPlugin;
+			packageProductDependencies = (
+			);
+			productName = StyloAudioPlugin;
+			productReference = 0E35BC8B2317B48B005A808A /* StyloAudioPlugin.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E35BC832317B48B005A808A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Sebastien Hamel";
+				TargetAttributes = {
+					0E35BC8A2317B48B005A808A = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+				};
+			};
+			buildConfigurationList = 0E35BC862317B48B005A808A /* Build configuration list for PBXProject "StyloAudioPlugin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0E35BC822317B48B005A808A;
+			packageReferences = (
+			);
+			productRefGroup = 0E35BC8C2317B48B005A808A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E35BC8A2317B48B005A808A /* StyloAudioPlugin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E35BC892317B48B005A808A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EB89DD1232CD1BA004B9459 /* colors.xcassets in Resources */,
+				0E35C6A42317BDEB005A808A /* AudioTools.storyboard in Resources */,
+				0EE433E32320017C007D1EBD /* images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E35BC872317B48B005A808A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E35C6CC2317C801005A808A /* Constants.swift in Sources */,
+				0E35C6CA2317C73D005A808A /* stylo_audio_plugin.pb.swift in Sources */,
+				0E35C6A12317BDEB005A808A /* DocumentAudioFilesManager+AudioOutlineItem.swift in Sources */,
+				0E35C6D22317D238005A808A /* AudioPluginDispatcher.swift in Sources */,
+				0EE433B6231E4B85007D1EBD /* StyloAudioPlugin+MetadataProvider.swift in Sources */,
+				0E35C6B22317BE9B005A808A /* AudioFilesManager.swift in Sources */,
+				0E35C6A92317BDEB005A808A /* AudioToolsViewController+NSOutlineViewDelegate.swift in Sources */,
+				0E160DC423753E960033CF78 /* AudioControls.swift in Sources */,
+				0E4CBA802398FD5F0055F18F /* MenuItemTag.swift in Sources */,
+				0E35C6BC2317BEF0005A808A /* AudioFileManager+MetadataProvider.swift in Sources */,
+				0E151F41236D59650015B93B /* DocumentAudioFilesViewController+DocumentAudioFilesViewDelegate.swift in Sources */,
+				0EE7A1CB232F481300324D23 /* RecordButton.swift in Sources */,
+				0EB89DC0232BA2B4004B9459 /* AudioFilesOutlineReducer.swift in Sources */,
+				0E5090072359BEA300FB05F4 /* CustomHighlightRowSelectionView.swift in Sources */,
+				0E151EF8236AC8F10015B93B /* AudioOutlineTitleSeparatorView.swift in Sources */,
+				0ED05F2A2329F537006A0950 /* Log.swift in Sources */,
+				0E67DD86249B3A1900E8A152 /* Observer.swift in Sources */,
+				0EE7A1C9232E3AC500324D23 /* AudioFilesOutlineManager+MetadataProvider.swift in Sources */,
+				0E151EF6236AC8B00015B93B /* AudioOutlineTitleView.swift in Sources */,
+				0E151F15236C478E0015B93B /* DocumentAudioFilesViewController.swift in Sources */,
+				0E35C6A82317BDEB005A808A /* AudioFilesOutlineRowView.swift in Sources */,
+				0EAB3C2723543BA200388184 /* AudioSliderCell.swift in Sources */,
+				0ED8A250237BCD8E00CD511B /* EditorPlayPauseButton.swift in Sources */,
+				0E19DF1D24B9D627006D831C /* StopRecordingButton.swift in Sources */,
+				0E35BC952317B5AF005A808A /* StyloAudioPlugin.swift in Sources */,
+				0E4CBA822398FDAF0055F18F /* StyloAudioPlugin+NSMenuItemValidation.swift in Sources */,
+				0EE433B8231E4C25007D1EBD /* StyloAudioPlugin+Saving.swift in Sources */,
+				0E45967A2335D4C400A83712 /* StyloAudioPlugin+ProjectPanelPlugin.swift in Sources */,
+				0E35C6AD2317BDEB005A808A /* PlaybackControlsCellView.swift in Sources */,
+				0E151F3F236D58D10015B93B /* DocumentAudioFilesViewDelegate.swift in Sources */,
+				0EE433BA231E5081007D1EBD /* AudioPluginManager+MetadataProvider.swift in Sources */,
+				0ED8A252237BCEB000CD511B /* EditorStopButton.swift in Sources */,
+				0EE433F123220B8A007D1EBD /* AudioState.swift in Sources */,
+				0E151F53236FF5E80015B93B /* RecordingBackgroundActivity.swift in Sources */,
+				0E35C6C12317BF98005A808A /* AudioFileStore+MetadataProvider.swift in Sources */,
+				0E782D192323A85B0083694F /* AudioFilesStore.swift in Sources */,
+				0ED8A24E237AAE1F00CD511B /* PlayingBackgroundActivity.swift in Sources */,
+				0E151E8D2366889F0015B93B /* AudioPluginManager+Saving.swift in Sources */,
+				0EE433E1231FDF45007D1EBD /* StyloAudioPlugin+EdiorToolsSidebarPlugin.swift in Sources */,
+				0E35C6A62317BDEB005A808A /* DocumentTitleCellView.swift in Sources */,
+				0E35C6C22317BF98005A808A /* AudioFileReducer.swift in Sources */,
+				0E35C6A52317BDEB005A808A /* AudioFileCellView.swift in Sources */,
+				0E35C6A72317BDEB005A808A /* AudioToolsViewController.swift in Sources */,
+				0E35C6A22317BDEB005A808A /* AudioOutlineView.swift in Sources */,
+				0E31C8142383D4020030BFD1 /* StyloAudioPlugin+DocumentPlugin.swift in Sources */,
+				0E35C6AF2317BDFD005A808A /* AudioFileViewController.swift in Sources */,
+				0E782D262324BFE20083694F /* AudioFilesManager+AVAudioPlayerDelegate.swift in Sources */,
+				0E782D242324BF5D0083694F /* AudioFilesManager+AVAudioRecorderDelegate.swift in Sources */,
+				0E151E8F23668A3E0015B93B /* AudioFilesManager+Saving.swift in Sources */,
+				0E35C6AA2317BDEB005A808A /* AudioOutlineItem.swift in Sources */,
+				0EB89DCF232BB529004B9459 /* AudioFilesOutlineManager.swift in Sources */,
+				0E151E9323668B6C0015B93B /* AudioFileManager+Saving.swift in Sources */,
+				0E151F3D236D589A0015B93B /* DocumentAudioFilesView.swift in Sources */,
+				0E35C6D42317D26C005A808A /* AudioPluginState.swift in Sources */,
+				0E1EB5E7234483CC00C040A6 /* EditorRecordButton.swift in Sources */,
+				0E25F04C247D36AA003FEAC6 /* AudioTitleSeparator.swift in Sources */,
+				0E782D1B2323A8760083694F /* AudioFilesReducer.swift in Sources */,
+				0E35C6AC2317BDEB005A808A /* AudioToolsViewController+NSOutlineViewDataSource.swift in Sources */,
+				0E35C6D62317D367005A808A /* AudioPluginManager.swift in Sources */,
+				0E35C6B72317BEBD005A808A /* DocumentAudioFilesManager.swift in Sources */,
+				0EE7A1C7232E1CB500324D23 /* AudioFileTitleTextField.swift in Sources */,
+				0EAB3C2323530FB800388184 /* AudioFileTitleView.swift in Sources */,
+				0E151E9123668B500015B93B /* DocumentAudioFilesManager+Saving.swift in Sources */,
+				0EE433D2231FA77B007D1EBD /* StyloAudioPlugin+ProjectSidebarPlugin.swift in Sources */,
+				0E35C6A32317BDEB005A808A /* AudioFileManager+AudioOutlineItem.swift in Sources */,
+				0E4CBA702398F9EB0055F18F /* StyloAudioPlugin+ApplicationMenuPlugin.swift in Sources */,
+				0E35C6C32317BF98005A808A /* AudioFileStore.swift in Sources */,
+				0EB89DBE232BA2A4004B9459 /* AudioFilesOutlineStore.swift in Sources */,
+				0E35C6D02317CCC4005A808A /* AudioFilesManager+MetadataProvider.swift in Sources */,
+				0EAB3C2523543B7200388184 /* AudioSlider.swift in Sources */,
+				0EEB3B0F23C593010069377F /* StyloAudioPlugin+DataPlugin.swift in Sources */,
+				0E1EB5D723447E5600C040A6 /* StyloAudioPlugin+TextEditorToolbarPlugin.swift in Sources */,
+				0E35C6B62317BEBD005A808A /* DocumentAudioFilesManager+MetadataProvider.swift in Sources */,
+				0E160DC623753FCF0033CF78 /* RecordTimer.swift in Sources */,
+				0E35C6BB2317BEF0005A808A /* AudioFileManager.swift in Sources */,
+				0E35C6AB2317BDEB005A808A /* CaptureControlsCellView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0E35BC8F2317B48B005A808A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-DDEBUG";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0E35BC902317B48B005A808A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_SWIFT_FLAGS = "-DRELEASE";
+				"OTHER_SWIFT_FLAGS[arch=*]" = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0E35BC922317B48B005A808A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = StyloAudioPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.textually.stylo.plugin.audio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		0E35BC932317B48B005A808A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = StyloAudioPlugin/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.textually.stylo.plugin.audio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E35BC862317B48B005A808A /* Build configuration list for PBXProject "StyloAudioPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E35BC8F2317B48B005A808A /* Debug */,
+				0E35BC902317B48B005A808A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E35BC912317B48B005A808A /* Build configuration list for PBXNativeTarget "StyloAudioPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E35BC922317B48B005A808A /* Debug */,
+				0E35BC932317B48B005A808A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E35BC832317B48B005A808A /* Project object */;
+}

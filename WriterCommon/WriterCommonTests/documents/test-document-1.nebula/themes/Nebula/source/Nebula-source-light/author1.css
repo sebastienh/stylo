@@ -1,0 +1,48 @@
+
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+    font-family: Menlo;
+    color: red;
+    font-size: 10pt;
+    background-color: rgb(42,41,40);
+}
+
+property-name {
+    color: rgb(223, 215, 221);
+}
+
+property-value {
+    color: rgb(123, 215, 21);
+}
+
+pseudo-element-selector {
+    color: rgb(123, 215, 21);
+}
+
+/*
+color-value {
+    color: selected-value;
+}*/
+
+.error {
+    
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: red;
+}
+
+.warning {
+    
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: yellow;
+}
+
+[code="invalidDeclaration"] {
+    
+    text-decoration-line: line-through !important;
+    text-decoration-style: solid !important;
+    text-decoration-color: black !important;
+}
+

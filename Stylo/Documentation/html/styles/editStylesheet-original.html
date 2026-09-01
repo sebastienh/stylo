@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Edit a stylesheet</h1>
+<p>To edit a stylesheet:</p>
+<ol>
+<li>Make sure the <em>style inspector</em> is opened (see <a href="#editStyle">Edit a Style</a>)</li>
+<li>Put the mouse cursor over the stylesheet, two buttons should appear: a<code>Delete</code> and an<code>Edit</code> button.</li>
+<li>Click on the <code>Edit</code> button</li>
+</ol>
+<p>Once in editing mode the <a href="#stylesheetPanel">stylesheet panel</a> is presented that allows to change a stylesheet in the current Markdown style. To change the appearance of an element in the Markdown source, the HTML type of the element to style must be used. The <a href="../markdown#mdContents">Markdown Reference</a> contains, for each Markdown element, the corresponding HTML element type that must be used in the style. Another way to know the corresponding HTML element type of a Markdown element, is to right click on it in the Markdown source editor, and choose <em>Copy selector</em>. See <a href="#copySelector"><em>Copy selector</em></a> section for more information.</p>
+<p>To style the following Markdown:</p>
+<pre><code class="language-markdown">
+# A title level one 
+
+Some paragraph that we want to style. 
+
+</code></pre>
+<p>we could use this simple CSS:</p>
+<pre><code class="language-css">body {
+	background-color: gray;
+}
+
+h1 {
+	color: blue;
+}
+
+p {
+	color: red;
+}
+
+</code></pre>
+<p>In the preceding CSS extract, <code>body</code> represents the whole document, we use it to assign a background color to the Mardkown source editor. To style <code># A title level one</code>, we use the corresponding HTML element type for a title level one: <code>h1</code> to style it with a blue color, and finally we use the <code>p</code> element to style the paragraph <code>Some paragraph that we want to style.</code> with a red color.</p>
+<p>The corresponding HTML element of a Markdown element is most of the time really straightforward i.e. a Markdown title level 1 is an <code>h1</code> HTML element; a Markdown paragraph is a <code>p</code> HTML element, etc... When in doubt, look in the <a href="../markdown#mdContents">Markdown Reference</a> for the element specific section which will give the corresponding HTML element for it, or use the <a href="#copySelector"><em>Copy selector</em></a> selector option of the element contextual menu which can be obtained by right clicking on it in the Markdown source.</p>
+
+    </body>
+</html>

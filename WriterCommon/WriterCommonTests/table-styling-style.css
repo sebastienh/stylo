@@ -1,0 +1,15 @@
+body {
+    color: black;
+}
+
+table {
+    color: red;
+}
+
+thead {
+    color: pink;
+}
+
+table::tag {
+    color: blue;
+}

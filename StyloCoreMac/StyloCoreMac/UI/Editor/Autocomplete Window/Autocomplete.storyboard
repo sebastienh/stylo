@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="cAE-1e-Sdz">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="XWD-uQ-7f3">
+            <objects>
+                <windowController storyboardIdentifier="Autocomplete" showSeguePresentationStyle="single" id="cAE-1e-Sdz" customClass="AutocompleteWindowController" customModule="StyloCoreMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="nIy-YP-Wyu" customClass="AutocompleteWindow" customModule="StyloCoreMac" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" utility="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="320" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="cAE-1e-Sdz" id="6z5-Gq-BeC"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="s8H-EU-why" kind="relationship" relationship="window.shadowedContentViewController" id="2Gi-Kl-wTL"/>
+                    </connections>
+                </windowController>
+                <customObject id="uti-uF-RMP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="532"/>
+        </scene>
+        <!--Autocompletions Array View Controller-->
+        <scene sceneID="7bk-oI-zTs">
+            <objects>
+                <viewController id="s8H-EU-why" customClass="AutocompletionsArrayViewController" customModule="StyloCoreMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="XCx-mA-Fkb">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="Hr7-nx-hT1">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                <clipView key="contentView" copiesOnScroll="NO" id="AMk-cr-Zbu">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView allowsExpansionToolTips="YES" columnAutoresizingStyle="none" tableStyle="plain" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" id="7k9-U9-PiI" customClass="AutocompleteTableView" customModule="StyloCoreMac" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="AutocompleteTableBackgroundColor"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn identifier="CompletionTableColumn" width="280" minWidth="100" maxWidth="1000" id="gwQ-j5-h8N" customClass="AutocompleteTableColumn" customModule="StyloCoreMac" customModuleProvider="target">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="i3q-N9-64D">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView id="8yO-wt-Fev" customClass="AutocompleteTableCellView" customModule="StyloCoreMac" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="1" width="280" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dmi-Ky-1bP">
+                                                                    <rect key="frame" x="1" y="0.0" width="278" height="17"/>
+                                                                    <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Table View Cell" usesSingleLineMode="YES" id="gEO-a0-HAe">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="8yO-wt-Fev" name="value" keyPath="objectValue.name" id="QII-QN-0P3"/>
+                                                                    </connections>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="Dmi-Ky-1bP" secondAttribute="bottom" id="AxK-4F-axU"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Dmi-Ky-1bP" secondAttribute="trailing" constant="3" id="BFZ-Gh-bOk"/>
+                                                                <constraint firstItem="Dmi-Ky-1bP" firstAttribute="leading" secondItem="8yO-wt-Fev" secondAttribute="leading" constant="3" id="SSC-x8-usd"/>
+                                                                <constraint firstItem="Dmi-Ky-1bP" firstAttribute="top" secondItem="8yO-wt-Fev" secondAttribute="top" id="Wt3-GU-HMh"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="textField" destination="Dmi-Ky-1bP" id="s5Q-gG-sEC"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                                <tableColumn identifier="LanguageTableColumn" width="30" minWidth="20" maxWidth="3.4028234663852886e+38" id="XXO-o1-YxK">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="ANh-x1-YYt">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView misplaced="YES" id="Qwu-ze-CuE" customClass="LanguageTableCellView" customModule="StyloCoreMac" customModuleProvider="target">
+                                                            <rect key="frame" x="284" y="1" width="30" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField horizontalHuggingPriority="1000" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K60-qj-iPg">
+                                                                    <rect key="frame" x="1" y="0.0" width="28" height="16"/>
+                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="right" title="Table View Cell" usesSingleLineMode="YES" id="Gkt-PE-ELZ">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="K60-qj-iPg" firstAttribute="leading" secondItem="Qwu-ze-CuE" secondAttribute="leading" constant="3" id="8ZP-EN-bk7"/>
+                                                                <constraint firstAttribute="bottom" secondItem="K60-qj-iPg" secondAttribute="bottom" id="8py-yK-y8q"/>
+                                                                <constraint firstAttribute="trailing" secondItem="K60-qj-iPg" secondAttribute="trailing" constant="3" id="IsQ-9J-UKg"/>
+                                                                <constraint firstItem="K60-qj-iPg" firstAttribute="top" secondItem="Qwu-ze-CuE" secondAttribute="top" id="oiM-Vd-KnL"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="textField" destination="K60-qj-iPg" id="TwQ-jj-uPK"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="s8H-EU-why" id="Fbt-s4-9gc"/>
+                                                <outlet property="delegate" destination="s8H-EU-why" id="EwS-Wy-VvY"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="AutocompleteTableBackgroundColor"/>
+                                </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="400" id="blH-hK-s3H"/>
+                                    <constraint firstAttribute="height" constant="300" id="h5U-yp-0ef"/>
+                                </constraints>
+                                <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="zTr-79-Vja">
+                                    <rect key="frame" x="-100" y="-100" width="0.0" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="8gI-0D-Pdf">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Hr7-nx-hT1" firstAttribute="top" secondItem="XCx-mA-Fkb" secondAttribute="top" id="Egl-7c-mFL"/>
+                            <constraint firstAttribute="trailing" secondItem="Hr7-nx-hT1" secondAttribute="trailing" id="Jbg-9e-GtE"/>
+                            <constraint firstAttribute="bottom" secondItem="Hr7-nx-hT1" secondAttribute="bottom" id="ZUd-sI-M7O"/>
+                            <constraint firstItem="Hr7-nx-hT1" firstAttribute="leading" secondItem="XCx-mA-Fkb" secondAttribute="leading" id="xZX-oY-7D6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                <color key="value" name="AutocompleteTableBackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="autocompleteView" destination="XCx-mA-Fkb" id="Oxe-VE-5E0"/>
+                        <outlet property="completionTableColumn" destination="gwQ-j5-h8N" id="z8S-fg-0RT"/>
+                        <outlet property="completionsTableView" destination="7k9-U9-PiI" id="oXA-Lp-efG"/>
+                        <outlet property="languageTableColumn" destination="XXO-o1-YxK" id="qO2-2M-Jdf"/>
+                        <outlet property="scrollView" destination="Hr7-nx-hT1" id="Dq9-3j-H4z"/>
+                        <outlet property="scrollViewHeightConstraint" destination="h5U-yp-0ef" id="Ahs-ao-ew2"/>
+                        <outlet property="scrollViewWidthConstraint" destination="blH-hK-s3H" id="IQK-Zd-R6g"/>
+                    </connections>
+                </viewController>
+                <customObject id="JMf-J9-FLF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="616" y="995"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AutocompleteTableBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

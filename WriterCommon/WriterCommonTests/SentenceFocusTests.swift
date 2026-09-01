@@ -1,0 +1,915 @@
+//
+//  SentenceFocusTests.swift
+//  WriterCommonTests
+//
+//  Created by Sebastien Hamel on 2020-07-28.
+//  Copyright © 2020 Textually Inc. All rights reserved.
+//
+
+import XCTest
+
+
+@testable import WriterCommon
+import Web
+import Common
+import Igloo
+
+class SentenceFocusTests: MarkdownRendererTests {
+
+    
+    let markdownString: String = {
+        
+        var value: String = "d" +
+            "\n" +
+            "p **n**. 1 2 3. 1 2 3. " +
+        "\n"
+        
+        for i in 0..<100 {
+            value += "\n\n"
+            value += "p"
+        }
+        return value
+    }()
+    
+    let styleString = """
+        body {
+            color: black;
+        }
+
+        strong {
+            color: green;
+        }
+
+        strong::tag {
+            color: blue;
+        }
+
+        :fade {
+            color: yellow;
+        }
+
+        :focus {
+            color: purple;
+        }
+
+        strong:focus {
+            color: pink;
+        }
+
+        strong::tag:focus {
+            color: red;
+        }
+
+     """
+    
+    
+    func testNoFocusOnEmptySelection() throws {
+        
+        let indexedCharacters = markdownString.indexedCharacters
+        
+        let indexedCharactersString = indexedCharacters.map { (arg) -> String in
+            return "\(arg.key): \(arg.value)\n"
+        }
+        for indexedCharacterString in indexedCharactersString {
+            print("\(indexedCharacterString)")
+        }
+        
+        let markdownContext = self.createInitialContext(markdownString: markdownString, styleString: styleString)
+        
+        print(HTMLSerializer.createDefault().serializeHTMLFragment(markdownContext.markdownDocumentStore.document.value!))
+        
+        //        0: d
+        WriterCommonTests.validateColor(in: markdownContext, index: 0, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        2: p
+        WriterCommonTests.validateColor(in: markdownContext, index: 2, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        4: *
+        WriterCommonTests.validateColor(in: markdownContext, index: 4, color: blue) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        5: *
+        WriterCommonTests.validateColor(in: markdownContext, index: 5, color: blue) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        6: n
+        WriterCommonTests.validateColor(in: markdownContext, index: 6, color: green) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        7: *
+        WriterCommonTests.validateColor(in: markdownContext, index: 7, color: blue) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        8: *
+        WriterCommonTests.validateColor(in: markdownContext, index: 8, color: blue) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 9: .
+        WriterCommonTests.validateColor(in: markdownContext, index: 9, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 11: 1
+        WriterCommonTests.validateColor(in: markdownContext, index: 11, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 13: 2
+        WriterCommonTests.validateColor(in: markdownContext, index: 13, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 15: 3
+        WriterCommonTests.validateColor(in: markdownContext, index: 15, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 16: .
+        WriterCommonTests.validateColor(in: markdownContext, index: 16, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 18: 1
+        WriterCommonTests.validateColor(in: markdownContext, index: 18, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 20: 2
+        WriterCommonTests.validateColor(in: markdownContext, index: 20, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 22: 3
+        WriterCommonTests.validateColor(in: markdownContext, index: 22, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 23: .
+        WriterCommonTests.validateColor(in: markdownContext, index: 23, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 28: p
+        WriterCommonTests.validateColor(in: markdownContext, index: 28, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 31: p
+        WriterCommonTests.validateColor(in: markdownContext, index: 31, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+    }
+    
+    
+    func testFocusSentenceOnSelectionChange2() {
+        
+        let markdownString: String = {
+            
+            var value: String = "\n" +
+                "p" +
+                "\n" +
+                "\n" +
+                "p **n**. 1 2 3. 1 2 3. " +
+            "\n"
+            
+            for _ in 0..<100 {
+                value += "\n\n"
+                value += "p"
+            }
+            return value
+        }()
+        
+        
+        let markdownContext = self.createInitialContext(markdownString: markdownString, styleString: styleString)
+        
+        let indexedCharacters = markdownString.indexedCharacters
+        
+        let indexedCharactersString = indexedCharacters.map { (arg) -> String in
+            return "\(arg.key): \(arg.value)\n"
+        }
+        for indexedCharacterString in indexedCharactersString {
+            print("\(indexedCharacterString)")
+        }
+        
+        
+        markdownContext.setFocusMode(focusMode: FocusMode.enabled(focusType: .sentence))
+        XCTAssert(markdownContext.markdownStyleStore.focusMode.value == FocusMode.enabled(focusType: .sentence))
+        
+        markdownContext.applySelectionChange(selectionRange: NSMakeRange(6, 0), visibleRange: NSMakeRange(0, 32))
+        
+        //        body {
+        //            color: black;
+        //        }
+        //
+        //        strong {
+        //            color: green;
+        //        }
+        //
+        //        strong::tag {
+        //            color: blue;
+        //        }
+        //
+        //        :fade {
+        //            color: yellow;
+        //        }
+        //
+        //        :focus {
+        //            color: purple;
+        //        }
+        //
+        //        strong:focus {
+        //            color: pink;
+        //        }
+        //
+        //        strong::tag:focus {
+        //            color: red;
+        //        }
+        
+        
+        //        1: p
+        validateFocusColor(in: markdownContext, index: 1, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        4: p
+        validateFocusColor(in: markdownContext, index: 4, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        6: *
+        validateFocusColor(in: markdownContext, index: 6, color: red) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        7: *
+        validateFocusColor(in: markdownContext, index: 7, color: red) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        8: n
+        validateFocusColor(in: markdownContext, index: 8, color: pink) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        9: *
+        validateFocusColor(in: markdownContext, index: 9, color: red) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        10: *
+        validateFocusColor(in: markdownContext, index: 10, color: red) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 11: .
+        validateFocusColor(in: markdownContext, index: 11, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 13: 1
+        validateFocusColor(in: markdownContext, index: 13, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 15: 2
+        validateFocusColor(in: markdownContext, index: 15, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 15: 3
+        validateFocusColor(in: markdownContext, index: 17, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 16: .
+        validateFocusColor(in: markdownContext, index: 18, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 18: 1
+        validateFocusColor(in: markdownContext, index: 20, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 20: 2
+        validateFocusColor(in: markdownContext, index: 22, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 22: 3
+        validateFocusColor(in: markdownContext, index: 24, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 23: .
+        validateFocusColor(in: markdownContext, index: 25, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 28: p
+        validateFocusColor(in: markdownContext, index: 30, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 31: p
+        validateFocusColor(in: markdownContext, index: 33, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 34: p
+        WriterCommonTests.validateColor(in: markdownContext, index: 36, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 37: p
+        WriterCommonTests.validateColor(in: markdownContext, index: 39, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+    }
+    
+    
+    func testFocusSentenceOnSelectionAndScroll() {
+        
+        let markdownString: String = {
+            
+            var value: String = "\n" +
+                "p" +
+                "\n" +
+                "\n" +
+                "p **n**. 1 2 3. 1 2 3. " +
+            "\n"
+            
+            for _ in 0..<100 {
+                value += "\n\n"
+                value += "p"
+            }
+            return value
+        }()
+        
+        
+        let markdownContext = self.createInitialContext(markdownString: markdownString, styleString: styleString)
+        
+        let indexedCharacters = markdownString.indexedCharacters
+        
+        let indexedCharactersString = indexedCharacters.map { (arg) -> String in
+            return "\(arg.key): \(arg.value)\n"
+        }
+        for indexedCharacterString in indexedCharactersString {
+            print("\(indexedCharacterString)")
+        }
+        
+        
+        markdownContext.setFocusMode(focusMode: .enabled(focusType: .sentence))
+        XCTAssert(markdownContext.markdownStyleStore.focusMode.value == FocusMode.enabled(focusType: .sentence))
+        
+        markdownContext.applySelectionChange(selectionRange: NSMakeRange(6, 0), visibleRange: NSMakeRange(0, 32))
+        markdownContext.scroll(focusMode: FocusMode.enabled(focusType: .sentence))
+        
+        //        body {
+        //            color: black;
+        //        }
+        //
+        //        strong {
+        //            color: green;
+        //        }
+        //
+        //        strong::tag {
+        //            color: blue;
+        //        }
+        
+        
+        
+        //        0: p
+        WriterCommonTests.validateColor(in: markdownContext, index: 1, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        2: p
+        WriterCommonTests.validateColor(in: markdownContext, index: 4, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        4: *
+        WriterCommonTests.validateColor(in: markdownContext, index: 6, color: blue) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        5: *
+        WriterCommonTests.validateColor(in: markdownContext, index: 7, color: blue) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        6: n
+        WriterCommonTests.validateColor(in: markdownContext, index: 8, color: green) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        7: *
+        WriterCommonTests.validateColor(in: markdownContext, index: 9, color: blue) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        8: *
+        WriterCommonTests.validateColor(in: markdownContext, index: 10, color: blue) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 9: .
+        WriterCommonTests.validateColor(in: markdownContext, index: 11, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 11: 1
+        WriterCommonTests.validateColor(in: markdownContext, index: 12, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 13: 2
+        WriterCommonTests.validateColor(in: markdownContext, index: 15, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 15: 3
+        WriterCommonTests.validateColor(in: markdownContext, index: 17, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 16: .
+        WriterCommonTests.validateColor(in: markdownContext, index: 18, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 18: 1
+        WriterCommonTests.validateColor(in: markdownContext, index: 20, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 20: 2
+        WriterCommonTests.validateColor(in: markdownContext, index: 22, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 22: 3
+        WriterCommonTests.validateColor(in: markdownContext, index: 24, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 23: .
+        WriterCommonTests.validateColor(in: markdownContext, index: 25, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 28: p
+        WriterCommonTests.validateColor(in: markdownContext, index: 30, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 31: p
+        WriterCommonTests.validateColor(in: markdownContext, index: 33, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 34: p
+        WriterCommonTests.validateColor(in: markdownContext, index: 36, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        // 37: p
+        WriterCommonTests.validateColor(in: markdownContext, index: 39, color: black) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        
+    }
+    
+    
+    func testFocusSentenceOnParagraphBelowH1WithTagFadeStyleDefined() {
+        
+        let markdownString: String = {
+            
+            var value: String = "\n" +
+                "# t\n" +
+                "\n" +
+                "\n" +
+                "123456\n" +
+            "\n"
+            
+            for _ in 0..<100 {
+                value += "\n\n"
+                value += "p"
+            }
+            return value
+        }()
+        
+        let styleString = """
+            body {
+                color: black;
+            }
+
+            h1::tag, h2::tag, h3::tag, h4::tag, h5::tag, h6::tag {
+                color: pink;
+            }
+
+            :fade {
+                color: yellow;
+            }
+
+            h1::tag:fade {
+                color: green;
+            }
+
+            :focus {
+                color: purple;
+            }
+
+         """
+        
+        let markdownContext = self.createInitialContext(markdownString: markdownString, styleString: styleString)
+        
+        markdownContext.setFocusMode(focusMode: .enabled(focusType: .sentence))
+        XCTAssert(markdownContext.markdownStyleStore.focusMode.value == FocusMode.enabled(focusType: .sentence))
+        
+        markdownContext.applySelectionChange(selectionRange: NSMakeRange(8, 0), visibleRange: NSMakeRange(0, 32))
+        
+
+        //        1: #
+        validateFocusColor(in: markdownContext, index: 1, color: green) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        3: t
+        validateFocusColor(in: markdownContext, index: 3, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        7: 1
+        validateFocusColor(in: markdownContext, index: 7, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        8: 2
+        validateFocusColor(in: markdownContext, index: 8, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        9: 3
+        validateFocusColor(in: markdownContext, index: 9, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        10: 4
+        validateFocusColor(in: markdownContext, index: 10, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        11: 5
+        validateFocusColor(in: markdownContext, index: 11, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        12: 6
+        validateFocusColor(in: markdownContext, index: 12, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+                
+        //        17: p
+        validateFocusColor(in: markdownContext, index: 17, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+    }
+    
+    func testFocusSentenceInPreCodeShouldBeOneLine() {
+        
+        let markdownString: String = {
+            
+            var value: String = "\n" +
+                "p" +
+                "\n" +
+                "\n" +
+                "```\n" +
+                "1\n" +
+                "2\n" +
+                "```\n" +
+            "\n"
+            
+            for _ in 0..<100 {
+                value += "\n\n"
+                value += "p"
+            }
+            return value
+        }()
+        
+        
+        markdownString.printCharactersIndexes()
+        
+        let markdownContext = self.createInitialContext(markdownString: markdownString, styleString: styleString)
+        
+        let indexedCharacters = markdownString.indexedCharacters
+        
+        let indexedCharactersString = indexedCharacters.map { (arg) -> String in
+            return "\(arg.key): \(arg.value)\n"
+        }
+        for indexedCharacterString in indexedCharactersString {
+            print("\(indexedCharacterString)")
+        }
+        
+        
+        markdownContext.setFocusMode(focusMode: FocusMode.enabled(focusType: .sentence))
+        XCTAssert(markdownContext.markdownStyleStore.focusMode.value == FocusMode.enabled(focusType: .sentence))
+        
+        markdownContext.applySelectionChange(selectionRange: NSMakeRange(8, 0), visibleRange: NSMakeRange(0, 32))
+        //
+        //        let styleString = """
+        //            body {
+        //                color: black;
+        //            }
+        //
+        //            strong {
+        //                color: green;
+        //            }
+        //
+        //            strong::tag {
+        //                color: blue;
+        //            }
+        //
+        //            :fade {
+        //                color: yellow;
+        //            }
+        //
+        //            :focus {
+        //                color: purple;
+        //            }
+        //
+        //            strong:focus {
+        //                color: pink;
+        //            }
+        //
+        //            strong::tag:focus {
+        //                color: red;
+        //            }
+        
+        
+        //        1: p
+        validateFocusColor(in: markdownContext, index: 1, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        4: `
+        validateFocusColor(in: markdownContext, index: 4, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        5: `
+        validateFocusColor(in: markdownContext, index: 5, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        6: `
+        validateFocusColor(in: markdownContext, index: 6, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        8: 1
+        validateFocusColor(in: markdownContext, index: 8, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        10: 2
+        validateFocusColor(in: markdownContext, index: 10, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        12: `
+        validateFocusColor(in: markdownContext, index: 12, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        13: `
+        validateFocusColor(in: markdownContext, index: 13, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        14: `
+        validateFocusColor(in: markdownContext, index: 14, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        19: p
+        validateFocusColor(in: markdownContext, index: 19, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        22: p
+        validateFocusColor(in: markdownContext, index: 22, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+    }
+    
+    func testFocusSentenceInPreCodeShouldBeOneLineAfterEdit() {
+        
+        let markdownString: String = {
+            
+            var value: String = "\n" +
+                "p" +
+                "\n" +
+                "\n" +
+                "```\n" +
+                "1\n" +
+                "2\n" +
+                "```\n" +
+            "\n"
+            
+            for _ in 0..<100 {
+                value += "\n\n"
+                value += "p"
+            }
+            return value
+        }()
+        
+        
+        markdownString.printCharactersIndexes()
+        
+        var markdownContext = self.createInitialContext(markdownString: markdownString, styleString: styleString)
+        
+        let indexedCharacters = markdownString.indexedCharacters
+        
+        let indexedCharactersString = indexedCharacters.map { (arg) -> String in
+            return "\(arg.key): \(arg.value)\n"
+        }
+        for indexedCharacterString in indexedCharactersString {
+            print("\(indexedCharacterString)")
+        }
+        
+        
+        markdownContext.setFocusMode(focusMode: FocusMode.enabled(focusType: .sentence))
+        XCTAssert(markdownContext.markdownStyleStore.focusMode.value == FocusMode.enabled(focusType: .sentence))
+        
+        markdownContext.applySelectionChange(selectionRange: NSMakeRange(8, 0), visibleRange: NSMakeRange(0, 32))
+        //
+        //        let styleString = """
+        //            body {
+        //                color: black;
+        //            }
+        //
+        //            strong {
+        //                color: green;
+        //            }
+        //
+        //            strong::tag {
+        //                color: blue;
+        //            }
+        //
+        //            :fade {
+        //                color: yellow;
+        //            }
+        //
+        //            :focus {
+        //                color: purple;
+        //            }
+        //
+        //            strong:focus {
+        //                color: pink;
+        //            }
+        //
+        //            strong::tag:focus {
+        //                color: red;
+        //            }
+        
+        
+        //        1: p
+        validateFocusColor(in: markdownContext, index: 1, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        4: `
+        validateFocusColor(in: markdownContext, index: 4, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        5: `
+        validateFocusColor(in: markdownContext, index: 5, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        6: `
+        validateFocusColor(in: markdownContext, index: 6, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        8: 1
+        validateFocusColor(in: markdownContext, index: 8, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        10: 2
+        validateFocusColor(in: markdownContext, index: 10, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        12: `
+        validateFocusColor(in: markdownContext, index: 12, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        13: `
+        validateFocusColor(in: markdownContext, index: 13, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        14: `
+        validateFocusColor(in: markdownContext, index: 14, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        19: p
+        validateFocusColor(in: markdownContext, index: 19, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        22: p
+        validateFocusColor(in: markdownContext, index: 22, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        
+        markdownContext.applyChange(range: NSMakeRange(9, 0), insertedString: "2", visibleRange: NSMakeRange(0, 32))
+        
+        print(markdownContext.string)
+        
+        //        1: p
+        validateFocusColor(in: markdownContext, index: 1, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        4: `
+        validateFocusColor(in: markdownContext, index: 4, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        5: `
+        validateFocusColor(in: markdownContext, index: 5, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        6: `
+        validateFocusColor(in: markdownContext, index: 6, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        8: 1
+        validateFocusColor(in: markdownContext, index: 8, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        9: 2
+        validateFocusColor(in: markdownContext, index: 9, color: purple) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        11: 2
+        validateFocusColor(in: markdownContext, index: 11, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        13: `
+        validateFocusColor(in: markdownContext, index: 13, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        14: `
+        validateFocusColor(in: markdownContext, index: 14, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        15: `
+        validateFocusColor(in: markdownContext, index: 15, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        20: p
+        validateFocusColor(in: markdownContext, index: 20, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        //        23: p
+        validateFocusColor(in: markdownContext, index: 23, color: yellow) { (e, r, i) in
+            XCTAssert(false, "Expected: \(e), received: \(r) at index: \(i)")
+        }
+        
+        
+        
+        
+    }
+    
+    
+}

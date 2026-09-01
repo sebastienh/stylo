@@ -1,0 +1,27 @@
+body {
+    color: black;
+}
+
+a {
+    color: red;
+}
+
+a::tag {
+    color: blue;
+}
+
+a::text {
+    color: yellow;
+}
+
+a::destination {
+    color: pink;
+}
+
+a::label {
+    color: green;
+}
+
+a::title {
+    color: white;
+}

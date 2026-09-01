@@ -1,0 +1,13 @@
+
+@namespace "http://www.w3.org/Style/CSS/";
+
+:root {
+
+    --theme-caret-color: white;
+    --theme-foreground-color: #234758;
+    --theme-background-color: rgb(33,33,33);
+/*    --theme-selectedErrorMessage-color: #AA0E3A !important;*/
+/*    --theme-selectedWarningMessage-color: #F5BB00 !important;*/
+    --theme-selectedErrorMessage-color: var(--red, red);
+    --theme-selectedWarningMessage-color: var(--yellow, yellow);
+}

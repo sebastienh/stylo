@@ -1,0 +1,35 @@
+body {
+   color: black;
+   font-family: "Avenir Next";
+	background-color: rgb(130,130,130);
+}
+
+h1  {
+	
+	color: rgb(0,0,100);
+}
+
+h2 {
+	color: rgb(0,0,130);
+}
+
+h3 {
+	color: rgb(0,0,160);
+}
+
+h4 {
+	color: rgb(0,0,190);
+}
+
+h5 {
+	color: rgb(0,0,220);
+}
+
+
+h6 {
+	color: rgb(0,0,250);
+}
+
+code {
+	color: skyblue;
+}

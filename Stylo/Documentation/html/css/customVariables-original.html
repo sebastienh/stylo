@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Custom Variables</h1>
+<p>Custom variables are used to define independant values that can be reused in properties in stylesheets. A custom variable is defined by preceeding its name with a double-dash <code>--</code> e.g.</p>
+<pre><code class="language-css">--my-custom-color: red;
+</code></pre>
+<p>Once defined a custom variable can be reused everywhere needed using the var(...) function, which take as parameters the custom variable name and optionally a default value, in case the used custom variable is not defined anywhere. The rules to define the value of a custom variable are simply the cascading rules. So, for a variable to be available in a certain subtree, we need to have it defined somewhere in at least one of the ancestors. That's the reason why custom variables are often defined in the <a href="#pseudoClassSelector"><code>:root</code></a> pseudo-class: to make sure it is defined in the top ancestor of all elements in the document tree.</p>
+<p>Here is an example illustrating the complete process of defining and using a custom variable:</p>
+<pre><code class="language-css">:root {
+	--my-custom-color: red;
+}
+
+body {
+	background-color: var(--my-custom-color, white);
+}
+
+</code></pre>
+<p>Custom variables are used everywhere in Stylo, so they need to be understood by all style editors.</p>
+
+    </body>
+</html>

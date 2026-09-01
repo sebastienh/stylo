@@ -1,0 +1,34 @@
+/*
+ source - all errors - light
+ 
+ source css file for handling a single error highlighting
+ in dark mode.
+ */
+@namespace "http://www.w3.org/Style/CSS/";
+
+/********
+ 
+ Important Note: This rule must be the first in the
+ stylesheet since we use the first style rule to extract
+ the color we use to replace all colors in the used style.
+ 
+ *********/
+
+css-style-sheet {
+    color: blue !important;
+}
+
+/*
+ the later will select all the errors to highlight
+ i.e. all errors have the attribute "error-id"
+ */
+[nw-message-id] {
+    color: red !important;
+}
+
+/*@namespace "http://www.w3.org/Style/CSS/";
+ 
+ css-style-sheet {
+ font-family: SF Mono Regular;
+ color: red;
+ }*/

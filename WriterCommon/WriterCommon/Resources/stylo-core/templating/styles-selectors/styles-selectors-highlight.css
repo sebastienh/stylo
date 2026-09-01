@@ -1,0 +1,832 @@
+/************************/
+/*      highlight       */
+/************************/
+
+
+
+body:highlight {
+    
+}
+
+/********************************************/
+/*                 highlight                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:highlight {
+    
+}
+
+h2:highlight {
+    
+}
+
+h3:highlight {
+    
+}
+
+h4:highlight {
+    
+}
+
+h5:highlight {
+    
+}
+
+h6:highlight {
+    
+}
+
+h1::tag:highlight {
+    
+}
+
+h2::tag:highlight {
+    
+}
+
+h3::tag:highlight {
+    
+}
+
+h4::tag:highlight {
+    
+}
+
+h5::tag:highlight {
+    
+}
+
+h6::tag:highlight {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:highlight {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:highlight {
+    
+    
+}
+
+em:highlight {
+    
+    
+}
+
+s:highlight {
+    
+    
+}
+
+:highlight strong {
+    
+    
+}
+
+:highlight em {
+    
+    
+}
+
+:highlight s {
+    
+    
+}
+
+:highlight strong::tag {
+    
+    
+}
+
+:highlight em::tag {
+    
+    
+}
+
+:highlight s::tag {
+    
+    
+}
+
+:highlight strong:highlight {
+    
+    
+}
+
+:highlight em:highlight {
+    
+    
+}
+
+:highlight s:highlight {
+    
+    
+}
+
+:highlight strong::tag:highlight {
+    
+    
+}
+
+:highlight em::tag:highlight {
+    
+    
+}
+
+:highlight s::tag:highlight {
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:highlight {
+    
+    
+}
+
+blockquote::tag:highlight {
+    
+    
+}
+
+:highlight blockquote {
+    
+    
+}
+
+
+:highlight blockquote::tag {
+    
+    
+}
+
+:highlight blockquote {
+    
+    
+}
+
+:highlight blockquote::tag {
+    
+    
+}
+
+:highlight blockquote::tag:highlight {
+    
+    
+}
+
+:highlight blockquote:highlight {
+    
+    
+}
+
+:highlight blockquote::tag:highlight {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:highlight {
+    
+}
+
+ol:highlight {
+    
+}
+
+li:highlight {
+    
+}
+
+li::tag:highlight {
+    
+}
+
+:highlight ul {
+    
+}
+
+:highlight ol {
+    
+}
+
+:highlight li {
+    
+}
+
+:highlight li::tag {
+    
+}
+
+:highlight ul:highlight {
+    
+}
+
+:highlight ol:highlight {
+    
+}
+
+:highlight li:highlight {
+    
+}
+
+:highlight li::tag:highlight {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:highlight {
+    
+}
+
+code::tag:highlight {
+    
+}
+
+code::params:highlight {
+    
+}
+
+:highlight code {
+    
+}
+
+:highlight code::tag {
+    
+}
+
+:highlight code::params {
+    
+}
+
+:highlight code:highlight {
+    
+}
+
+:highlight code::tag:highlight {
+    
+}
+
+:highlight code::params:highlight {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:highlight {
+    
+}
+
+thead:highlight {
+    
+}
+
+tbody:highlight {
+    
+    
+}
+
+tr:highlight {
+    
+}
+
+td:highlight {
+    
+}
+
+:highlight thead {
+    
+}
+
+:highlight tbody {
+    
+    
+}
+
+:highlight tr {
+    
+}
+
+:highlight td {
+    
+}
+
+
+:highlight thead:highlight {
+    
+}
+
+:highlight tbody:highlight {
+    
+    
+}
+
+:highlight tr:highlight {
+    
+}
+
+:highlight td:highlight {
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:highlight {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:highlight {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:highlight {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:highlight {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:highlight {
+    
+}
+
+/* title: the title of the link */
+a::title:highlight {
+    
+    
+}
+
+:highlight a {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title {
+    
+    
+}
+
+:highlight a:highlight {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:highlight {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:highlight {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:highlight {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:highlight {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:highlight {
+    
+    
+}
+
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+img:highlight {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:highlight {
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:highlight {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+img::destination:highlight {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+img::label:highlight {
+    
+}
+
+/* title: the title of the image link */
+img::title:highlight {
+    
+}
+
+:highlight img {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:highlight img::destination {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:highlight img::label {
+    
+}
+
+/* title: the title of the image link */
+:highlight img::title {
+    
+}
+
+
+:highlight img:highlight {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:highlight {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:highlight {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:highlight img::destination:highlight {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:highlight img::label:highlight {
+    
+}
+
+/* title: the title of the image link */
+:highlight img::title:highlight {
+    
+}
+
+/*
+    html-block
+*/
+
+html-block:highlight {
+    
+}
+
+/*
+    ref
+*/
+
+ref:highlight {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+ref::tag:highlight {
+    
+}
+
+/* label: the part between the two square braquets */
+ref::label:highlight {
+    
+}
+
+
+/* destination: the destination URI */
+ref::destination:highlight {
+    
+}
+
+/* title: the ref title */
+ref::title:highlight {
+    
+}
+
+:highlight ref {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:highlight ref::tag {
+    
+}
+
+/* label: the part between the two square braquets */
+:highlight ref::label {
+    
+}
+
+
+/* destination: the destination URI */
+:highlight ref::destination {
+    
+}
+
+/* title: the ref title */
+:highlight ref::title {
+    
+}
+
+:highlight ref:highlight {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:highlight ref::tag:highlight {
+    
+}
+
+/* label: the part between the two square braquets */
+:highlight ref::label:highlight {
+    
+}
+
+
+/* destination: the destination URI */
+:highlight ref::destination:highlight {
+    
+}
+
+/* title: the ref title */
+:highlight ref::title:highlight {
+    
+}
+
+/* attributes */
+
+/* :highlight */
+key-value-attr:highlight {
+
+}
+
+key-value-attr::tag:highlight {
+    
+}
+
+class-attr:highlight {
+
+
+}
+
+class-attr::tag:highlight {
+
+}
+
+id-attr:highlight {
+
+}
+
+id-attr::tag:highlight {
+
+}
+
+/* :highlight  */
+
+:highlight key-value-attr {
+
+}
+
+:highlight key-value-attr::tag {
+    
+}
+
+:highlight class-attr {
+
+}
+
+:highlight class-attr::tag {
+
+}
+
+:highlight id-attr {
+
+}
+
+:highlight id-attr::tag {
+
+}
+
+/* :highlight :highlight */
+
+:highlight key-value-attr:highlight {
+
+}
+
+:highlight key-value-attr::tag:highlight {
+    
+}
+
+:highlight class-attr:highlight {
+
+
+}
+
+:highlight class-attr::tag:highlight {
+
+}
+
+:highlight id-attr:highlight {
+
+}
+
+:highlight id-attr::tag:highlight {
+
+}
+
+

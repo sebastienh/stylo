@@ -1,0 +1,172 @@
+
+body :highlight:flash p:fade {
+    color: var(--text-sts7, black);
+}
+
+body :highlight:flash strong:fade,
+body :highlight:flash em:fade {
+    color: var(--strong-em-sts7, black);
+}
+
+
+body h1:highlight:flash strong:fade,
+body h2:highlight:flash strong:fade,
+body h3:highlight:flash strong:fade,
+body h4:highlight:flash strong:fade,
+body h5:highlight:flash strong:fade,
+body h6:highlight:flash strong:fade,
+body h1:highlight:flash em:fade,
+body h2:highlight:flash em:fade,
+body h3:highlight:flash em:fade,
+body h4:highlight:flash em:fade,
+body h5:highlight:flash em:fade,
+body h6:highlight:flash em:fade {
+    color: var(--h-strong-em-sts7, black);
+}
+
+body :highlight:flash s:fade {
+    color: var(--s-sts7, black);
+    text-decoration-color: var(--s-strikethrough-sts7, black);
+}
+
+body h1:highlight:flash s:fade,
+body h2:highlight:flash s:fade,
+body h3:highlight:flash s:fade,
+body h4:highlight:flash s:fade,
+body h5:highlight:flash s:fade,
+body h6:highlight:flash s:fade {
+    color: var(--h-s-sts7, black);
+    text-decoration-color: var(--h-s-strikethrough-sts7, black);
+}
+
+body :highlight:flash strong::tag:fade,
+body :highlight:flash em::tag:fade {
+    color: var(--strong-em-tag-sts7, black);
+}
+
+
+body h1:highlight:flash strong::tag:fade,
+body h2:highlight:flash strong::tag:fade,
+body h3:highlight:flash strong::tag:fade,
+body h4:highlight:flash strong::tag:fade,
+body h5:highlight:flash strong::tag:fade,
+body h6:highlight:flash strong::tag:fade,
+body h1:highlight:flash em::tag:fade,
+body h2:highlight:flash em::tag:fade,
+body h3:highlight:flash em::tag:fade,
+body h4:highlight:flash em::tag:fade,
+body h5:highlight:flash em::tag:fade,
+body h6:highlight:flash em::tag:fade {
+    color: var(--h-strong-em-tag-sts7, black);
+}
+
+body :highlight:flash s::tag:fade {
+    color: var(--s-tag-sts7, black);
+}
+
+body h1:highlight:flash s::tag:fade,
+body h2:highlight:flash s::tag:fade,
+body h3:highlight:flash s::tag:fade,
+body h4:highlight:flash s::tag:fade,
+body h5:highlight:flash s::tag:fade,
+body h6:highlight:flash s::tag:fade {
+    color: var(--h-s-tag-sts7, black);
+}
+
+
+body :highlight:flash blockquote:highlight p {
+    color: var(--blockquote-sts7, black);
+}
+
+body :highlight:flash blockquote::tag:highlight p {
+    color: var(--blockquote-tag-sts7, black);
+}
+
+
+body :highlight:flash ul:fade {
+    color: var(--ul-sts7, black);
+}
+
+body :highlight:flash ol:fade {
+    color: var(--ol-sts7, black);
+}
+
+body :highlight:flash li:fade {
+    color: var(--li-sts7, black);
+}
+
+body :highlight:flash li::tag:fade {
+    color: var(--li-tag-sts7, black);
+}
+
+
+body :highlight:flash code:fade {
+    color: var(--code-sts7, black);
+}
+
+body :highlight:flash code::tag:fade {
+    color: var(--code-tag-sts7, black);
+}
+
+body :highlight:flash code::params:fade {
+    color: var(--code-params-sts7, black);
+}
+
+
+body :highlight:flash thead:fade {
+    color: var(--thead-sts7, black);
+}
+
+body :highlight:flash tbody:fade {
+    color: var(--tbody-sts7, black);
+}
+
+
+body :highlight:flash a:fade,
+body :highlight:flash img:fade,
+body :highlight:flash ref:fade {
+    color: var(--a-img-ref-sts7, black);
+}
+
+body :highlight:flash a::tag:fade,
+body :highlight:flash img::tag:fade,
+body :highlight:flash ref::tag:fade {
+    color: var(--a-img-ref-tag-sts7, black);
+}
+
+body :highlight:flash a::text:fade,
+body :highlight:flash img::text:fade,
+body :highlight:flash ref::text:fade {
+    color: var(--a-img-ref-text-sts7, black);
+}
+
+body :highlight:flash a::destination:fade,
+body :highlight:flash img::destination:fade,
+body :highlight:flash ref::destination:fade {
+    color: var(--a-img-ref-dest-sts7, black);
+}
+
+body :highlight:flash a::label:fade,
+body :highlight:flash img::label:fade,
+body :highlight:flash ref::label:fade {
+    color: var(--a-img-ref-lbl-sts7, black);
+}
+
+body :highlight:flash a::title:fade,
+body :highlight:flash img::title:fade,
+body :highlight:flash ref::title:fade {
+    color: var(--a-img-ref-title-sts7, black);
+}
+
+
+body :highlight:flash key-value-attr:fade,
+body :highlight:flash class-attr:fade,
+body :highlight:flash id-attr:fade {
+    color: var(--key-value-attr-class-attr-id-attr-sts7, black);
+}
+
+body :highlight:flash key-value-attr::tag:fade,
+body :highlight:flash class-attr::tag:fade,
+body :highlight:flash id-attr::tag:fade {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts7, black);
+}

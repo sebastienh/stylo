@@ -1,0 +1,36 @@
+/**************************************************************
+ Pseudo CSS User Agent StyleSheet
+ 
+ This is the user agent style sheet for any other css style sheet.
+ 
+ **************************************************************/
+
+css-style-sheet {
+    font-family: Avenir Next;
+    color: blue;
+}
+
+::property-name {
+    color: yellow;
+}
+
+::color-value {
+    color: selected-value;
+}
+
+/**************************************************************
+ 
+ The generated tree for font-family property declaration
+ with this example :
+ 
+ font-family : “Times New Roman”, Arial;
+ 
+ we can style the each font-family property value to it's
+ own computed value usging the following css :
+ with the following:
+ 
+ **************************************************************/
+
+::font-family-name {
+    font-family: selected-value;
+}

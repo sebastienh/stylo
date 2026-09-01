@@ -1,0 +1,334 @@
+
+::-webkit-scrollbar {
+    display: none !important;
+}
+
+body {
+
+    {# font-family #}
+    {% if theme.html.preview.light.foreground.fontFamily %}
+        font-family: {{ theme.html.preview.light.foreground.fontFamily }};
+    {% elif theme.html.preview.foreground.fontFamily %}
+        font-family: {{ theme.html.preview.foreground.fontFamily }};
+    {% elif theme.html.light.foreground.fontFamily %}
+        font-family: {{ theme.html.light.foreground.fontFamily }};
+    {% elif theme.html.foreground.fontFamily %}
+        font-family: {{ theme.html.foreground.fontFamily }};
+    {% elif theme.light.foreground.fontFamily %}
+        font-family: {{ theme.light.foreground.fontFamily }};
+    {% elif theme.foreground.fontFamily %}
+        font-family: {{ theme.foreground.fontFamily }};
+    {% endif %}
+
+
+    {# color #}
+    {% if theme.html.preview.light.foreground.color %}
+        color: {{ theme.html.preview.light.foreground.color }};
+    {% elif theme.html.preview.foreground.color %}
+        color: {{ theme.html.preview.foreground.color }};
+    {% elif theme.html.light.foreground.color %}
+        color: {{ theme.html.light.foreground.color }};
+    {% elif theme.html.foreground.color %}
+        color: {{ theme.html.foreground.color }};
+    {% elif theme.light.foreground.color %}
+        color: {{ theme.light.foreground.color }};
+    {% elif theme.foreground.color %}
+        color: {{ theme.foreground.color }};
+    {% endif %}
+
+
+    {# background-color #}
+    {% if theme.html.preview.light.background.color %}
+        background-color: {{ theme.html.preview.light.background.color }};
+    {% elif theme.html.preview.background.color %}
+        background-color: {{ theme.html.preview.background.color }};
+    {% elif theme.html.light.background.color %}
+        background-color: {{ theme.html.light.background.color }};
+    {% elif theme.html.background.color %}
+        background-color: {{ theme.html.background.color }};
+    {% elif theme.light.background.color %}
+        background-color: {{ theme.light.background.color }};
+    {% elif theme.background.color %}
+        background-color: {{ theme.background.color }};
+    {% endif %}
+}
+
+body .highlight pre, body pre {
+
+    {# background-color #}
+    {% if theme.html.preview.light.codeBackground.color %}
+        background-color: {{ theme.html.preview.light.codeBackground.color }};
+    {% elif theme.html.preview.codeBackground.color %}
+        background-color: {{ theme.html.preview.codeBackground.color }};
+    {% elif theme.html.light.codeBackground.color %}
+        background-color: {{ theme.html.light.codeBackground.color }};
+    {% elif theme.html.codeBackground.color %}
+        background-color: {{ theme.html.codeBackground.color }};
+    {% elif theme.light.codeBackground.color %}
+        background-color: {{ theme.light.codeBackground.color }};
+    {% elif theme.codeBackground.color %}
+        background-color: {{ theme.codeBackground.color }};
+    {% endif %}
+}
+
+body hr {
+    {# background-color #}
+    {% if theme.html.preview.light.codeBackground.color %}
+        background-color: {{ theme.html.preview.light.codeBackground.color }};
+    {% elif theme.html.preview.codeBackground.color %}
+        background-color: {{ theme.html.preview.codeBackground.color }};
+    {% elif theme.html.light.codeBackground.color %}
+        background-color: {{ theme.html.light.codeBackground.color }};
+    {% elif theme.html.codeBackground.color %}
+        background-color: {{ theme.html.codeBackground.color }};
+    {% elif theme.light.codeBackground.color %}
+        background-color: {{ theme.light.codeBackground.color }};
+    {% elif theme.codeBackground.color %}
+        background-color: {{ theme.codeBackground.color }};
+    {% endif %}
+}
+
+a {
+
+    {# border-bottom #}
+    {% if theme.html.preview.light.linkUnderline.color %}
+        border-bottom: 1px solid {{ theme.html.preview.light.linkUnderline.color }};
+    {% elif theme.html.preview.linkUnderline.color %}
+        border-bottom: 1px solid {{ theme.html.preview.linkUnderline.color }};
+    {% elif theme.html.light.linkUnderline.color %}
+        border-bottom: 1px solid {{ theme.html.light.linkUnderline.color }};
+    {% elif theme.html.linkUnderline.color %}
+        border-bottom: 1px solid {{ theme.html.linkUnderline.color }};
+    {% elif theme.light.codeBackground.color %}
+        border-bottom: 1px solid {{ theme.light.linkUnderline.color }};
+    {% elif theme.linkUnderline.color %}
+        border-bottom: 1px solid {{ theme.linkUnderline.color }};
+    {% endif %}
+
+    {# color #}
+    {% if theme.html.preview.light.linkColor.color %}
+        color: {{ theme.html.preview.light.linkColor.color }};
+    {% elif theme.html.preview.linkColor.color %}
+        color: {{ theme.html.preview.linkColor.color }};
+    {% elif theme.html.light.linkColor.color %}
+        color: {{ theme.html.light.linkColor.color }};
+    {% elif theme.html.linkColor.color %}
+        color: {{ theme.html.linkColor.color }};
+    {% elif theme.light.linkColor.color %}
+        color: {{ theme.light.linkColor.color }};
+    {% elif theme.linkColor.color %}
+        color: {{ theme.linkColor.color }};
+    {% endif %}
+}
+
+body code {
+
+    {# background-color #}
+    {% if theme.html.preview.light.codeBackground.color %}
+        background-color: {{ theme.html.preview.light.codeBackground.color }};
+    {% elif theme.html.preview.codeBackground.color %}
+        background-color: {{ theme.html.preview.codeBackground.color }};
+    {% elif theme.html.light.codeBackground.color %}
+        background-color: {{ theme.html.light.codeBackground.color }};
+    {% elif theme.html.codeBackground.color %}
+        background-color: {{ theme.html.codeBackground.color }};
+    {% elif theme.light.codeBackground.color %}
+        background-color: {{ theme.light.codeBackground.color }};
+    {% elif theme.codeBackground.color %}
+        background-color: {{ theme.codeBackground.color }};
+    {% endif %}
+}
+
+body table tr {
+    background-color: rgb(70,70,70);
+    border-top: 1px solid rgb(70,70,70);
+}
+
+body table tr:nth-child(2n) {
+    background-color: rgb(100,100,100);
+}
+
+body table th,
+body table td {
+
+    border: 1px solid rgb(30,30,30);
+}
+
+body table td {
+    border: 1px solid rgb(30,30,30);
+}
+
+body table tr {
+    border-top: 1px solid rgb(30,30,30);
+}
+
+h1 {
+
+    {# color #}
+    {% if theme.html.preview.light.h1.color %}
+        color: {{ theme.html.preview.light.h1.color }};
+    {% elif theme.html.preview.h1.color %}
+        color: {{ theme.html.preview.h1.color }};
+    {% elif theme.html.light.h1.color %}
+        color: {{ theme.html.light.h1.color }};
+    {% elif theme.html.h1.color %}
+        color: {{ theme.html.h1.color }};
+    {% elif theme.light.h1.color %}
+        color: {{ theme.light.h1.color }};
+    {% elif theme.h1.color %}
+        color: {{ theme.h1.color }};
+    {% endif %}
+}
+
+h2 {
+
+    {# color #}
+    {% if theme.html.preview.light.h2.color %}
+        color: {{ theme.html.preview.light.h2.color }};
+    {% elif theme.html.preview.h2.color %}
+        color: {{ theme.html.preview.h2.color }};
+    {% elif theme.html.light.h2.color %}
+        color: {{ theme.html.light.h2.color }};
+    {% elif theme.html.h2.color %}
+        color: {{ theme.html.h2.color }};
+    {% elif theme.light.h2.color %}
+        color: {{ theme.light.h2.color }};
+    {% elif theme.h2.color %}
+        color: {{ theme.h2.color }};
+    {% endif %}
+
+}
+
+h3 {
+
+    {# color #}
+    {% if theme.html.preview.light.h3.color %}
+        color: {{ theme.html.preview.light.h3.color }};
+    {% elif theme.html.preview.h3.color %}
+        color: {{ theme.html.preview.h3.color }};
+    {% elif theme.html.light.h3.color %}
+        color: {{ theme.html.light.h3.color }};
+    {% elif theme.html.h3.color %}
+        color: {{ theme.html.h3.color }};
+    {% elif theme.light.h3.color %}
+        color: {{ theme.light.h3.color }};
+    {% elif theme.h3.color %}
+        color: {{ theme.h3.color }};
+    {% endif %}
+}
+
+h4 {
+
+    {# color #}
+    {% if theme.html.preview.light.h4.color %}
+        color: {{ theme.html.preview.light.h4.color }};
+    {% elif theme.html.preview.h4.color %}
+        color: {{ theme.html.preview.h4.color }};
+    {% elif theme.html.light.h4.color %}
+        color: {{ theme.html.light.h4.color }};
+    {% elif theme.html.h4.color %}
+        color: {{ theme.html.h4.color }};
+    {% elif theme.light.h4.color %}
+        color: {{ theme.light.h4.color }};
+    {% elif theme.h4.color %}
+        color: {{ theme.h4.color }};
+    {% endif %}
+}
+
+h5 {
+
+    {# color #}
+    {% if theme.html.preview.light.h5.color %}
+        color: {{ theme.html.preview.light.h5.color }};
+    {% elif theme.html.preview.h5.color %}
+        color: {{ theme.html.preview.h5.color }};
+    {% elif theme.html.light.h5.color %}
+        color: {{ theme.html.light.h5.color }};
+    {% elif theme.html.h5.color %}
+        color: {{ theme.html.h5.color }};
+    {% elif theme.light.h5.color %}
+        color: {{ theme.light.h5.color }};
+    {% elif theme.h5.color %}
+        color: {{ theme.h5.color }};
+    {% endif %}
+}
+
+h6 {
+
+    {# color #}
+    {% if theme.html.preview.light.h6.color %}
+        color: {{ theme.html.preview.light.h6.color }};
+    {% elif theme.html.preview.h6.color %}
+        color: {{ theme.html.preview.h6.color }};
+    {% elif theme.html.light.h6.color %}
+        color: {{ theme.html.light.h6.color }};
+    {% elif theme.html.h6.color %}
+        color: {{ theme.html.h6.color }};
+    {% elif theme.light.h6.color %}
+        color: {{ theme.light.h6.color }};
+    {% elif theme.h6.color %}
+        color: {{ theme.h6.color }};
+    {% endif %}
+}
+
+em {
+
+    {# color #}
+    {% if theme.html.preview.light.em.color %}
+        color: {{ theme.html.preview.light.em.color }};
+    {% elif theme.html.preview.em.color %}
+        color: {{ theme.html.preview.em.color }};
+    {% elif theme.html.light.em.color %}
+        color: {{ theme.html.light.em.color }};
+    {% elif theme.html.em.color %}
+        color: {{ theme.html.em.color }};
+    {% elif theme.light.em.color %}
+        color: {{ theme.light.em.color }};
+    {% elif theme.em.color %}
+        color: {{ theme.em.color }};
+    {% endif %}
+
+}
+
+body table tr {
+
+
+    {# background-color #}
+    {% if theme.html.preview.light.codeBackground.color %}
+        background-color: {{ theme.html.preview.light.codeBackground.color }};
+    {% elif theme.html.preview.codeBackground.color %}
+        background-color: {{ theme.html.preview.codeBackground.color }};
+    {% elif theme.html.light.codeBackground.color %}
+        background-color: {{ theme.html.light.codeBackground.color }};
+    {% elif theme.html.codeBackground.color %}
+        background-color: {{ theme.html.codeBackground.color }};
+    {% elif theme.light.codeBackground.color %}
+        background-color: {{ theme.light.codeBackground.color }};
+    {% elif theme.codeBackground.color %}
+        background-color: {{ theme.codeBackground.color }};
+    {% endif %}
+}
+
+body table tr:nth-child(2n) {
+
+    {# background-color #}
+    {% if theme.html.preview.light.codeBackground.color %}
+        background-color: {{ theme.html.preview.light.codeBackground.color }};
+    {% elif theme.html.preview.codeBackground.color %}
+        background-color: {{ theme.html.preview.codeBackground.color }};
+    {% elif theme.html.light.codeBackground.color %}
+        background-color: {{ theme.html.light.codeBackground.color }};
+    {% elif theme.html.codeBackground.color %}
+        background-color: {{ theme.html.codeBackground.color }};
+    {% elif theme.light.codeBackground.color %}
+        background-color: {{ theme.light.codeBackground.color }};
+    {% elif theme.codeBackground.color %}
+        background-color: {{ theme.codeBackground.color }};
+    {% endif %}
+}
+
+
+body table th,
+body table td {
+    border: 1px solid white;
+}

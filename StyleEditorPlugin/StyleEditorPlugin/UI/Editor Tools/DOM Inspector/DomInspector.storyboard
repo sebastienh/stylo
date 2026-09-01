@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="0U9-hH-2WM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dom Inspector View Controller-->
+        <scene sceneID="2hG-4P-1Eh">
+            <objects>
+                <viewController id="0U9-hH-2WM" customClass="DomInspectorViewController" customModule="StyleEditorPlugin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" misplaced="YES" id="JxF-eW-7TZ" customClass="DomInspectorBackgroundView" customModule="StyleEditorPlugin" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="370" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKu-nu-vKQ" customClass="DomInspectorScrollView" customModule="StyleEditorPlugin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="298"/>
+                                <clipView key="contentView" copiesOnScroll="NO" id="99J-t6-S0J">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="298"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="plain" selectionHighlightStyle="none" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" viewBased="YES" indentationPerLevel="16" outlineTableColumn="waq-tH-r8G" id="vrl-Js-wUg" customClass="DomInspectorOutlineView" customModule="StyleEditorPlugin" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="298"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="UnselectedTableCellViewBackgroundColor"/>
+                                            <color key="gridColor" name="UnselectedTableCellViewBackgroundColor"/>
+                                            <tableColumns>
+                                                <tableColumn editable="NO" width="347" minWidth="40" maxWidth="1000" id="waq-tH-r8G" userLabel="Elements Column" customClass="DomInspectorTableColumn" customModule="StyleEditorPlugin" customModuleProvider="target">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Elements">
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="rLB-MG-mwA">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView identifier="DomElementCell" misplaced="YES" id="coc-qm-whw">
+                                                            <rect key="frame" x="1" y="1" width="347" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Btf-ft-ejJ" customClass="DomInspectorTextField" customModule="StyleEditorPlugin" customModuleProvider="target">
+                                                                    <rect key="frame" x="-2" y="0.0" width="351" height="16"/>
+                                                                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Table View Cell" id="miv-bG-IUg">
+                                                                        <font key="font" metaFont="system"/>
+                                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="Btf-ft-ejJ" secondAttribute="trailing" id="RqM-ta-XzV"/>
+                                                                <constraint firstItem="Btf-ft-ejJ" firstAttribute="leading" secondItem="coc-qm-whw" secondAttribute="leading" id="frd-Uk-fiE"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Btf-ft-ejJ" secondAttribute="bottom" id="vYF-o2-vCR"/>
+                                                                <constraint firstItem="Btf-ft-ejJ" firstAttribute="top" secondItem="coc-qm-whw" secondAttribute="top" id="ygb-tz-fej"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="textField" destination="Btf-ft-ejJ" id="SAr-gQ-Ume"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="0U9-hH-2WM" id="DNy-C4-u4x"/>
+                                                <outlet property="delegate" destination="0U9-hH-2WM" id="UvY-bi-lWr"/>
+                                            </connections>
+                                        </outlineView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="UnselectedTableCellViewBackgroundColor"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="Thp-pB-iNa">
+                                    <rect key="frame" x="0.0" y="282" width="350" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="fjf-b7-lke">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lKu-nu-vKQ" secondAttribute="trailing" id="ESY-Wx-XQJ"/>
+                            <constraint firstAttribute="bottom" secondItem="lKu-nu-vKQ" secondAttribute="bottom" id="LOs-cZ-3Dc"/>
+                            <constraint firstItem="lKu-nu-vKQ" firstAttribute="top" secondItem="JxF-eW-7TZ" secondAttribute="top" id="VIs-yY-WJt"/>
+                            <constraint firstItem="lKu-nu-vKQ" firstAttribute="leading" secondItem="JxF-eW-7TZ" secondAttribute="leading" id="v4O-nz-3aB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="outlineView" destination="vrl-Js-wUg" id="Kec-qu-KY7"/>
+                        <outlet property="scrollView" destination="lKu-nu-vKQ" id="U2K-vG-jY5"/>
+                        <outlet property="topView" destination="JxF-eW-7TZ" id="ZCd-AX-BM0"/>
+                    </connections>
+                </viewController>
+                <customObject id="IU2-VX-lan" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-470" y="276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="UnselectedTableCellViewBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

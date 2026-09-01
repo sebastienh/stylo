@@ -1,0 +1,875 @@
+
+
+/********************************************/
+/*           highlight-flash                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:highlight:flash {
+    
+}
+
+h2:highlight:flash {
+    
+}
+
+h3:highlight:flash {
+    
+}
+
+h4:highlight:flash {
+    
+}
+
+h5:highlight:flash {
+    
+}
+
+h6:highlight:flash {
+    
+}
+
+h1::tag:highlight:flash {
+    
+}
+
+h2::tag:highlight:flash {
+    
+}
+
+h3::tag:highlight:flash {
+    
+}
+
+h4::tag:highlight:flash {
+    
+}
+
+h5::tag:highlight:flash {
+    
+}
+
+h6::tag:highlight:flash {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:highlight:flash {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+/* :highlight:flash */
+strong:highlight:flash {
+    
+    
+}
+
+em:highlight:flash {
+    
+    
+}
+
+s:highlight:flash {
+    
+    
+}
+
+strong::tag:highlight:flash {
+    
+    
+}
+
+em::tag:highlight:flash {
+    
+    
+}
+
+s::tag:highlight:flash {
+    
+
+}
+
+/* :highlight :flash */
+:highlight strong:flash {
+    
+    
+}
+
+:highlight em:flash {
+    
+    
+}
+
+:highlight s:flash {
+    
+    
+}
+
+:highlight strong::tag:flash {
+    
+    
+}
+
+:highlight em::tag:flash {
+    
+    
+}
+
+:highlight s::tag:flash {
+    
+
+}
+
+
+/* :highlight :highlight:flash */
+:highlight strong:highlight:flash {
+    
+    
+}
+
+:highlight em:highlight:flash {
+    
+    
+}
+
+:highlight s:highlight:flash {
+    
+    
+}
+
+:highlight strong::tag:highlight:flash {
+    
+    
+}
+
+:highlight em::tag:highlight:flash {
+    
+    
+}
+
+:highlight s::tag:highlight:flash {
+    
+
+}
+
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+/* :highlight:flash */
+blockquote:highlight:flash {
+    
+    
+}
+
+blockquote::tag:highlight:flash {
+    
+    
+}
+
+/* :highlight :flash */
+:highlight blockquote:flash {
+    
+    
+}
+
+
+:highlight blockquote::tag:flash {
+    
+    
+}
+
+
+/* :highlight :highlight:flash */
+:highlight blockquote:highlight:flash {
+    
+    
+}
+
+
+:highlight blockquote::tag:highlight:flash {
+    
+    
+}
+
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+/* :highlight:flash */
+ul:highlight:flash {
+    
+}
+
+ol:highlight:flash {
+    
+}
+
+li:highlight:flash {
+    
+}
+
+li::tag:highlight:flash {
+    
+}
+
+/* :highlight :flash */
+:highlight ul:flash {
+    
+}
+
+:highlight ol:flash {
+    
+}
+
+:highlight li:flash {
+    
+}
+
+:highlight li::tag:flash {
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight ul:highlight:flash {
+    
+}
+
+:highlight ol:highlight:flash {
+    
+}
+
+:highlight li:highlight:flash {
+    
+}
+
+:highlight li::tag:highlight:flash {
+    
+}
+
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+/* :highlight:flash */
+code:highlight:flash {
+    
+}
+
+code::tag:highlight:flash {
+    
+}
+
+code::params:highlight:flash {
+    
+}
+
+/* :highlight :flash */
+:highlight code:flash {
+    
+}
+
+:highlight code::tag:flash {
+    
+}
+
+:highlight code::params:flash {
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight code:highlight:flash {
+    
+}
+
+:highlight code::tag:highlight:flash {
+    
+}
+
+:highlight code::params:highlight:flash {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+/* :highlight:flash */
+
+
+table:highlight:flash {
+    
+}
+
+thead:highlight:flash {
+    
+}
+
+tbody:highlight:flash {
+    
+    
+}
+
+tr:highlight:flash {
+    
+}
+
+td:highlight:flash {
+    
+}
+
+/* :highlight :flash */
+:highlight thead:flash {
+    
+}
+
+:highlight tbody:flash {
+    
+    
+}
+
+:highlight tr:flash {
+    
+}
+
+:highlight td:flash {
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight thead:highlight:flash {
+    
+}
+
+:highlight tbody:highlight:flash {
+    
+    
+}
+
+:highlight tr:highlight:flash {
+    
+}
+
+:highlight td :highlight:flash {
+    
+}
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+/* :highlight:flash */
+
+a:highlight:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:highlight:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:highlight:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:highlight:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:highlight:flash {
+    
+}
+
+/* title: the title of the link */
+a::title:highlight:flash {
+    
+    
+}
+
+/* :highlight :flash */
+:highlight a:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:flash {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:flash {
+    
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight a:highlight:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:highlight:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:highlight:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:highlight:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:highlight:flash {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:highlight:flash {
+    
+    
+}
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+
+/* :highlight:flash */
+
+img:highlight:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:highlight:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:highlight:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+img::destination:highlight:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+img::label:highlight:flash {
+    
+}
+
+/* title: the title of the link */
+img::title:highlight:flash {
+    
+    
+}
+
+/* :highlight :flash */
+:highlight img:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight img::destination:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight img::label:flash {
+    
+}
+
+/* title: the title of the link */
+:highlight img::title:flash {
+    
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight img:highlight:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:highlight:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:highlight:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight img::destination:highlight:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight img::label:highlight:flash {
+    
+}
+
+/* title: the title of the link */
+:highlight img::title:highlight:flash {
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:highlight:flash {
+    
+}
+
+/*
+    ref
+*/
+
+
+/* :highlight:flash */
+
+ref:highlight:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+ref::tag:highlight:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+ref::text:highlight:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+ref::destination:highlight:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+ref::label:highlight:flash {
+    
+}
+
+/* title: the title of the link */
+ref::title:highlight:flash {
+    
+    
+}
+
+/* :highlight :flash */
+:highlight ref:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight ref::tag:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight ref::text:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight ref::destination:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight ref::label:flash {
+    
+}
+
+/* title: the title of the link */
+:highlight ref::title:flash {
+    
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight ref:highlight:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight ref::tag:highlight:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight ref::text:highlight:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight ref::destination:highlight:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight ref::label:highlight:flash {
+    
+}
+
+/* title: the title of the link */
+:highlight ref::title:highlight:flash {
+    
+    
+}
+
+
+/* attributes */
+
+/* :highlight:flash */
+key-value-attr:highlight:flash {
+
+}
+
+key-value-attr::tag:highlight:flash {
+    
+}
+
+class-attr:highlight:flash {
+
+
+}
+
+class-attr::tag:highlight:flash {
+
+}
+
+id-attr:highlight:flash {
+
+}
+
+id-attr::tag:highlight:flash {
+
+}
+
+/* :highlight :flash */
+
+:highlight key-value-attr:flash {
+
+}
+
+:highlight key-value-attr::tag:flash {
+    
+}
+
+:highlight class-attr:flash {
+
+}
+
+:highlight class-attr::tag:flash {
+
+}
+
+:highlight id-attr:flash {
+
+}
+
+:highlight id-attr::tag:flash {
+
+}
+
+/* :highlight :highlight:flash */
+
+:highlight key-value-attr:highlight:flash {
+
+}
+
+:highlight key-value-attr::tag:highlight:flash {
+    
+}
+
+:highlight class-attr:highlight:flash {
+
+
+}
+
+:highlight class-attr::tag:highlight:flash {
+
+}
+
+:highlight id-attr:highlight:flash {
+
+}
+
+:highlight id-attr::tag:highlight:flash {
+
+}

@@ -1,0 +1,59 @@
+ [
+  {
+  "type": "paragraph_open",
+  "tag": "p",
+  "attrs": null,
+  "nesting": 1,
+  "level": 0,
+  "children": null,
+  "content": "",
+  "markup": "",
+  "info": "",
+  "meta": null,
+  "block": true,
+  "hidden": false
+  },
+  {
+  "type": "inline",
+  "tag": "",
+  "attrs": null,
+  "nesting": 0,
+  "level": 1,
+  "children": [
+               {
+               "type": "text",
+               "tag": "",
+               "attrs": null,
+               "nesting": 0,
+               "level": 0,
+               "children": null,
+               "content": "" ആ ಫ",
+               "markup": "",
+               "info": "",
+               "meta": null,
+               "block": false,
+               "hidden": false
+               }
+               ],
+  "content": "&#X22; &#XD06; &#xcab;",
+  "markup": "",
+  "info": "",
+  "meta": null,
+  "block": true,
+  "hidden": false
+  },
+  {
+  "type": "paragraph_close",
+  "tag": "p",
+  "attrs": null,
+  "nesting": -1,
+  "level": 0,
+  "children": null,
+  "content": "",
+  "markup": "",
+  "info": "",
+  "meta": null,
+  "block": true,
+  "hidden": false
+  }
+  ]

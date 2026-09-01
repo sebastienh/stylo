@@ -1,0 +1,121 @@
+/*
+ * UI stylesheet
+ */
+
+/* Styles */
+
+body {
+    
+    background-color: white;
+    color: black;
+    font-family: "Avenir Next";
+    font-size: 12pt;
+}
+
+#sidebar-moon {
+    color: red;
+    font-size: 14pt;
+}
+
+#sidebar-sun {
+    color: red;
+    font-size: 14pt;
+}
+
+#sidebar-preview {
+    color: red;
+    font-size: 14pt;
+}
+
+#sidebar-styles {
+    color: red;
+    font-size: 14pt;
+}
+
+#sidebar-markdown-help {
+    color: red;
+    font-size: 14pt;
+}
+
+#sidebar-dom {
+    color: red;
+    font-size: 14pt;
+}
+
+#sidebar-themes {
+    color: red;
+    font-size: 14pt;
+}
+
+#sidebar-themes-select {
+    color: red;
+    font-size: 14pt;
+}
+
+#sidebar-styles-up-button {
+    color: red;
+    font-size: 14pt;
+}
+
+#sidebar-styles-down-button {
+    color: red;
+    font-size: 14pt;
+}
+
+/* styles */
+#styles-header {
+    background-color: blue;
+}
+
+#styles-header-title {
+    color: red;
+    font-family: "Avenir Next";
+    font-size: 14pt;
+}
+#styles-header-add-button {
+    color: red;
+    font-family: "Avenir Next";
+    font-size: 14pt;
+}
+
+/* style */
+#styles-style {
+    background-color: blue;
+}
+#styles-style-title {
+    color: red;
+    font-family: "Avenir Next";
+    font-size: 14pt;
+}
+#styles-style-sun-button {
+    color: red;
+    font-family: "Avenir Next";
+    font-size: 14pt;
+}
+#styles-style-moon-button {
+    color: red;
+    font-family: "Avenir Next";
+    font-size: 14pt;
+}
+#styles-style-edit-button {
+    color: red;
+    font-family: "Avenir Next";
+    font-size: 14pt;
+}
+
+/* MarkdownHelp */
+#markdown-help {
+    color: red;
+    font-family: "Avenir Next";
+    font-size: 14pt;
+}
+#markdown-help-text {
+    color: red;
+    font-family: "Avenir Next";
+    font-size: 14pt;
+}
+#markdown-help-title {
+    color: red;
+    font-family: "Avenir Next";
+    font-size: 14pt;
+}

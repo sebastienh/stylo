@@ -1,0 +1,34 @@
+
+body, th {
+    font-family: "Helvetica Neue";
+    font-size: 1.1vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    font-size: 1.1vw;
+}
+
+table, th {
+    font-family: Menlo;
+    font-size: 1.0vw;
+}
+
+code, html-block {
+    font-family: "Roboto Mono";
+    font-size: 92%;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-style: normal;
+    font-weight: bold;
+}

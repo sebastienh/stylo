@@ -1,0 +1,73 @@
+
+/**
+ Classic Red
+ https://coolors.co/9b2915-e4d6a7-e9b44c-50a2a7-d5b942
+*/
+
+body, th {
+    
+    background-color: #9B2915;
+    color: #E4D6A7;
+    font-family: "Times New Roman";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #E9B44C;
+}
+
+::tag {
+    color: #50A2A7;
+}
+
+a::destination,
+img::destination,
+table,
+td,
+ref::destination,
+a::label,
+img::label,
+ref::title,
+code,
+hr,
+blockquote,
+html-block {
+    color: #D5B942;
+}
+
+code, html-block {
+    font-family: "Hack";
+    font-size: 85%;
+}
+
+s {
+    text-decoration-style: solid;
+    text-decoration-line: line-through;
+    text-decoration-color: #50A2A7;
+}
+
+s::tag {
+    text-decoration-line: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

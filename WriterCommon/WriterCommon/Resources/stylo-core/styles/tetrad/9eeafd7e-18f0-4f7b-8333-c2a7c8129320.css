@@ -1,0 +1,153 @@
+
+:root {
+    
+    --body-b1: #191919;
+    --body-b2: #141414;
+   
+    --caret-sts3: #0075F2;
+    --caret-sts4: #006CE0;
+    
+    --emph-text-2-sts1: #464646;
+    --emph-text-2-sts2: #999999;
+    --emph-text-2-sts3: #cccccc;
+    --emph-text-2-sts4: #d1d1d1;
+    --emph-text-2-sts5: #d6d6d6;
+    --emph-text-2-sts6: #dbdbdb;
+    --emph-text-2-sts7: #e0e0e0;
+    --emph-text-2-sts8: #e6e6e6;
+    --emph-text-2-sts9: #ebebeb;
+    --emph-text-2-sts10: #f0f0f0;
+    
+    --emph-text-1-sts1: #444444;
+    --emph-text-1-sts2: #7A7A7A;
+    --emph-text-1-sts3: #adadad;
+    --emph-text-1-sts4: #b8b8b8;
+    --emph-text-1-sts5: #c2c2c2;
+    --emph-text-1-sts6: #cccccc;
+    --emph-text-1-sts7: #d6d6d6;
+    --emph-text-1-sts8: #e0e0e0;
+    --emph-text-1-sts9: #ebebeb;
+    --emph-text-1-sts10: #f5f5f5;
+    
+    --emph-text-0-sts1: #404040;
+    --emph-text-0-sts2: #666666;
+    --emph-text-0-sts3: #858585;
+    --emph-text-0-sts4: #919191;
+    --emph-text-0-sts5: #9d9d9d;
+    --emph-text-0-sts6: #aaaaaa;
+    --emph-text-0-sts7: #b6b6b6;
+    --emph-text-0-sts8: #c2c2c2;
+    --emph-text-0-sts9: #cecece;
+    --emph-text-0-sts10: #dadada;
+    
+    --text-sts1: #3e3e3e;
+    --text-sts2: #5c5c5c;
+    --text-sts3: #a7a7a7;
+    --text-sts4: #ababab;
+    --text-sts5: #afafaf;
+    --text-sts6: #b7b7b7;
+    --text-sts7: #c6c6c6;
+    --text-sts8: #d6d6d6;
+    --text-sts9: #dedede;
+    --text-sts10: #e5e5e5;
+    
+    --de-emph-text-0-sts1: #3c3c3c;
+    --de-emph-text-0-sts2: #525252;
+    --de-emph-text-0-sts3: #a3a3a3;
+    --de-emph-text-0-sts4: #acacac;
+    --de-emph-text-0-sts5: #b5b5b5;
+    --de-emph-text-0-sts6: #bfbfbf;
+    --de-emph-text-0-sts7: #c8c8c8;
+    --de-emph-text-0-sts8: #d1d1d1;
+    --de-emph-text-0-sts9: #dadada;
+    --de-emph-text-0-sts10: #e3e3e3;
+    
+    --de-emph-text-1-sts1: #383838;
+    --de-emph-text-1-sts2: #474747;
+    --de-emph-text-1-sts3: #858585;
+    --de-emph-text-1-sts4: #8f8f8f;
+    --de-emph-text-1-sts5: #999999;
+    --de-emph-text-1-sts6: #a3a3a3;
+    --de-emph-text-1-sts7: #adadad;
+    --de-emph-text-1-sts8: #b8b8b8;
+    --de-emph-text-1-sts9: #c2c2c2;
+    --de-emph-text-1-sts10: #cccccc;
+    
+    --de-emph-text-2-sts1: #313131;
+    --de-emph-text-2-sts2: #3D3D3D;
+    --de-emph-text-2-sts3: #707070;
+    --de-emph-text-2-sts4: #7a7a7a;
+    --de-emph-text-2-sts5: #858585;
+    --de-emph-text-2-sts6: #8f8f8f;
+    --de-emph-text-2-sts7: #999999;
+    --de-emph-text-2-sts8: #a3a3a3;
+    --de-emph-text-2-sts9: #adadad;
+    --de-emph-text-2-sts10: #b8b8b8;
+    
+    --de-emph-text-3-sts1: #292929;
+    --de-emph-text-3-sts2: #333333;
+    --de-emph-text-3-sts3: #5c5c5c;
+    --de-emph-text-3-sts4: #666666;
+    --de-emph-text-3-sts5: #707070;
+    --de-emph-text-3-sts6: #7a7a7a;
+    --de-emph-text-3-sts7: #858585;
+    --de-emph-text-3-sts8: #8f8f8f;
+    --de-emph-text-3-sts9: #999999;
+    --de-emph-text-3-sts10: #a3a3a3;
+
+    --deep-sparkle-sts1: #292F2F;
+    --deep-sparkle-sts2: #303838;
+    --deep-sparkle-sts3: #4c5b5c;
+    --deep-sparkle-sts4: #5c6f70;
+    --deep-sparkle-sts5: #657a7b;
+    --deep-sparkle-sts6: #6e8587;
+    --deep-sparkle-sts7: #788f91;
+    --deep-sparkle-sts8: #84999a;
+    --deep-sparkle-sts9: #8fa2a3;
+    --deep-sparkle-sts10: #9aabac;
+    
+    --space-sparkle-sts1: #394141;
+    --space-sparkle-sts2: #5E6E6E;
+    --space-sparkle-sts3: #84989a;
+    --space-sparkle-sts4: #8fa2a3;
+    --space-sparkle-sts5: #9aabac;
+    --space-sparkle-sts6: #a5b4b6;
+    --space-sparkle-sts7: #b0bebf;
+    --space-sparkle-sts8: #bcc7c8;
+    --space-sparkle-sts9: #c7d0d1;
+    --space-sparkle-sts10: #d2dada;
+    
+    --orange-sts1: #823021;
+    --orange-sts2: #a23c2a;
+    --orange-sts3: #bb4430;
+    --orange-sts4: #cd523c;
+    --orange-sts5: #d1604d;
+    --orange-sts6: #d56f5d;
+    --orange-sts7: #d97d6d;
+    --orange-sts8: #de8c7d;
+    --orange-sts9: #e29a8d;
+    --orange-sts10: #e6a99e;
+      
+    --copper-sts1: #3E2D14;
+    --copper-sts2: #895D1A;
+    --copper-sts3: #ca8216;
+    --copper-sts4: #dc8e18;
+    --copper-sts5: #e79823;
+    --copper-sts6: #e9a135;
+    --copper-sts7: #eba947;
+    --copper-sts8: #edb25a;
+    --copper-sts9: #efba6c;
+    --copper-sts10: #f1c37e;
+    
+    --blue-sts1: #13222F;
+    --blue-sts2: #183E63;
+    --blue-sts3: #10497e;
+    --blue-sts4: #135490;
+    --blue-sts5: #155ea2;
+    --blue-sts6: #1769b5;
+    --blue-sts7: #1a73c7;
+    --blue-sts8: #1c7ed9;
+    --blue-sts9: #2688e3;
+    --blue-sts10: #3892e5;
+}
+

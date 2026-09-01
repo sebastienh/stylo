@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="OBW-B1-1bG">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="eZY-tv-ZX4">
+            <objects>
+                <windowController storyboardIdentifier="VersionsDocumentWindowController" id="OBW-B1-1bG" customClass="VersionsStyloWindowController" customModule="Stylo" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="Tin-4Q-M6W" customClass="VersionsStyloWindow" customModule="Stylo" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="OBW-B1-1bG" id="0yE-TZ-O40"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="v4Q-sm-pxj" kind="relationship" relationship="window.shadowedContentViewController" id="JIh-JQ-A0t"/>
+                    </connections>
+                </windowController>
+                <customObject id="ZaW-aT-226" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="126"/>
+        </scene>
+        <!--VersionsTextEditor-->
+        <scene sceneID="VnM-lq-EiY">
+            <objects>
+                <controllerPlaceholder storyboardName="VersionsTextEditor" id="v4Q-sm-pxj" sceneMemberID="viewController"/>
+                <customObject id="DXq-VW-Qen" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="563" y="120"/>
+        </scene>
+    </scenes>
+</document>

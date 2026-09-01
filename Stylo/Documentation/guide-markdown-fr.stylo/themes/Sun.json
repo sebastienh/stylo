@@ -1,0 +1,149 @@
+{
+    
+    "name": "Sun",
+    
+    "theme": {
+        
+        "common": {
+            
+            "dark": {
+                "background": {
+                    "color": "#211109"
+                }
+            },
+            "light": {
+                "background": {
+                    "color": "#F7F040"
+                }
+            }
+        },
+        "css": {
+            
+            "common": {
+                
+                "foreground": {
+                    "color": "#FEFDAB",
+                    "fontFamily": "Menlo",
+                    "fontSize": "10pt"
+                },
+                "function": {
+                    "color": "#C54305"
+                },
+                "comment": {
+                    "color": "#4E320A"
+                },
+                "classSelector": {
+                    "color": "#C54305"
+                },
+                "atRuleName": {
+                    "color": "#C54305"
+                },
+                "namespacePrefix": {
+                    "color": "#C54305"
+                },
+                "namespaceUri": {
+                    "color": "#C54305"
+                },
+                "typeSelector": {
+                    "color": "#C54305"
+                },
+                "attributeName": {
+                    "color": "#C54305"
+                },
+                "attributeMatch": {
+                    "color": "#E67E22"
+                },
+                "combinator": {
+                    "color": "#E67E22"
+                },
+                "propertyName": {
+                    "color": "#D38B56"
+                },
+                "importantExclamationPoint": {
+                    "color": "#C54305"
+                },
+                "importantText": {
+                    "color": "#C54305"
+                },
+                "string": {
+                    "color": "#F7F040"
+                },
+                "fontStyle": {
+                    "color": "#E67E22"
+                },
+                "colorKeyword": {
+                    "color": "#E67E22"
+                },
+                "dimension": {
+                    "color": "#D38B56"
+                },
+                "number": {
+                    "color": "#F7F040"
+                },
+                "invalid": {
+                    "color": "#C54305"
+                },
+                "pseudoSelectorOperator": {
+                    "color": "#C54305"
+                },
+                "pseudoSelectorValue": {
+                    "color": "#C54305"
+                }
+            },
+			"source": {
+
+				"light": {
+					"foreground": {
+                   		"color": "#4E320A"
+					},
+                	"string": {
+                   		"color": "#C54305"
+                	},
+                	"number": {
+                   		"color": "#C54305"
+                	},                
+					"comment": {
+                    	"color": "#DED956"
+                	},
+	                "colorKeyword": {
+    	                "color": "#F74105"
+        	        }
+				},
+				"dark": {
+					"foreground": {
+                   		"color": "#C54305"
+					}
+				}
+			},
+            "errors": {
+                
+                "common": {
+                    "unselectedMessage": {
+                        "color": "#C54305"
+                    },
+                    "selectedMessage": {
+                        "color": "#C54305"
+                    }
+                }
+            }
+        },
+        "html": {
+            
+            "preview": {
+                
+                
+                "dark": {
+                    "foreground": {
+                        "color": "white"
+                    }
+                },
+                "light": {
+                    "foreground": {
+                        "color": "#C54305"
+                    }
+                }
+            }
+        }
+    }
+}
+

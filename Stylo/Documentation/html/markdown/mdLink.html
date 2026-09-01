@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>Markdown link element</title>
+		<meta name="description" content="Description and usage examples of the Markdown link element."></meta>
+		<meta name="KEYWORDS" content="markdown, link, a, element"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- markdown/mdLink.html -->
+<h1>Link</h1>
+<p>A link is an element that allows to insert a Unique Resource Identifier (URI) to a resource. This element corresponds to the <code>a</code> (anchor) element of HTML.</p>
+<h2>Syntax</h2>
+<p>There are two main syntaxes for links, the difference being how to specify the URI: with or without reference. A reference (see the <a href="mdReference.html">Reference</a> section for more information) is an identifier given to a URI and can be used instead of a URI in a link (or image).</p>
+<h3>Without reference</h3>
+<p>Markdown:</p>
+<pre><code class="language-markdown">[Stylo](www.textually.net/stylo)
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p&gt;&lt;a href=&quot;www.textually.net/stylo&quot;&gt;Stylo&lt;/a&gt;&lt;/p&gt;
+</code></pre>
+<p>or with a title:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">[link with title](http://www.textually.net/stylo &quot;Stylo!&quot;)
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p&gt;&lt;a href=&quot;http://www.textually.net/stylo&quot; title=&quot;Stylo!&quot;&gt;link with title&lt;/a&gt;&lt;/p&gt;
+</code></pre>
+<h3>With reference</h3>
+<p>Markdown:</p>
+<pre><code class="language-markdown">[link] [idStylo]
+
+[idStylo]: http://www.textually.net/stylo
+</code></pre>
+<p>Note: If a reference is not found in the current document the links and images that use it will be considered text.</p>
+<h2>Pseudo-elements</h2>
+<ul>
+<li><code>tag</code>: the region that includes the start and end square braquet( &quot;[&quot;, &quot;]&quot;) and the two parenthesis (&quot;(&quot;, &quot;)&quot;)</li>
+<li><code>text</code>: the part between the two square braquets</li>
+<li><code>destination</code>: the destination URI if the link does not point to a reference</li>
+<li><code>label</code>: the destination reference if the link points to a reference</li>
+<li><code>title</code>: the title of the link</li>
+</ul>
+	</body>
+</html>

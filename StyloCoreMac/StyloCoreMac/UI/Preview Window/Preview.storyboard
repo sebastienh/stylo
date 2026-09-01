@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="e74-Dn-uVK">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="kH3-yK-kxY">
+            <objects>
+                <windowController id="e74-Dn-uVK" customClass="PreviewWindowController" customModule="StyloCoreMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titleVisibility="hidden" id="xM0-3Z-Wnu" customClass="PreviewWindow" customModule="StyloCoreMac" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="680" height="346"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <value key="minSize" type="size" width="620" height="346"/>
+                        <value key="minFullScreenContentSize" type="size" width="620" height="346"/>
+                        <toolbar key="toolbar" implicitIdentifier="795F88A9-BD88-47B6-A059-A80B94A18B32" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="Y1E-2D-1hY">
+                            <allowedToolbarItems>
+                                <toolbarItem implicitItemIdentifier="B0E0E6FB-2E5F-47CE-9331-A25DDCAB6351" label="Custom View" paletteLabel="Custom View" sizingBehavior="auto" id="J8j-Ek-QAg">
+                                    <nil key="toolTip"/>
+                                    <popUpButton key="view" id="mt1-9U-JxT">
+                                        <rect key="frame" x="28" y="14" width="21" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <popUpButtonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" lineBreakMode="truncatingTail" inset="2" id="kWJ-t2-eUG">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" id="kTf-jz-ySU"/>
+                                        </popUpButtonCell>
+                                    </popUpButton>
+                                    <connections>
+                                        <action selector="selectPreviewMode:" target="e74-Dn-uVK" id="1qB-4d-jDV"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="687EAC41-5B38-4B92-B21A-D2215CB65DF0" label="Custom View" paletteLabel="Custom View" image="preview-save" sizingBehavior="auto" id="2qy-Iy-qPa">
+                                    <nil key="toolTip"/>
+                                    <button key="view" verticalHuggingPriority="750" id="8y1-hE-c23">
+                                        <rect key="frame" x="29" y="14" width="19" height="24"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="preview-save" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="ZRk-Am-rqR">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="savePreview:" target="e74-Dn-uVK" id="aCF-Sb-PVY"/>
+                                        </connections>
+                                    </button>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="2Rb-ef-WiX"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="x4L-5J-7AA"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="43U-fj-lWl"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="ihp-4t-HHe"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="h5L-q1-ByT"/>
+                            </allowedToolbarItems>
+                            <defaultToolbarItems>
+                                <toolbarItem reference="h5L-q1-ByT"/>
+                                <toolbarItem reference="J8j-Ek-QAg"/>
+                                <toolbarItem reference="h5L-q1-ByT"/>
+                                <toolbarItem reference="2qy-Iy-qPa"/>
+                            </defaultToolbarItems>
+                            <connections>
+                                <outlet property="delegate" destination="e74-Dn-uVK" id="GYT-EB-Mgs"/>
+                            </connections>
+                        </toolbar>
+                        <connections>
+                            <outlet property="delegate" destination="e74-Dn-uVK" id="u1c-tX-oof"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <outlet property="previewModePopupButton" destination="mt1-9U-JxT" id="ici-Gp-HSs"/>
+                        <outlet property="saveButton" destination="8y1-hE-c23" id="LiX-kj-Brg"/>
+                        <outlet property="toolbar" destination="Y1E-2D-1hY" id="nJt-bn-TID"/>
+                        <segue destination="3GH-wi-IgF" kind="relationship" relationship="window.shadowedContentViewController" id="d4W-KK-XM3"/>
+                    </connections>
+                </windowController>
+                <customObject id="slP-sA-9ti" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189" y="157"/>
+        </scene>
+        <!--Preview Tab View Controller-->
+        <scene sceneID="qhl-wX-G7p">
+            <objects>
+                <tabViewController tabStyle="unspecified" id="3GH-wi-IgF" customClass="PreviewTabViewController" customModule="StyloCoreMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="QbD-d1-C7O"/>
+                        <tabViewItem id="lzd-bM-OEr"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="8aH-5J-SjW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="3GH-wi-IgF" id="VP7-u2-45h"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="8aH-5J-SjW" id="0Tj-M1-ayy"/>
+                        <segue destination="nLi-Uj-ex0" kind="relationship" relationship="tabItems" id="rio-Sq-FUx"/>
+                        <segue destination="yRg-Y4-lbf" kind="relationship" relationship="tabItems" id="C4b-EE-cl4"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="wRq-f1-KZS" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="713"/>
+        </scene>
+        <!--Loading Preview Data View Controller-->
+        <scene sceneID="Xph-2D-06d">
+            <objects>
+                <viewController id="nLi-Uj-ex0" customClass="LoadingPreviewDataViewController" customModule="StyloCoreMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="Cd7-yQ-hrk">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KLJ-Ki-YXE">
+                                <rect key="frame" x="153" y="190" width="145" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Loading preview data..." id="yAX-1u-3xi">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="TertiaryTextColor"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="M42-kB-jck">
+                                <rect key="frame" x="209" y="134" width="32" height="32"/>
+                            </progressIndicator>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="KLJ-Ki-YXE" firstAttribute="centerX" secondItem="Cd7-yQ-hrk" secondAttribute="centerX" id="6hA-Nq-CaJ"/>
+                            <constraint firstItem="M42-kB-jck" firstAttribute="centerX" secondItem="Cd7-yQ-hrk" secondAttribute="centerX" id="Bld-aO-fZ4"/>
+                            <constraint firstItem="M42-kB-jck" firstAttribute="centerY" secondItem="Cd7-yQ-hrk" secondAttribute="centerY" id="ncc-Sk-CTp"/>
+                            <constraint firstItem="M42-kB-jck" firstAttribute="top" secondItem="KLJ-Ki-YXE" secondAttribute="bottom" constant="24" id="sUb-7J-QWi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressIndicator" destination="M42-kB-jck" id="TkY-eb-j6Y"/>
+                    </connections>
+                </viewController>
+                <customObject id="9di-Kd-UGC" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-151" y="1236"/>
+        </scene>
+        <!--No Preview Data View Controller-->
+        <scene sceneID="xOg-1G-GXC">
+            <objects>
+                <viewController id="yRg-Y4-lbf" customClass="NoPreviewDataViewController" customModule="StyloCoreMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="ak0-NF-51D">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fcO-CN-tFM">
+                                <rect key="frame" x="130" y="142" width="191" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="No preview data to be shown..." id="5GF-R2-t9F">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="TertiaryTextColor"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="fcO-CN-tFM" firstAttribute="centerY" secondItem="ak0-NF-51D" secondAttribute="centerY" id="906-wb-wUf"/>
+                            <constraint firstItem="fcO-CN-tFM" firstAttribute="centerX" secondItem="ak0-NF-51D" secondAttribute="centerX" id="blU-p6-Kf8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="hGL-Ut-f3D" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="335" y="1236"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="preview-save" width="19" height="24"/>
+        <namedColor name="TertiaryTextColor">
+            <color red="0.38039215686274508" green="0.36470588235294116" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

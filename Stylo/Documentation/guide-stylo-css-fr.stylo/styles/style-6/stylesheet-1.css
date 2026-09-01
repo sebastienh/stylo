@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(80,80,80);
+    color: rgb(220,220,220);
+    font-family: "Avenir Next";
+}
+
+h1::tag, 
+h2::tag, 
+h3::tag, 
+h4::tag, 
+h5::tag, 
+h6::tag {
+	color: orange;
+}
+
+code {
+	color: rgb(140,140,140);
+}
+
+a::tag {
+	color: rgba(0,191,255,0.5);
+}
+
+a {
+	color: rgba(255,69,0,0.8);
+}
+
+body p::first-letter {
+  color: blue;
+}
+
+p::first-letter {
+	
+	color: red;
+/*
+	text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+*/
+}

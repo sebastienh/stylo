@@ -1,0 +1,16 @@
+
+/* errors-light */
+
+@namespace "http://www.w3.org/Style/CSS/";
+
+:root {
+    
+    --theme-caret-color: black;
+    --theme-foreground-color: #CCCCCC;
+    --theme-background-color: white;
+/*    --theme-selectedErrorMessage-color: #B80C09 !important;*/
+/*    --theme-selectedWarningMessage-color: #F5BB00 !important;*/
+    --theme-selectedErrorMessage-color: var(--red, red);
+    --theme-selectedWarningMessage-color: var(--yellow, yellow);
+}
+

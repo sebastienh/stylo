@@ -1,0 +1,86 @@
+
+body, th {
+    
+    background-color: #F7F7F7;
+    color: rgb(40,40,40);
+    font-family: "bitstream vera sans mono";
+    font-size: default;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, attr-bloc {
+    color: rgb(120,120,120);
+    font-size: inherit;
+}
+
+.style {
+    color: red;
+}
+
+.john {
+    color: yellow;
+}
+
+::tag {
+    color: #E69300;
+}
+
+hr {
+    color: #88292F;
+}
+
+blockquote::tag, code::tag {
+    color: #01768B;
+}
+
+reference::title, img::title, a::title {
+    color: #88292F;
+}
+
+th {
+    font-weight: 500;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+s {
+    text-decoration-style: solid;
+    text-decoration-line: line-through;
+    text-decoration-color: #01768B;
+}
+
+s::tag {
+    text-decoration-line: none;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.pink {
+    color: pink;
+}
+
+
+
+

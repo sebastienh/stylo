@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Style Inspector (<code>⇧⌘E</code>)</h1>
+<p>A style can only be <em>inspected</em> if it is selected, this allows any change to the style to be <a href="#applyPendingStyleShanges">applied</a> directly to the Mardkown text.</p>
+<p>Each style is expected to support two appearances: light and dark. It implements an appearance support by defining stylesheets that applies to it. A stylesheet can be applied to muliple appearances. In case a style does not have any stylesheet defined for an appearance, a default, system defined, stylesheet will be applied for that paricular appearance.</p>
+<p>The style inspector allows to add/delete/update stylesheets in a style; to set their appearances which can be light, dark or both; and to change a stylesheet name. It also allows to reorder stylsheets, simply by dragging them, to change their order in the style evaluation process; the last stylsheet having the higher priority.</p>
+<p>When one or more stylesheet(s) has been updated, either their source, their order or their appplicable appearance(s), we can then update the document style using the <a href="#applyPendingChanges"><em>Update Document Style</em></a> button.</p>
+<h2>Open the <em>style inspector</em></h2>
+<p>Prerequisite: The styles list panel is visible (see <a href="#stylesList">styles list</a>)</p>
+<p>To open a style inspector, do one of the following:</p>
+<ul>
+<li>Click on the <code>Edit</code> button of the selected style</li>
+<li>From the menu, choose: <code>Styles</code>→<code>Open Style Inspector</code></li>
+<li>With the keyboard shortcut: <code>⇧⌘E</code></li>
+</ul>
+<h2>Add a stylesheet</h2>
+<p>Prerequisite: The styles list panel is visible (see <a href="#stylesList">styles list</a>)</p>
+<ul>
+<li>From the <em>style inspector</em> click on the top rightmost <code>+</code> button.</li>
+</ul>
+<h2>Rename a stylesheet</h2>
+<p>Prerequisite: The styles list panel is visible (see <a href="#stylesList">styles list</a>)</p>
+<ul>
+<li>From the <em>style inspector</em> click on the stylesheet name to rename in the <em>Stylesheets list</em>, the stylesheet's name text field should become editable. Type enter on the keyboard or click anywhere else in the window to apply the new name.</li>
+</ul>
+<h2>Edit a stylesheet</h2>
+<p>Prerequisite: The styles list panel is visible (see <a href="#stylesList">styles list</a>)</p>
+<ul>
+<li>From the <em>style inspector</em>, move the mouse cursor over the stylesheet to edit. Two buttons should appear on the right: <code>Delete Stylesheet</code> and <code>Edit Stylesheet</code>. Click on the <code>Edit Stylesheet</code> to open the <a href="#stylesheetPanel"><em>stylesheet panel</em></a>.</li>
+</ul>
+<h2>Delete a stylesheet</h2>
+<p>Prerequisite: The styles list panel is visible (see <a href="#stylesList">styles list</a>)</p>
+<ul>
+<li>From the <em>style inspector</em>, move the mouse cursor over the stylesheet to edit. Two buttons should appear on the right: <code>Delete Stylesheet</code> and <code>Edit Stylesheet</code>. Click on the <code>Delete Stylesheet</code> to delete the stylesheet.</li>
+</ul>
+<h2>Set stylesheet's applicable appearance(s)</h2>
+<p>Prerequisite: The styles list panel is visible (see <a href="#stylesList">styles list</a>)</p>
+<ul>
+<li>From the <em>style inspector</em> click on the stylesheet's appearance(s) selector popup button in the <em>Stylesheets list</em>,</li>
+</ul>
+
+    </body>
+</html>

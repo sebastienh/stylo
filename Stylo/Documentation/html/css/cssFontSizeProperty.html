@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS font-size property</title>
+		<meta name="description" content="CSS font-size property desscription page."></meta>
+		<meta name="KEYWORDS" content="font, size, font-size, css, properties, property, xx-small, x-small, small, large, x-large, xx-large, smaller, larger, length, percentage"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+		<!-- css/cssFontSizeProperty.html -->
+<h1>font-size</h1>
+<p>The <code>font-size</code> property allows to assign a size to a font.</p>
+<p>Formal definition: <code>font-size: <a href="#css-properties-font-size-absolute">medium</a>
+| <a href="#css-properties-font-size-absolute">xx-small</a>
+| <a href="#css-properties-font-size-absolute">x-small</a>
+| <a href="#css-properties-font-size-absolute">small</a>
+| <a href="#css-properties-font-size-absolute">large</a>
+| <a href="#css-properties-font-size-absolute">x-large</a>
+| <a href="#css-properties-font-size-absolute">xx-large</a>
+| <a href="#css-properties-font-size-relative">smaller</a>
+| <a href="#css-properties-font-size-relative">larger</a>
+| <a href="cssPropertyValuesLength.html">length</a>
+| <a href="#css-properties-font-size-percentage">%</a>
+| <a href="cssPropertyValuesInitial.html">initial</a>
+| <a href="cssPropertyValuesInherit.html">inherit</a>;</code></p>
+<h2>Keywords</h2>
+<h3 id="css-properties-font-size-absolute">Absolute</h3>
+<p>All these sizes are based on the <code>medium</code> size which is set to 16px in Stylo.</p>
+<table>
+<thead>
+<tr>
+<th> Keyword </th>
+<th> Value </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> xx-small </td>
+<td> 9.6px </td>
+</tr>
+<tr>
+<td> x-small </td>
+<td> 12px </td>
+</tr>
+<tr>
+<td> medium </td>
+<td> 16 px </td>
+</tr>
+<tr>
+<td> wide </td>
+<td> 19.2px </td>
+</tr>
+<tr>
+<td> x-large </td>
+<td> 24px </td>
+</tr>
+<tr>
+<td> xx-large </td>
+<td> 32px </td>
+</tr>
+</tbody>
+</table>
+<h3 id="css-properties-font-size-relative">Relative</h3>
+<p>The size is based on the size of the parent element.</p>
+<table>
+<thead>
+<tr>
+<th> Keyword </th>
+<th> Value </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> smaller </td>
+<td> 2/3 of the inherited value </td>
+</tr>
+<tr>
+<td> larger </td>
+<td> 3/2 of the inherited value </td>
+</tr>
+</tbody>
+</table>
+<h2 id="css-properties-font-size-percentage">Percentage</h2>
+<p>A percentage value, calculated from the value for <code>font-size</code> property from the parent element, for example:</p>
+<p>CSS:</p>
+<pre><code class="language-css">body {
+    font-size: 16px;
+}
+h1 {
+    font-size: 80%;
+}
+</code></pre>
+<p>In the following document:</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Title 1&lt;/h1&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The font size of the <code>h1</code> element  would be 12.8px (0.8 x 16px = 12.8px).</p>
+<p><em>Note</em>: It is suggested to use the relative sizes in that they adapt to all devices and the design will be more &quot;portable&quot;.</p>
+	</body>
+</html>

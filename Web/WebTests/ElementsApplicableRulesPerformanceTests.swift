@@ -1,0 +1,4034 @@
+//
+//  ElementsApplicableRulesPerformanceTests.swift
+//  Web
+//
+//  Created by Sebastien Hamel on 2020-08-31.
+//  Copyright © 2020 Textually Inc. All rights reserved.
+//
+
+import XCTest
+import XCTest
+import Common
+@testable import Web
+
+class ElementsApplicableRulesPerformanceTests: TestCascading {
+
+    func testPerformanceApplicableRules() throws {
+        
+        let styledDocument = self.buildHtmlDocument()!
+        let stylingCssStyleSheet = getStylingCSSStyleSheet(sourceString: stylingSourceString as NSString)!
+        let style = CSSStyle(id: "test", authorStyleSheets: [stylingCssStyleSheet])
+        let resourceComputedStyle = ResourceComputedStyle(styleDefinition: style)
+        let h1 = styledDocument.getElementsByTagName("h1").elements.first as! HTMLHeadingElement
+        var filterContext = FilterContext()
+        filterContext.updatePseudoClassesOptions(forElement: h1, with: .focus)
+        
+        self.measure {
+            
+            resourceComputedStyle.computeElementsAplicableRules(for: ContiguousArray<Element>(arrayLiteral: h1), filterContext: filterContext)
+        }
+    }
+
+    /// h1
+    /// p
+    /// h2
+    ///
+    ///
+    func buildHtmlDocument() -> HtmlDocument? {
+        
+        let htmlDocument = HtmlDocument.Create("test-document")
+        
+        if let body = htmlDocument?.body {
+            
+            var exception = Exception()
+            
+            // h1
+            let h1 = HTMLHeadingElement(document: htmlDocument, localName: "h1")
+            body.append(h1, exception: &exception)
+            h1.addClassAttribute("test")
+            h1.setPseudoElementSourceStringFragment(with: "tag", to: SourceStringSegment(range: NSMakeRange(0, 1)))
+            
+            // p
+            let p1 = HTMLParagraphElement(document: htmlDocument)
+            body.append(p1, exception: &exception)
+            
+            // h2
+            let h2 = HTMLHeadingElement(document: htmlDocument, localName: "h2")
+            
+            body.append(h2, exception: &exception)
+            
+            // p
+            let p2 = HTMLParagraphElement(document: htmlDocument)
+            body.append(p2, exception: &exception)
+        }
+        
+        return htmlDocument
+    }
+    
+    private let stylingSourceString = """
+    
+        body {
+            color: var(--text-sts1, black);
+            background-color: var(--body-b1, white);
+        }
+
+        h1 , h2, h3, h4, h5, h6 {
+            color: var(--h-sts3, black);
+        }
+
+        h1::tag, h2::tag, h3::tag, h4::tag, h5::tag, h6::tag {
+            color: var(--h-tag-sts3, black);
+        }
+
+        p {
+            color: var(--text-sts3, black);
+        }
+
+        hr {
+            color: var(--hr-sts3, black);
+        }
+
+        strong, em {
+            color: var(--strong-em-sts3, black);
+        }
+
+        strong::tag, em::tag {
+            color: var(--strong-em-tag-sts3, black);
+        }
+
+        h1 strong,
+        h2 strong,
+        h3 strong,
+        h4 strong,
+        h5 strong,
+        h6 strong,
+        h1 em,
+        h2 em,
+        h3 em,
+        h4 em,
+        h5 em,
+        h6 em {
+            color: var(--h-strong-em-sts3, black);
+        }
+
+        strong::tag, em::tag {
+            color: var(--strong-em-tag-sts3, black);
+        }
+
+        h1 strong::tag,
+        h2 strong::tag,
+        h3 strong::tag,
+        h4 strong::tag,
+        h5 strong::tag,
+        h6 strong::tag,
+        h1 em::tag,
+        h2 em::tag,
+        h3 em::tag,
+        h4 em::tag,
+        h5 em::tag,
+        h6 em::tag {
+            color: var(--h-strong-em-tag-sts3, black);
+        }
+
+        s {
+            color: var(--s-sts3, black);
+            text-decoration-color: var(--s-strikethrough-sts3, black);
+        }
+
+        h1 s,
+        h2 s,
+        h3 s,
+        h4 s,
+        h5 s,
+        h6 s {
+            color: var(--h-s-sts3, black);
+            text-decoration-color: var(--h-s-strikethrough-sts3, black);
+        }
+
+        s::tag {
+            color: var(--s-tag-sts3, black);
+        }
+
+        h1 s::tag,
+        h2 s::tag,
+        h3 s::tag,
+        h4 s::tag,
+        h5 s::tag,
+        h6 s::tag {
+            color: var(--h-s-tag-sts3, black);
+        }
+
+        blockquote p {
+            color: var(--blockquote-sts3, black);
+        }
+
+        blockquote::tag {
+            color: var(--blockquote-tag-sts3, black);
+        }
+
+        ul {
+            color: var(--ul-sts3, black);
+        }
+
+        ol {
+            color: var(--ol-sts3, black);
+        }
+
+        li {
+            color: var(--li-sts3, black);
+        }
+
+        li::tag {
+            color: var(--li-tag-sts3, black);
+        }
+
+        code {
+            color: var(--code-sts3, black);
+        }
+
+        code::tag {
+            color: var(--code-tag-sts3, black);
+        }
+
+        code::params {
+            color: var(--code-params-sts3, black);
+        }
+
+        table {
+            color: var(--table-sts3, black);
+        }
+
+        table::tag {
+            color: var(--table-tag-sts3, black);
+        }
+
+        thead {
+            color: var(--thead-sts3, black);
+        }
+
+        tbody {
+            color: var(--tbody-sts3, black);
+        }
+
+        a,
+        img,
+        reference {
+            color: var(--a-img-reference-sts3, black);
+        }
+
+        h1 a,
+        h2 a,
+        h3 a,
+        h4 a,
+        h5 a,
+        h6 a,
+        h1 img,
+        h2 img,
+        h3 img,
+        h4 img,
+        h5 img,
+        h6 img {
+            color: var(--h-a-img-sts3, black);
+        }
+
+        a::tag,
+        img::tag,
+        reference::tag {
+            color: var(--a-img-reference-tag-sts3, black);
+        }
+
+        h1 a::tag,
+        h2 a::tag,
+        h3 a::tag,
+        h4 a::tag,
+        h5 a::tag,
+        h6 a::tag,
+        h1 img::tag,
+        h2 img::tag,
+        h3 img::tag,
+        h4 img::tag,
+        h5 img::tag,
+        h6 img::tag {
+            color: var(--h-a-img-tag-sts3, black);
+        }
+
+        a::text,
+        img::text,
+        reference::text {
+            color: var(--a-img-reference-text-sts3, black);
+        }
+
+        h1 a::text,
+        h2 a::text,
+        h3 a::text,
+        h4 a::text,
+        h5 a::text,
+        h6 a::text,
+        h1 img::text,
+        h2 img::text,
+        h3 img::text,
+        h4 img::text,
+        h5 img::text,
+        h6 img::text {
+            color: var(--h-a-img-text-sts3, black);
+        }
+
+        a::destination,
+        img::destination,
+        reference::destination {
+            color: var(--a-img-reference-destination-sts3, black);
+        }
+
+        h1 a::destination,
+        h2 a::destination,
+        h3 a::destination,
+        h4 a::destination,
+        h5 a::destination,
+        h6 a::destination,
+        h1 img::destination,
+        h2 img::destination,
+        h3 img::destination,
+        h4 img::destination,
+        h5 img::destination,
+        h6 img::destination {
+            color: var(--h-a-img-destination-sts3, black);
+        }
+
+
+        a::label,
+        img::label,
+        reference::label {
+            color: var(--a-img-reference-label-sts3, black);
+        }
+
+        h1 a::label,
+        h2 a::label,
+        h3 a::label,
+        h4 a::label,
+        h5 a::label,
+        h6 a::label,
+        h1 img::label,
+        h2 img::label,
+        h3 img::label,
+        h4 img::label,
+        h5 img::label,
+        h6 img::label {
+            color: var(--h-a-img-label-sts3, black);
+        }
+
+        a::title,
+        img::title,
+        reference::title {
+            color: var(--a-img-reference-title-sts3, black);
+        }
+
+        h1 a::title,
+        h2 a::title,
+        h3 a::title,
+        h4 a::title,
+        h5 a::title,
+        h6 a::title,
+        h1 img::title,
+        h2 img::title,
+        h3 img::title,
+        h4 img::title,
+        h5 img::title,
+        h6 img::title {
+            color: var(--h-a-img-title-sts3, black);
+        }
+
+        html-block {
+            color: var(--html-block-sts3, black);
+        }
+
+        attr-bloc::tag {
+            color: var(--attr-bloc-tag-sts3, black);
+        }
+
+        key-value-attr, class-attr, id-attr {
+            color: var(--key-value-attr-class-attr-id-attr-sts3, black);
+        }
+
+        key-value-attr::tag, class-attr::tag, id-attr::tag {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts3, black);
+        }
+
+        body:highlight {
+            color: var(--text-sts2, black);
+            background-color: var(--body-b2, black);
+        }
+
+        h1:highlight, h2:highlight, h3:highlight, h4:highlight, h5:highlight, h6:highlight {
+            color: var(--h-sts4, black);
+        }
+
+        h1::tag:highlight, h2::tag:highlight, h3::tag:highlight, h4::tag:highlight, h5::tag:highlight, h6::tag:highlight {
+            color: var(--h-tag-sts4, black);
+        }
+
+        p:highlight {
+            color: var(--text-sts4, black);
+        }
+
+        hr:highlight {
+            color: var(--hr-sts4, black);
+        }
+
+        body :highlight strong::tag,
+        body :highlight em::tag,
+        strong:highlight,
+        em:highlight {
+            color: var(--strong-em-sts4, black);
+        }
+
+        body h1:highlight strong::tag,
+        body h2:highlight strong::tag,
+        body h3:highlight strong::tag,
+        body h4:highlight strong::tag,
+        body h5:highlight strong::tag,
+        body h6:highlight strong::tag,
+        body h1:highlight em::tag,
+        body h2:highlight em::tag,
+        body h3:highlight em::tag,
+        body h4:highlight em::tag,
+        body h5:highlight em::tag,
+        body h6:highlight em::tag,
+        h1 strong:highlight,
+        h2 strong:highlight,
+        h3 strong:highlight,
+        h4 strong:highlight,
+        h5 strong:highlight,
+        h6 strong:highlight,
+        h1 em:highlight,
+        h2 em:highlight,
+        h3 em:highlight,
+        h4 em:highlight,
+        h5 em:highlight,
+        h6 em:highlight {
+            color: var(--h-strong-em-sts4, black);
+        }
+
+
+        body :highlight s,
+        s:highlight {
+            color: var(--s-sts4, black);
+            text-decoration-color: var(--s-strikethrough-sts4, black);
+        }
+
+        body h1:highlight s,
+        body h2:highlight s,
+        body h3:highlight s,
+        body h4:highlight s,
+        body h5:highlight s,
+        body h6:highlight s,
+        h1 s:highlight,
+        h2 s:highlight,
+        h3 s:highlight,
+        h4 s:highlight,
+        h5 s:highlight,
+        h6 s:highlight {
+            color: var(--h-s-sts4, black);
+            text-decoration-color: var(--h-s-strikethrough-sts4, black);
+        }
+
+        body :highlight strong,
+        body :highlight em {
+            color: var(--strong-em-sts4, black);
+        }
+
+        body h1:highlight strong,
+        body h2:highlight strong,
+        body h3:highlight strong,
+        body h4:highlight strong,
+        body h5:highlight strong,
+        body h6:highlight strong,
+        body h1:highlight em,
+        body h2:highlight em,
+        body h3:highlight em,
+        body h4:highlight em,
+        body h5:highlight em,
+        body h6:highlight em {
+            color: var(--h-strong-em-sts4, black);
+        }
+
+        body :highlight s::tag {
+            color: var(--s-sts4, black);
+        }
+
+        body h1:highlight s::tag,
+        body h2:highlight s::tag,
+        body h3:highlight s::tag,
+        body h4:highlight s::tag,
+        body h5:highlight s::tag,
+        body h6:highlight s::tag {
+            color: var(--h-s-sts4, black);
+        }
+
+        body :highlight strong:highlight,
+        body :highlight em:highlight {
+            color: var(--strong-em-sts7, black);
+        }
+
+        body h1:highlight strong:highlight,
+        body h2:highlight strong:highlight,
+        body h3:highlight strong:highlight,
+        body h4:highlight strong:highlight,
+        body h5:highlight strong:highlight,
+        body h6:highlight strong:highlight,
+        body h1:highlight em:highlight,
+        body h2:highlight em:highlight,
+        body h3:highlight em:highlight,
+        body h4:highlight em:highlight,
+        body h5:highlight em:highlight,
+        body h6:highlight em:highlight {
+            color: var(--h-strong-em-sts7, black);
+        }
+
+        body :highlight s:highlight {
+            color: var(--s-sts7, black);
+            text-decoration-color: var(--s-strikethrough-sts7, black);
+        }
+
+        body h1:highlight s:highlight,
+        body h2:highlight s:highlight,
+        body h3:highlight s:highlight,
+        body h4:highlight s:highlight,
+        body h5:highlight s:highlight,
+        body h6:highlight s:highlight {
+            color: var(--h-s-sts7, black);
+            text-decoration-color: var(--h-s-strikethrough-sts7, black);
+        }
+
+        body :highlight strong::tag:highlight,
+        body :highlight em::tag:highlight  {
+            color: var(--strong-em-tag-sts7, black);
+        }
+
+        body h1:highlight strong::tag:highlight,
+        body h2:highlight strong::tag:highlight,
+        body h3:highlight strong::tag:highlight,
+        body h4:highlight strong::tag:highlight,
+        body h5:highlight strong::tag:highlight,
+        body h6:highlight strong::tag:highlight,
+        body h1:highlight em::tag:highlight,
+        body h2:highlight em::tag:highlight,
+        body h3:highlight em::tag:highlight,
+        body h4:highlight em::tag:highlight,
+        body h5:highlight em::tag:highlight,
+        body h6:highlight em::tag:highlight {
+            color: var(--h-strong-em-tag-sts7, black);
+        }
+
+        body :highlight s::tag:highlight  {
+            color: var(--s-tag-sts7, black);
+        }
+
+        body h1:highlight s::tag:highlight,
+        body h2:highlight s::tag:highlight,
+        body h3:highlight s::tag:highlight,
+        body h4:highlight s::tag:highlight,
+        body h5:highlight s::tag:highlight,
+        body h6:highlight s::tag:highlight {
+            color: var(--h-s-tag-sts7, black);
+        }
+
+        blockquote:highlight p,
+        body :highlight blockquote p {
+            color: var(--blockquote-sts4, black);
+        }
+
+        blockquote::tag:highlight,
+        body :highlight blockquote::tag {
+            color: var(--blockquote-tag-sts4, black);
+        }
+
+        body :highlight blockquote::tag:highlight p {
+            color: var(--blockquote-tag-sts7, black);
+        }
+
+        body :highlight blockquote:highlight p {
+            color: var(--blockquote-sts7, black);
+        }
+
+        ul:highlight,
+        body :highlight ul {
+            color: var(--ul-sts4, black);
+        }
+
+        ol:highlight,
+        body :highlight ol {
+            color: var(--ol-sts4, black);
+        }
+
+        li:highlight,
+        body :highlight li {
+            color: var(--li-sts4, black);
+        }
+
+        li::tag:highlight,
+        body :highlight li::tag {
+            color: var(--li-tag-sts4, black);
+        }
+
+        body :highlight ul:highlight {
+            color: var(--ul-sts7, black);
+        }
+
+        body :highlight ol:highlight {
+            color: var(--ol-sts7, black);
+        }
+
+        body :highlight li:highlight {
+            color: var(--li-sts7, black);
+        }
+
+        body :highlight li::tag:highlight {
+            color: var(--li-tag-sts7, black);
+        }
+
+        code:highlight,
+        body :highlight code {
+            color: var(--code-sts4, black);
+        }
+
+        code::tag:highlight,
+        body :highlight code::tag {
+            color: var(--code-tag-sts4, black);
+        }
+
+        code::params:highlight,
+        body :highlight code::params {
+            color: var(--code-params-sts4, black);
+        }
+
+        body :highlight code:highlight {
+            color: var(--code-sts7, black);
+        }
+
+        body :highlight code::tag:highlight {
+            color: var(--code-tag-sts7, black);
+        }
+
+        body :highlight code::params:highlight {
+            color: var(--code-params-sts7, black);
+        }
+
+        table:highlight {
+            color: var(--table-sts4, black);
+        }
+
+        table::tag:highlight {
+            color: var(--table-tag-sts4, black);
+        }
+
+        thead:highlight,
+        body :highlight thead {
+            color: var(--thead-sts4, black);
+        }
+
+        tbody:highlight,
+        body :highlight tbody {
+            color: var(--tbody-sts4, black);
+        }
+
+        body :highlight thead:highlight {
+            color: var(--thead-sts7, black);
+        }
+
+        body :highlight tbody:highlight {
+            color: var(--tbody-sts7, black);
+        }
+
+        a:highlight,
+        img:highlight,
+        reference:highlight,
+        body :highlight a,
+        body :highlight img,
+        body :highlight reference {
+            color: var(--a-img-reference-sts4, black);
+        }
+
+        h1 a:highlight,
+        h2 a:highlight,
+        h3 a:highlight,
+        h4 a:highlight,
+        h5 a:highlight,
+        h6 a:highlight,
+        h1 img:highlight,
+        h2 img:highlight,
+        h3 img:highlight,
+        h4 img:highlight,
+        h5 img:highlight,
+        h6 img:highlight,
+        body h1:highlight a,
+        body h2:highlight a,
+        body h3:highlight a,
+        body h4:highlight a,
+        body h5:highlight a,
+        body h6:highlight a,
+        body h1:highlight img,
+        body h2:highlight img,
+        body h3:highlight img,
+        body h4:highlight img,
+        body h5:highlight img,
+        body h6:highlight img {
+            color: var(--h-a-img-sts4, black);
+        }
+
+        a::tag:highlight,
+        img::tag:highlight,
+        reference::tag:highlight,
+        body :highlight a::tag,
+        body :highlight img::tag,
+        body :highlight reference::tag {
+            color: var(--a-img-reference-tag-sts4, black);
+        }
+
+        h1 a::tag:highlight,
+        h2 a::tag:highlight,
+        h3 a::tag:highlight,
+        h4 a::tag:highlight,
+        h5 a::tag:highlight,
+        h6 a::tag:highlight,
+        h1 img::tag:highlight,
+        h2 img::tag:highlight,
+        h3 img::tag:highlight,
+        h4 img::tag:highlight,
+        h5 img::tag:highlight,
+        h6 img::tag:highlight,
+        body h1:highlight a::tag,
+        body h2:highlight a::tag,
+        body h3:highlight a::tag,
+        body h4:highlight a::tag,
+        body h5:highlight a::tag,
+        body h6:highlight a::tag,
+        body h1:highlight img::tag,
+        body h2:highlight img::tag,
+        body h3:highlight img::tag,
+        body h4:highlight img::tag,
+        body h5:highlight img::tag,
+        body h6:highlight img::tag {
+            color: var(--h-a-img-tag-sts4, black);
+        }
+
+
+        a::text:highlight,
+        img::text:highlight,
+        reference::text:highlight,
+        body :highlight a::text,
+        body :highlight img::text,
+        body :highlight reference::text {
+            color: var(--a-img-reference-text-sts4, black);
+        }
+
+        h1 a::text:highlight,
+        h2 a::text:highlight,
+        h3 a::text:highlight,
+        h4 a::text:highlight,
+        h5 a::text:highlight,
+        h6 a::text:highlight,
+        h1 img::text:highlight,
+        h2 img::text:highlight,
+        h3 img::text:highlight,
+        h4 img::text:highlight,
+        h5 img::text:highlight,
+        h6 img::text:highlight,
+        body h1:highlight a::text,
+        body h2:highlight a::text,
+        body h3:highlight a::text,
+        body h4:highlight a::text,
+        body h5:highlight a::text,
+        body h6:highlight a::text,
+        body h1:highlight img::text,
+        body h2:highlight img::text,
+        body h3:highlight img::text,
+        body h4:highlight img::text,
+        body h5:highlight img::text,
+        body h6:highlight img::text {
+            color: var(--h-a-img-text-sts4, black);
+        }
+
+        a::destination:highlight,
+        img::destination:highlight,
+        reference::destination:highlight,
+        body :highlight a::destination,
+        body :highlight img::destination,
+        body :highlight reference::destination {
+            color: var(--a-img-reference-destination-sts4, black);
+        }
+
+        h1 a::destination:highlight,
+        h2 a::destination:highlight,
+        h3 a::destination:highlight,
+        h4 a::destination:highlight,
+        h5 a::destination:highlight,
+        h6 a::destination:highlight,
+        h1 img::destination:highlight,
+        h2 img::destination:highlight,
+        h3 img::destination:highlight,
+        h4 img::destination:highlight,
+        h5 img::destination:highlight,
+        h6 img::destination:highlight,
+        body h1:highlight a::destination,
+        body h2:highlight a::destination,
+        body h3:highlight a::destination,
+        body h4:highlight a::destination,
+        body h5:highlight a::destination,
+        body h6:highlight a::destination,
+        body h1:highlight img::destination,
+        body h2:highlight img::destination,
+        body h3:highlight img::destination,
+        body h4:highlight img::destination,
+        body h5:highlight img::destination,
+        body h6:highlight img::destination {
+            color: var(--h-a-img-destination-sts4, black);
+        }
+
+
+        a::label:highlight,
+        img::label:highlight,
+        reference::label:highlight,
+        body :highlight a::label,
+        body :highlight img::label,
+        body :highlight reference::label {
+            color: var(--a-img-reference-label-sts4, black);
+        }
+
+        h1 a::label:highlight,
+        h2 a::label:highlight,
+        h3 a::label:highlight,
+        h4 a::label:highlight,
+        h5 a::label:highlight,
+        h6 a::label:highlight,
+        h1 img::label:highlight,
+        h2 img::label:highlight,
+        h3 img::label:highlight,
+        h4 img::label:highlight,
+        h5 img::label:highlight,
+        h6 img::label:highlight,
+        body h1:highlight a::label,
+        body h2:highlight a::label,
+        body h3:highlight a::label,
+        body h4:highlight a::label,
+        body h5:highlight a::label,
+        body h6:highlight a::label,
+        body h1:highlight img::label,
+        body h2:highlight img::label,
+        body h3:highlight img::label,
+        body h4:highlight img::label,
+        body h5:highlight img::label,
+        body h6:highlight img::label {
+            color: var(--h-a-img-label-sts4, black);
+        }
+
+        a::title:highlight,
+        img::title:highlight,
+        reference::title:highlight,
+        body :highlight a::title,
+        body :highlight img::title,
+        body :highlight reference::title {
+            color: var(--a-img-reference-title-sts4, black);
+        }
+
+        h1 a::title:highlight,
+        h2 a::title:highlight,
+        h3 a::title:highlight,
+        h4 a::title:highlight,
+        h5 a::title:highlight,
+        h6 a::title:highlight,
+        h1 img::title:highlight,
+        h2 img::title:highlight,
+        h3 img::title:highlight,
+        h4 img::title:highlight,
+        h5 img::title:highlight,
+        h6 img::title:highlight,
+        body h1:highlight a::title,
+        body h2:highlight a::title,
+        body h3:highlight a::title,
+        body h4:highlight a::title,
+        body h5:highlight a::title,
+        body h6:highlight a::title,
+        body h1:highlight img::title,
+        body h2:highlight img::title,
+        body h3:highlight img::title,
+        body h4:highlight img::title,
+        body h5:highlight img::title,
+        body h6:highlight img::title {
+            color: var(--h-a-img-title-sts4, black);
+        }
+
+        body :highlight a:highlight,
+        body :highlight img:highlight,
+        body :highlight reference:highlight {
+            color: var(--a-img-reference-sts7, black);
+        }
+
+        body :highlight a::tag:highlight,
+        body :highlight img::tag:highlight,
+        body :highlight reference::tag:highlight {
+            color: var(--a-img-reference-tag-sts7, black);
+        }
+
+        body :highlight a::text:highlight,
+        body :highlight img::text:highlight,
+        body :highlight reference::text:highlight {
+            color: var(--a-img-reference-text-sts7, black);
+        }
+
+        body :highlight a::destination:highlight,
+        body :highlight img::destination:highlight,
+        body :highlight reference::destination:highlight {
+            color: var(--a-img-reference-destination-sts7, black);
+        }
+
+        body :highlight a::label:highlight,
+        body :highlight img::label:highlight,
+        body :highlight reference::label:highlight {
+            color: var(--a-img-reference-label-sts7, black);
+        }
+
+        body :highlight a::title:highlight,
+        body :highlight img::title:highlight,
+        body :highlight reference::title:highlight {
+            color: var(--a-img-reference-title-sts7, black);
+        }
+
+        html-block:highlight {
+            color: var(--html-block-sts4, black);
+        }
+
+        attr-bloc::tag:highlight {
+            color: var(--attr-bloc-tag-sts4, black);
+        }
+
+        key-value-attr:highlight,
+        class-attr:highlight,
+        id-attr:highlight,
+        body :highlight key-value-attr,
+        body :highlight class-attr,
+        body :highlight id-attr {
+            color: var(--key-value-attr-class-attr-id-attr-sts4, black);
+        }
+
+        key-value-attr::tag:highlight,
+        class-attr::tag:highlight,
+        id-attr::tag:highlight,
+        body :highlight key-value-attr::tag,
+        body :highlight class-attr::tag,
+        body :highlight id-attr::tag {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts4, black);
+        }
+
+        body :highlight key-value-attr:highlight,
+        body :highlight class-attr:highlight,
+        body :highlight id-attr:highlight {
+            color: var(--key-value-attr-class-attr-id-attr-sts7, black);
+        }
+
+        body :highlight key-value-attr::tag:highlight,
+        body :highlight class-attr::tag:highlight,
+        body :highlight id-attr::tag:highlight {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts7, black);
+        }
+
+        h1:flash,
+        h2:flash,
+        h3:flash,
+        h4:flash,
+        h5:flash,
+        h6:flash {
+            color: var(--h-sts6, black);
+        }
+
+        h1::tag:flash,
+        h2::tag:flash,
+        h3::tag:flash,
+        h4::tag:flash,
+        h5::tag:flash,
+        h6::tag:flash {
+            color: var(--h-tag-sts6, black);
+        }
+
+        p:flash {
+            color: var(--text-sts6, black);
+        }
+
+        hr:flash {
+            color: var(--hr-sts6, black);
+        }
+
+        strong:flash,
+        em:flash,
+        :flash strong,
+        :flash em {
+            color: var(--strong-em-sts6, black);
+        }
+
+        h1 strong:flash,
+        h2 strong:flash,
+        h3 strong:flash,
+        h4 strong:flash,
+        h5 strong:flash,
+        h6 strong:flash,
+        h1 em:flash,
+        h2 em:flash,
+        h3 em:flash,
+        h4 em:flash,
+        h5 em:flash,
+        h6 em:flash,
+        h1:flash strong,
+        h2:flash strong,
+        h3:flash strong,
+        h4:flash strong,
+        h5:flash strong,
+        h6:flash strong,
+        h1:flash em,
+        h2:flash em,
+        h3:flash em,
+        h4:flash em,
+        h5:flash em,
+        h6:flash em {
+            color: var(--h-strong-em-sts6, black);
+        }
+
+        :flash strong::tag,
+        :flash em::tag {
+            color: var(--strong-em-tag-sts6, black);
+        }
+
+        h1:flash strong::tag,
+        h1:flash strong::tag,
+        h1:flash strong::tag,
+        h1:flash strong::tag,
+        h1:flash strong::tag,
+        h1:flash strong::tag,
+        h1:flash em::tag,
+        h1:flash em::tag,
+        h1:flash em::tag,
+        h1:flash em::tag,
+        h1:flash em::tag,
+        h1:flash em::tag {
+            color: var(--h-strong-em-tag-sts6, black);
+        }
+
+
+        s:flash,
+        :flash s {
+            color: var(--s-sts6, black);
+            text-decoration-color: var(--s-strikethrough-sts6, black);
+        }
+
+        h1 s:flash,
+        h2 s:flash,
+        h3 s:flash,
+        h4 s:flash,
+        h5 s:flash,
+        h6 s:flash,
+        h1:flash s,
+        h2:flash s,
+        h3:flash s,
+        h4:flash s,
+        h5:flash s,
+        h6:flash s {
+            color: var(--h-s-sts6, black);
+            text-decoration-color: var(--h-s-strikethrough-sts6, black);
+        }
+
+        :flash s::tag {
+            color: var(--s-tag-sts6, black);
+        }
+
+        h1:flash s::tag,
+        h2:flash s::tag,
+        h3:flash s::tag,
+        h4:flash s::tag,
+        h5:flash s::tag,
+        h6:flash s::tag {
+            color: var(--h-s-tag-sts6, black);
+        }
+
+        blockquote:flash p,
+        :flash blockquote p {
+            color: var(--blockquote-sts6, black);
+        }
+
+        blockquote::tag:flash,
+        :flash blockquote::tag {
+            color: var(--blockquote-tag-sts6, black);
+        }
+
+        ul:flash,
+        :flash ul {
+            color: var(--ul-sts6, black);
+        }
+
+        ol:flash,
+        :flash ol {
+            color: var(--ol-sts6, black);
+        }
+
+        li:flash,
+        :flash li {
+            color: var(--li-sts6, black);
+        }
+
+        li::tag:flash,
+        :flash li::tag {
+            color: var(--li-tag-sts6, black);
+        }
+
+        code:flash,
+        :flash code {
+            color: var(--code-sts6, black);
+        }
+
+        code::tag:flash,
+        :flash code::tag {
+            color: var(--code-tag-sts6, black);
+        }
+
+        code::params:flash,
+        :flash code::params {
+            color: var(--code-params-sts6, black);
+        }
+
+        table:flash {
+            color: var(--table-sts6, black);
+        }
+
+        table::tag:flash {
+            color: var(--table-tag-sts6, black);
+        }
+
+        thead:flash,
+        :flash thead {
+            color: var(--thead-sts6, black);
+        }
+
+        tbody:flash,
+        :flash tbody {
+            color: var(--tbody-sts6, black);
+        }
+
+        a:flash,
+        img:flash,
+        reference:flash,
+        :flash a,
+        :flash img,
+        :flash reference {
+            color: var(--a-img-reference-sts6, black);
+        }
+
+        h1 a:flash,
+        h2 a:flash,
+        h3 a:flash,
+        h4 a:flash,
+        h5 a:flash,
+        h6 a:flash,
+        h1 img:flash,
+        h2 img:flash,
+        h3 img:flash,
+        h4 img:flash,
+        h5 img:flash,
+        h6 img:flash,
+        h1:flash a,
+        h2:flash a,
+        h3:flash a,
+        h4:flash a,
+        h5:flash a,
+        h6:flash a,
+        h1:flash img,
+        h2:flash img,
+        h3:flash img,
+        h4:flash img,
+        h5:flash img,
+        h6:flash img {
+            color: var(--h-a-img-sts6, black);
+        }
+
+        a::tag:flash,
+        img::tag:flash,
+        reference::tag:flash,
+        :flash a::tag,
+        :flash img::tag,
+        :flash reference::tag {
+            color: var(--a-img-reference-tag-sts6, black);
+        }
+
+        h1 a::tag:flash,
+        h2 a::tag:flash,
+        h3 a::tag:flash,
+        h4 a::tag:flash,
+        h5 a::tag:flash,
+        h6 a::tag:flash,
+        h1 img::tag:flash,
+        h2 img::tag:flash,
+        h3 img::tag:flash,
+        h4 img::tag:flash,
+        h5 img::tag:flash,
+        h6 img::tag:flash,
+        h1:flash a::tag,
+        h2:flash a::tag,
+        h3:flash a::tag,
+        h4:flash a::tag,
+        h5:flash a::tag,
+        h6:flash a::tag,
+        h1:flash img::tag,
+        h2:flash img::tag,
+        h3:flash img::tag,
+        h4:flash img::tag,
+        h5:flash img::tag,
+        h6:flash img::tag {
+            color: var(--h-a-img-tag-sts6, black);
+        }
+
+        a::text:flash,
+        img::text:flash,
+        reference::text:flash,
+        :flash a::text,
+        :flash img::text,
+        :flash reference::text {
+            color: var(--a-img-reference-text-sts6, black);
+        }
+
+        h1 a::text:flash,
+        h2 a::text:flash,
+        h3 a::text:flash,
+        h4 a::text:flash,
+        h5 a::text:flash,
+        h6 a::text:flash,
+        h1 img::text:flash,
+        h2 img::text:flash,
+        h3 img::text:flash,
+        h4 img::text:flash,
+        h5 img::text:flash,
+        h6 img::text:flash,
+        h1:flash a::text,
+        h2:flash a::text,
+        h3:flash a::text,
+        h4:flash a::text,
+        h5:flash a::text,
+        h6:flash a::text,
+        h1:flash img::text,
+        h2:flash img::text,
+        h3:flash img::text,
+        h4:flash img::text,
+        h5:flash img::text,
+        h6:flash img::text {
+            color: var(--h-a-img-text-sts6, black);
+        }
+
+        a::destination:flash,
+        img::destination:flash,
+        reference::destination:flash,
+        :flash a::destination,
+        :flash img::destination,
+        :flash reference::destination {
+            color: var(--a-img-reference-destination-sts6, black);
+        }
+
+        h1 a::destination:flash,
+        h2 a::destination:flash,
+        h3 a::destination:flash,
+        h4 a::destination:flash,
+        h5 a::destination:flash,
+        h6 a::destination:flash,
+        h1 img::destination:flash,
+        h2 img::destination:flash,
+        h3 img::destination:flash,
+        h4 img::destination:flash,
+        h5 img::destination:flash,
+        h6 img::destination:flash,
+        h1:flash a::destination,
+        h2:flash a::destination,
+        h3:flash a::destination,
+        h4:flash a::destination,
+        h5:flash a::destination,
+        h6:flash a::destination,
+        h1:flash img::destination,
+        h2:flash img::destination,
+        h3:flash img::destination,
+        h4:flash img::destination,
+        h5:flash img::destination,
+        h6:flash img::destination {
+            color: var(--h-a-img-destination-sts6, black);
+        }
+
+
+        a::label:flash,
+        img::label:flash,
+        reference::label:flash,
+        :flash a::label,
+        :flash img::label,
+        :flash reference::label {
+            color: var(--a-img-reference-label-sts6, black);
+        }
+
+        h1 a::label:flash,
+        h2 a::label:flash,
+        h3 a::label:flash,
+        h4 a::label:flash,
+        h5 a::label:flash,
+        h6 a::label:flash,
+        h1 img::label:flash,
+        h2 img::label:flash,
+        h3 img::label:flash,
+        h4 img::label:flash,
+        h5 img::label:flash,
+        h6 img::label:flash,
+        h1:flash a::label,
+        h2:flash a::label,
+        h3:flash a::label,
+        h4:flash a::label,
+        h5:flash a::label,
+        h6:flash a::label,
+        h1:flash img::label,
+        h2:flash img::label,
+        h3:flash img::label,
+        h4:flash img::label,
+        h5:flash img::label,
+        h6:flash img::label {
+            color: var(--h-a-img-label-sts6, black);
+        }
+
+        a::title:flash,
+        img::title:flash,
+        reference::title:flash,
+        :flash a::title,
+        :flash img::title,
+        :flash reference::title {
+            color: var(--a-img-reference-title-sts6, black);
+        }
+
+        h1 a::title:flash,
+        h2 a::title:flash,
+        h3 a::title:flash,
+        h4 a::title:flash,
+        h5 a::title:flash,
+        h6 a::title:flash,
+        h1 img::title:flash,
+        h2 img::title:flash,
+        h3 img::title:flash,
+        h4 img::title:flash,
+        h5 img::title:flash,
+        h6 img::title:flash,
+        h1:flash a::title,
+        h2:flash a::title,
+        h3:flash a::title,
+        h4:flash a::title,
+        h5:flash a::title,
+        h6:flash a::title,
+        h1:flash img::title,
+        h2:flash img::title,
+        h3:flash img::title,
+        h4:flash img::title,
+        h5:flash img::title,
+        h6:flash img::title {
+            color: var(--h-a-img-title-sts6, black);
+        }
+
+        html-block:flash {
+            color: var(--html-block-sts6, black);
+        }
+
+        attr-bloc::tag:flash {
+            color: var(--attr-bloc-tag-sts6, black);
+        }
+
+        key-value-attr:flash ,
+        class-attr:flash,
+        id-attr:flash,
+        :flash key-value-attr,
+        :flash class-attr,
+        :flash id-attr {
+            color: var(--key-value-attr-class-attr-id-attr-sts6, black);
+        }
+
+        key-value-attr::tag:flash,
+        class-attr::tag:flash,
+        id-attr::tag:flash,
+        :flash key-value-attr::tag,
+        :flash class-attr::tag,
+        :flash id-attr::tag {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts6, black);
+        }
+
+        h1:fade,
+        h2:fade,
+        h3:fade,
+        h4:fade,
+        h5:fade,
+        h6:fade {
+            color: var(--h-sts1, black);
+        }
+
+        h1::tag:fade,
+        h2::tag:fade,
+        h3::tag:fade,
+        h4::tag:fade,
+        h5::tag:fade,
+        h6::tag:fade {
+            color: var(--h-tag-sts1, black);
+        }
+
+        p:fade {
+            color: var(--text-sts1, black);
+        }
+
+        hr:fade {
+            color: var(--hr-sts1, black);
+        }
+
+        h1 strong:fade,
+        h2 strong:fade,
+        h3 strong:fade,
+        h4 strong:fade,
+        h5 strong:fade,
+        h6 strong:fade,
+        h1 em:fade,
+        h2 em:fade,
+        h3 em:fade,
+        h4 em:fade,
+        h5 em:fade,
+        h6 em:fade,
+        h1:fade strong,
+        h2:fade strong,
+        h3:fade strong,
+        h4:fade strong,
+        h5:fade strong,
+        h6:fade strong,
+        h1:fade em,
+        h2:fade em,
+        h3:fade em,
+        h4:fade em,
+        h5:fade em,
+        h6:fade em {
+            color: var(--h-strong-em-sts1, black);
+        }
+
+        strong:fade,
+        em:fade,
+        :fade strong,
+        :fade em  {
+            color: var(--strong-em-sts1, black);
+        }
+
+        h1 strong:fade,
+        h2 strong:fade,
+        h3 strong:fade,
+        h4 strong:fade,
+        h5 strong:fade,
+        h6 strong:fade,
+        h1 em:fade,
+        h2 em:fade,
+        h3 em:fade,
+        h4 em:fade,
+        h5 em:fade,
+        h6 em:fade,
+        h1 :fade strong,
+        h2 :fade strong,
+        h3 :fade strong,
+        h4 :fade strong,
+        h5 :fade strong,
+        h6 :fade strong,
+        h1:fade em,
+        h2:fade em,
+        h3:fade em,
+        h4:fade em,
+        h5:fade em,
+        h6:fade em {
+            color: var(--h-strong-em-sts1, black);
+        }
+
+
+        s:fade,
+        :fade s {
+            color: var(--s-sts1, black);
+            text-decoration-color: var(--s-strikethrough-sts1, black);
+        }
+
+        h1 s:fade,
+        h2 s:fade,
+        h3 s:fade,
+        h4 s:fade,
+        h5 s:fade,
+        h6 s:fade,
+        h1:fade s,
+        h2:fade s,
+        h3:fade s,
+        h4:fade s,
+        h5:fade s,
+        h6:fade s {
+            color: var(--h-s-sts1, black);
+            text-decoration-color: var(--h-s-strikethrough-sts1, black);
+        }
+
+
+        :fade strong::tag,
+        :fade em::tag {
+            color: var(--strong-em-tag-sts1, black);
+        }
+
+        h1:fade strong::tag,
+        h2:fade strong::tag,
+        h3:fade strong::tag,
+        h4:fade strong::tag,
+        h5:fade strong::tag,
+        h6:fade strong::tag,
+        h1:fade em::tag,
+        h2:fade em::tag,
+        h3:fade em::tag,
+        h4:fade em::tag,
+        h5:fade em::tag,
+        h6:fade em::tag {
+            color: var(--h-strong-em-tag-sts1, black);
+        }
+
+        :fade s::tag {
+            color: var(--s-tag-sts1, black);
+        }
+
+        h1:fade s::tag,
+        h2:fade s::tag,
+        h3:fade s::tag,
+        h4:fade s::tag,
+        h5:fade s::tag,
+        h6:fade s::tag {
+            color: var(--h-s-tag-sts1, black);
+        }
+
+        blockquote:fade p,
+        :fade blockquote p {
+            color: var(--blockquote-sts1, black);
+        }
+
+        blockquote::tag:fade,
+        :fade blockquote::tag  {
+            color: var(--blockquote-tag-sts1, black);
+        }
+
+        ul:fade,
+        :fade ul {
+            color: var(--ul-sts1, black);
+        }
+
+        ol:fade,
+        :fade ol {
+            color: var(--ol-sts1, black);
+        }
+
+        li:fade,
+        :fade li {
+            color: var(--li-sts1, black);
+        }
+
+        li::tag:fade,
+        :fade li::tag {
+            color: var(--li-tag-sts1, black);
+        }
+
+        code:fade,
+        :fade code {
+            color: var(--code-sts1, black);
+        }
+
+        code::tag:fade,
+        :fade code::tag {
+            color: var(--code-tag-sts1, black);
+        }
+
+        code::params:fade,
+        :fade code::params {
+            color: var(--code-params-sts1, black);
+        }
+
+        table:fade {
+            color: var(--table-sts1, black);
+        }
+
+        table::tag:fade {
+            color: var(--table-tag-sts1, black);
+        }
+
+        thead:fade,
+        :fade thead {
+            color: var(--thead-sts1, black);
+        }
+
+        tbody:fade,
+        :fade tbody {
+            color: var(--tbody-sts1, black);
+        }
+
+        a:fade,
+        img:fade,
+        reference:fade,
+        :fade a,
+        :fade img,
+        :fade reference {
+            color: var(--a-img-reference-sts1, black);
+        }
+
+        h1 a:fade,
+        h2 a:fade,
+        h3 a:fade,
+        h4 a:fade,
+        h5 a:fade,
+        h6 a:fade,
+        h1 img:fade,
+        h2 img:fade,
+        h3 img:fade,
+        h4 img:fade,
+        h5 img:fade,
+        h6 img:fade,
+        h1:fade a,
+        h2:fade a,
+        h3:fade a,
+        h4:fade a,
+        h5:fade a,
+        h6:fade a,
+        h1:fade img,
+        h2:fade img,
+        h3:fade img,
+        h4:fade img,
+        h5:fade img,
+        h6:fade img {
+            color: var(--h-a-img-sts1, black);
+        }
+
+        a::tag:fade,
+        img::tag:fade,
+        reference::tag:fade,
+        :fade a::tag,
+        :fade img::tag,
+        :fade reference::tag {
+            color: var(--a-img-reference-tag-sts1, black);
+        }
+
+        h1 a::tag:fade,
+        h2 a::tag:fade,
+        h3 a::tag:fade,
+        h4 a::tag:fade,
+        h5 a::tag:fade,
+        h6 a::tag:fade,
+        h1 img::tag:fade,
+        h2 img::tag:fade,
+        h3 img::tag:fade,
+        h4 img::tag:fade,
+        h5 img::tag:fade,
+        h6 img::tag:fade,
+        h1:fade a::tag,
+        h2:fade a::tag,
+        h3:fade a::tag,
+        h4:fade a::tag,
+        h5:fade a::tag,
+        h6:fade a::tag,
+        h1:fade img::tag,
+        h2:fade img::tag,
+        h3:fade img::tag,
+        h4:fade img::tag,
+        h5:fade img::tag,
+        h6:fade img::tag {
+            color: var(--h-a-img-tag-sts1, black);
+        }
+
+        a::text:fade,
+        img::text:fade,
+        reference::text:fade,
+        :fade a::text,
+        :fade img::text,
+        :fade reference::text {
+            color: var(--a-img-reference-text-sts1, black);
+        }
+
+        h1 a::text:fade,
+        h2 a::text:fade,
+        h3 a::text:fade,
+        h4 a::text:fade,
+        h5 a::text:fade,
+        h6 a::text:fade,
+        h1 img::text:fade,
+        h2 img::text:fade,
+        h3 img::text:fade,
+        h4 img::text:fade,
+        h5 img::text:fade,
+        h6 img::text:fade,
+        h1:fade a::text,
+        h2:fade a::text,
+        h3:fade a::text,
+        h4:fade a::text,
+        h5:fade a::text,
+        h6:fade a::text,
+        h1:fade img::text,
+        h2:fade img::text,
+        h3:fade img::text,
+        h4:fade img::text,
+        h5:fade img::text,
+        h6:fade img::text {
+            color: var(--h-a-img-text-sts1, black);
+        }
+
+        a::destination:fade,
+        img::destination:fade,
+        reference::destination:fade,
+        :fade a::destination,
+        :fade img::destination,
+        :fade reference::destination {
+            color: var(--a-img-reference-destination-sts1, black);
+        }
+
+        h1 a::destination:fade,
+        h2 a::destination:fade,
+        h3 a::destination:fade,
+        h4 a::destination:fade,
+        h5 a::destination:fade,
+        h6 a::destination:fade,
+        h1 img::destination:fade,
+        h2 img::destination:fade,
+        h3 img::destination:fade,
+        h4 img::destination:fade,
+        h5 img::destination:fade,
+        h6 img::destination:fade,
+        h1:fade a::destination,
+        h2:fade a::destination,
+        h3:fade a::destination,
+        h4:fade a::destination,
+        h5:fade a::destination,
+        h6:fade a::destination,
+        h1:fade img::destination,
+        h2:fade img::destination,
+        h3:fade img::destination,
+        h4:fade img::destination,
+        h5:fade img::destination,
+        h6:fade img::destination {
+            color: var(--h-a-img-destination-sts1, black);
+        }
+
+        a::label:fade,
+        img::label:fade,
+        reference::label:fade,
+        :fade a::label,
+        :fade img::label,
+        :fade reference::label {
+            color: var(--a-img-reference-label-sts1, black);
+        }
+
+        h1 a::label:fade,
+        h2 a::label:fade,
+        h3 a::label:fade,
+        h4 a::label:fade,
+        h5 a::label:fade,
+        h6 a::label:fade,
+        h1 img::label:fade,
+        h2 img::label:fade,
+        h3 img::label:fade,
+        h4 img::label:fade,
+        h5 img::label:fade,
+        h6 img::label:fade,
+        h1:fade a::label,
+        h2:fade a::label,
+        h3:fade a::label,
+        h4:fade a::label,
+        h5:fade a::label,
+        h6:fade a::label,
+        h1:fade img::label,
+        h2:fade img::label,
+        h3:fade img::label,
+        h4:fade img::label,
+        h5:fade img::label,
+        h6:fade img::label {
+            color: var(--h-a-img-label-sts1, black);
+        }
+
+        a::title:fade,
+        img::title:fade,
+        reference::title:fade,
+        :fade a::title,
+        :fade img::title,
+        :fade reference::title {
+            color: var(--a-img-reference-title-sts1, black);
+        }
+
+        h1 a::title:fade,
+        h2 a::title:fade,
+        h3 a::title:fade,
+        h4 a::title:fade,
+        h5 a::title:fade,
+        h6 a::title:fade,
+        h1 img::title:fade,
+        h2 img::title:fade,
+        h3 img::title:fade,
+        h4 img::title:fade,
+        h5 img::title:fade,
+        h6 img::title:fade,
+        h1:fade a::title,
+        h2:fade a::title,
+        h3:fade a::title,
+        h4:fade a::title,
+        h5:fade a::title,
+        h6:fade a::title,
+        h1:fade img::title,
+        h2:fade img::title,
+        h3:fade img::title,
+        h4:fade img::title,
+        h5:fade img::title,
+        h6:fade img::title {
+            color: var(--h-a-img-title-sts1, black);
+        }
+
+        html-block:fade {
+            color: var(--html-block-sts1, black);
+        }
+
+        attr-bloc::tag:fade {
+            color: var(--attr-bloc-tag-sts1, black);
+        }
+
+        key-value-attr:fade,
+        class-attr:fade,
+        id-attr:fade,
+        :fade key-value-attr,
+        :fade class-attr,
+        :fade id-attr {
+            color: var(--key-value-attr-class-attr-id-attr-sts1, black);
+        }
+
+        key-value-attr::tag:fade,
+        class-attr::tag:fade,
+        id-attr::tag:fade,
+        :fade key-value-attr::tag,
+        :fade class-attr::tag,
+        :fade id-attr::tag {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts1, black);
+        }
+
+        h1:focus,
+        h2:focus,
+        h3:focus,
+        h4:focus,
+        h5:focus,
+        h6:focus {
+            color: var(--h-sts5, black);
+        }
+
+        h1::tag:focus,
+        h2::tag:focus,
+        h3::tag:focus,
+        h4::tag:focus,
+        h5::tag:focus,
+        h6::tag:focus {
+            color: var(--h-tag-sts5, black);
+        }
+
+        p:focus {
+            color: var(--text-sts5, black);
+        }
+
+        hr:focus {
+            color: var(--hr-sts5, black);
+        }
+
+        strong:focus,
+        em:focus,
+        :focus strong,
+        :focus em {
+            color: var(--strong-em-sts5, black);
+        }
+
+        h1 strong:focus,
+        h2 strong:focus,
+        h3 strong:focus,
+        h4 strong:focus,
+        h5 strong:focus,
+        h6 strong:focus,
+        h1 em:focus,
+        h2 em:focus,
+        h3 em:focus,
+        h4 em:focus,
+        h5 em:focus,
+        h6 em:focus,
+        h1:focus strong,
+        h2:focus strong,
+        h3:focus strong,
+        h4:focus strong,
+        h5:focus strong,
+        h6:focus strong,
+        h1:focus em,
+        h2:focus em,
+        h3:focus em,
+        h4:focus em,
+        h5:focus em,
+        h6:focus em {
+            color: var(--h-strong-em-sts5, black);
+        }
+
+        s:focus,
+        :focus s {
+            color: var(--s-sts5, black);
+            text-decoration-color: var(--s-strikethrough-sts5, black);
+        }
+
+        h1 s:focus,
+        h2 s:focus,
+        h3 s:focus,
+        h4 s:focus,
+        h5 s:focus,
+        h6 s:focus,
+        h1:focus s,
+        h2:focus s,
+        h3:focus s,
+        h4:focus s,
+        h5:focus s,
+        h6:focus s {
+            color: var(--h-s-sts5, black);
+            text-decoration-color: var(--h-s-strikethrough-sts5, black);
+        }
+
+        :focus strong::tag,
+        :focus em::tag {
+            color: var(--strong-em-tag-sts5, black);
+        }
+
+        h1:focus strong::tag,
+        h2:focus strong::tag,
+        h3:focus strong::tag,
+        h4:focus strong::tag,
+        h5:focus strong::tag,
+        h6:focus strong::tag,
+        h1:focus em::tag,
+        h2:focus em::tag,
+        h3:focus em::tag,
+        h4:focus em::tag,
+        h5:focus em::tag,
+        h6:focus em::tag {
+            color: var(--h-strong-em-tag-sts5, black);
+        }
+
+        :focus s::tag {
+            color: var(--s-tag-sts5, black);
+        }
+
+        h1:focus s::tag,
+        h2:focus s::tag,
+        h3:focus s::tag,
+        h4:focus s::tag,
+        h5:focus s::tag,
+        h6:focus s::tag {
+            color: var(--h-s-tag-sts5, black);
+        }
+
+        blockquote:focus p,
+        :focus blockquote p {
+            color: var(--blockquote-sts5, black);
+        }
+
+        blockquote::tag:focus,
+        :focus blockquote::tag {
+            color: var(--blockquote-tag-sts5, black);
+        }
+
+        ul:focus,
+        :focus ul {
+            color: var(--ul-sts5, black);
+        }
+
+        ol:focus,
+        :focus ol {
+            color: var(--ol-sts5, black);
+        }
+
+        li:focus,
+        :focus li {
+            color: var(--li-sts5, black);
+        }
+
+        li::tag:focus,
+        :focus li::tag {
+            color: var(--li-tag-sts5, black);
+        }
+
+        code:focus,
+        :focus code {
+            color: var(--code-sts5, black);
+        }
+
+        code::tag:focus,
+        :focus code::tag {
+            color: var(--code-tag-sts5, black);
+        }
+
+        code::params:focus,
+        :focus code::params {
+            color: var(--code-params-sts5, black);
+        }
+
+        table:focus {
+            color: var(--table-sts5, black);
+        }
+
+        table::tag:focus {
+            color: var(--table-tag-sts5, black);
+        }
+
+        thead:focus,
+        :focus thead {
+            color: var(--thead-sts5, black);
+        }
+
+        tbody:focus,
+        :focus tbody {
+            color: var(--tbody-sts5, black);
+        }
+
+        a:focus,
+        img:focus,
+        reference:focus,
+        :focus a,
+        :focus img,
+        :focus reference {
+            color: var(--a-img-reference-sts5, black);
+        }
+
+        h1 a:focus,
+        h2 a:focus,
+        h3 a:focus,
+        h4 a:focus,
+        h5 a:focus,
+        h6 a:focus,
+        h1 img:focus,
+        h2 img:focus,
+        h3 img:focus,
+        h4 img:focus,
+        h5 img:focus,
+        h6 img:focus,
+        h1:focus a,
+        h2:focus a,
+        h3:focus a,
+        h4:focus a,
+        h5:focus a,
+        h6:focus a,
+        h1:focus img,
+        h2:focus img,
+        h3:focus img,
+        h4:focus img,
+        h5:focus img,
+        h6:focus img {
+            color: var(--h-a-img-sts5, black);
+        }
+
+        a::tag:focus,
+        img::tag:focus,
+        reference::tag:focus,
+        :focus a::tag,
+        :focus img::tag,
+        :focus reference::tag {
+            color: var(--a-img-reference-tag-sts5, black);
+        }
+
+        h1 a::tag:focus,
+        h2 a::tag:focus,
+        h3 a::tag:focus,
+        h4 a::tag:focus,
+        h5 a::tag:focus,
+        h6 a::tag:focus,
+        h1 img::tag:focus,
+        h2 img::tag:focus,
+        h3 img::tag:focus,
+        h4 img::tag:focus,
+        h5 img::tag:focus,
+        h6 img::tag:focus,
+        h1:focus a::tag,
+        h2:focus a::tag,
+        h3:focus a::tag,
+        h4:focus a::tag,
+        h5:focus a::tag,
+        h6:focus a::tag,
+        h1:focus img::tag,
+        h2:focus img::tag,
+        h3:focus img::tag,
+        h4:focus img::tag,
+        h5:focus img::tag,
+        h6:focus img::tag {
+            color: var(--h-a-img-tag-sts5, black);
+        }
+
+        a::text:focus,
+        img::text:focus,
+        reference::text:focus,
+        :focus a::text,
+        :focus img::text,
+        :focus reference::text {
+            color: var(--a-img-reference-text-sts5, black);
+        }
+
+        h1 a::text:focus,
+        h2 a::text:focus,
+        h3 a::text:focus,
+        h4 a::text:focus,
+        h5 a::text:focus,
+        h6 a::text:focus,
+        h1 img::text:focus,
+        h2 img::text:focus,
+        h3 img::text:focus,
+        h4 img::text:focus,
+        h5 img::text:focus,
+        h6 img::text:focus,
+        h1:focus a::text,
+        h2:focus a::text,
+        h3:focus a::text,
+        h4:focus a::text,
+        h5:focus a::text,
+        h6:focus a::text,
+        h1:focus img::text,
+        h2:focus img::text,
+        h3:focus img::text,
+        h4:focus img::text,
+        h5:focus img::text,
+        h6:focus img::text {
+            color: var(--h-a-img-text-sts5, black);
+        }
+
+        a::destination:focus,
+        img::destination:focus,
+        reference::destination:focus,
+        :focus a::destination,
+        :focus img::destination,
+        :focus reference::destination {
+            color: var(--a-img-reference-destination-sts5, black);
+        }
+
+        h1 a::destination:focus,
+        h2 a::destination:focus,
+        h3 a::destination:focus,
+        h4 a::destination:focus,
+        h5 a::destination:focus,
+        h6 a::destination:focus,
+        h1 img::destination:focus,
+        h2 img::destination:focus,
+        h3 img::destination:focus,
+        h4 img::destination:focus,
+        h5 img::destination:focus,
+        h6 img::destination:focus,
+        h1:focus a::destination,
+        h2:focus a::destination,
+        h3:focus a::destination,
+        h4:focus a::destination,
+        h5:focus a::destination,
+        h6:focus a::destination,
+        h1:focus img::destination,
+        h2:focus img::destination,
+        h3:focus img::destination,
+        h4:focus img::destination,
+        h5:focus img::destination,
+        h6:focus img::destination {
+            color: var(--h-a-img-destination-sts5, black);
+        }
+
+        a::label:focus,
+        img::label:focus,
+        reference::label:focus,
+        :focus a::label,
+        :focus img::label,
+        :focus reference::label {
+            color: var(--a-img-reference-label-sts5, black);
+        }
+
+        h1 a::label:focus,
+        h2 a::label:focus,
+        h3 a::label:focus,
+        h4 a::label:focus,
+        h5 a::label:focus,
+        h6 a::label:focus,
+        h1 img::label:focus,
+        h2 img::label:focus,
+        h3 img::label:focus,
+        h4 img::label:focus,
+        h5 img::label:focus,
+        h6 img::label:focus,
+        h1:focus a::label,
+        h2:focus a::label,
+        h3:focus a::label,
+        h4:focus a::label,
+        h5:focus a::label,
+        h6:focus a::label,
+        h1:focus img::label,
+        h2:focus img::label,
+        h3:focus img::label,
+        h4:focus img::label,
+        h5:focus img::label,
+        h6:focus img::label {
+            color: var(--h-a-img-label-sts5, black);
+        }
+
+        a::title:focus,
+        img::title:focus,
+        reference::title:focus,
+        :focus a::title,
+        :focus img::title,
+        :focus reference::title {
+            color: var(--a-img-reference-title-sts5, black);
+        }
+
+        h1 a::title:focus,
+        h2 a::title:focus,
+        h3 a::title:focus,
+        h4 a::title:focus,
+        h5 a::title:focus,
+        h6 a::title:focus,
+        h1 img::title:focus,
+        h2 img::title:focus,
+        h3 img::title:focus,
+        h4 img::title:focus,
+        h5 img::title:focus,
+        h6 img::title:focus,
+        h1:focus a::title,
+        h2:focus a::title,
+        h3:focus a::title,
+        h4:focus a::title,
+        h5:focus a::title,
+        h6:focus a::title,
+        h1:focus img::title,
+        h2:focus img::title,
+        h3:focus img::title,
+        h4:focus img::title,
+        h5:focus img::title,
+        h6:focus img::title {
+            color: var(--h-a-img-title-sts5, black);
+        }
+
+        html-block:focus {
+            color: var(--html-block-sts5, black);
+        }
+
+        attr-bloc::tag:focus {
+            color: var(--attr-bloc-tag-sts5, black);
+        }
+
+        key-value-attr:focus,
+        class-attr:focus,
+        id-attr:focus,
+        :focus key-value-attr,
+        :focus class-attr,
+        :focus id-attr {
+            color: var(--key-value-attr-class-attr-id-attr-sts5, black);
+        }
+
+        key-value-attr::tag:focus,
+        class-attr::tag:focus,
+        id-attr::tag:focus,
+        :focus key-value-attr::tag,
+        :focus class-attr::tag,
+        :focus id-attr::tag {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts5, black);
+        }
+
+        h1:highlight:fade,
+        h2:highlight:fade,
+        h3:highlight:fade,
+        h4:highlight:fade,
+        h5:highlight:fade,
+        h6:highlight:fade {
+            color: var(--h-sts2, black);
+        }
+
+        h1::tag:highlight:fade,
+        h2::tag:highlight:fade,
+        h3::tag:highlight:fade,
+        h4::tag:highlight:fade,
+        h5::tag:highlight:fade,
+        h6::tag:highlight:fade {
+            color: var(--h-tag-sts2, black);
+        }
+
+        p:highlight:fade {
+            color: var(--text-sts2, black);
+        }
+
+        hr:highlight:fade {
+            color: var(--hr-sts2, black);
+        }
+
+        strong:highlight:fade,
+        em:highlight:fade,
+        body :highlight strong:fade,
+        body :highlight em:fade {
+            color: var(--strong-em-sts2, black);
+        }
+
+        h1 strong:highlight:fade,
+        h2 strong:highlight:fade,
+        h3 strong:highlight:fade,
+        h4 strong:highlight:fade,
+        h5 strong:highlight:fade,
+        h6 strong:highlight:fade,
+        h1 em:highlight:fade,
+        h2 em:highlight:fade,
+        h3 em:highlight:fade,
+        h4 em:highlight:fade,
+        h5 em:highlight:fade,
+        h6 em:highlight:fade,
+        body h1:highlight strong:fade,
+        body h2:highlight strong:fade,
+        body h3:highlight strong:fade,
+        body h4:highlight strong:fade,
+        body h5:highlight strong:fade,
+        body h6:highlight strong:fade,
+        body h1:highlight em:fade,
+        body h2:highlight em:fade,
+        body h3:highlight em:fade,
+        body h4:highlight em:fade,
+        body h5:highlight em:fade,
+        body h6:highlight em:fade {
+            color: var(--h-strong-em-sts2, black);
+        }
+
+        s:highlight:fade,
+        body :highlight s:fade {
+            color: var(--s-sts2, black);
+            text-decoration-color: var(--s-strikethrough-sts2, black);
+        }
+
+        h1 s:highlight:fade,
+        h2 s:highlight:fade,
+        h3 s:highlight:fade,
+        h4 s:highlight:fade,
+        h5 s:highlight:fade,
+        h6 s:highlight:fade,
+        body h1:highlight s:fade,
+        body h2:highlight s:fade,
+        body h3:highlight s:fade,
+        body h4:highlight s:fade,
+        body h5:highlight s:fade,
+        body h6:highlight s:fade {
+            color: var(--h-s-sts2, black);
+            text-decoration-color: var(--h-s-strikethrough-sts2, black);
+        }
+
+        strong::tag:highlight:fade,
+        em::tag:highlight:fade,
+        body :highlight strong::tag:fade,
+        body :highlight em::tag:fade {
+            color: var(--strong-em-tag-sts2, black);
+        }
+
+        h1 strong::tag:highlight:fade,
+        h2 strong::tag:highlight:fade,
+        h3 strong::tag:highlight:fade,
+        h4 strong::tag:highlight:fade,
+        h5 strong::tag:highlight:fade,
+        h6 strong::tag:highlight:fade,
+        h1 em::tag:highlight:fade,
+        h2 em::tag:highlight:fade,
+        h3 em::tag:highlight:fade,
+        h4 em::tag:highlight:fade,
+        h5 em::tag:highlight:fade,
+        h6 em::tag:highlight:fade,
+        body h1:highlight strong::tag:fade,
+        body h2:highlight strong::tag:fade,
+        body h3:highlight strong::tag:fade,
+        body h4:highlight strong::tag:fade,
+        body h5:highlight strong::tag:fade,
+        body h6:highlight strong::tag:fade,
+        body h1:highlight em::tag:fade,
+        body h2:highlight em::tag:fade,
+        body h3:highlight em::tag:fade,
+        body h4:highlight em::tag:fade,
+        body h5:highlight em::tag:fade,
+        body h6:highlight em::tag:fade {
+            color: var(--h-strong-em-tag-sts2, black);
+        }
+
+        s::tag:highlight:fade,
+        body :highlight s::tag:fade {
+            color: var(--s-tag-sts2, black);
+        }
+
+        h1 s::tag:highlight:fade,
+        h2 s::tag:highlight:fade,
+        h3 s::tag:highlight:fade,
+        h4 s::tag:highlight:fade,
+        h5 s::tag:highlight:fade,
+        h6 s::tag:highlight:fade,
+        body h1:highlight s::tag:fade,
+        body h2:highlight s::tag:fade,
+        body h3:highlight s::tag:fade,
+        body h4:highlight s::tag:fade,
+        body h5:highlight s::tag:fade,
+        body h6:highlight s::tag:fade {
+            color: var(--h-s-tag-sts2, black);
+        }
+
+        body :highlight strong:highlight:fade,
+        body :highlight em:highlight:fade {
+            color: var(--strong-em-sts2, black);
+        }
+
+        body h1:highlight strong:highlight:fade,
+        body h2:highlight strong:highlight:fade,
+        body h3:highlight strong:highlight:fade,
+        body h4:highlight strong:highlight:fade,
+        body h5:highlight strong:highlight:fade,
+        body h6:highlight strong:highlight:fade,
+        body h1:highlight em:highlight:fade,
+        body h2:highlight em:highlight:fade,
+        body h3:highlight em:highlight:fade,
+        body h4:highlight em:highlight:fade,
+        body h5:highlight em:highlight:fade,
+        body h6:highlight em:highlight:fade {
+            color: var(--h-strong-em-sts2, black);
+        }
+
+
+        body :highlight s:highlight:fade {
+            color: var(--s-sts2, black);
+            text-decoration-color: var(--s-strikethrough-sts2, black);
+        }
+
+        body h1:highlight s:highlight:fade,
+        body h2:highlight s:highlight:fade,
+        body h3:highlight s:highlight:fade,
+        body h4:highlight s:highlight:fade,
+        body h5:highlight s:highlight:fade,
+        body h6:highlight s:highlight:fade {
+            color: var(--h-s-sts2, black);
+            text-decoration-color: var(--h-s-strikethrough-sts2, black);
+        }
+
+        body :highlight strong::tag:highlight:fade,
+        body :highlight em::tag:highlight:fade {
+            color: var(--strong-em-tag-sts2, black);
+        }
+
+        body h1:highlight strong::tag:highlight:fade,
+        body h2:highlight strong::tag:highlight:fade,
+        body h3:highlight strong::tag:highlight:fade,
+        body h4:highlight strong::tag:highlight:fade,
+        body h5:highlight strong::tag:highlight:fade,
+        body h6:highlight strong::tag:highlight:fade,
+        body h1:highlight em::tag:highlight:fade,
+        body h2:highlight em::tag:highlight:fade,
+        body h3:highlight em::tag:highlight:fade,
+        body h4:highlight em::tag:highlight:fade,
+        body h5:highlight em::tag:highlight:fade,
+        body h6:highlight em::tag:highlight:fade {
+            color: var(--h-strong-em-tag-sts2, black);
+        }
+
+        body :highlight s::tag:highlight:fade {
+            color: var(--s-tag-sts2, black);
+        }
+
+        body h1:highlight s::tag:highlight:fade,
+        body h2:highlight s::tag:highlight:fade,
+        body h3:highlight s::tag:highlight:fade,
+        body h4:highlight s::tag:highlight:fade,
+        body h5:highlight s::tag:highlight:fade,
+        body h6:highlight s::tag:highlight:fade {
+            color: var(--h-s-tag-sts2, black);
+        }
+
+        blockquote:highlight:fade p {
+            color: var(--blockquote-sts2, black);
+        }
+
+        blockquote::tag:highlight:fade,
+        body :highlight blockquote::tag:fade {
+            color: var(--blockquote-tag-sts2, black);
+        }
+
+        blockquote:highlight:fade p {
+            color: var(--blockquote-sts2, black);
+        }
+
+        body :highlight blockquote::tag:highlight:fade p {
+            color: var(--blockquote-tag-sts2, black);
+        }
+
+        ul:highlight:fade,
+        body :highlight ul:fade {
+            color: var(--ul-sts2, black);
+        }
+
+        ol:highlight:fade,
+        body :highlight ol:fade {
+            color: var(--ol-sts2, black);
+        }
+
+        li:highlight:fade,
+        body :highlight li:fade {
+            color: var(--li-sts2, black);
+        }
+
+        li::tag:highlight:fade,
+        body :highlight li::tag:fade {
+            color: var(--li-tag-sts2, black);
+        }
+
+        body :highlight ul:highlight:fade {
+            color: var(--ul-sts2, black);
+        }
+
+        body :highlight ol:highlight:fade {
+            color: var(--ol-sts2, black);
+        }
+
+        body :highlight li:highlight:fade {
+            color: var(--li-sts2, black);
+        }
+
+        body :highlight li::tag:highlight:fade {
+            color: var(--li-tag-sts2, black);
+        }
+
+        code:highlight:fade,
+        body :highlight code:fade {
+            color: var(--code-sts2, black);
+        }
+
+        code::tag:highlight:fade,
+        body :highlight code::tag:fade {
+            color: var(--code-tag-sts2, black);
+        }
+
+        code::params:highlight:fade,
+        body :highlight code::params:fade {
+            color: var(--code-params-sts2, black);
+        }
+
+        body :highlight code:highlight:fade {
+            color: var(--code-sts2, black);
+        }
+
+        body :highlight code::tag:highlight:fade {
+            color: var(--code-tag-sts2, black);
+        }
+
+        body :highlight code::params:highlight:fade {
+            color: var(--code-params-sts2, black);
+        }
+
+        table:highlight:fade {
+            color: var(--table-sts2, black);
+        }
+
+        table::tag:highlight:fade {
+            color: var(--table-tag-sts2, black);
+        }
+
+        thead:highlight:fade,
+        body :highlight thead:fade {
+            color: var(--thead-sts2, black);
+        }
+
+        tbody:highlight:fade,
+        body :highlight tbody:fade {
+            color: var(--tbody-sts2, black);
+        }
+
+        body :highlight thead:highlight:fade {
+            color: var(--thead-sts2, black);
+        }
+
+        body :highlight tbody:highlight:fade {
+            color: var(--tbody-sts2, black);
+        }
+
+        a:highlight:fade,
+        img:highlight:fade,
+        reference:highlight:fade,
+        body :highlight a:fade,
+        body :highlight img:fade,
+        body :highlight reference:fade {
+            color: var(--a-img-reference-sts2, black);
+        }
+
+        h1 a:highlight:fade,
+        h2 a:highlight:fade,
+        h3 a:highlight:fade,
+        h4 a:highlight:fade,
+        h5 a:highlight:fade,
+        h6 a:highlight:fade,
+        h1 img:highlight:fade,
+        h2 img:highlight:fade,
+        h3 img:highlight:fade,
+        h4 img:highlight:fade,
+        h5 img:highlight:fade,
+        h6 img:highlight:fade,
+        body h1:highlight a:fade,
+        body h2:highlight a:fade,
+        body h3:highlight a:fade,
+        body h4:highlight a:fade,
+        body h5:highlight a:fade,
+        body h6:highlight a:fade,
+        body h1:highlight img:fade,
+        body h2:highlight img:fade,
+        body h3:highlight img:fade,
+        body h4:highlight img:fade,
+        body h5:highlight img:fade,
+        body h6:highlight img:fade {
+            color: var(--h-a-img-sts2, black);
+        }
+
+        a::tag:highlight:fade,
+        img::tag:highlight:fade,
+        reference::tag:highlight:fade,
+        body :highlight a::tag:fade,
+        body :highlight img::tag:fade,
+        body :highlight reference::tag:fade {
+            color: var(--a-img-reference-tag-sts2, black);
+        }
+
+        h1 a::tag:highlight:fade,
+        h2 a::tag:highlight:fade,
+        h3 a::tag:highlight:fade,
+        h4 a::tag:highlight:fade,
+        h5 a::tag:highlight:fade,
+        h6 a::tag:highlight:fade,
+        h1 img::tag:highlight:fade,
+        h2 img::tag:highlight:fade,
+        h3 img::tag:highlight:fade,
+        h4 img::tag:highlight:fade,
+        h5 img::tag:highlight:fade,
+        h6 img::tag:highlight:fade,
+        body h1:highlight a::tag:fade,
+        body h2:highlight a::tag:fade,
+        body h3:highlight a::tag:fade,
+        body h4:highlight a::tag:fade,
+        body h5:highlight a::tag:fade,
+        body h6:highlight a::tag:fade,
+        body h1:highlight img::tag:fade,
+        body h2:highlight img::tag:fade,
+        body h3:highlight img::tag:fade,
+        body h4:highlight img::tag:fade,
+        body h5:highlight img::tag:fade,
+        body h6:highlight img::tag:fade {
+            color: var(--h-a-img-tag-sts2, black);
+        }
+
+        a::text:highlight:fade,
+        img::text:highlight:fade,
+        reference::text:highlight:fade,
+        body :highlight a::text:fade,
+        body :highlight img::text:fade,
+        body :highlight reference::text:fade {
+            color: var(--a-img-reference-text-sts2, black);
+        }
+
+        h1 a::text:highlight:fade,
+        h2 a::text:highlight:fade,
+        h3 a::text:highlight:fade,
+        h4 a::text:highlight:fade,
+        h5 a::text:highlight:fade,
+        h6 a::text:highlight:fade,
+        h1 img::text:highlight:fade,
+        h2 img::text:highlight:fade,
+        h3 img::text:highlight:fade,
+        h4 img::text:highlight:fade,
+        h5 img::text:highlight:fade,
+        h6 img::text:highlight:fade,
+        body h1:highlight a::text:fade,
+        body h2:highlight a::text:fade,
+        body h3:highlight a::text:fade,
+        body h4:highlight a::text:fade,
+        body h5:highlight a::text:fade,
+        body h6:highlight a::text:fade,
+        body h1:highlight img::text:fade,
+        body h3:highlight img::text:fade,
+        body h3:highlight img::text:fade,
+        body h4:highlight img::text:fade,
+        body h5:highlight img::text:fade,
+        body h6:highlight img::text:fade {
+            color: var(--h-a-img-text-sts2, black);
+        }
+
+        a::destination:highlight:fade,
+        img::destination:highlight:fade,
+        reference::destination:highlight:fade,
+        body :highlight a::destination:fade,
+        body :highlight img::destination:fade,
+        body :highlight reference::destination:fade {
+            color: var(--a-img-reference-destination-sts2, black);
+        }
+
+        h1 a::destination:highlight:fade,
+        h2 a::destination:highlight:fade,
+        h3 a::destination:highlight:fade,
+        h4 a::destination:highlight:fade,
+        h5 a::destination:highlight:fade,
+        h6 a::destination:highlight:fade,
+        h1 img::destination:highlight:fade,
+        h2 img::destination:highlight:fade,
+        h3 img::destination:highlight:fade,
+        h4 img::destination:highlight:fade,
+        h5 img::destination:highlight:fade,
+        h6 img::destination:highlight:fade,
+        body h1:highlight a::destination:fade,
+        body h2:highlight a::destination:fade,
+        body h3:highlight a::destination:fade,
+        body h4:highlight a::destination:fade,
+        body h5:highlight a::destination:fade,
+        body h6:highlight a::destination:fade,
+        body h1:highlight img::destination:fade,
+        body h2:highlight img::destination:fade,
+        body h3:highlight img::destination:fade,
+        body h4:highlight img::destination:fade,
+        body h5:highlight img::destination:fade,
+        body h6:highlight img::destination:fade {
+            color: var(--h-a-img-destination-sts2, black);
+        }
+
+        a::label:highlight:fade,
+        img::label:highlight:fade,
+        reference::label:highlight:fade,
+        body :highlight a::label:fade,
+        body :highlight img::label:fade,
+        body :highlight reference::label:fade {
+            color: var(--a-img-reference-label-sts2, black);
+        }
+
+        h1 a::label:highlight:fade,
+        h2 a::label:highlight:fade,
+        h3 a::label:highlight:fade,
+        h4 a::label:highlight:fade,
+        h5 a::label:highlight:fade,
+        h6 a::label:highlight:fade,
+        h1 img::label:highlight:fade,
+        h2 img::label:highlight:fade,
+        h3 img::label:highlight:fade,
+        h4 img::label:highlight:fade,
+        h5 img::label:highlight:fade,
+        h6 img::label:highlight:fade,
+        body h1:highlight a::label:fade,
+        body h2:highlight a::label:fade,
+        body h3:highlight a::label:fade,
+        body h4:highlight a::label:fade,
+        body h5:highlight a::label:fade,
+        body h6:highlight a::label:fade,
+        body h1:highlight img::label:fade,
+        body h2:highlight img::label:fade,
+        body h3:highlight img::label:fade,
+        body h4:highlight img::label:fade,
+        body h5:highlight img::label:fade,
+        body h6:highlight img::label:fade {
+            color: var(--h-a-img-label-sts2, black);
+        }
+
+        a::title:highlight:fade,
+        img::title:highlight:fade,
+        reference::title:highlight:fade,
+        body :highlight a::title:fade,
+        body :highlight img::title:fade,
+        body :highlight reference::title:fade {
+            color: var(--a-img-reference-title-sts2, black);
+        }
+
+        h1 a::title:highlight:fade,
+        h2 a::title:highlight:fade,
+        h3 a::title:highlight:fade,
+        h4 a::title:highlight:fade,
+        h5 a::title:highlight:fade,
+        h6 a::title:highlight:fade,
+        h1 img::title:highlight:fade,
+        h2 img::title:highlight:fade,
+        h3 img::title:highlight:fade,
+        h4 img::title:highlight:fade,
+        h5 img::title:highlight:fade,
+        h6 img::title:highlight:fade,
+        body h1:highlight a::title:fade,
+        body h2:highlight a::title:fade,
+        body h3:highlight a::title:fade,
+        body h4:highlight a::title:fade,
+        body h5:highlight a::title:fade,
+        body h6:highlight a::title:fade,
+        body h1:highlight img::title:fade,
+        body h2:highlight img::title:fade,
+        body h3:highlight img::title:fade,
+        body h4:highlight img::title:fade,
+        body h5:highlight img::title:fade,
+        body h6:highlight img::title:fade {
+            color: var(--h-a-img-title-sts2, black);
+        }
+
+        body :highlight a:highlight:fade,
+        body :highlight img:highlight:fade,
+        body :highlight reference:highlight:fade {
+            color: var(--a-img-reference-sts2, black);
+        }
+
+        body :highlight a::tag:highlight:fade,
+        body :highlight img::tag:highlight:fade,
+        body :highlight reference::tag:highlight:fade {
+            color: var(--a-img-reference-tag-sts2, black);
+        }
+
+        body :highlight a::text:highlight:fade,
+        body :highlight img::text:highlight:fade,
+        body :highlight reference::text:highlight:fade {
+            color: var(--a-img-reference-text-sts2, black);
+        }
+
+        body :highlight a::destination:highlight:fade,
+        body :highlight img::destination:highlight:fade,
+        body :highlight reference::destination:highlight:fade {
+            color: var(--a-img-reference-destination-sts2, black);
+        }
+
+        body :highlight a::label:highlight:fade,
+        body :highlight img::label:highlight:fade,
+        body :highlight reference::label:highlight:fade {
+            color: var(--a-img-reference-label-sts2, black);
+        }
+
+        body :highlight a::title:highlight:fade,
+        body :highlight img::title:highlight:fade,
+        body :highlight reference::title:highlight:fade {
+            color: var(--a-img-reference-title-sts2, black);
+        }
+
+        html-block:highlight:fade {
+            color: var(--html-block-sts2, black);
+        }
+
+        attr-bloc::tag:highlight:fade {
+            color: var(--attr-bloc-tag-sts2, black);
+        }
+
+        key-value-attr:highlight:fade,
+        class-attr:highlight:fade,
+        id-attr:highlight:fade,
+        body :highlight key-value-attr:fade,
+        body :highlight class-attr:fade,
+        body :highlight id-attr:fade {
+            color: var(--key-value-attr-class-attr-id-attr-sts2, black);
+        }
+
+        key-value-attr::tag:highlight:fade,
+        class-attr::tag:highlight:fade,
+        id-attr::tag:highlight:fade,
+        body :highlight key-value-attr::tag:fade,
+        body :highlight class-attr::tag:fade,
+        body :highlight id-attr::tag:fade {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts2, black);
+        }
+
+        body :highlight key-value-attr:highlight:fade,
+        body :highlight class-attr:highlight:fade,
+        body :highlight id-attr:highlight:fade {
+            color: var(--key-value-attr-class-attr-id-attr-sts2, black);
+        }
+
+        body :highlight key-value-attr::tag:highlight:fade,
+        body :highlight class-attr::tag:highlight:fade,
+        body :highlight id-attr::tag:highlight:fade {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts2, black);
+        }
+
+        h1:highlight:focus,
+        h2:highlight:focus,
+        h3:highlight:focus,
+        h4:highlight:focus,
+        h5:highlight:focus,
+        h6:highlight:focus {
+            color: var(--h-sts7, black);
+        }
+
+        h1::tag:highlight:focus,
+        h2::tag:highlight:focus,
+        h3::tag:highlight:focus,
+        h4::tag:highlight:focus,
+        h5::tag:highlight:focus,
+        h6::tag:highlight:focus {
+            color: var(--h-tag-sts7, black);
+        }
+
+        p:highlight:focus {
+            color: var(--text-sts7, black);
+        }
+
+        hr:highlight:focus {
+            color: var(--hr-sts7, black);
+        }
+
+        strong:highlight:focus,
+        em:highlight:focus,
+        body :highlight strong:focus,
+        body :highlight em:focus {
+            color: var(--strong-em-sts7, black);
+        }
+
+        h1 strong:highlight:focus,
+        h2 strong:highlight:focus,
+        h3 strong:highlight:focus,
+        h4 strong:highlight:focus,
+        h5 strong:highlight:focus,
+        h6 strong:highlight:focus,
+        h1 em:highlight:focus,
+        h2 em:highlight:focus,
+        h3 em:highlight:focus,
+        h4 em:highlight:focus,
+        h5 em:highlight:focus,
+        h6 em:highlight:focus,
+        body h1:highlight strong:focus,
+        body h2:highlight strong:focus,
+        body h3:highlight strong:focus,
+        body h4:highlight strong:focus,
+        body h5:highlight strong:focus,
+        body h6:highlight strong:focus,
+        body h1:highlight em:focus,
+        body h2:highlight em:focus,
+        body h3:highlight em:focus,
+        body h4:highlight em:focus,
+        body h5:highlight em:focus,
+        body h6:highlight em:focus {
+            color: var(--h-strong-em-sts7, black);
+        }
+
+        s:highlight:focus,
+        body :highlight s:focus {
+            color: var(--s-sts7, black);
+            text-decoration-color: var(--s-strikethrough-sts7, black);
+        }
+
+        h1 s:highlight:focus,
+        h2 s:highlight:focus,
+        h3 s:highlight:focus,
+        h4 s:highlight:focus,
+        h5 s:highlight:focus,
+        h6 s:highlight:focus,
+        body h1:highlight s:focus,
+        body h2:highlight s:focus,
+        body h3:highlight s:focus,
+        body h4:highlight s:focus,
+        body h5:highlight s:focus,
+        body h6:highlight s:focus {
+            color: var(--h-s-sts7, black);
+            text-decoration-color: var(--h-s-strikethrough-sts7, black);
+        }
+
+
+        strong::tag:highlight:focus,
+        em::tag:highlight:focus,
+        body :highlight strong::tag:focus,
+        body :highlight em::tag:focus {
+            color: var(--strong-em-tag-sts7, black);
+        }
+
+        h1 strong::tag:highlight:focus,
+        h2 strong::tag:highlight:focus,
+        h3 strong::tag:highlight:focus,
+        h4 strong::tag:highlight:focus,
+        h5 strong::tag:highlight:focus,
+        h6 strong::tag:highlight:focus,
+        h1 em::tag:highlight:focus,
+        h2 em::tag:highlight:focus,
+        h3 em::tag:highlight:focus,
+        h4 em::tag:highlight:focus,
+        h5 em::tag:highlight:focus,
+        h6 em::tag:highlight:focus,
+        body h1:highlight strong::tag:focus,
+        body h2:highlight strong::tag:focus,
+        body h3:highlight strong::tag:focus,
+        body h4:highlight strong::tag:focus,
+        body h5:highlight strong::tag:focus,
+        body h6:highlight strong::tag:focus,
+        body h1:highlight em::tag:focus,
+        body h2:highlight em::tag:focus,
+        body h3:highlight em::tag:focus,
+        body h4:highlight em::tag:focus,
+        body h5:highlight em::tag:focus,
+        body h6:highlight em::tag:focus {
+            color: var(--h-strong-em-tag-sts7, black);
+        }
+
+        s::tag:highlight:focus,
+        body :highlight s::tag:focus {
+            color: var(--s-tag-sts7, black);
+        }
+
+        h1 s::tag:highlight:focus,
+        h2 s::tag:highlight:focus,
+        h3 s::tag:highlight:focus,
+        h4 s::tag:highlight:focus,
+        h5 s::tag:highlight:focus,
+        h6 s::tag:highlight:focus,
+        body h1:highlight s::tag:focus,
+        body h2:highlight s::tag:focus,
+        body h3:highlight s::tag:focus,
+        body h4:highlight s::tag:focus,
+        body h5:highlight s::tag:focus,
+        body h6:highlight s::tag:focus {
+            color: var(--h-s-tag-sts7, black);
+        }
+
+        body :highlight strong:highlight:focus,
+        body :highlight em:highlight:focus {
+            color: var(--strong-em-sts8, black);
+        }
+
+        body h1:highlight strong:highlight:focus,
+        body h2:highlight strong:highlight:focus,
+        body h3:highlight strong:highlight:focus,
+        body h4:highlight strong:highlight:focus,
+        body h5:highlight strong:highlight:focus,
+        body h6:highlight strong:highlight:focus,
+        body h1:highlight em:highlight:focus,
+        body h2:highlight em:highlight:focus,
+        body h3:highlight em:highlight:focus,
+        body h4:highlight em:highlight:focus,
+        body h5:highlight em:highlight:focus,
+        body h6:highlight em:highlight:focus {
+            color: var(--h-strong-em-sts8, black);
+        }
+
+
+        body :highlight s:highlight:focus {
+            color: var(--s-sts8, black);
+            text-decoration-color: var(--s-strikethrough-sts8, black);
+        }
+
+        body h1:highlight s:highlight:focus,
+        body h2:highlight s:highlight:focus,
+        body h3:highlight s:highlight:focus,
+        body h4:highlight s:highlight:focus,
+        body h5:highlight s:highlight:focus,
+        body h6:highlight s:highlight:focus {
+            color: var(--h-s-sts8, black);
+            text-decoration-color: var(--h-s-strikethrough-sts8, black);
+        }
+
+        body :highlight strong::tag:highlight:focus,
+        body :highlight em::tag:highlight:focus {
+            color: var(--strong-em-tag-sts8, black);
+        }
+
+        body h1:highlight strong::tag:highlight:focus,
+        body h2:highlight strong::tag:highlight:focus,
+        body h3:highlight strong::tag:highlight:focus,
+        body h4:highlight strong::tag:highlight:focus,
+        body h5:highlight strong::tag:highlight:focus,
+        body h6:highlight strong::tag:highlight:focus,
+        body h1:highlight em::tag:highlight:focus,
+        body h2:highlight em::tag:highlight:focus,
+        body h3:highlight em::tag:highlight:focus,
+        body h4:highlight em::tag:highlight:focus,
+        body h5:highlight em::tag:highlight:focus,
+        body h6:highlight em::tag:highlight:focus {
+            color: var(--h-strong-em-tag-sts8, black);
+        }
+
+        body :highlight s::tag:highlight:focus {
+            color: var(--s-tag-sts8, black);
+        }
+
+        body h1:highlight s::tag:highlight:focus,
+        body h2:highlight s::tag:highlight:focus,
+        body h3:highlight s::tag:highlight:focus,
+        body h4:highlight s::tag:highlight:focus,
+        body h5:highlight s::tag:highlight:focus,
+        body h6:highlight s::tag:highlight:focus {
+            color: var(--h-s-tag-sts8, black);
+        }
+
+        blockquote:highlight:focus p,
+        body :highlight blockquote:focus p {
+            color: var(--blockquote-sts7, black);
+        }
+
+        blockquote::tag:highlight:focus,
+        body :highlight blockquote::tag:focus {
+            color: var(--blockquote-tag-sts7, black);
+        }
+
+        body :highlight blockquote:highlight:focus p {
+            color: var(--blockquote-sts8, black);
+        }
+
+        body :highlight blockquote::tag:highlight:focus p {
+            color: var(--blockquote-tag-sts8, black);
+        }
+
+        ul:highlight:focus,
+        body :highlight ul:focus {
+            color: var(--ul-sts7, black);
+        }
+
+        ol:highlight:focus,
+        body :highlight ol:focus {
+            color: var(--ol-sts7, black);
+        }
+
+        li:highlight:focus,
+        body :highlight li:focus {
+            color: var(--li-sts7, black);
+        }
+
+        li::tag:highlight:focus,
+        body :highlight li::tag:focus {
+            color: var(--li-tag-sts7, black);
+        }
+
+        body :highlight ul:highlight:focus {
+            color: var(--ul-sts8, black);
+        }
+
+        body :highlight ol:highlight:focus {
+            color: var(--ol-sts8, black);
+        }
+
+        body :highlight li:highlight:focus {
+            color: var(--li-sts8, black);
+        }
+
+        body :highlight li::tag:highlight:focus {
+            color: var(--li-tag-sts8, black);
+        }
+
+        code:highlight:focus,
+        body :highlight code:focus {
+            color: var(--code-sts7, black);
+        }
+
+        code::tag:highlight:focus,
+        body :highlight code::tag:focus {
+            color: var(--code-tag-sts7, black);
+        }
+
+        code::params:highlight:focus,
+        body :highlight code::params:focus {
+            color: var(--code-params-sts7, black);
+        }
+
+        body :highlight code:highlight:focus {
+            color: var(--code-sts8, black);
+        }
+
+        body :highlight code::tag:highlight:focus {
+            color: var(--code-tag-sts8, black);
+        }
+
+        body :highlight code::params:highlight:focus {
+            color: var(--code-params-sts8, black);
+        }
+
+        table:highlight:focus {
+            color: var(--table-sts7, black);
+        }
+
+        table::tag:highlight:focus {
+            color: var(--table-tag-sts7, black);
+        }
+
+        thead:highlight:focus,
+        body :highlight thead:focus {
+            color: var(--thead-sts7, black);
+        }
+
+        tbody:highlight:focus,
+        body :highlight tbody:focus {
+            color: var(--tbody-sts7, black);
+        }
+
+        body :highlight thead:highlight:focus {
+            color: var(--thead-sts8, black);
+        }
+
+        body :highlight tbody:highlight:focus {
+            color: var(--tbody-sts8, black);
+        }
+
+        a:highlight:focus,
+        img:highlight:focus,
+        reference:highlight:focus,
+        body :highlight a:focus,
+        body :highlight img:focus,
+        body :highlight reference:focus {
+            color: var(--a-img-reference-sts7, black);
+        }
+
+        h1 a:highlight:focus,
+        h2 a:highlight:focus,
+        h3 a:highlight:focus,
+        h4 a:highlight:focus,
+        h5 a:highlight:focus,
+        h6 a:highlight:focus,
+        h1 img:highlight:focus,
+        h2 img:highlight:focus,
+        h3 img:highlight:focus,
+        h4 img:highlight:focus,
+        h5 img:highlight:focus,
+        h6 img:highlight:focus,
+        body h1:highlight a:focus,
+        body h2:highlight a:focus,
+        body h3:highlight a:focus,
+        body h4:highlight a:focus,
+        body h5:highlight a:focus,
+        body h6:highlight a:focus,
+        body h1:highlight img:focus,
+        body h2:highlight img:focus,
+        body h3:highlight img:focus,
+        body h4:highlight img:focus,
+        body h5:highlight img:focus,
+        body h6:highlight img:focus {
+            color: var(--h-a-img-sts7, black);
+        }
+
+        a::tag:highlight:focus,
+        img::tag:highlight:focus,
+        reference::tag:highlight:focus,
+        body :highlight a::tag:focus,
+        body :highlight img::tag:focus,
+        body :highlight reference::tag:focus {
+            color: var(--a-img-reference-tag-sts7, black);
+        }
+
+        h1 a::tag:highlight:focus,
+        h2 a::tag:highlight:focus,
+        h3 a::tag:highlight:focus,
+        h4 a::tag:highlight:focus,
+        h5 a::tag:highlight:focus,
+        h6 a::tag:highlight:focus,
+        h1 img::tag:highlight:focus,
+        h2 img::tag:highlight:focus,
+        h3 img::tag:highlight:focus,
+        h4 img::tag:highlight:focus,
+        h5 img::tag:highlight:focus,
+        h6 img::tag:highlight:focus,
+        body h1:highlight a::tag:focus,
+        body h2:highlight a::tag:focus,
+        body h3:highlight a::tag:focus,
+        body h4:highlight a::tag:focus,
+        body h5:highlight a::tag:focus,
+        body h6:highlight a::tag:focus,
+        body h1:highlight img::tag:focus,
+        body h2:highlight img::tag:focus,
+        body h3:highlight img::tag:focus,
+        body h4:highlight img::tag:focus,
+        body h5:highlight img::tag:focus,
+        body h6:highlight img::tag:focus {
+            color: var(--h-a-img-tag-sts7, black);
+        }
+
+        a::text:highlight:focus,
+        img::text:highlight:focus,
+        reference::text:highlight:focus,
+        body :highlight a::text:focus,
+        body :highlight img::text:focus,
+        body :highlight reference::text:focus {
+            color: var(--a-img-reference-text-sts7, black);
+        }
+
+        h1 a::text:highlight:focus,
+        h2 a::text:highlight:focus,
+        h3 a::text:highlight:focus,
+        h4 a::text:highlight:focus,
+        h5 a::text:highlight:focus,
+        h6 a::text:highlight:focus,
+        h1 img::text:highlight:focus,
+        h2 img::text:highlight:focus,
+        h3 img::text:highlight:focus,
+        h4 img::text:highlight:focus,
+        h5 img::text:highlight:focus,
+        h6 img::text:highlight:focus,
+        body h1:highlight a::text:focus,
+        body h2:highlight a::text:focus,
+        body h3:highlight a::text:focus,
+        body h4:highlight a::text:focus,
+        body h5:highlight a::text:focus,
+        body h6:highlight a::text:focus,
+        body h1:highlight img::text:focus,
+        body h2:highlight img::text:focus,
+        body h3:highlight img::text:focus,
+        body h4:highlight img::text:focus,
+        body h5:highlight img::text:focus,
+        body h6:highlight img::text:focus {
+            color: var(--h-a-img-text-sts7, black);
+        }
+
+        a::destination:highlight:focus,
+        img::destination:highlight:focus,
+        reference::destination:highlight:focus,
+        body :highlight a::destination:focus,
+        body :highlight img::destination:focus,
+        body :highlight reference::destination:focus {
+            color: var(--a-img-reference-destination-sts7, black);
+        }
+
+        h1 a::destination:highlight:focus,
+        h2 a::destination:highlight:focus,
+        h3 a::destination:highlight:focus,
+        h4 a::destination:highlight:focus,
+        h5 a::destination:highlight:focus,
+        h6 a::destination:highlight:focus,
+        h1 img::destination:highlight:focus,
+        h2 img::destination:highlight:focus,
+        h3 img::destination:highlight:focus,
+        h4 img::destination:highlight:focus,
+        h5 img::destination:highlight:focus,
+        h6 img::destination:highlight:focus,
+        body h1:highlight a::destination:focus,
+        body h2:highlight a::destination:focus,
+        body h3:highlight a::destination:focus,
+        body h4:highlight a::destination:focus,
+        body h5:highlight a::destination:focus,
+        body h6:highlight a::destination:focus,
+        body h1:highlight img::destination:focus,
+        body h2:highlight img::destination:focus,
+        body h3:highlight img::destination:focus,
+        body h4:highlight img::destination:focus,
+        body h5:highlight img::destination:focus,
+        body h6:highlight img::destination:focus {
+            color: var(--h-a-img-destination-sts7, black);
+        }
+
+        a::label:highlight:focus,
+        img::label:highlight:focus,
+        reference::label:highlight:focus,
+        body :highlight a::label:focus,
+        body :highlight img::label:focus,
+        body :highlight reference::label:focus {
+            color: var(--a-img-reference-label-sts7, black);
+        }
+
+        h1 a::label:highlight:focus,
+        h2 a::label:highlight:focus,
+        h3 a::label:highlight:focus,
+        h4 a::label:highlight:focus,
+        h5 a::label:highlight:focus,
+        h6 a::label:highlight:focus,
+        h1 img::label:highlight:focus,
+        h2 img::label:highlight:focus,
+        h3 img::label:highlight:focus,
+        h4 img::label:highlight:focus,
+        h5 img::label:highlight:focus,
+        h6 img::label:highlight:focus,
+        body h1:highlight a::label:focus,
+        body h2:highlight a::label:focus,
+        body h3:highlight a::label:focus,
+        body h4:highlight a::label:focus,
+        body h5:highlight a::label:focus,
+        body h6:highlight a::label:focus,
+        body h1:highlight img::label:focus,
+        body h3:highlight img::label:focus,
+        body h3:highlight img::label:focus,
+        body h4:highlight img::label:focus,
+        body h5:highlight img::label:focus,
+        body h6:highlight img::label:focus {
+            color: var(--h-a-img-label-sts7, black);
+        }
+
+        a::title:highlight:focus,
+        img::title:highlight:focus,
+        reference::title:highlight:focus,
+        body :highlight a::title:focus,
+        body :highlight img::title:focus,
+        body :highlight reference::title:focus {
+            color: var(--a-img-reference-title-sts7, black);
+        }
+
+        h1 a::title:highlight:focus,
+        h2 a::title:highlight:focus,
+        h3 a::title:highlight:focus,
+        h4 a::title:highlight:focus,
+        h5 a::title:highlight:focus,
+        h6 a::title:highlight:focus,
+        h1 img::title:highlight:focus,
+        h2 img::title:highlight:focus,
+        h3 img::title:highlight:focus,
+        h4 img::title:highlight:focus,
+        h5 img::title:highlight:focus,
+        h6 img::title:highlight:focus,
+        body h1:highlight a::title:focus,
+        body h2:highlight a::title:focus,
+        body h3:highlight a::title:focus,
+        body h4:highlight a::title:focus,
+        body h5:highlight a::title:focus,
+        body h6:highlight a::title:focus,
+        body h1:highlight img::title:focus,
+        body h2:highlight img::title:focus,
+        body h3:highlight img::title:focus,
+        body h4:highlight img::title:focus,
+        body h5:highlight img::title:focus,
+        body h6:highlight img::title:focus {
+            color: var(--h-a-img-title-sts7, black);
+        }
+
+        body :highlight a:highlight:focus,
+        body :highlight img:highlight:focus,
+        body :highlight reference:highlight:focus {
+            color: var(--a-img-reference-sts8, black);
+        }
+
+        body :highlight a::tag:highlight:focus,
+        body :highlight img::tag:highlight:focus,
+        body :highlight reference::tag:highlight:focus {
+            color: var(--a-img-reference-tag-sts8, black);
+        }
+
+        body :highlight a::text:highlight:focus,
+        body :highlight img::text:highlight:focus,
+        body :highlight reference::text:highlight:focus {
+            color: var(--a-img-reference-text-sts8, black);
+        }
+
+        body :highlight a::destination:highlight:focus,
+        body :highlight img::destination:highlight:focus,
+        body :highlight reference::destination:highlight:focus {
+            color: var(--a-img-reference-destination-sts8, black);
+        }
+
+        body :highlight a::label:highlight:focus,
+        body :highlight img::label:highlight:focus,
+        body :highlight reference::label:highlight:focus {
+            color: var(--a-img-reference-label-sts8, black);
+        }
+
+        body :highlight a::title:highlight:focus,
+        body :highlight img::title:highlight:focus,
+        body :highlight reference::title:highlight:focus {
+            color: var(--a-img-reference-title-sts8, black);
+        }
+
+        html-block:highlight:focus {
+            color: var(--html-block-sts7, black);
+        }
+
+        attr-bloc::tag:highlight:focus {
+            color: var(--attr-bloc-tag-sts7, black);
+        }
+
+        key-value-attr:highlight:focus,
+        class-attr:highlight:focus,
+        id-attr:highlight:focus,
+        body :highlight key-value-attr:focus,
+        body :highlight class-attr:focus,
+        body :highlight id-attr:focus {
+            color: var(--key-value-attr-class-attr-id-attr-sts7, black);
+        }
+
+        key-value-attr::tag:highlight:focus,
+        class-attr::tag:highlight:focus,
+        id-attr::tag:highlight:focus,
+        body :highlight key-value-attr::tag:focus,
+        body :highlight class-attr::tag:focus,
+        body :highlight id-attr::tag:focus {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts7, black);
+        }
+
+        body :highlight key-value-attr:highlight:focus,
+        body :highlight class-attr:highlight:focus,
+        body :highlight id-attr:highlight:focus {
+            color: var(--key-value-attr-class-attr-id-attr-sts8, black);
+        }
+
+        body :highlight key-value-attr::tag:highlight:focus,
+        body :highlight class-attr::tag:highlight:focus,
+        body :highlight id-attr::tag:highlight:focus {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts8, black);
+        }
+
+        h1:highlight:flash,
+        h2:highlight:flash,
+        h3:highlight:flash,
+        h4:highlight:flash,
+        h5:highlight:flash,
+        h6:highlight:flash {
+            color: var(--h-sts8, black);
+        }
+
+        h1::tag:highlight:flash,
+        h2::tag:highlight:flash,
+        h3::tag:highlight:flash,
+        h4::tag:highlight:flash,
+        h5::tag:highlight:flash,
+        h6::tag:highlight:flash {
+            color: var(--h-tag-sts8, black);
+        }
+
+        p:highlight:flash {
+            color: var(--text-sts8, black);
+        }
+
+        body :highlight:flash p:highlight {
+            color: var(--text-sts9, black);
+        }
+
+        hr:highlight:flash {
+            color: var(--hr-sts8, black);
+        }
+
+        strong:highlight:flash,
+        em:highlight:flash,
+        body :highlight strong:flash,
+        body :highlight em:flash {
+            color: var(--strong-em-sts8, black);
+        }
+
+        h1 strong:highlight:flash,
+        h2 strong:highlight:flash,
+        h3 strong:highlight:flash,
+        h4 strong:highlight:flash,
+        h5 strong:highlight:flash,
+        h6 strong:highlight:flash,
+        h1 em:highlight:flash,
+        h2 em:highlight:flash,
+        h3 em:highlight:flash,
+        h4 em:highlight:flash,
+        h5 em:highlight:flash,
+        h6 em:highlight:flash,
+        body h1:highlight strong:flash,
+        body h2:highlight strong:flash,
+        body h3:highlight strong:flash,
+        body h4:highlight strong:flash,
+        body h5:highlight strong:flash,
+        body h6:highlight strong:flash,
+        body h1:highlight em:flash,
+        body h2:highlight em:flash,
+        body h3:highlight em:flash,
+        body h4:highlight em:flash,
+        body h5:highlight em:flash,
+        body h6:highlight em:flash {
+            color: var(--h-strong-em-sts8, black);
+        }
+
+        s:highlight:flash,
+        body :highlight s:flash {
+            color: var(--s-sts8, black);
+            text-decoration-color: var(--s-strikethrough-sts8, black);
+        }
+
+        h1 s:highlight:flash,
+        h2 s:highlight:flash,
+        h3 s:highlight:flash,
+        h4 s:highlight:flash,
+        h5 s:highlight:flash,
+        h6 s:highlight:flash,
+        body h1:highlight s:flash,
+        body h2:highlight s:flash,
+        body h3:highlight s:flash,
+        body h4:highlight s:flash,
+        body h5:highlight s:flash,
+        body h6:highlight s:flash {
+            color: var(--h-s-sts8, black);
+            text-decoration-color: var(--h-s-strikethrough-sts8, black);
+        }
+
+        strong::tag:highlight:flash,
+        em::tag:highlight:flash,
+        body :highlight strong::tag:flash,
+        body :highlight em::tag:flash {
+            color: var(--strong-em-tag-sts8, black);
+        }
+
+        h1 strong::tag:highlight:flash,
+        h2 strong::tag:highlight:flash,
+        h3 strong::tag:highlight:flash,
+        h4 strong::tag:highlight:flash,
+        h5 strong::tag:highlight:flash,
+        h6 strong::tag:highlight:flash,
+        h1 em::tag:highlight:flash,
+        h2 em::tag:highlight:flash,
+        h3 em::tag:highlight:flash,
+        h4 em::tag:highlight:flash,
+        h5 em::tag:highlight:flash,
+        h6 em::tag:highlight:flash,
+        body h1:highlight strong::tag:flash,
+        body h2:highlight strong::tag:flash,
+        body h3:highlight strong::tag:flash,
+        body h4:highlight strong::tag:flash,
+        body h5:highlight strong::tag:flash,
+        body h6:highlight strong::tag:flash,
+        body h1:highlight em::tag:flash,
+        body h2:highlight em::tag:flash,
+        body h3:highlight em::tag:flash,
+        body h4:highlight em::tag:flash,
+        body h5:highlight em::tag:flash,
+        body h6:highlight em::tag:flash {
+            color: var(--h-strong-em-tag-sts8, black);
+        }
+
+        s::tag:highlight:flash,
+        body :highlight s::tag:flash {
+            color: var(--s-tag-sts8, black);
+        }
+
+        h1 s::tag:highlight:flash,
+        h2 s::tag:highlight:flash,
+        h3 s::tag:highlight:flash,
+        h4 s::tag:highlight:flash,
+        h5 s::tag:highlight:flash,
+        h6 s::tag:highlight:flash,
+        body h1:highlight s::tag:flash,
+        body h2:highlight s::tag:flash,
+        body h3:highlight s::tag:flash,
+        body h4:highlight s::tag:flash,
+        body h5:highlight s::tag:flash,
+        body h6:highlight s::tag:flash {
+            color: var(--h-s-tag-sts8, black);
+        }
+
+        body :highlight:flash strong:highlight,
+        body :highlight:flash em:highlight {
+            color: var(--strong-em-sts9, black);
+        }
+
+        body h1:highlight:flash strong:highlight,
+        body h2:highlight:flash strong:highlight,
+        body h3:highlight:flash strong:highlight,
+        body h4:highlight:flash strong:highlight,
+        body h5:highlight:flash strong:highlight,
+        body h6:highlight:flash strong:highlight,
+        body h1:highlight:flash em:highlight,
+        body h2:highlight:flash em:highlight,
+        body h3:highlight:flash em:highlight,
+        body h4:highlight:flash em:highlight,
+        body h5:highlight:flash em:highlight,
+        body h6:highlight:flash em:highlight {
+            color: var(--h-strong-em-sts9, black);
+        }
+
+        body :highlight:flash s:highlight {
+            color: var(--s-sts9, black);
+            text-decoration-color: var(--s-strikethrough-sts9, black);
+        }
+
+        body h1:highlight:flash s:highlight,
+        body h2:highlight:flash s:highlight,
+        body h3:highlight:flash s:highlight,
+        body h4:highlight:flash s:highlight,
+        body h5:highlight:flash s:highlight,
+        body h6:highlight:flash s:highlight {
+            color: var(--h-s-sts9, black);
+            text-decoration-color: var(--h-s-strikethrough-sts9, black);
+        }
+
+        body :highlight:flash strong::tag:highlight,
+        body :highlight:flash em::tag:highlight {
+            color: var(--strong-em-tag-sts9, black);
+        }
+
+        body h1:highlight:flash strong::tag:highlight,
+        body h2:highlight:flash strong::tag:highlight,
+        body h3:highlight:flash strong::tag:highlight,
+        body h4:highlight:flash strong::tag:highlight,
+        body h5:highlight:flash strong::tag:highlight,
+        body h6:highlight:flash strong::tag:highlight,
+        body h1:highlight:flash em::tag:highlight,
+        body h2:highlight:flash em::tag:highlight,
+        body h3:highlight:flash em::tag:highlight,
+        body h4:highlight:flash em::tag:highlight,
+        body h5:highlight:flash em::tag:highlight,
+        body h6:highlight:flash em::tag:highlight {
+            color: var(--h-strong-em-tag-sts9, black);
+        }
+
+        body :highlight:flash s::tag:highlight {
+            color: var(--s-tag-sts9, black);
+        }
+
+        body h1:highlight:flash s::tag:highlight,
+        body h2:highlight:flash s::tag:highlight,
+        body h3:highlight:flash s::tag:highlight,
+        body h4:highlight:flash s::tag:highlight,
+        body h5:highlight:flash s::tag:highlight,
+        body h6:highlight:flash s::tag:highlight {
+            color: var(--h-s-tag-sts9, black);
+        }
+
+        blockquote:highlight:flash p,
+        body :highlight blockquote:flash p {
+            color: var(--blockquote-sts8, black);
+        }
+
+        blockquote::tag:highlight:flash,
+        body :highlight blockquote::tag:flash {
+            color: var(--blockquote-tag-sts8, black);
+        }
+
+        body :highlight:flash blockquote:highlight p {
+            color: var(--blockquote-sts9, black);
+        }
+
+        body :highlight:flash blockquote::tag:highlight p {
+            color: var(--blockquote-tag-sts9, black);
+        }
+
+        ul:highlight:flash,
+        body :highlight ul:flash {
+            color: var(--ul-sts8, black);
+        }
+
+        ol:highlight:flash,
+        body :highlight ol:flash {
+            color: var(--ol-sts8, black);
+        }
+
+        li:highlight:flash,
+        body :highlight li:flash {
+            color: var(--li-sts8, black);
+        }
+
+        li::tag:highlight:flash,
+        body :highlight li::tag:flash {
+            color: var(--li-tag-sts8, black);
+        }
+
+        body :highlight:flash ul:highlight {
+            color: var(--ul-sts9, black);
+        }
+
+        body :highlight:flash ol:highlight {
+            color: var(--ol-sts9, black);
+        }
+
+        body :highlight:flash li:highlight {
+            color: var(--li-sts9, black);
+        }
+
+        body :highlight:flash li::tag:highlight {
+            color: var(--li-tag-sts9, black);
+        }
+
+        code:highlight:flash,
+        body :highlight code:flash {
+            color: var(--code-sts8, black);
+        }
+
+        code::tag:highlight:flash,
+        body :highlight code::tag:flash {
+            color: var(--code-tag-sts8, black);
+        }
+
+        code::params:highlight:flash,
+        body :highlight code::params:flash {
+            color: var(--code-params-sts8, black);
+        }
+
+        body :highlight:flash code:highlight {
+            color: var(--code-sts9, black);
+        }
+
+        body :highlight:flash code::tag:highlight {
+            color: var(--code-tag-sts9, black);
+        }
+
+        body :highlight:flash code::params:highlight {
+            color: var(--code-params-sts9, black);
+        }
+
+        table:highlight:flash {
+            color: var(--table-sts8, black);
+        }
+
+        table::tag:highlight:flash {
+            color: var(--table-tag-sts8, black);
+        }
+
+        thead:highlight:flash,
+        body :highlight thead:flash {
+            color: var(--thead-sts8, black);
+        }
+
+        tbody:highlight:flash,
+        body :highlight tbody:flash {
+            color: var(--tbody-sts8, black);
+        }
+
+        body :highlight:flash thead:highlight {
+            color: var(--thead-sts9, black);
+        }
+
+        body :highlight:flash tbody:highlight {
+            color: var(--tbody-sts9, black);
+        }
+
+        a:highlight:flash,
+        img:highlight:flash,
+        reference:highlight:flash,
+        body :highlight a:flash,
+        body :highlight img:flash,
+        body :highlight reference:flash {
+            color: var(--a-img-reference-sts8, black);
+        }
+
+        h1 a:highlight:flash,
+        h2 a:highlight:flash,
+        h3 a:highlight:flash,
+        h4 a:highlight:flash,
+        h5 a:highlight:flash,
+        h6 a:highlight:flash,
+        h1 img:highlight:flash,
+        h2 img:highlight:flash,
+        h3 img:highlight:flash,
+        h4 img:highlight:flash,
+        h5 img:highlight:flash,
+        h6 img:highlight:flash,
+        body h1:highlight a:flash,
+        body h2:highlight a:flash,
+        body h3:highlight a:flash,
+        body h4:highlight a:flash,
+        body h5:highlight a:flash,
+        body h6:highlight a:flash,
+        body h1:highlight img:flash,
+        body h2:highlight img:flash,
+        body h3:highlight img:flash,
+        body h4:highlight img:flash,
+        body h5:highlight img:flash,
+        body h6:highlight img:flash {
+            color: var(--h-a-img-sts8, black);
+        }
+
+        a::tag:highlight:flash,
+        img::tag:highlight:flash,
+        reference::tag:highlight:flash,
+        body :highlight a::tag:flash,
+        body :highlight img::tag:flash,
+        body :highlight reference::tag:flash {
+            color: var(--a-img-reference-tag-sts8, black);
+        }
+
+        h1 a::tag:highlight:flash,
+        h2 a::tag:highlight:flash,
+        h3 a::tag:highlight:flash,
+        h4 a::tag:highlight:flash,
+        h5 a::tag:highlight:flash,
+        h6 a::tag:highlight:flash,
+        h1 img::tag:highlight:flash,
+        h2 img::tag:highlight:flash,
+        h3 img::tag:highlight:flash,
+        h4 img::tag:highlight:flash,
+        h5 img::tag:highlight:flash,
+        h6 img::tag:highlight:flash,
+        body h1:highlight a::tag:flash,
+        body h2:highlight a::tag:flash,
+        body h3:highlight a::tag:flash,
+        body h4:highlight a::tag:flash,
+        body h5:highlight a::tag:flash,
+        body h6:highlight a::tag:flash,
+        body h1:highlight img::tag:flash,
+        body h2:highlight img::tag:flash,
+        body h3:highlight img::tag:flash,
+        body h4:highlight img::tag:flash,
+        body h5:highlight img::tag:flash,
+        body h6:highlight img::tag:flash {
+            color: var(--h-a-img-tag-sts8, black);
+        }
+
+        a::text:highlight:flash,
+        img::text:highlight:flash,
+        reference::text:highlight:flash,
+        body :highlight a::text:flash,
+        body :highlight img::text:flash,
+        body :highlight reference::text:flash {
+            color: var(--a-img-reference-text-sts8, black);
+        }
+
+        h1 a::text:highlight:flash,
+        h2 a::text:highlight:flash,
+        h3 a::text:highlight:flash,
+        h4 a::text:highlight:flash,
+        h5 a::text:highlight:flash,
+        h6 a::text:highlight:flash,
+        h1 img::text:highlight:flash,
+        h2 img::text:highlight:flash,
+        h3 img::text:highlight:flash,
+        h4 img::text:highlight:flash,
+        h5 img::text:highlight:flash,
+        h6 img::text:highlight:flash,
+        body h1:highlight a::text:flash,
+        body h2:highlight a::text:flash,
+        body h3:highlight a::text:flash,
+        body h4:highlight a::text:flash,
+        body h5:highlight a::text:flash,
+        body h6:highlight a::text:flash,
+        body h1:highlight img::text:flash,
+        body h2:highlight img::text:flash,
+        body h3:highlight img::text:flash,
+        body h4:highlight img::text:flash,
+        body h5:highlight img::text:flash,
+        body h6:highlight img::text:flash {
+            color: var(--h-a-img-text-sts8, black);
+        }
+
+        a::destination:highlight:flash,
+        img::destination:highlight:flash,
+        reference::destination:highlight:flash,
+        body :highlight a::destination:flash,
+        body :highlight img::destination:flash,
+        body :highlight reference::destination:flash {
+            color: var(--a-img-reference-destination-sts8, black);
+        }
+
+        h1 a::destination:highlight:flash,
+        h2 a::destination:highlight:flash,
+        h3 a::destination:highlight:flash,
+        h4 a::destination:highlight:flash,
+        h5 a::destination:highlight:flash,
+        h6 a::destination:highlight:flash,
+        h1 img::destination:highlight:flash,
+        h2 img::destination:highlight:flash,
+        h3 img::destination:highlight:flash,
+        h4 img::destination:highlight:flash,
+        h5 img::destination:highlight:flash,
+        h6 img::destination:highlight:flash,
+        body h1:highlight a::destination:flash,
+        body h2:highlight a::destination:flash,
+        body h3:highlight a::destination:flash,
+        body h4:highlight a::destination:flash,
+        body h5:highlight a::destination:flash,
+        body h6:highlight a::destination:flash,
+        body h1:highlight img::destination:flash,
+        body h2:highlight img::destination:flash,
+        body h3:highlight img::destination:flash,
+        body h4:highlight img::destination:flash,
+        body h5:highlight img::destination:flash,
+        body h6:highlight img::destination:flash {
+            color: var(--h-a-img-destination-sts8, black);
+        }
+
+        a::label:highlight:flash,
+        img::label:highlight:flash,
+        reference::label:highlight:flash,
+        body :highlight a::label:flash,
+        body :highlight img::label:flash,
+        body :highlight reference::label:flash{
+            color: var(--a-img-reference-label-sts8, black);
+        }
+
+        h1 a::label:highlight:flash,
+        h2 a::label:highlight:flash,
+        h3 a::label:highlight:flash,
+        h4 a::label:highlight:flash,
+        h5 a::label:highlight:flash,
+        h6 a::label:highlight:flash,
+        h1 img::label:highlight:flash,
+        h2 img::label:highlight:flash,
+        h3 img::label:highlight:flash,
+        h4 img::label:highlight:flash,
+        h5 img::label:highlight:flash,
+        h6 img::label:highlight:flash,
+        body h1:highlight a::label:flash,
+        body h2:highlight a::label:flash,
+        body h3:highlight a::label:flash,
+        body h4:highlight a::label:flash,
+        body h5:highlight a::label:flash,
+        body h6:highlight a::label:flash,
+        body h1:highlight img::label:flash,
+        body h2:highlight img::label:flash,
+        body h3:highlight img::label:flash,
+        body h4:highlight img::label:flash,
+        body h5:highlight img::label:flash,
+        body h6:highlight img::label:flash {
+            color: var(--h-a-img-label-sts8, black);
+        }
+
+        a::title:highlight:flash,
+        img::title:highlight:flash,
+        reference::title:highlight:flash,
+        body :highlight a::title:flash,
+        body :highlight img::title:flash,
+        body :highlight reference::title:flash {
+            color: var(--a-img-reference-title-sts8, black);
+        }
+
+        h1 a::title:highlight:flash,
+        h2 a::title:highlight:flash,
+        h3 a::title:highlight:flash,
+        h4 a::title:highlight:flash,
+        h5 a::title:highlight:flash,
+        h6 a::title:highlight:flash,
+        h1 img::title:highlight:flash,
+        h2 img::title:highlight:flash,
+        h3 img::title:highlight:flash,
+        h4 img::title:highlight:flash,
+        h5 img::title:highlight:flash,
+        h6 img::title:highlight:flash,
+        body h1:highlight a::title:flash,
+        body h2:highlight a::title:flash,
+        body h3:highlight a::title:flash,
+        body h4:highlight a::title:flash,
+        body h5:highlight a::title:flash,
+        body h6:highlight a::title:flash,
+        body h1:highlight img::title:flash,
+        body h2:highlight img::title:flash,
+        body h3:highlight img::title:flash,
+        body h4:highlight img::title:flash,
+        body h5:highlight img::title:flash,
+        body h6:highlight img::title:flash {
+            color: var(--h-a-img-title-sts8, black);
+        }
+
+        body :highlight:flash a:highlight,
+        body :highlight:flash img:highlight,
+        body :highlight:flash reference:highlight {
+            color: var(--a-img-reference-sts9, black);
+        }
+
+        body :highlight:flash a::tag:highlight,
+        body :highlight:flash img::tag:highlight,
+        body :highlight:flash reference::tag:highlight {
+            color: var(--a-img-reference-tag-sts9, black);
+        }
+
+        body :highlight:flash a::text:highlight,
+        body :highlight:flash img::text:highlight,
+        body :highlight:flash reference::text:highlight {
+            color: var(--a-img-reference-text-sts9, black);
+        }
+
+        body :highlight:flash a::destination:highlight,
+        body :highlight:flash img::destination:highlight,
+        body :highlight:flash reference::destination:highlight {
+            color: var(--a-img-reference-destination-sts9, black);
+        }
+
+        body :highlight:flash a::label:highlight,
+        body :highlight:flash img::label:highlight,
+        body :highlight:flash reference::label:highlight {
+            color: var(--a-img-reference-label-sts9, black);
+        }
+
+        body :highlight:flash a::title:highlight,
+        body :highlight:flash img::title:highlight,
+        body :highlight:flash reference::title:highlight {
+            color: var(--a-img-reference-title-sts9, black);
+        }
+
+        html-block:highlight:flash {
+            color: var(--html-block-sts8, black);
+        }
+
+        attr-bloc::tag:highlight:flash {
+            color: var(--attr-bloc-tag-sts8, black);
+        }
+
+        key-value-attr:highlight:flash,
+        class-attr:highlight:flash,
+        id-attr:highlight:flash,
+        body :highlight key-value-attr:flash,
+        body :highlight class-attr:flash,
+        body :highlight id-attr:flash {
+            color: var(--key-value-attr-class-attr-id-attr-sts8, black);
+        }
+
+        key-value-attr::tag:highlight:flash,
+        class-attr::tag:highlight:flash,
+        id-attr::tag:highlight:flash,
+        body :highlight key-value-attr::tag:flash,
+        body :highlight class-attr::tag:flash,
+        body :highlight id-attr::tag:flash {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts8, black);
+        }
+
+        body :highlight:flash key-value-attr:highlight,
+        body :highlight:flash class-attr:highlight,
+        body :highlight:flash id-attr:highlight {
+            color: var(--key-value-attr-class-attr-id-attr-sts9, black);
+        }
+
+        body :highlight:flash key-value-attr::tag:highlight,
+        body :highlight:flash class-attr::tag:highlight,
+        body :highlight:flash id-attr::tag:highlight {
+            color: var(--key-value-attr-class-attr-id-attr-tag-sts9, black);
+        }
+    """
+}

@@ -1,0 +1,84 @@
+
+/**
+ Beige
+ https://coolors.co/f2f3d9-03312e-2e282a-cd5334-9b3e26
+ */
+
+body, th {
+    
+    background-color: #F2F3D9;
+    color: #03312E;
+    font-family: Cochin;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr {
+    color: #2E282A;
+}
+
+::tag {
+    color: #CD5334;
+}
+
+a::destination,
+img::destination,
+table,
+td,
+ref::destination,
+a::label,
+img::label,
+ref::title,
+code,
+blockquote,
+html-block {
+    color: #9B3E26;
+}
+
+code, html-block {
+    font-family: "Hack";
+    font-size: 80%;
+}
+
+blockquote::tag {
+    color: #EA5D3A;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+s {
+    text-decoration-style: solid;
+    text-decoration-line: line-through;
+    text-decoration-color: black;
+}
+
+s::tag {
+    text-decoration-line: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

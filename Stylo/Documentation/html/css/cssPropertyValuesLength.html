@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS length property type</title>
+		<meta name="description" content="CSS length property type description page."></meta>
+		<meta name="KEYWORDS" content="css, properties, property, type, length, cm, centimeters, mm, millimeters, in, inches, px, pixels, pt, points, pc, picas, vw, viewport, ch, ex, rem, vh, vmax, vmin"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+		<!-- css/cssPropertyValuesLength.html -->
+<h1>length</h1>
+<p>The type <em>length</em> in CSS defines a length.</p>
+<p>The syntax of <em>length</em> is a decimal number followed by a unit.</p>
+<h2>Units relative to the font size</h2>
+<h3>em</h3>
+<p>This unit applies the decimal number as a multiplier to the value we would normally have after cascading for this property.</p>
+<p>For example:</p>
+<p>CSS:</p>
+<pre><code class="language-css">body {
+    font-size: 10px;
+}
+h1 {
+    font-size: 1.2em; 
+}
+</code></pre>
+<p>In the following document, for <code>h1</code> element font-size value:</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;title 1&lt;/h1&gt; 
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>We get: 1.2 x 10 = 12px</p>
+<h3>ex</h3>
+<p>The value is calculated from the current font &quot;<a href="https://en.wikipedia.org/wiki/X-height">x-height</a>&quot; value. As in the case of &quot;em&quot; we prefix the unit with the multiplier to apply to it.</p>
+<h3>ch</h3>
+<p>Value relative to the width of the &quot;0&quot; in the current font.</p>
+<h3>rem</h3>
+<p>Value relative to the font size of the root element.</p>
+<h2>Units relative to viewport size</h2>
+<p>The &quot;viewport&quot; in Stylo is the screen. And all the values ​​related to the viewport are calculated according to the size of the screen.</p>
+<h3>vw</h3>
+<p>Value equivalent to 1% of the viewport's width.</p>
+<h3>vh</h3>
+<p>Value equivalent to 1% of the viewport's height.</p>
+<h3>vmin</h3>
+<p>Value equivalent to 1% of the viewport 's smallest dimension.</p>
+<h3>vmax</h3>
+<p>Value equivalent to 1% of the viewport's largest dimension.</p>
+<h2>Absolute units</h2>
+<p>Absolute units are based on units of known length.</p>
+<table>
+<thead>
+<tr>
+<th> Unit </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> Cm </td>
+<td> centimeters </td>
+</tr>
+<tr>
+<td> Mm </td>
+<td> millimeters </td>
+</tr>
+<tr>
+<td> In </td>
+<td> inches (1in = 96px = 2.54cm) </td>
+</tr>
+<tr>
+<td>px </td>
+<td> pixels (1px = 1 / 96th of 1in)</td>
+</tr>
+<tr>
+<td> Pt </td>
+<td> points (1pt = 1/72 of 1in) </td>
+</tr>
+<tr>
+<td> Pc </td>
+<td> picas (1pc = 12 pt) </td>
+</tr>
+</tbody>
+</table>
+	</body>
+</html>

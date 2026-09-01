@@ -1,0 +1,15 @@
+
+body, a::text {
+    
+    font-family: "hurme geometric sans 3";
+    color: black;
+    background-color: white;
+}
+
+.lu {
+    color: red;
+}
+
+.lu ~ p {
+    color: blue;
+}

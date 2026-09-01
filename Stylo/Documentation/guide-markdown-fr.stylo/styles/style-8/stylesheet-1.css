@@ -1,0 +1,18 @@
+
+body {
+    
+    font-family: "Times New Roman";
+    color: rgb(123,234,123);
+}
+
+h1 {
+    color: rgb(129,23,153);
+}
+
+h4 {
+    color: red;
+}
+
+h4::first-letter {
+    color: blue;
+}

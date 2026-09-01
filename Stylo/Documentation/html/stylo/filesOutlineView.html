@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+        <link rel="stylesheet" href="../../css/help.css"></link>
+        <title>Files Outline View</title>
+        <meta name="description" content="Description of the file format."></meta>
+        <meta name="KEYWORDS" content="files, outline, view, title"></meta>
+    </head>
+    <body id="help">
+        <a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+        <h1>Files Outline View</h1>
+        <p>A <em>Files Outline View</em> is a specific view of the files in a document. It's an outline view which contains user selected items and expanded ones. A specific navigation history is also associated with each <em>Files Outline View</em>. Each <em>Files Outline View</em> is also associated with a corresponding <a href="editorsPanel.html"><em>Editors Panel</em></a> which shows the selected text files computed based on the <em>Files Outline View</em>'s user selected items.</p>
+        <h2>Select the <em>Files Outline View</em></h2>
+        <p>If the Navigator is not opened, click on the <a href="sidebarButtons.html">left sidebar button</a>.</p>
+        <p>To select the <em>Files Outline View</em>:</p>
+        <ul>
+            <li>from the <a href="navigatorTitleBar.html">Navigator Title Bar</a>'s <a href="navigatorToolSelectorButton.html"><em>navigator tool selector button</em></a>: click on the <code>Files</code> popup menu item.</li>
+        </ul>
+        <h2>Items types</h2>
+        <p>There is three items types that can go inside the directory structure: <code>Group</code>, <code>Directory</code> and <code>File</code>.</p>
+        <h3>Group</h3>
+        <p>A group is a &quot;promoted&quot; directory. The <code>group</code> concept is used to differentiate between top level directories and the other directories inside the files structure.</p>
+        <p>A <code>group</code> being a directory, any directory can become a group and any group can become a directory. To create a group from an existing directory, simply drag it at the top level of the outline.</p>
+        <p>To create a directory from an existing group, drag the group under another group or directory.</p>
+        <h3>Directory</h3>
+        <p>The directory is the same as the file's system directory. It is used as a container for other directories and/or files.</p>
+        <h3>File</h3>
+        <p>A file is any source file and can only be of text type currently. The files outline view allows to move them around under existing directories/groups by dragging them but they can not be put at the root and become groups. In fact, in general, a text cannot morph into a directory and vice-versa. The two concepts are not interchangeable.</p>
+        <h2>Subviews</h2>
+        <p>The <em>Files Outline View</em> contains two subviews:</p>
+        <ul>
+            <li><em>Files Outline Actions Bar</em></li>
+            <li><em>Outline View</em></li>
+        </ul>
+        <h3>Files Outline Actions Bar</h3>
+        <p>The <em>Files Outline Actions Bar</em> is located at the top of the <em>Files Outline View</em> and shows two buttons to add and/or remove items.</p>
+        <p>The <em>Add Item</em> button, represented by a plus sign, allows to add an item of any type: <code>Group</code>, <code>Directory</code> or <code>File</code> after the current selection last item if it's a <code>File</code> or at the end of the current container if it's a <code>Group</code> or <code>Directory</code>.</p>
+        <p>The <em>Delete Item</em> button, represented by a minus sign, allows to remove all user selected items and their descendants.</p>
+        <h3>Outline View</h3>
+        <p>The outline view follows a simple structure. At the top level we can only have groups. Under a group there could be any number of files or directory, and recursively, the same applies for the directory.</p>
+        <h2>Actions</h2>
+        <h3>Select/deselect an item</h3>
+        <p>To select an item:</p>
+        <ul>
+            <li>click on the item in the outline.</li>
+        </ul>
+        <p>To add an item to the selection:</p>
+        <ul>
+            <li>Press <code>Command</code> and click on the item to be added to the selection.</li>
+        </ul>
+        <p>To extend the selection:</p>
+        <ul>
+            <li>Press <code>Shift</code> and click the last file that needs to be included in the selection, either above or below the current selection.</li>
+        </ul>
+        <h3>Rename an item</h3>
+        <p>To rename an item:</p>
+        <ul>
+            <li>from the <em>Files Outline View</em>: click on a uniquely selected item.</li>
+        </ul>
+        <p>It's also possible to rename a file from the <a href="fileEditor.html"><em>File Editor</em></a></p>
+        <ul>
+            <li>from the <a href="fileEditor.html"><em>File Editor</em></a>: click on the file name in the file path located on the left of the <em>Editor Title Bar</em>. The title will go in edit mode.</li>
+        </ul>
+        <h3>Add a group (<code>⇧⌘R</code>)</h3>
+        <p>To add a group:</p>
+        <ul>
+            <li>
+                <p>From the files outline title view, press the <code>+</code> (<em>Add Item</em>) button from the <em>Files Outlines Panel Title Bar</em> and chose <code>Group</code></p>
+            </li>
+            <li>
+                <p>From the menu, go to <code>File</code> -&gt; <code>New Group</code></p>
+            </li>
+            <li>
+                <p>Using the keyboard, press <code>⇧⌘R</code></p>
+            </li>
+        </ul>
+        <h3>Delete a group</h3>
+        <p>To delete a group:</p>
+        <ul>
+            <li>
+                <p>From the files outline title view, select the group to be deleted and press the <code>-</code>(<em>Delete Item</em>) button from the <em>Files Outlines Panel Title Bar</em>.</p>
+            </li>
+            <li>
+                <p>From the group popup menu, right click (<code>⌥+Click</code>) the group to be deleted, and chose the option: <code>Delete</code></p>
+            </li>
+        </ul>
+        <h3>Move a group</h3>
+        <p>Dragging a group under another group or directory will automatically convert this group into a directory.</p>
+        <p>To move a group:</p>
+        <ol>
+            <li>click on the group in the outline</li>
+            <li>drag the group to the target position</li>
+        </ol>
+        <h3>Expand/Collapse a group</h3>
+        <p>To expand a group:</p>
+        <ol>
+            <li>Move the pointer over the target group, a Show/Hide indicator should appear on the right.</li>
+            <li>Click on the indicator.</li>
+        </ol>
+        <h3>Add a directory (<code>⇧⌘D</code> )</h3>
+        <p>To add a directory:</p>
+        <ul>
+            <li>
+                <p>From the files outline title view, press the <code>+</code>(<em>Add Item</em>)  button from the <em>Files Outlines Panel Title Bar</em> and chose <code>Directory</code></p>
+            </li>
+            <li>
+                <p>From the menu, go to <code>File</code> -&gt; <code>New Directory</code></p>
+            </li>
+            <li>
+                <p>Using the keyboard, press <code>⇧⌘D</code></p>
+            </li>
+            <li>
+                <p>From the popup menu, right click (<code>⌥+Click</code>) any item in the files outline, and chose the option: <code>Add Directory</code></p>
+            </li>
+        </ul>
+        <h3>Move a directory</h3>
+        <p>Dragging a directory at the top level will convert this directory into a group. The concepts of directory and files, like in a real directory are not interchangeble, so dragging a file at the top level is not possible and will cause an error. Remember, no magic! a document is simply a directory on the file system.</p>
+        <p>To move a directory:</p>
+        <ol>
+            <li>click on the directory in the outline</li>
+            <li>drag the directory to the target position</li>
+        </ol>
+        <h3>Delete a directory</h3>
+        <p>To delete a directory:</p>
+        <ul>
+            <li>
+                <p>From the files outline title view, select the directory to be deleted and press the <code>-</code>(<em>Delete Item</em>) button from the <em>Files Outlines Panel Title Bar</em>.</p>
+            </li>
+            <li>
+                <p>From the directory popup menu, right click the directory to be deleted, and chose: <code>Delete</code></p>
+            </li>
+        </ul>
+        <h3>Expand/Collapse a directory</h3>
+        <p>To expand a group:</p>
+        <ul>
+            <li>click on the left expand/collapse indicator.</li>
+        </ul>
+        <h3>Add a file (<code>⇧⌘T</code> )</h3>
+        <p>To add a file:</p>
+        <ul>
+            <li>
+                <p>From the files outline title view, press the <code>+</code>(<em>Add Item</em>)  button from the <em>Files Outlines Panel Title Bar</em> and chose <code>File</code></p>
+            </li>
+            <li>
+                <p>From the menu, go to <code>File</code> -&gt; <code>New File</code></p>
+            </li>
+            <li>
+                <p>Using the keyboard, press <code>⇧⌘T</code></p>
+            </li>
+            <li>
+                <p>From the popup menu, right click (<code>⌥+Click</code>) any item in the files outline view, and chose the option: <code>Add File</code></p>
+            </li>
+            <li>
+                <p>From the <em>Editors</em> panel, press any of the <em>Add Editor</em> buttons under each editor.</p>
+            </li>
+        </ul>
+        <h3>Move a file</h3>
+        <p>Note that a file cannot be moved at the top level, only groups/directory can be found at the top.</p>
+        <p>To move a file:</p>
+        <ol>
+            <li>click on the file in the outline</li>
+            <li>drag the file to the target position</li>
+        </ol>
+        <h3>Delete a file</h3>
+        <p>To delete a file:</p>
+        <ul>
+            <li>
+                <p>From the files outline title view, select the file to be deleted and press the <code>-</code> (<em>Delete Item</em>) button from the <em>Files Outlines Panel Title Bar</em>.</p>
+            </li>
+            <li>
+                <p>From the file popup menu, right click the file to be deleted, and chose the option: <code>Delete</code></p>
+            </li>
+        </ul>
+        
+    </body>
+</html>
+

@@ -1,0 +1,112 @@
+{
+    
+    "name": "Solarized",
+    
+    "theme": {
+        
+        "common": {
+            
+            "dark": {
+                "background": {
+                    "color": "#002b36"
+                }
+            },
+            "light": {
+                "background": {
+                    "color": "#fdf6e3"
+                }
+            }
+        },
+        "css": {
+            
+            "common": {
+                
+                "foreground": {
+                    "color": "#93a1a1",
+                    "fontFamily": "Menlo",
+                    "fontSize": "10pt"
+                },
+				"function": {
+					"color": "#859900"
+				},
+                "comment": {
+                    "color": "#586e75"
+                },
+                "classSelector": {
+                    "color": "#b68a00"
+                },
+                "atRuleName": {
+                    "color": "#859900"
+                },
+                "namespacePrefix": {
+                    "color": "#859900"
+                },
+                "namespaceUri": {
+                    "color": "#859900"
+                },
+                "typeSelector": {
+                    "color": "#859900"
+                },
+                "attributeName": {
+                    "color": "#b68a00"
+                },
+                "attributeMatch": {
+                    "color": "#859900"
+                },
+                "combinator": {
+                    "color": "#93a1a1"
+                },
+                "propertyName": {
+                    "color": "#268bd2"
+                },
+                "importantExclamationPoint": {
+                    "color": "#93a1a1"
+                },
+                "importantText": {
+                    "color": "#586e75"
+                },
+                "string": {
+                    "color": "#2aa198"
+                },
+                "fontStyle": {
+                    "color": "#859900"
+                },
+                "colorKeyword": {
+                    "color": "#b68a00"
+                },
+                "dimension": {
+                    "color": "#859900"
+                },
+                "number": {
+                    "color": "#2aa198"
+                },
+                "invalid": {
+                    "color": "#93a1a1"
+                },
+                "pseudoSelectorOperator": {
+                    "color": "#586e75"
+                },
+                "pseudoSelectorValue": {
+                    "color": "#586e75"
+                }
+            },
+            "errors": {
+                
+                "common": {
+                    "unselectedMessage": {
+                        "color": "rgba(220,50,47, 0.5)"
+                    },
+                    "selectedMessage": {
+                        "color": "#dc322f"
+                    }
+                }
+            }
+        },
+        "html": {
+            
+            "preview": {
+            
+            }
+        }
+    }
+}

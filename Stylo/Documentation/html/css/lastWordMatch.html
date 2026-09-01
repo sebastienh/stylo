@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS attribute selector, last word match.</title>
+		<meta name="description" content="Page that describe the text match expression &quot;last word match&quot; of CSS attribute selector."></meta>
+		<meta name="KEYWORDS" content="attribute, last, word, match, selector, css"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- css/lastWordMatch.html -->
+<h1>Last word ends with substring</h1>
+<p><em>[attribute_name $=&quot;match_text&quot;]</em> matches the elements whose value last word of the attribute &quot;attribute_name&quot; <em>ends with</em> &quot;match_text&quot;. Here, the value does not have to be an entire word. In the following HTML source:</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;h1 authors=&quot;john marc&quot;&gt;Title 1&lt;/h1&gt;
+</code></pre>
+<p>we could select the <code>h1</code> element, with the following attribute selector:</p>
+<p>CSS:</p>
+<pre><code class="language-css">[authors$=&quot;arc&quot;] {
+    ...
+}
+</code></pre>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS Child selector combinator</title>
+		<meta name="description" content="CSS child selector combinator description with some examples."></meta>
+		<meta name="KEYWORDS" content="cascading"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- css/childCombinator.html -->
+<h1>Child combinator</h1>
+<p><strong>child combinator</strong> is used to select the children of an element. A child selector combinator is represented by a larger than (<code>&gt;</code>) sign between the selectors. For example, to select all <code>h2</code> that are children of the <code>body</code> element, the following CSS could be used:</p>
+<p>CSS:</p>
+<pre><code class="language-css">body &gt; h2 {
+    ...
+}
+</code></pre>
+<p>In this example, only the <code>h2</code> element under the <code>body</code> element is selected, the one with the text: <code>title 2</code>. The one under the <code>p</code> element is not selected.</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;title 1&lt;/h1&gt; 
+        &lt;h2&gt;title 2&lt;/h2&gt;
+        &lt;p&gt; 
+            &lt;h2&gt;title 2 in p&lt;/h2&gt;
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+	</body>
+</html>

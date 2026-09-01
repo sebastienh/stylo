@@ -1,0 +1,10 @@
+
+In the Stylo case, the first tab is used to indicate a code block and
+the second tab is kept to indent the text on the same line.
+
+```````````````````````````````` example
+→→foo
+.
+<pre><code>→foo
+</code></pre>
+````````````````````````````````

@@ -1,0 +1,179 @@
+/*
+ * UI stylesheet
+ */
+
+/* Styles */
+
+body {
+    
+    background-color: white;
+    color: black;
+    font-family: "Avenir Next";
+    font-size: 12pt;
+}
+
+styles header {
+    
+    background-color: ;
+}
+
+styles header title {
+    
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+styles header add {
+    
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+styles style {
+    
+    background-color: ;
+}
+
+styles style sun {
+    
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+styles style moon {
+    
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+styles style title {
+    
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+styles style edit {
+    
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+sidebar {
+    
+    background-color: ;
+}
+
+sidebar sun {
+    
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+sidebar moon {
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+sidebar preview {
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+sidebar styles {
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+sidebar markdown-help-button {
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+sidebar dom-button {
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+sidebar themes-edit {
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+sidebar themes-select-button {
+    color: ;
+    font-family: ;
+    font-size: ;
+}
+
+sidebar style-select up {
+    
+}
+
+sidebar style-select down {
+    
+}
+
+markdown-help {
+    
+    background-color: ;
+    font-family: ;
+    font-size: ;
+    color: ;
+}
+
+markdown-help title {
+    
+    background-color: ;
+    font-family: ;
+    font-size: ;
+}
+
+
+
+dom header {
+    
+    background-color: ;
+}
+
+dom header title {
+    font-family: ;
+    font-size: ;
+}
+
+dom {
+    
+    font-family: ;
+    font-size: ;
+    color: ;
+    background-color: ;
+}
+
+themes-select header {
+    
+    font-family: ;
+    font-size: ;
+    color: ;
+    background-color: ;
+}
+
+themes-select theme {
+    
+    font-family: ;
+    font-size: ;
+    color: ;
+    background-color: ;
+}
+

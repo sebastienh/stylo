@@ -1,0 +1,3 @@
+# Strikethrough
+
+~~strikethrough text~~  

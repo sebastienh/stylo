@@ -1,0 +1,111 @@
+{
+    "source": {
+        
+        "dark": {
+            
+            "foreground": {
+                "color": "#93a1a1",
+                "fontFamily": "Menlo",
+                "fontSize": "12pt"
+            },
+            "background": {
+                "color": "#002b36"
+            },
+            "classSelector": {
+                "color": "#cb4b16"
+            },
+            "typeSelector": {
+                "color": "#268bd2"
+            },
+            "attributeName": {
+                "color": "#cb4b16"
+            },
+            "attributeMatch": {
+                "color": "#859900"
+            },
+            "combinator": {
+                "color": "#93a1a1"
+            },
+            "propertyName": {
+                "color": "#859900"
+            },
+            "important": {
+                "color": "#859900"
+            },
+            "string": {
+                "color": "#2aa198"
+            },
+            "colorKeyword": {
+                "color": "#cb4b16"
+            },
+            "dimension": {
+                "color": "#859900"
+            },
+            "number": {
+                "color": "#2aa198"
+            },
+            "invalid": {
+                "color": "#93a1a1"
+            },
+            "pseudoSelectorOperator": {
+                "color": "#93a1a1"
+            },
+            "pseudoSelectorValue": {
+                "color": "#93a1a1"
+            }
+            
+        },
+        "light": {
+            "foreground": {
+                "color": "#93a1a1",
+                "fontFamily": "Menlo",
+                "fontSize": "12pt"
+            },
+            "background": {
+                "color": "#fdf6e3"
+            },
+            "classSelector": {
+                "color": "#cb4b16"
+            },
+            "typeSelector": {
+                "color": "#268bd2"
+            },
+            "attributeName": {
+                "color": "#cb4b16"
+            },
+            "attributeMatch": {
+                "color": "#859900"
+            },
+            "combinator": {
+                "color": "#93a1a1"
+            },
+            "propertyName": {
+                "color": "#859900"
+            },
+            "important": {
+                "color": "#859900"
+            },
+            "string": {
+                "color": "#2aa198"
+            },
+            "colorKeyword": {
+                "color": "#cb4b16"
+            },
+            "dimension": {
+                "color": "#859900"
+            },
+            "number": {
+                "color": "#2aa198"
+            },
+            "invalid": {
+                "color": "#93a1a1"
+            },
+            "pseudoSelectorOperator": {
+                "color": "#93a1a1"
+            },
+            "pseudoSelectorValue": {
+                "color": "#93a1a1"
+            }
+        }
+    }
+}

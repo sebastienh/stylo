@@ -1,0 +1,1087 @@
+
+/********************************************/
+/*           highlight-focus                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:highlight:focus {
+    
+}
+
+h2:highlight:focus {
+    
+}
+
+h3:highlight:focus {
+    
+}
+
+h4:highlight:focus {
+    
+}
+
+h5:highlight:focus {
+    
+}
+
+h6:highlight:focus {
+    
+}
+
+h1::tag:highlight:focus {
+    
+}
+
+h2::tag:highlight:focus {
+    
+}
+
+h3::tag:highlight:focus {
+    
+}
+
+h4::tag:highlight:focus {
+    
+}
+
+h5::tag:highlight:focus {
+    
+}
+
+h6::tag:highlight:focus {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:highlight:focus {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+/* :highlight:focus */
+strong:highlight:focus {
+    
+    
+}
+
+em:highlight:focus {
+    
+    
+}
+
+s:highlight:focus {
+    
+    
+}
+
+strong::tag:highlight:focus {
+    
+    
+}
+
+em::tag:highlight:focus {
+    
+    
+}
+
+s::tag:highlight:focus {
+    
+
+}
+
+/* :highlight :focus */
+:highlight strong:focus {
+    
+    
+}
+
+:highlight em:focus {
+    
+    
+}
+
+:highlight s:focus {
+    
+    
+}
+
+:highlight strong::tag:focus {
+    
+    
+}
+
+:highlight em::tag:focus {
+    
+    
+}
+
+:highlight s::tag:focus {
+    
+
+}
+
+
+/* :highlight :highlight:focus */
+:highlight strong:highlight:focus {
+    
+    
+}
+
+:highlight em:highlight:focus {
+    
+    
+}
+
+:highlight s:highlight:focus {
+    
+    
+}
+
+:highlight strong::tag:highlight:focus {
+    
+    
+}
+
+:highlight em::tag:highlight:focus {
+    
+    
+}
+
+:highlight s::tag:highlight:focus {
+    
+
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus strong:highlight:focus {
+    
+    
+}
+
+:highlight:focus em:highlight:focus {
+    
+    
+}
+
+:highlight:focus s:highlight:focus {
+    
+    
+}
+
+:highlight:focus strong::tag:highlight:focus {
+    
+    
+}
+
+:highlight:focus em::tag:highlight:focus {
+    
+    
+}
+
+:highlight:focus s::tag:highlight:focus {
+    
+
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+/* :highlight:focus */
+blockquote:highlight:focus {
+    
+    
+}
+
+blockquote::tag:highlight:focus {
+    
+    
+}
+
+/* :highlight :focus */
+:highlight blockquote:focus {
+    
+    
+}
+
+
+:highlight blockquote::tag:focus {
+    
+    
+}
+
+
+/* :highlight :highlight:focus */
+:highlight blockquote:highlight:focus {
+    
+    
+}
+
+
+:highlight blockquote::tag:highlight:focus {
+    
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus blockquote:highlight:focus {
+    
+    
+}
+
+:highlight:focus blockquote::tag:highlight:focus {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+/* :highlight:focus */
+ul:highlight:focus {
+    
+}
+
+ol:highlight:focus {
+    
+}
+
+li:highlight:focus {
+    
+}
+
+li::tag:highlight:focus {
+    
+}
+
+/* :highlight :focus */
+:highlight ul:focus {
+    
+}
+
+:highlight ol:focus {
+    
+}
+
+:highlight li:focus {
+    
+}
+
+:highlight li::tag:focus {
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight ul:highlight:focus {
+    
+}
+
+:highlight ol:highlight:focus {
+    
+}
+
+:highlight li:highlight:focus {
+    
+}
+
+:highlight li::tag:highlight:focus {
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus ul:highlight:focus {
+    
+}
+
+:highlight:focus ol:highlight:focus {
+    
+}
+
+:highlight:focus li:highlight:focus {
+    
+}
+
+:highlight:focus li::tag:highlight:focus {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+/* :highlight:focus */
+code:highlight:focus {
+    
+}
+
+code::tag:highlight:focus {
+    
+}
+
+code::params:highlight:focus {
+    
+}
+
+/* :highlight :focus */
+:highlight code:focus {
+    
+}
+
+:highlight code::tag:focus {
+    
+}
+
+:highlight code::params:focus {
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight code:highlight:focus {
+    
+}
+
+:highlight code::tag:highlight:focus {
+    
+}
+
+:highlight code::params:highlight:focus {
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus code:highlight:focus {
+    
+}
+
+:highlight:focus code::tag:highlight:focus {
+    
+}
+
+:highlight:focus code::params:highlight:focus {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+/* :highlight:focus */
+
+
+table:highlight:focus {
+    
+}
+
+thead:highlight:focus {
+    
+}
+
+tbody:highlight:focus {
+    
+    
+}
+
+tr:highlight:focus {
+    
+}
+
+td:highlight:focus {
+    
+}
+
+/* :highlight :focus */
+:highlight thead:focus {
+    
+}
+
+:highlight tbody:focus {
+    
+    
+}
+
+:highlight tr:focus {
+    
+}
+
+:highlight td:focus {
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight thead:highlight:focus {
+    
+}
+
+:highlight tbody:highlight:focus {
+    
+    
+}
+
+:highlight tr:highlight:focus {
+    
+}
+
+:highlight td :highlight:focus {
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus thead:highlight:focus {
+    
+}
+
+:highlight:focus tbody:highlight:focus {
+    
+    
+}
+
+:highlight:focus tr:highlight:focus {
+    
+}
+
+:highlight:focus td:highlight:focus {
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+/* :highlight:focus */
+
+a:highlight:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+a::title:highlight:focus {
+    
+    
+}
+
+/* :highlight :focus */
+:highlight a:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:focus {
+    
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight a:highlight:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:highlight:focus {
+    
+    
+}
+
+
+/* :highlight:focus :highlight:focus */
+
+:highlight:focus a:highlight:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight:focus a::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight:focus a::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight:focus a::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight:focus a::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight:focus a::title:highlight:focus {
+    
+    
+}
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+
+/* :highlight:focus */
+
+img:highlight:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+img::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+img::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+img::title:highlight:focus {
+    
+    
+}
+
+/* :highlight :focus */
+:highlight img:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight img::destination:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight img::label:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight img::title:focus {
+    
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight img:highlight:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight img::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight img::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight img::title:highlight:focus {
+    
+    
+}
+
+
+/* :highlight:focus :highlight:focus */
+
+:highlight:focus img:highlight:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight:focus img::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight:focus img::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight:focus img::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight:focus img::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight:focus img::title:highlight:focus {
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:highlight:focus {
+    
+}
+
+/*
+    ref
+*/
+
+
+/* :highlight:focus */
+
+ref:highlight:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+ref::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+ref::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+ref::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+ref::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+ref::title:highlight:focus {
+    
+    
+}
+
+/* :highlight :focus */
+:highlight ref:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight ref::tag:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight ref::text:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight ref::destination:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight ref::label:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight ref::title:focus {
+    
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight ref:highlight:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight ref::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight ref::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight ref::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight ref::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight ref::title:highlight:focus {
+    
+    
+}
+
+
+/* :highlight:focus :highlight:focus */
+
+:highlight:focus ref:highlight:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight:focus ref::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight:focus ref::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight:focus ref::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight:focus ref::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight:focus ref::title:highlight:focus {
+    
+    
+}
+
+/* attributes */
+
+/* :highlight:focus */
+key-value-attr:highlight:focus {
+
+}
+
+key-value-attr::tag:highlight:focus {
+    
+}
+
+class-attr:highlight:focus {
+
+
+}
+
+class-attr::tag:highlight:focus {
+
+}
+
+id-attr:highlight:focus {
+
+}
+
+id-attr::tag:highlight:focus {
+
+}
+
+/* :highlight :focus */
+
+:highlight key-value-attr:focus {
+
+}
+
+:highlight key-value-attr::tag:focus {
+    
+}
+
+:highlight class-attr:focus {
+
+}
+
+:highlight class-attr::tag:focus {
+
+}
+
+:highlight id-attr:focus {
+
+}
+
+:highlight id-attr::tag:focus {
+
+}
+
+/* :highlight :highlight:focus */
+
+:highlight key-value-attr:highlight:focus {
+
+}
+
+:highlight key-value-attr::tag:highlight:focus {
+    
+}
+
+:highlight class-attr:highlight:focus {
+
+
+}
+
+:highlight class-attr::tag:highlight:focus {
+
+}
+
+:highlight id-attr:highlight:focus {
+
+}
+
+:highlight id-attr::tag:highlight:focus {
+
+}
+
+/* :highlight:focus :highlight:focus */
+
+:highlight:focus key-value-attr:highlight:focus {
+
+}
+
+:highlight:focus key-value-attr::tag:highlight:focus {
+    
+}
+
+:highlight:focus class-attr:highlight:focus {
+
+
+}
+
+:highlight:focus class-attr::tag:highlight:focus {
+
+}
+
+:highlight:focus id-attr:highlight:focus {
+
+}
+
+:highlight:focus id-attr::tag:highlight:focus {
+
+}

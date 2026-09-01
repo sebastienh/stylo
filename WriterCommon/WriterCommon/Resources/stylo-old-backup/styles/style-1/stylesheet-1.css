@@ -1,0 +1,93 @@
+
+/**
+ Light Gray
+ https://coolors.co/f7f7f7-282828-e69300-88292f-01768b
+*/
+
+
+/**
+ Light Gray
+ https://coolors.co/f7f7f7-282828-e69300-88292f-01768b
+ */
+
+body, th {
+    
+    background-color: #F7F7F7;
+    color: rgb(60,60,60);
+    font-family: "Roboto Mono";
+}
+
+::tag {
+    color: #D4694E;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(80,80,80);
+    font-weight: 900;
+    font-size: 1.0vw;
+}
+
+h1::tag,
+h2::tag,
+h3::tag,
+h4::tag,
+h5::tag,
+h6::tag {
+    color: rgb(80,80,80);
+    color: #FF5223;
+}
+
+hr {
+    color: #FF5223;
+}
+
+a::destination,
+img::destination,
+table,
+td,
+ref::destination,
+a::label,
+img::label,
+ref::title,
+code,
+blockquote,
+html-block {
+    color: rgb(120,120,120);
+}
+
+
+blockquote::tag {
+    color: #D4694E;
+    font-weight: 500;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+th {
+    font-weight: 500;
+}
+
+s {
+    text-decoration-style: solid;
+    text-decoration-line: line-through;
+    text-decoration-color: #FF5223;
+}
+
+s::tag {
+    text-decoration-line: none;
+}
+
+[highlight] {
+    color: #FF5223;
+}

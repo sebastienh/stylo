@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS color property type</title>
+		<meta name="description" content="CSS color property type description page."></meta>
+		<meta name="KEYWORDS" content="css, properties, property, type, color"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+		<!-- css/cssPropertyValuesColor.html -->
+<h1>color</h1>
+<p>In Stylo, the value of a color is ultimately represented by four components between 0 and 1: red, green, blue, and alpha. A color component with value 0 is absent; with value 1, the component is present at 100%. The intermediate values ​​determine the different variants in the presence of the component. In the case of the alpha component, the value 0 means that the color is completely transparent and the value 1, that it is completely opaque.</p>
+<p>Pure red, is represented by: red: 1, green: 0, blue: 0, alpha: 0; white 1,1,1,1 and black: 0,0,0,1. All shades of gray use the three components in equal amounts, for example, a dark gray could be obtained with the components: 0.2,0,2,0,2,1.</p>
+<h2>rgb</h2>
+<p>The <code>rgb(&lt;red&gt;,&lt;green&gt;,&lt;blue&gt;)</code> function allows to define a color by passing the value of the three color components with a number between 0 and 255 for each component. This number is ultimately divided by 255 to get a value between 0 and 1 as mentioned previously. The alpha value is set to 1 by default.</p>
+<p>For example, to assign the red color to the <code>color</code> property of <code>h1</code> elements, we could use:</p>
+<p>CSS:</p>
+<pre><code class="language-css">h1 {
+    color: rgb(255, 0,0);
+}
+</code></pre>
+<p>Here, the <code>rgb</code> function was used with the red component at its maximum value of 255 (255/255 = 1) and the green and blue components are not present.</p>
+<h2>rgba</h2>
+<p>The <code>rgba (&lt;red&gt;, &lt;green&gt;, &lt;blue&gt;, &lt;alpha&gt;)</code> function allows, like the <code>rgb</code> function, to define a color according to the three fundamental components with a value between 0 and 255, but also allows to specify the alpha component value.</p>
+<p>For example, to assign the red color with an alpha of 0.5 to the <code>h1</code> elements <code>color</code> property, we could use:</p>
+<p>CSS:</p>
+<pre><code class="language-css">h1 {
+    color: rgba(255, 0.0, 0.5);
+}
+</code></pre>
+<p>Note: The <code>background-color</code> property of the body element does not support alpha component value different than 1 for perfomance reasons.</p>
+<h2>hexadecimal</h2>
+<p>An hexadecimal value is another way to represent the red, green, and blue color components. An hexadecimal value is introduced by the character &quot;#&quot; and followed by the hexadecimal characters of the value. Valid hexadecimal characters are: 0,1,2,3,4,5,6,7,8,9, a, b, c, d, e, f, case insensitive. For example, &quot;#F00&quot; represents the red color with an alpha to 255.</p>
+<table>
+<thead>
+<tr>
+<th> hexadecimal character </th>
+<th> decimal value </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 0 </td>
+<td> 0 </td>
+</tr>
+<tr>
+<td> 1 </td>
+<td> 1 </td>
+</tr>
+<tr>
+<td> 2 </td>
+<td> 2 </td>
+</tr>
+<tr>
+<td> 3 </td>
+<td> 3 </td>
+</tr>
+<tr>
+<td> 4 </td>
+<td> 4 </td>
+</tr>
+<tr>
+<td> 5 </td>
+<td> 5 </td>
+</tr>
+<tr>
+<td> 6 </td>
+<td> 6 </td>
+</tr>
+<tr>
+<td> 7 </td>
+<td> 7 </td>
+</tr>
+<tr>
+<td> 8 </td>
+<td> 8 </td>
+</tr>
+<tr>
+<td> 9 </td>
+<td> 9 </td>
+</tr>
+<tr>
+<td> A </td>
+<td> 10 </td>
+</tr>
+<tr>
+<td> B </td>
+<td> 11 </td>
+</tr>
+<tr>
+<td> C </td>
+<td> 12 </td>
+</tr>
+<tr>
+<td> D </td>
+<td> 13 </td>
+</tr>
+<tr>
+<td> E </td>
+<td> 14 </td>
+</tr>
+<tr>
+<td> F </td>
+<td> 15 </td>
+</tr>
+</tbody>
+</table>
+<p>As a decimal value, for which each position represents a power of 10, in hexadecimal, each position represents a power of 16.</p>
+<p>For example, the number 28 in decimal is:</p>
+<p>2x10<sup>1</sup> + 8 x10<sup>0</sup> = 20 + 8 = 28</p>
+<p>Reminder: &lt;any number&gt;<sup>0</sup> = 1</p>
+<p>The same number in hexadecimal is written as &quot;1c&quot; (&quot;c&quot; is 12):</p>
+<p>1x16<sup>1</sup> + 12x16<sup>0</sup> = 16 + 12 = 28</p>
+<p>For a full explanation of the hexadecimal characters, see the <a href="https://en.wikipedia.org/wiki/Hexadecimal">Hexadecimal</a> article on Wikipedia.</p>
+<p>It is possible to express a color in hexadecimal with values ​​of several lengths, each length having its own interpretation.</p>
+<ol>
+<li>three hexadecimal characters</li>
+</ol>
+<p>With a value of length 3, from left to right, the first character represents the red component; the second component, the green component; the third, the blue component. To get the value of each component, Stylo doubles the character. Thus, for the value <code>#abc</code>, the value used will be: <code>#aabbcc</code>, the <code>aa</code> characters  for the red component, the <code>bb</code> characters for the green component and finally, the <code>cc</code> characters for the blue component. The range of values ​​thus goes from 0 (0x16<sup>1</sup> + 0x16<sup>0</sup> = 0 + 0 = 0) to 255 (15x16<sup>1</sup> + 15x16<sup>0</sup> = 240 + 15 = 255). The value of the alpha (as in the rgb function mentioned above) will always default to 255.</p>
+<p>For example, we could set the color red, for a level 1 title:</p>
+<p>CSS:</p>
+<pre><code class="language-css">h1 {
+    color: #F00;
+}
+</code></pre>
+<p>Which gives with the values doubled: <code>#FF0000</code>, and therefore, a value of 255 for the red component, 0 for the green component, 0 for the blue component, and 255 for the alpha, by default.</p>
+<ol start="2">
+<li>four hexadecimal characters</li>
+</ol>
+<p>The interpretation remains the same with four characters, all the values ​​are doubled and the components remain the same as for the first six characters except the added last two characters that are used to specify the color's alpha component.</p>
+<p>To define the red color with an alpha of 0.53, we will have:</p>
+<p>CSS:</p>
+<pre><code class="language-css">h1 {
+    color: #F008;
+}
+</code></pre>
+<ol start="3">
+<li>six hexadecimal characters</li>
+</ol>
+<p>We find ourselves in the same case with three characters, except that the values ​​will not be doubled.</p>
+<p>To obtain the pure blue color, we will use:</p>
+<p>CSS:</p>
+<pre><code class="language-css">h1 {
+    color: #0000FF;
+}
+</code></pre>
+<ol start="4">
+<li>height hexadecimal characters</li>
+</ol>
+<p>This time, we find ourselves in the same case as with four characters, except that the values ​​are not doubled: we can completely define a color with an 8 characters hexadecimal code, including its alpha component. For a green with an alpha component at 0.47:</p>
+<p>CSS:</p>
+<pre><code class="language-css">h1 {
+    color: #00FF0078;
+}
+</code></pre>
+<p>Calculation for the alpha value gives: 7x16<sup>1</sup> + 8x16<sup>0</sup> = 112 + 8 = 120 -&gt; 120/255 = 0.47.</p>
+<h2>keyword</h2>
+<p>Stylo supports all keywords supported by CSS.</p>
+<p>To assign the red color to the <code>color</code> property of elements of type <code>h1</code> we could use the following CSS:</p>
+<p>CSS:</p>
+<pre><code class="language-css">h1 {
+    color: red;
+}
+</code></pre>
+<p>Keywords allow quick access to the main colors in CSS. See the full list of Stylo <a href="colorKeywords.html">color keywords</a>.</p>
+	</body>
+</html>

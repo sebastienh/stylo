@@ -1,0 +1,53 @@
+
+
+
+body, th {
+
+    font-family: "Avenir Next";
+    font-size: 1.1vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    font-size: 1.2vw;
+}
+
+h1::tag,
+h2::tag,
+h3::tag,
+h4::tag,
+h5::tag,
+h6::tag {
+    font-size: 1.2vw;
+}
+
+code {
+    font-family: Inconsolata;
+}
+
+table, th, table::tag {
+    font-family: Inconsolata;
+}
+
+blockquote::tag {
+    font-weight: 500;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-style: normal;
+    font-weight: bold;
+}
+
+th {
+    font-weight: 500;
+}
+

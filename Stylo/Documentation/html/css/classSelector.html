@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS class selector</title>
+		<meta name="description" content="CSS class selector description along with some examples."></meta>
+		<meta name="KEYWORDS" content="cascading, css"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- css/classSelector.html -->
+<h1>Class selector</h1>
+<p>The class selector allows to select elements using the <code>class</code> attribute. It takes the general form of the dot ('.') followed by the element class name: &quot;. &lt;element class&gt;&quot;. In the following HTML document:</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1 id=&quot;my-first-title&quot; class=&quot;title&quot;&gt;Title 1&lt;/h1&gt;
+        &lt;h2 class=&quot;other-class title&quot;&gt;Title 2&lt;/h2&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>it is possible to assign the red color to the elements <code>h1</code> and <code>h2</code> using the following style declaration (since they share the <code>class</code>'s value <code>title</code>):</p>
+<p>CSS:</p>
+<pre><code class="language-css">.title {
+    color: red;
+}
+</code></pre>
+	</body>
+</html>

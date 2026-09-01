@@ -1,0 +1,590 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Markdown Attributes</h1>
+<p>Markdown attributes allow to assign <a href="../html/#id">id</a>, <a href="../html/#class">class</a> and <a href="../html/#attributes">attributes</a> to Markdown elements using Markdown syntax instead of raw HTML.</p>
+<p>Markdown attributes are composed of two parts, firstly, the attributes themselves which can be of <a href="../html/#id">id</a>, <a href="../html/#class">class</a> or <a href="../html/#attributes">attributes</a> types, and secondly, the attributes blocs which allow to group together attributes to be assigned to Markdown elements.</p>
+<p>An attributes bloc take the general form:</p>
+<pre><code>{ &lt;attribute-1&gt; &lt;...&gt; &lt;attribute-n&gt; }
+</code></pre>
+<p>e.g. to define an attribute bloc that assign the value <code>john</code> to the value <code>name</code> we would use the following syntax:</p>
+<pre><code class="language-markdown">{name=john}
+</code></pre>
+<p>In the following sections, we will first start the description of Markdown attributes by defining the attributes types and their syntax before moving to the description of the attribute blocs. We will then define the rules used to associated attributes blocs to Markdown elements and conclude by giving some examples of their use with common Markdown elements types.</p>
+<h2>Attribute</h2>
+<p>An attribute is a &quot;name value&quot; pair property that is assigned to a Markdown element. There is three attributes types, each corresponding to their HTML equivalent:</p>
+<ul>
+<li><a href="../html/#id">id</a></li>
+<li><a href="../html/#class">class</a></li>
+<li><a href="../html/#attributes">attributes</a></li>
+</ul>
+<h3><code>id</code> attribute</h3>
+<p>The id attribute adds an <a href="../html/#id">HTML id</a> to a Markdown element. To define an <code>id</code>, we should use the pound character <code>#</code> followed by the id we want to assign to the attribute. Remember that ids are supposed to be unique in an HTML document!</p>
+<h4>Syntax</h4>
+<p>Markdown:</p>
+<pre><code class="language-markdown">{#myid}
+Text with id attribute.
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p id=&quot;myid&quot;&gt;
+Text with id attribute.
+&lt;/p&gt;
+
+</code></pre>
+<p>Only one id should be defined per element. If multiple ids are defined, only the last one will be considered.</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">{#id1 #id2}
+Text with id attribute.
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p id=&quot;id2&quot;&gt;
+Text with id attribute.
+&lt;/p&gt;
+</code></pre>
+<h4>HTML Element</h4>
+<p>The <code>id</code> attribute offers the following HTML element for styling:</p>
+<ul>
+<li><code>id-attr</code>: allows to style the region used to defines the <code>id</code> attribute, including the <code>#</code> sign.</li>
+</ul>
+<h4 id="id-element">HTML Pseudo-element</h4>
+<p>The <code>id</code> attribute offers the following pseudo-element:</p>
+<ul>
+<li>
+<p><code>tag</code>: allows to style the region used to define the <code>id</code>, basically the <code>#</code> sign.</p>
+</li>
+<li>
+<p><code>attr-indicator</code>: see <code>tag</code>.</p>
+</li>
+</ul>
+<h3><code>class</code> attribute</h3>
+<p>The class attribute adds an <a href="../html/#class">HTML class</a> to a Markdown element. To define a <code>class</code> attribute we should use the <code>.</code> character followed by the class value we want to define. Any number of class values can be added to any element.</p>
+<h4>Syntax</h4>
+<p>Markdown:</p>
+<pre><code class="language-markdown">{.myclass}
+Text with class attribute.
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p class=&quot;myclass&quot;&gt;
+Text with class attribute.
+&lt;/p&gt;
+
+</code></pre>
+<h4>HTML Element</h4>
+<p>The <code>class</code> attribute offers the following HTML element for styling:</p>
+<ul>
+<li><code>class-attr</code>: allows to style the region used to defines the <code>class</code> attribute, including the <code>.</code> sign.</li>
+</ul>
+<h4 class="class-element">HTML Pseudo-element</h4>
+<p>The <code>class</code> attribute offers the following pseudo-element:</p>
+<ul>
+<li>
+<p><code>tag</code>: allows to style the region used to define the <code>class</code>, basically the <code>.</code> sign.</p>
+</li>
+<li>
+<p><code>attr-indicator</code>: see <code>tag</code>.</p>
+</li>
+</ul>
+<h3>Key-value attributes</h3>
+<p>A key-value attribute adds an <a href="../html/#attributes">HTML attribute</a> to a Markdown element. A key-value attribute has, well, two parts: a key and a value.</p>
+<p>The key and the value cannot start with a number but they can start with any letter or an underscore <code>_</code>.</p>
+<h4>Syntax</h4>
+<p>Markdown:</p>
+<pre><code class="language-markdown">{key=value}
+Attributed text.
+
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p key=&quot;value&quot;&gt;Attributed text.&lt;/p&gt;
+</code></pre>
+<p>An attribute definition with multiple values for the same key should be enclosed within double quotes <code>&quot;</code> and separated by at least one space.</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">{key=&quot;value1 value2&quot;}
+Attributed text.
+
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p key=&quot;value1 value2&quot;&gt;Attributed text.&lt;/p&gt;
+</code></pre>
+<p>Complex attributes can be added, for example, to add style attributes:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">{style=&quot;color: red&quot;}
+Red text.
+
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p style=&quot;color: red&quot;&gt;Red text.&lt;/p&gt;
+</code></pre>
+<h4>HTML Element</h4>
+<p>The <code>key-value</code> attribute offers the following HTML element for styling:</p>
+<ul>
+<li><code>key-value-attr</code>: allows to style the region used to defines the <code>key-value-attr</code> attribute, including the <code>=</code> sign.</li>
+</ul>
+<h4 key="value">HTML Pseudo-element</h4>
+<p>The <code>key-value-attr</code> attribute offers the following pseudo-element:</p>
+<ul>
+<li>
+<p><code>tag</code>: allows to style the region used to define the <code>key-value-attr</code>, basically the <code>=</code> sign.</p>
+</li>
+<li>
+<p><code>attr-indicator</code>: see <code>tag</code>.</p>
+</li>
+</ul>
+<h2>Attributes bloc</h2>
+<p>Attributes blocs are used are used to group attributes together and to assign them to any Markdown element, except attributes blocs themselves. Attributes added by attributes blocs are kept in the final HTML file and can be used as any other attributes from CSS to style the HTML elements.</p>
+<h3>Syntax</h3>
+<p>An attributes bloc starts with a left curly brace <code>{</code> and ends with a right curly brace <code>}</code>. Multilines attributes bloc are not allowed and must start and end on the same line. Inside the the opening and closing curly braces it's possible to define any number of attributes, of any type, as long as they do not extend to more than one line.</p>
+<h3>HTML Element</h3>
+<p>The attribute bloc offers the following HTML element for styling:</p>
+<ul>
+<li><code>attr-bloc</code>: allows to style the region used to defines the attribute bloc, including the opening and closing curly braces signs.</li>
+</ul>
+<h3 class="attributes-bloc">HTML Pseudo-element</h3>
+<p>The <code>key-value-attr</code> attribute offers the following pseudo-element:</p>
+<ul>
+<li>
+<p><code>tag</code>: allows to style the region used to define the <code>attr-bloc</code>, basically the <code>=</code> sign.</p>
+</li>
+<li>
+<p><code>attr-indicator</code>: see <code>tag</code>.</p>
+</li>
+</ul>
+<h3>Using attributes with Markdown</h3>
+<p>To start using attributes effectively we need to understand how they interoperate with the other Markdown elements.</p>
+<p>Please note that the examples thats follows will use the CSS* below:</p>
+<pre><code class="language-css">.blue {
+    color: blue;
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+.pink {
+    color: pink;
+}
+
+</code></pre>
+<p>*Note that the last CSS style rules have higher priority than preceeding ones, some examples below will need to have this fact in mind.</p>
+<h4>Attributes application rules</h4>
+<p>Attributes can be assigned to Markdown <a href="../markdown/#mdElementTypes">inline or bloc elements</a>.</p>
+<p>Here are the rules to use them:</p>
+<ol>
+<li>Attributes blocs can be added before* any markdown bloc.</li>
+</ol>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+<span class="red">Red paragraph with attributes before.</span>
+</code></pre>
+<ol start="2">
+<li>All attributes blocs before a Markdown bloc that applies to that bloc will be aggregated together.</li>
+</ol>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.green</span><span class="attribute-tag">}</span>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attribute-tag">}</span>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="green">Paragraph is green because .green selector has higher priority.</span>
+</code></pre>
+<ol start="3">
+<li>Attributes blocs can also be added after a markdown bloc, on the line directly below it. No blank lines must separare the markdown bloc and the attributes bloc for the attributes bloc to be considered on the line directly below this bloc.</li>
+</ol>
+<pre><code>
+<span class="red">Red paragraph with attributes after.</span>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<ol start="4">
+<li>Inline attributes blocs are applied to the inline element defined before them, if there is no such element, they apply to the enclosing bloc in which they are defined.	
+Example of inline attributes blocs applied to the inline element defined before, here an <a href="#mdEmphasis">emphasis</a>:</li>
+</ol>
+<pre><code>
+This is <span class="red">*red*</span><span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>.</span>
+</code></pre>
+<p>Example of inline attributes blocs applied to the enclosing bloc in which they are defined:</p>
+<pre><code>
+<span class="red">This is all red.</span><span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>.</span>
+</code></pre>
+<p>*Note: An attributes bloc can be defined inline e.g. inside a paragraph, or as a bloc, at the root or inside another bloc. <em>_</em> <em>Before</em> <em>_</em> or <em>_</em> <em>after</em> <em>_</em> refers to the position of an attributes bloc relatively to another bloc level element under the same bloc or the root. The notion is quite intuitive:</p>
+<p>Attributes bloc after:</p>
+<pre><code>
+<span class="red">Red paragraph with attributes after.</span>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>Or:</p>
+<pre><code>
+<span class="blockquote-tag">></span><span class="red"> Red paragraph with attributes after.</span>
+<span class="blockquote-tag">></span> <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>Attributes bloc before:</p>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+<span class="red">Red paragraph with attributes before.</span>
+</code></pre>
+<p>Or:</p>
+<pre><code>
+<span class="blockquote-tag">></span> <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+<span class="blockquote-tag">></span> <span class="red">Red paragraph with attributes before.</span>
+</code></pre>
+<p>To be considered a bloc, the attributes bloc must not be followed by anything else than whitespaces:</p>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span><span class="red"> Red paragraph with inline attributes bloc.</span>
+This paragraph does not inherit the attributes before because they are considered <em>inline</em>.
+</code></pre>
+<h2>Examples:</h2>
+<h3>ATX Headers:</h3>
+<p>Before:</p>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">#id .red</span><span class="attributes-tag">}</span>
+<span class="heading-tag">###</span> <span class="red">foo</span>
+</code></pre>
+<p>inline:</p>
+<pre><code>
+<span class="heading-tag">###</span> <span class="red">foo</span> <span class="attributes-tag">{</span><span class="attribute">#id .red</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="heading-tag">###</span> <span class="red">foo </span><span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span> <span class="heading-tag">###</span>
+</code></pre>
+<pre><code>
+<span class="heading-tag">###</span> <span class="red">foo ### </span><span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>or after:</p>
+<pre><code>
+<span class="heading-tag">###</span> <span class="red">foo</span>
+<span class="attributes-tag">{</span><span class="attribute">#id .red</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>are allowed.</p>
+<h3>horizontal rule</h3>
+<pre><code>
+<span class="red">---</span> <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>No spaces are needed between the attributes bloc and the horizontal rule:</p>
+<pre><code>
+<span class="red">---</span><span class="attributes-tag">{</span><span class="attribute">.red #id</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>A line feed inside an attributes bloc invalidate it, the same as blank lines inside it:</p>
+<pre><code>
+---{.red 
+#id}
+</code></pre>
+<h3>Setext headers</h3>
+<pre><code>
+<span class="red">Foo </span><span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span> 
+<span class="attributes-tag">==========</span>
+</code></pre>
+<h3>fenced code block</h3>
+<p>An attributes bloc can be put in place of the usual params or &quot;info string&quot; and become &quot;syntactic sugar for classes&quot;.</p>
+<p>But attributes can be put before or after as with any other bloc element:</p>
+<p>Before:</p>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span> 
+<span class="fence-tag">```</span>
+<span class="red">some text</span>
+<span class="fence-tag">```</span>
+</code></pre>
+<p>After:</p>
+<pre><code>
+<span class="fence-tag">```</span>
+<span class="red">some text</span>
+<span class="fence-tag">```</span>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span> 
+</code></pre>
+<p>Replacing the params:</p>
+<pre><code>
+<span class="fence-tag">```</span><span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span> 
+<span class="red">some text</span>
+<span class="fence-tag">```</span>
+</code></pre>
+<h3>Reference Links</h3>
+<pre><code>
+<span class="reference-tag">[</span><span class="red">foo</span><span class="reference-tag">]</span><span class="reference-tag">[</span>bar<span class="reference-tag">]</span>
+<span class="reference-tag">[</span><span class="red">bar</span><span class="reference-tag">]:</span> /url "title"<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span> 
+<span class="reference-tag">[</span><span class="blue">bar</span><span class="reference-tag">]:</span> /url "title"<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>In the previous example, only the first attributes are propagated since it is the active reference (because it is the first one). Also, attributes propagation to the referencing links and images is applied.</p>
+<h3>Paragraphs</h3>
+<p>As usual, attributes are supported before, inline and after:</p>
+<p>Before:</p>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+<span class="red">Red paragraph with attributes before.</span>
+</code></pre>
+<p>Inline:</p>
+<pre><code>
+<span class="red">Red paragraph with inline attributes.</span><span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>After:</p>
+<pre><code>
+<span class="red">Red paragraph with attributes after.</span>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>Inline blocs, apply to the previous inline element unless, this previous inline element is itself an attributes bloc:</p>
+<pre><code>
+<span class="red">Red paragraph with attributes </span><span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span><span class="red"> inside.</span>
+</code></pre>
+<pre><code>
+<span class="strong-tag">**</span><span class="red">Red emphasized text</span><span class="string-tag">**</span> <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span> text.
+</code></pre>
+<p>If the previous element is an attribute bloc then the attributes apply to the enclosing bloc:</p>
+<pre><code>
+<span class="strong-tag">**</span><span class="red">Red emphasized text</span><span class="strong-tag">**</span> <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span><span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span> <span class="blue">blue text.</span>
+</code></pre>
+<p>There is no need for the attribute blocks to be indented exactly as much as the first line of the paragraph: if it is on the line below it applies to it:</p>
+<pre><code>
+<span class="red">Red text with attributes after.</span>
+ <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<h3>Block quotes</h3>
+<p>No need for the attributes bloc to be indented as the block quote to apply to it, since it is on the line below at the same level, it is sufficient:</p>
+<pre><code>
+<span class="blockquote-tag">></span> <span class="red">Blockquote with attributes.</span>
+ <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="blockquote-tag">></span> <span class="red">Paragraph with attributes.</span>
+<span class="blockquote-tag">></span> <span class="red">inside a blockquote.</span>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>The same rules apply inside a bloc quote, :</p>
+<pre><code>
+<span class="blockquote-tag">></span> <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+<span class="blockquote-tag">></span> <span class="red">Paragraph with attributes.</span>
+<span class="blockquote-tag">></span> <span class="red">inside a blockquote.</span>
+<span class="blockquote-tag">></span>
+<span class="blockquote-tag">></span> Some more text.
+</code></pre>
+<p>Bloc indentation does not change anything:</p>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+   <span class="blockquote-tag">></span> <span class="blue">Blockquote with attributes.</span>
+     <span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>But as we can see, depending on where the attributes belong they apply to different blocs (remember that red has higher priority than blue in the CSS style):</p>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+   <span class="blockquote-tag">></span> <span class="red">Blockquote with attributes.</span>
+   <span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+<span class="blockquote-tag">></span> <span class="red">Blockquote without attributes.</span>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="blockquote-tag">></span> <span class="red">Blockquote with</span>
+<span class="red">lazy continuation.</span>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="blockquote-tag">></span> <span class="red">Blockquote with</span>
+<span class="red">lazy continuation.</span>
+  <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<h3>Lists</h3>
+<pre><code>
+<span class="list-tag">- </span> <span class="red">List with</span>
+<span class="list-tag">- </span> <span class="red">attributes.</span>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>Attributes blocs that are not directly under a bloc are applied to the following one:</p>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="list-tag">- </span> <span class="blue">A tight list</span>
+<span class="list-tag">- </span> <span class="blue">with lazy</span>
+<span class="blue">continuation.</span>
+
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+
+<span class="red">Red paragraph.</span>
+</code></pre>
+<p>The same goes for lists inside another bloc, here a blockquote:</p>
+<pre><code>
+<span class="blockquote-tag">></span> <span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="blockquote-tag">></span> <span class="list-tag">- </span> <span class="blue">A tight list</span>
+<span class="blockquote-tag">></span> <span class="list-tag">- </span> <span class="blue">with lazy</span>
+<span class="blockquote-tag">></span> <span class="blue">continuation.</span>
+<span class="blockquote-tag">></span> 
+<span class="blockquote-tag">></span> <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+<span class="blockquote-tag">></span> 
+<span class="blockquote-tag">></span> <span class="red">Red paragraph.</span>
+<span class="blockquote-tag">></span> 
+</code></pre>
+<p>To get red color applied to the list, we need to put attributes bloc directly under it:</p>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="list-tag">- </span> <span class="red">A tight list</span>
+<span class="list-tag">- </span> <span class="red">with lazy</span>
+<span class="red">continuation.</span>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>We can apply different attributes to the lists</p>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="list-tag">- </span> <span class="blue">1</span>
+<span class="list-tag">- </span> <span class="blue">2</span>
+    <span class="list-tag">- </span> <span class="red">2.1</span>
+    <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="list-tag">- </span> <span class="blue">1</span>
+<span class="list-tag">- </span> <span class="blue">2</span>
+    <span class="list-tag">- </span> <span class="red">2.1</span>
+    <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+
+
+<span class="list-tag">- </span> <span class="blue">a loose list</span>
+
+<span class="list-tag">- </span> <span class="blue">with attributes.</span>
+</code></pre>
+<pre><code>
+<span class="list-tag">- </span> <span class="red">A loose list</span>
+
+<span class="list-tag">- </span> <span class="red">with attributes.</span>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="list-tag">- </span> <span class="blue">A loose list where</span>
+
+<span class="list-tag">- </span> <span class="red">The last paragraph has attributes.</span>
+  <span class="red">Note that the indentation of the</span>
+  <span class="red">attributes block is significant depending</span>
+  <span class="red">on if the attributes bloc after is part of the</span>
+  <span class="red">list or the paragraph (here paragraph case).</span>
+  <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="list-tag">- </span> <span class="red">A loose list where</span>
+
+<span class="list-tag">- </span> <span class="red">The last paragraph has attributes.</span>
+  <span class="red">Note that the indentation of the</span>
+  <span class="red">attributes block is significant depending</span>
+  <span class="red">on if the attributes bloc after is part of the</span>
+  <span class="red">list or the paragraph (here list case).</span>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="list-tag">- </span> <span class="green">A loose list</span>
+
+<span class="list-tag">- </span> <span class="green">with lazy</span>
+<span class="green">continuation.</span>
+<span class="attributes-tag">{</span><span class="attribute">.green</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+<span class="red">Red text.</span>
+
+
+<span class="list-tag">- </span><span class="blockquote-tag">> </span></span><span class="blue">Item text.</span>
+  <span class="blockquote-tag">> </span>
+  <span class="blockquote-tag">> </span><span class="green">A list where each</span>
+  <span class="blockquote-tag">> </span><span class="green">item is a blockquote</span>
+  <span class="blockquote-tag">> </span><span class="attributes-tag">{</span><span class="attribute">.green</span><span class="attributes-tag">}</span>
+
+<span class="list-tag">- </span><span class="blue">Text without specific attributes, the list ones apply.</span>
+
+<span class="list-tag">- </span><span class="pink">Some pink text.</span> <span class="attributes-tag">{</span><span class="attribute">.pink</span><span class="attributes-tag">}</span>
+
+<span class="list-tag">- </span><span class="blockquote-tag">> </span><span class="red">Paragraph inside a red blockquote.</span>
+  <span class="blockquote-tag">> </span>
+  <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>Pink class attribute is put on top:</p>
+<pre><code>
+<span class="list-tag">- </span><span class="blockquote-tag">> </span></span><span class="blue">Item text.</span>
+  <span class="blockquote-tag">> </span>
+  <span class="blockquote-tag">> </span><span class="green">A list where each</span>
+  <span class="blockquote-tag">> </span><span class="green">item is a blockquote</span>
+  <span class="blockquote-tag">> </span><span class="attributes-tag">{</span><span class="attribute">.green</span><span class="attributes-tag">}</span>
+
+<span class="list-tag">- </span><span class="blue">Text without specific attributes, the list ones apply.</span>
+
+  <span class="attributes-tag">{</span><span class="attribute">.pink</span><span class="attributes-tag">}</span>
+<span class="list-tag">- </span><span class="pink">Some pink text.</span> 
+
+<span class="list-tag">- </span><span class="blockquote-tag">> </span><span class="red">Paragraph inside a red blockquote.</span>
+  <span class="blockquote-tag">> </span>
+  <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>The attributes can be put before for the list too:</p>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="list-tag">- </span><span class="blockquote-tag">> </span></span><span class="blue">Item text.</span>
+  <span class="blockquote-tag">> </span>
+  <span class="blockquote-tag">> </span><span class="green">A list where each</span>
+  <span class="blockquote-tag">> </span><span class="green">item is a blockquote</span>
+  <span class="blockquote-tag">> </span><span class="attributes-tag">{</span><span class="attribute">.green</span><span class="attributes-tag">}</span>
+
+<span class="list-tag">- </span><span class="blue">Text without specific attributes, the list ones apply.</span>
+
+  <span class="attributes-tag">{</span><span class="attribute">.pink</span><span class="attributes-tag">}</span>
+<span class="list-tag">- </span><span class="pink">Some pink text.</span> 
+
+<span class="list-tag">- </span><span class="blockquote-tag">> </span><span class="red">Paragraph inside a red blockquote.</span>
+  <span class="blockquote-tag">> </span>
+  <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<h3>inline code</h3>
+<p>The spaces don't matter:</p>
+<pre><code>
+<span class="inline-code-tag">`</span><span class="red">foo</span><span class="inline-code-tag">`</span> <span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<p>or</p>
+<pre><code>
+<span class="inline-code-tag">`</span><span class="red">foo</span><span class="inline-code-tag">`</span><span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="blockquote-tag">> </span>Bar.
+<span class="blockquote-tag">> </span><span class="inline-code-tag">`</span><span class="red">foo</span><span class="inline-code-tag">`</span><span class="attributes-tag">{</span><span class="attribute">.red</span><span class="attributes-tag">}</span>
+<span class="blockquote-tag">> </span>
+</code></pre>
+<h3>emphasis</h3>
+<pre><code>
+<span class="emphasis-tag">_</span><span class="blue"><em>foo</em></span><span class="emphasis-tag">_</span><span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="strong-tag">**</span><span class="blue"><strong>foo</strong></span><span class="strong-tag">**</span><span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<h3>links</h3>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="link-tag">[</span><span class="blue">link</span><span class="link-tag">]</span><span class="link-tag">(</span><span class="blue">/uri</span><span class="link-tag">)</span>
+</code></pre>
+<pre><code>
+<span class="link-tag">[</span><span class="blue">link</span><span class="link-tag">]</span><span class="link-tag">(</span><span class="blue">/uri</span><span class="link-tag">)</span><span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="link-tag">[</span><span class="blue">link</span><span class="link-tag">]</span><span class="link-tag">(</span><span class="blue">/uri</span><span class="link-tag">)</span>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<h3>images</h3>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="image-tag">![</span><span class="blue">link</span><span class="image-tag">]</span><span class="image-tag">(</span><span class="blue">/uri</span><span class="image-tag">)</span>
+</code></pre>
+<pre><code>
+<span class="image-tag">![</span><span class="blue">link</span><span class="image-tag">]</span><span class="image-tag">(</span><span class="blue">/uri</span><span class="image-tag">)</span><span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="image-tag">![</span><span class="blue">link</span><span class="image-tag">]</span><span class="image-tag">(</span><span class="blue">/uri</span><span class="image-tag">)</span>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<h3>reference</h3>
+<pre><code>
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+<span class="reference-tag">[</span><span class="blue">link</span><span class="reference-tag">]:</span> www.textually.net
+</code></pre>
+<pre><code>
+<span class="reference-tag">[</span><span class="blue">link</span><span class="reference-tag">]:</span> www.textually.net <span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+<pre><code>
+<span class="reference-tag">[</span><span class="blue">link</span><span class="reference-tag">]:</span> www.textually.net
+<span class="attributes-tag">{</span><span class="attribute">.blue</span><span class="attributes-tag">}</span>
+</code></pre>
+
+    </body>
+</html>

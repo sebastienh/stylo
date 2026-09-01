@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+message EditRange {
+    
+    uint32 location = 1;
+    uint32 length = 2;
+}
+
+message Edit {
+    
+    EditRange range = 1;
+    string replacementString = 2;
+}
+
+message EditHistory {
+
+    repeated Edit edits = 1;
+
+}

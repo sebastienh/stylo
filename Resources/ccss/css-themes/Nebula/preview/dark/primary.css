@@ -1,0 +1,18 @@
+/*
+ file: Default Source Css Pseudo Style Dark.css
+ */
+
+/*
+ A comment that should not interfere with 
+ rest of the css stylesheet definition.
+*/
+css-style-sheet {
+    font-family: Silom, Courrier, Futura, Andale Mono;
+    color: green;
+}
+
+font-family-name {
+    font-family: Arial, Avenir, Courrier New, Palatino;
+    color: blue;
+}
+

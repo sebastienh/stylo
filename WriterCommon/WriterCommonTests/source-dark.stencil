@@ -1,0 +1,130 @@
+@namespace "http://www.w3.org/Style/CSS/";
+
+/* Solarized Dark
+For use with Jekyll and Pygments
+http://ethanschoonover.com/solarized
+SOLARIZED HEX      ROLE
+--------- -------- ------------------------------------------
+- base03    #002b36  background
+- base01    #586e75  comments / secondary content
+- base1     #93a1a1  body text / default code / primary content
+orange    #cb4b16  constants
+red       #dc322f  regex, special keywords
+blue      #268bd2  reserved keywords
+- cyan      #2aa198  strings, numbers
+green     #859900  operators, other keywords
+*/
+
+css-style-sheet {
+font-family: {{ source.dark.foreground.fontFamily }};
+font-size: {{ source.dark.foreground.fontSize }};
+/* base1     #93a1a1  body text / default code / primary content */
+color: #93a1a1;
+/* base03    #002b36  background */
+background-color: {{ backgroundColor|default:"rgb(70,70,70)" }} ;
+}
+
+/*  base01    #586e75  comments / secondary content */
+.comment-token {
+color: #586e75;
+}
+
+/*  cyan      #2aa198  strings, numbers*/
+.number-token {
+color: #2aa198;
+}
+
+.string-token {
+color: #2aa198;
+}
+
+/*  blue      #268bd2  reserved keywords */
+property-name .string-token {
+color: #268bd2 !important;
+}
+
+/* green     #859900  operators, other keywords */
+complexe-selector selector-combinator {
+color: #859900 !important;
+}
+
+css-token[text-value~="{"] {
+color: #859900;
+}
+
+/*
+css-token[text-value="}"] {
+color: #859900;
+}
+
+css-token[text-value="["] {
+color: #859900;
+}
+
+css-token[text-value="]"] {
+color: #859900;
+}*/
+
+css-token[text-value="."], css-token[text-value="]"], css-token[text-value="["], css-token[text-value="}"] {
+color: #859900;
+}
+
+function {
+color: #859900;
+}
+
+attribute-match {
+color: #859900;
+}
+
+pseudo-element-selector .colon-token {
+color: #859900;
+}
+
+/*  red       #dc322f  regex, special keywords */
+color-value color-keyword {
+color: #dc322f;
+}
+
+pseudo-element-selector .ident-token {
+color: #dc322f;
+}
+
+css-token.dimension-token {
+color: #dc322f;
+}
+
+/* orange    #cb4b16  constants */
+attribute-name css-token.ident-token {
+color: #cb4b16;
+}
+
+/*  - base1     #93a1a1  body text / default code / primary content */
+[nw-message-id] {
+color: #93a1a1;
+}
+
+[code~="invalidDeclaration"] {
+color: #93a1a1 !important;
+}
+
+[code~="invalidDeclaration"] property-name .string-token {
+color: #93a1a1 !important;
+}
+
+[code~="invalidDeclaration"] property-value {
+color: #93a1a1 !important;
+}
+
+[code~="invalidDeclaration"] property-value .number-token {
+color: #93a1a1 !important;
+}
+
+[code~="invalidDeclaration"] property-value .dimension-token {
+color: #93a1a1 !important;
+}
+
+[code~="invalidDeclaration"] color-value color-keyword {
+color: #93a1a1 !important;
+}
+

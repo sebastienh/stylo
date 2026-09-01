@@ -1,0 +1,15 @@
+body {
+    color: black;
+}
+
+code {
+    color: red;
+}
+
+code::tag {
+    color: blue;
+}
+
+code::params {
+    color: pink;
+}

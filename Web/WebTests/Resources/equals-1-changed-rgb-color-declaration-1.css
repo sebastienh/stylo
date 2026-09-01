@@ -1,0 +1,32 @@
+body {
+    
+    font-family: Avenir;
+    color: rgb(123,114,113);
+    background-color: rgb(23,234,33);
+    font-size: 16pt;
+}
+
+h2::tag {
+    color: red;
+}
+
+h2 {
+    color: blue;
+}
+
+h1 {
+    color: rgb(229,23,153);
+}
+
+h4 {
+    color: blue;
+}
+
+h4::first-letter {
+    color: blue;
+}
+
+p {
+    color: red;
+}
+

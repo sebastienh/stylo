@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode user state
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+DerivedData/
+
+# Xcode build outputs and archives
+build/
+Build/
+*.xcarchive
+*.dSYM
+*.ipa
+
+# Swift Package Manager local state
+.build/
+.swiftpm/
+
+# Signing material and private local archives
+certificates/
+*.p12
+*.cer
+*.mobileprovision
+*.provisionprofile
+
+# Local/private project history
+builds/
+crash-reports/
+old jira issues/
+Marketing Documents/
+web-site/
+
+# Temporary files
+*.swp
+*.tmp
+*~

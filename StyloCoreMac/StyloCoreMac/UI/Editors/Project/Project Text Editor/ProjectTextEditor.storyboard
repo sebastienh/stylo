@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="IX1-tk-BPI">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Project Text Editor View Controller-->
+        <scene sceneID="5Ae-hO-jBh">
+            <objects>
+                <viewController id="IX1-tk-BPI" customClass="ProjectTextEditorViewController" customModule="StyloCoreMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" identifier="project-container-view" id="gD7-Yk-oWa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                        <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="dxh-Gd-38F" customClass="EditorContentView" customModule="StyloCoreMac" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                <subviews>
+                                    <customView identifier="project-left-side-view" horizontalHuggingPriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="3Io-vT-ZXP" customClass="ProjectLineNumberingView" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="300"/>
+                                        <subviews>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Tic-1u-EE2" customClass="EditorSideSeparator" customModule="StyloCoreMac" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Tbl-hk-IV9"/>
+                                                </constraints>
+                                            </customView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Tic-1u-EE2" secondAttribute="trailing" id="RXg-Ly-ZV9"/>
+                                            <constraint firstItem="Tic-1u-EE2" firstAttribute="leading" secondItem="3Io-vT-ZXP" secondAttribute="leading" id="fn2-SK-KMN"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tic-1u-EE2" secondAttribute="bottom" id="jFH-AB-UFn"/>
+                                            <constraint firstAttribute="width" constant="100" id="uwe-bC-CX4"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="8jp-hY-820" customClass="EditorContainerView" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="0.0" width="400" height="300"/>
+                                        <subviews>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="s6R-nS-NB2" customClass="EditorSeparator" customModule="StyloCoreMac" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="400" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="xab-AS-Ujf"/>
+                                                </constraints>
+                                            </customView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="s6R-nS-NB2" firstAttribute="leading" secondItem="8jp-hY-820" secondAttribute="leading" id="6kZ-Ot-TKP"/>
+                                            <constraint firstAttribute="bottom" secondItem="s6R-nS-NB2" secondAttribute="bottom" id="O8Y-BP-AvZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="s6R-nS-NB2" secondAttribute="trailing" id="vKV-Eh-G5v"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView identifier="project-right-side-view" horizontalHuggingPriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="w9d-Db-4KX" customClass="RightEditorSideView" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="500" y="0.0" width="100" height="300"/>
+                                        <subviews>
+                                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="55S-tl-eRT" customClass="EditorSideSeparator" customModule="StyloCoreMac" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="1"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="jkh-Qg-f8P"/>
+                                                </constraints>
+                                            </customView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="55S-tl-eRT" secondAttribute="trailing" id="ImO-fi-1G8"/>
+                                            <constraint firstAttribute="width" constant="100" id="SCB-Xs-eO5"/>
+                                            <constraint firstAttribute="bottom" secondItem="55S-tl-eRT" secondAttribute="bottom" id="qBC-Hz-OvM"/>
+                                            <constraint firstItem="55S-tl-eRT" firstAttribute="leading" secondItem="w9d-Db-4KX" secondAttribute="leading" id="wJp-x4-ruI"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3Io-vT-ZXP" firstAttribute="top" secondItem="dxh-Gd-38F" secondAttribute="top" id="02q-8T-qMp"/>
+                                    <constraint firstAttribute="bottom" secondItem="8jp-hY-820" secondAttribute="bottom" id="1uy-SP-MCs"/>
+                                    <constraint firstAttribute="bottom" secondItem="w9d-Db-4KX" secondAttribute="bottom" id="2KQ-6R-uk0"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Io-vT-ZXP" secondAttribute="bottom" id="IiC-yE-Te0"/>
+                                    <constraint firstItem="3Io-vT-ZXP" firstAttribute="width" secondItem="w9d-Db-4KX" secondAttribute="width" id="P3y-9O-jEB"/>
+                                    <constraint firstItem="w9d-Db-4KX" firstAttribute="leading" secondItem="8jp-hY-820" secondAttribute="trailing" id="XmK-xp-WA6"/>
+                                    <constraint firstItem="8jp-hY-820" firstAttribute="top" secondItem="dxh-Gd-38F" secondAttribute="top" id="bbI-rZ-TBf"/>
+                                    <constraint firstItem="3Io-vT-ZXP" firstAttribute="leading" secondItem="dxh-Gd-38F" secondAttribute="leading" id="fwU-e8-skc"/>
+                                    <constraint firstAttribute="trailing" secondItem="w9d-Db-4KX" secondAttribute="trailing" id="kHI-Am-xGe"/>
+                                    <constraint firstItem="w9d-Db-4KX" firstAttribute="top" secondItem="dxh-Gd-38F" secondAttribute="top" id="l16-0I-XCc"/>
+                                    <constraint firstItem="8jp-hY-820" firstAttribute="leading" secondItem="3Io-vT-ZXP" secondAttribute="trailing" id="wm4-0b-k8E"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dxh-Gd-38F" firstAttribute="top" secondItem="gD7-Yk-oWa" secondAttribute="top" id="0CV-8i-CyN"/>
+                            <constraint firstAttribute="bottom" secondItem="dxh-Gd-38F" secondAttribute="bottom" id="Gfi-dl-lN3"/>
+                            <constraint firstItem="dxh-Gd-38F" firstAttribute="leading" secondItem="gD7-Yk-oWa" secondAttribute="leading" id="clU-Rm-fLv"/>
+                            <constraint firstAttribute="trailing" secondItem="dxh-Gd-38F" secondAttribute="trailing" id="pAb-Oo-ba5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="centerEditorSeparator" destination="s6R-nS-NB2" id="B6J-uz-bn9"/>
+                        <outlet property="editorContainerView" destination="8jp-hY-820" id="vL9-dM-BvK"/>
+                        <outlet property="editorContentView" destination="dxh-Gd-38F" id="fg2-Rj-gsg"/>
+                        <outlet property="leftEditorSeparator" destination="Tic-1u-EE2" id="4gr-n1-LFY"/>
+                        <outlet property="leftView" destination="3Io-vT-ZXP" id="lu0-Pp-mdH"/>
+                        <outlet property="rightEditorSeparator" destination="55S-tl-eRT" id="S4f-0y-1mI"/>
+                        <outlet property="rightView" destination="w9d-Db-4KX" id="aIk-4R-akz"/>
+                    </connections>
+                </viewController>
+                <customObject id="F8q-8d-JrA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165" y="87"/>
+        </scene>
+    </scenes>
+</document>

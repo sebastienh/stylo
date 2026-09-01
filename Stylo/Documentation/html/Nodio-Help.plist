@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   Nodio-Help.plist
+   Stylo
+
+   Created by Sebastien hamel on 2019-10-18.
+   Copyright (c) 2019 Textually Inc.. All rights reserved.
+-->
+<plist version="1.0">
+    <dict>
+        <key>CFBundleDevelopmentRegion</key>
+        <string>en-us</string>
+        <key>CFBundleInfoDictionaryVersion</key>
+        <string>6.0</string>
+        <key>CFBundleIdentifier</key>
+        <string>net.textually.nodio.help</string>
+        <key>CFBundleName</key>
+        <string>NodioHelp</string>
+        <key>CFBundlePackageType</key>
+        <string>BNDL</string>
+        <key>CFBundleShortVersionString</key>
+        <string>1.0</string>
+        <key>CFBundleSignature</key>
+        <string>hbwr</string>
+        <key>CFBundleVersion</key>
+        <string>4</string>
+        <key>HPDBookIconPath</key>
+        <string>images/icon_128x128.png</string>
+        <key>HPDBookAccessPath</key>
+        <string>index.html</string>
+        <key>HPDBookTitle</key>
+        <string>Nodio Help</string>
+        <key>HPDBookType</key>
+        <string>3</string>
+        <key>HPDBookIndexPath</key>
+        <string>search.helpindex</string>
+    </dict>
+</plist>

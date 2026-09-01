@@ -1,0 +1,19 @@
+body {
+    color: black;
+}
+
+blockquote {
+    color: red;
+}
+
+blockquote::tag {
+    color: pink;
+}
+
+blockquote blockquote {
+    color: green;
+}
+
+blockquote blockquote::tag {
+    color: yellow;
+}

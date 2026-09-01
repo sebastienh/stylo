@@ -1,0 +1,103 @@
+body {
+
+    tab-size:4;
+
+    {# font-size #}
+    {% if theme.print.word.body.fontSize %}
+        font-size: {{ theme.print.word.body.fontSize }};
+    {% elif theme.print.body.fontSize %}
+        font-size: {{ theme.print.body.fontSize }};
+    {% elif theme.body.fontSize %}
+        font-size: {{ theme.body.fontSize }};
+    {% endif %}
+
+    {# font-family #}
+    {% if theme.print.word.fontFamily %}
+        font-family: {{ theme.print.word.fontFamily }};
+    {% elif theme.print.fontFamily %}
+        font-family: {{ theme.print.fontFamily }};
+    {% elif theme.fontFamily %}
+        font-family: {{ theme.fontFamily }};
+    {% else %}
+        font-family: "Arial";
+    {% endif %}
+}
+
+
+h1 {
+
+    {# font-size #}
+    {% if theme.print.word.h1.fontSize %}
+        font-size: {{ theme.print.word.h1.fontSize }};
+    {% elif theme.print.h1.fontSize %}
+        font-size: {{ theme.print.h1.fontSize }};
+    {% elif theme.h1.fontSize %}
+        font-size: {{ theme.h1.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}
+
+h2 {
+
+    {# font-size #}
+    {% if theme.print.word.h2.fontSize %}
+        font-size: {{ theme.print.word.h2.fontSize }};
+    {% elif theme.print.h2.fontSize %}
+        font-size: {{ theme.print.h2.fontSize }};
+    {% elif theme.h2.fontSize %}
+        font-size: {{ theme.h2.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}
+
+h3 {
+
+    {# font-size #}
+    {% if theme.print.word.h3.fontSize %}
+        font-size: {{ theme.print.word.h3.fontSize }};
+    {% elif theme.print.h3.fontSize %}
+        font-size: {{ theme.print.h3.fontSize }};
+    {% elif theme.h3.fontSize %}
+        font-size: {{ theme.h3.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}
+
+h4 {
+
+    {# font-size #}
+    {% if theme.print.word.h4.fontSize %}
+        font-size: {{ theme.print.word.h4.fontSize }};
+    {% elif theme.print.h4.fontSize %}
+        font-size: {{ theme.print.h4.fontSize }};
+    {% elif theme.h4.fontSize %}
+        font-size: {{ theme.h4.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}
+
+h5 {
+
+    {# font-size #}
+    {% if theme.print.word.h5.fontSize %}
+        font-size: {{ theme.print.word.h5.fontSize }};
+    {% elif theme.print.h5.fontSize %}
+        font-size: {{ theme.print.h5.fontSize }};
+    {% elif theme.h5.fontSize %}
+        font-size: {{ theme.h5.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}
+
+h6 {
+
+    {# font-size #}
+    {% if theme.print.word.h6.fontSize %}
+        font-size: {{ theme.print.word.h6.fontSize }};
+    {% elif theme.print.h6.fontSize %}
+        font-size: {{ theme.print.h6.fontSize }};
+    {% elif theme.h6.fontSize %}
+        font-size: {{ theme.h6.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}

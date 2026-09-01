@@ -1,0 +1,79 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+message SemanticVersion {
+    
+    uint32 major = 1;
+    uint32 minor = 2;
+    uint32 patch = 3;
+}
+
+message StylesheetMetadata_1 {
+    
+    // unique id of the stylesheet which correspond to the file name
+    string id = 1;
+    // cannot assign a name to a stylesheet yet...
+    // but we define it ot minimize changes in the future
+    string title = 2;
+    
+    uint32 order = 3;
+}
+
+message StyleMetadata_1 {
+    
+    // unique id of the style which correspond to the directory name
+    string id = 1;
+    string title = 2;
+    map<string, StylesheetMetadata_1> stylesheets = 3;
+    uint32 order = 4;
+}
+
+message StyleSetMetadata_1 {
+    
+    map<string, StyleMetadata_1> styles = 1;
+}
+
+message WritingSessionMetadata {
+    
+    google.protobuf.Timestamp startDate = 1;
+    int32 charactersCount = 2;
+    int32 wordsCount = 3;
+    int32 sentencesCount = 4;
+    int32 paragraphsCount = 5;
+    float pagesCount = 6;
+}
+
+message WritingSessionsMetadata {
+    
+    bool isHidden = 1;
+    repeated WritingSessionMetadata sessions = 2;
+}
+
+message SourceMetadata_1 {
+    
+    // unique id of the source which correspond to the file name
+    string id = 1;
+    string title = 2;
+    uint32 order = 3;
+    
+    // since each source can have it's own style, each source
+    // is responsible to know it's own style.
+    string styleId = 4;
+    WritingSessionsMetadata writingSessions = 5;
+}
+
+message SourceSetMetadata_1 {
+    
+    map<string, SourceMetadata_1> sources = 1;
+    string selectedSourceId = 2;
+}
+
+message DocumentMetadata_1 {
+    
+    string name = 1;
+    SemanticVersion releaseVersion = 2;
+    SourceSetMetadata_1 sourceSet = 3;
+    StyleSetMetadata_1 styleSet = 4;
+}
+

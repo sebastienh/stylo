@@ -1,0 +1,87 @@
+ [
+  {
+  "type": "paragraph_open",
+  "tag": "p",
+  "attrs": null,
+  "nesting": 1,
+  "level": 0,
+  "children": null,
+  "content": "",
+  "markup": "",
+  "info": "",
+  "meta": null,
+  "block": true,
+  "hidden": false
+  },
+  {
+  "type": "inline",
+  "tag": "",
+  "attrs": null,
+  "nesting": 0,
+  "level": 1,
+  "children": [
+               {
+               "type": "s_open",
+               "tag": "s",
+               "attrs": null,
+               "nesting": 1,
+               "level": 1,
+               "children": null,
+               "content": "",
+               "markup": "~~",
+               "info": "",
+               "meta": null,
+               "block": false,
+               "hidden": false
+               },
+               {
+               "type": "text",
+               "tag": "",
+               "attrs": null,
+               "nesting": 0,
+               "level": 1,
+               "children": null,
+               "content": "strike",
+               "markup": "",
+               "info": "",
+               "meta": null,
+               "block": false,
+               "hidden": false
+               },
+               {
+               "type": "s_close",
+               "tag": "s",
+               "attrs": null,
+               "nesting": -1,
+               "level": 0,
+               "children": null,
+               "content": "",
+               "markup": "~~",
+               "info": "",
+               "meta": null,
+               "block": false,
+               "hidden": false
+               }
+               ],
+  "content": "~~strike~~",
+  "markup": "",
+  "info": "",
+  "meta": null,
+  "block": true,
+  "hidden": false
+  },
+  {
+  "type": "paragraph_close",
+  "tag": "p",
+  "attrs": null,
+  "nesting": -1,
+  "level": 0,
+  "children": null,
+  "content": "",
+  "markup": "",
+  "info": "",
+  "meta": null,
+  "block": true,
+  "hidden": false
+  }
+  ]

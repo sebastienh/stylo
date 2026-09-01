@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+enum AudioFormat {
+    UNKNOWN_AUDIO_FORMAT = 0;
+    PCM=1;
+    APPLELOSSELESS=2;
+    FLAC=3;
+    MPEG4AAC=4;
+    AMR=5;
+}
+
+enum AudioQuality {
+    UNKNOWN_AUDIO_QUALITY = 0;
+    MIN = 1;
+    LOW = 2;
+    MEDIUM = 3;
+    HIGH = 4;
+    MAX = 5;
+}
+
+enum ChannelsMode {
+    UNKNOWN_CHANNELS_MODE = 0;
+    MONO = 1;
+    STEREO = 2;
+}
+
+enum AudioPlayerState {
+    UNKNOWN_AUDIO_PLAYER_STATE = 0;
+    PLAYER = 1;
+    RECORDER = 2;
+    NOT_SHOW = 3;
+}
+
+message AudioFileMetadata {
+    
+    string id = 1;
+    string name = 2;
+    google.protobuf.Timestamp recordedDate = 3;
+    AudioFormat audioFormat = 4;
+    uint32 sampleRate = 5;
+    ChannelsMode mode = 6;
+    AudioQuality audioQuality = 7;
+    AudioPlayerState audioPlayerState = 8;
+}
+
+message DocumentAudioFilesMetadata {
+    
+    string id = 1;
+    string associatedDocumentId = 2;
+    repeated AudioFileMetadata audioFiles = 3;
+}
+
+message AudioFilesOutlineMetadata {
+    
+    string id = 1;
+    string name = 2;
+    // contains the ids of the elements
+    repeated string expandedItems = 3;
+    
+    // contains the id of the selected element
+    // it can either be: Document or Audio.
+    string selectedItem = 4;
+    bool selectedFilesFilterActive = 5;
+}
+
+message AudioFilesMetadata {
+    
+    string id = 1;
+    repeated DocumentAudioFilesMetadata documentAudioFiles = 2;
+    AudioFilesOutlineMetadata audioFilesOutline = 3;
+}

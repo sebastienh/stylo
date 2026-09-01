@@ -1,0 +1,12 @@
+/**************************************************************
+ HTML User Agent StyleSheet
+ 
+ This is the user agent style sheet for HTML Preview.
+ 
+ **************************************************************/
+
+body {
+    
+    font-family: Futura;
+    color: rgba(32,43,123,0.8);
+}

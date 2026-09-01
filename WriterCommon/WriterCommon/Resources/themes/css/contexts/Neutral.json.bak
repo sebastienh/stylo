@@ -1,0 +1,156 @@
+{
+    
+    "name": "Neutral",
+    
+    "theme": {
+        
+        "dark": {
+            "background": {
+                "color": "#1E1E1E"
+            }
+        },
+        "light": {
+            "background": {
+                "color": "#F7F7F7"
+            }
+        },
+        "print": {
+            "body": {
+                "fontSize": "10pt"
+            },
+            "h1": {
+                "fontSize": "14pt"
+            },
+            "h2": {
+                "fontSize": "13pt"
+            },
+            "h3": {
+                "fontSize": "12pt"
+            },
+            "h4": {
+                "fontSize": "11pt"
+            },
+            "h5": {
+                "fontSize": "11pt"
+            },
+            "h6": {
+                "fontSize": "10pt"
+            }
+        },
+        "css": {
+            
+            "foreground": {
+                "color": "#E68790",
+                "fontFamily": "Hack",
+                "fontSize": "10pt"
+            },
+            "source": {
+                "function": {
+                    "color": "#BDD4E7"
+                },
+                "comment": {
+                    "color": "#F9F8F2"
+                },
+                "classSelector": {
+                    "color": "#F9F8F2"
+                },
+                "atRuleName": {
+                    "color": "#F9F8F2"
+                },
+                "namespacePrefix": {
+                    "color": "#F9F8F2"
+                },
+                "namespaceUri": {
+                    "color": "#F9F8F2"
+                },
+                "typeSelector": {
+                    "color": "#969696"
+                },
+                "attributeName": {
+                    "color": "#F9F8F2"
+                },
+                "attributeMatch": {
+                    "color": "#F9F8F2"
+                },
+                "combinator": {
+                    "color": "#F9F8F2"
+                },
+                "propertyName": {
+                    "color": "#B2CFBD"
+                },
+                "important": {
+                    "color": "#F9F8F2"
+                },
+                "string": {
+                    "color": "#F9F8F2"
+                },
+                "fontStyle": {
+                    "color": "#F9F8F2"
+                },
+                "colorKeyword": {
+                    "color": "#BDD4E7"
+                },
+                "dimension": {
+                    "color": "#F9F8F2"
+                },
+                "number": {
+                    "color": "#B4B4B4"
+                },
+                "invalid": {
+                    "color": "#F9F8F2"
+                },
+                "pseudoSelectorOperator": {
+                    "color": "#BDD4E7"
+                },
+                "pseudoSelectorValue": {
+                    "color": "#E6E2CA"
+                },
+            },
+            "errors": {    
+            
+                "unselectedErrorMessage": {
+                    "color": "#DF6571"
+                },
+                "selectedErrorMessage": {
+                    "color": "#DB5461"
+                }
+            }
+        },
+        "html": {
+            
+            
+            "preview": {
+                
+                "dark": {
+                    "foreground": {
+                        "color": "white",
+                        "fontFamily": "Avenir Next",
+                    },
+                    "background": {
+                        "color": "rgb(30,30,30)"
+                    },
+                    "codeBackground": {
+                        "color": "rgb(40,40,40)"
+                    }
+                },
+                "light": {
+                    "foreground": {
+                        "color": "black",
+                        "fontFamily": "Avenir Next",
+                    },
+                    "background": {
+                        "color": "rgb(220,220,220)"
+                    },
+                    "codeBackground": {
+                        "color": "rgb(200,200,200)"
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+

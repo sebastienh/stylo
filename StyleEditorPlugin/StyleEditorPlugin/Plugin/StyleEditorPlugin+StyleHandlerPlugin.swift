@@ -1,0 +1,23 @@
+//
+//  StyleEditorPlugin+StyleHandlerPlugin.swift
+//  StyleEditorPlugin
+//
+//  Created by Sebastien Hamel on 2020-01-02.
+//  Copyright © 2020 Sebastien hamel. All rights reserved.
+//
+
+import Foundation
+import WriterCommon
+
+extension StyleEditorPlugin: StyleHandlerPlugin {
+    
+    public func disableStyleControls() {
+        
+        self.cssViewController?.disableStylesTable()
+    }
+    
+    public func enableStyleControls() {
+        
+        self.cssViewController?.enableStylesTable()
+    }
+}

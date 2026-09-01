@@ -1,0 +1,125 @@
+body {
+
+    {# font-family #}
+    {% if theme.print.pdf.fontFamily %}
+        font-family: {{ theme.print.pdf.fontFamily }};
+    {% elif theme.print.fontFamily %}
+        font-family: {{ theme.print.fontFamily }};
+    {% elif theme.fontFamily %}
+        font-family: {{ theme.fontFamily }};
+    {% else %}
+        font-family: "Arial";
+    {% endif %}
+
+    {% if theme.print.pdf.marginTop %}
+        margin-top: {{ theme.print.pdf.marginTop }};
+    {% elif theme.print.marginTop %}
+        margin-top: {{ theme.print.marginTop }};
+    {% else %}
+        margin-top: 0px;
+    {% endif %}
+
+    {% if theme.print.marginRight %}
+        margin-right: {{ theme.print.marginRight }};
+    {% else %}
+        margin-right: 0px;
+    {% endif %}
+
+    {% if theme.print.marginBottom %}
+        margin-bottom: {{ theme.print.marginBottom }};
+    {% else %}
+        margin-bottom: 0px;
+    {% endif %}
+
+    {% if theme.print.marginLeft %}
+        margin-left: {{ theme.print.marginLeft }};
+    {% else %}
+        margin-left: 0px;
+    {% endif %}
+    tab-size:4;
+
+    {# font-size #}
+    {% if theme.print.body.fontSize %}
+        font-size: {{ theme.print.body.fontSize }};
+    {% elif theme.body.fontSize %}
+        font-size: {{ theme.body.fontSize }};
+    {% endif %}
+}
+
+h1 {
+
+    {# font-size #}
+    {% if theme.print.pdf.h1.fontSize %}
+        font-size: {{ theme.print.pdf.h1.fontSize }};
+    {% elif theme.print.h1.fontSize %}
+        font-size: {{ theme.print.h1.fontSize }};
+    {% elif theme.h1.fontSize %}
+        font-size: {{ theme.h1.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}
+
+h2 {
+
+    {# font-size #}
+    {% if theme.print.pdf.h2.fontSize %}
+        font-size: {{ theme.print.pdf.h2.fontSize }};
+    {% elif theme.print.h2.fontSize %}
+        font-size: {{ theme.print.h2.fontSize }};
+    {% elif theme.h2.fontSize %}
+        font-size: {{ theme.h2.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}
+
+h3 {
+
+    {# font-size #}
+    {% if theme.print.pdf.h3.fontSize %}
+        font-size: {{ theme.print.pdf.h3.fontSize }};
+    {% elif theme.print.h3.fontSize %}
+        font-size: {{ theme.print.h3.fontSize }};
+    {% elif theme.h3.fontSize %}
+        font-size: {{ theme.h3.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}
+
+h4 {
+
+    {# font-size #}
+    {% if theme.print.pdf.h4.fontSize %}
+        font-size: {{ theme.print.pdf.h4.fontSize }};
+    {% elif theme.print.h4.fontSize %}
+        font-size: {{ theme.print.h4.fontSize }};
+    {% elif theme.h4.fontSize %}
+        font-size: {{ theme.h4.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}
+
+h5 {
+
+    {# font-size #}
+    {% if theme.print.pdf.h5.fontSize %}
+        font-size: {{ theme.print.pdf.h5.fontSize }};
+    {% elif theme.print.h5.fontSize %}
+        font-size: {{ theme.print.h5.fontSize }};
+    {% elif theme.h5.fontSize %}
+        font-size: {{ theme.h5.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}
+
+h6 {
+
+    {# font-size #}
+    {% if theme.print.pdf.h6.fontSize %}
+        font-size: {{ theme.print.pdf.h6.fontSize }};
+    {% elif theme.print.h6.fontSize %}
+        font-size: {{ theme.print.h6.fontSize }};
+    {% elif theme.h6.fontSize %}
+        font-size: {{ theme.h6.fontSize }};
+    {% endif %}
+    font-weight: 600;
+}

@@ -1,0 +1,96 @@
+
+/**
+ Dark Gray
+ https://coolors.co/787878-282828-e69300-88292f-01768b
+ */
+
+
+body, th {
+    
+    background-color: rgb(40,40,40);
+    color: rgb(200,200,200);
+    font-family: "Roboto Mono";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(220,220,220);
+}
+
+::tag {
+    color: #D4694E;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(120,120,120);
+    font-weight: 900;
+    font-size: 1.0vw;
+}
+
+h1::tag,
+h2::tag,
+h3::tag,
+h4::tag,
+h5::tag,
+h6::tag {
+    color: #FF5223;
+}
+
+hr {
+    color: #FF5223;
+}
+
+a::destination,
+img::destination,
+table,
+td,
+reference::destination,
+a::label,
+img::label,
+reference::title,
+code,
+blockquote,
+html-block {
+    color: rgb(120,120,120);
+}
+
+
+blockquote::tag {
+    color: #D4694E;
+    font-weight: 500;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+th {
+    font-weight: 500;
+}
+
+s {
+    text-decoration-style: solid;
+    text-decoration-line: line-through;
+    text-decoration-color: #D4694E;
+}
+
+s::tag {
+    text-decoration-line: none;
+}
+
+[highlight] {
+    color: #FF5223;
+}

@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(220,220,220);
+    color: black;
+    font-family: "Avenir Next";
+}
+
+h1::tag, 
+h2::tag, 
+h3::tag,
+h4::tag,
+h5::tag,
+h6::tag {
+	color: orange;
+}
+
+code {
+	color: rgb(140,140,140);
+}
+
+blockquote {
+	color: rgb(140,140,140);
+}
+
+a::tag {
+	color: skyblue;
+}
+
+a {
+	color: rgb(120,120,120);
+}

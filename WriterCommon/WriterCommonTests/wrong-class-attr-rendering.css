@@ -1,0 +1,27 @@
+
+body, a::text {
+    
+    font-family: "hurme geometric sans 3";
+    color: rgb(123,134,123);
+    background-color: rgb(34,34,34);
+}
+
+.lu {
+    color: red;
+}
+
+.lu ~ p {
+    color: blue;
+}
+
+#test {
+    color: green;
+}
+
+#test2 {
+    color: yellow;
+}
+
+.te"st {
+
+}

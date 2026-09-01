@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Tag" customModule="TagsPlugin" customModuleProvider="target">
+            <connections>
+                <outlet property="tokenField" destination="zCG-5E-I3S" id="COr-XA-Ybo"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="Tag" horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="47" height="22"/>
+            <subviews>
+                <customView horizontalHuggingPriority="750" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="zCG-5E-I3S" customClass="TagItem" customModule="TagsPlugin" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="47" height="22"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="1000" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1" translatesAutoresizingMaskIntoConstraints="NO" id="qye-FM-6Q5" customClass="TokenTextField" customModule="TagsPlugin" customModuleProvider="target">
+                            <rect key="frame" x="6" y="4" width="35" height="15"/>
+                            <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" continuous="YES" allowsUndo="NO" alignment="left" title="Label" usesSingleLineMode="YES" id="TLq-AB-tgc">
+                                <font key="font" metaFont="label" size="12"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </textFieldCell>
+                            <connections>
+                                <binding destination="dC3-zl-3mh" name="font" keyPath="self.font" id="p2m-W6-7iv"/>
+                                <binding destination="dC3-zl-3mh" name="value" keyPath="self.representedObject" id="sQd-PQ-czF"/>
+                            </connections>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="qye-FM-6Q5" secondAttribute="trailing" constant="8" id="B0I-Zu-cD3"/>
+                        <constraint firstItem="qye-FM-6Q5" firstAttribute="leading" secondItem="zCG-5E-I3S" secondAttribute="leading" constant="8" id="GM8-8a-SMi"/>
+                        <constraint firstItem="qye-FM-6Q5" firstAttribute="centerY" secondItem="zCG-5E-I3S" secondAttribute="centerY" id="QKz-g4-Bjk"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="textField" destination="qye-FM-6Q5" id="DrF-hB-Biz"/>
+                    </connections>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="zCG-5E-I3S" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="J1D-Ue-CZj"/>
+                <constraint firstItem="zCG-5E-I3S" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="aWb-bJ-zF5"/>
+                <constraint firstAttribute="trailing" secondItem="zCG-5E-I3S" secondAttribute="trailing" priority="999" id="gCf-1f-EvG"/>
+                <constraint firstAttribute="bottom" secondItem="zCG-5E-I3S" secondAttribute="bottom" id="oEj-CN-aXZ"/>
+            </constraints>
+            <point key="canvasLocation" x="137" y="101.5"/>
+        </customView>
+        <collectionViewItem title="Tag" nibName="Tag" nibBundleIdentifier="net.textually.TagsPlugin" id="dC3-zl-3mh" customClass="Tag" customModule="TagsPlugin" customModuleProvider="target">
+            <connections>
+                <outlet property="tokenField" destination="zCG-5E-I3S" id="rf3-lh-3nR"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="W09-aZ-wUv"/>
+            </connections>
+        </collectionViewItem>
+        <userDefaultsController representsSharedInstance="YES" id="mOJ-ec-o6P"/>
+    </objects>
+</document>

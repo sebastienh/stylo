@@ -1,0 +1,91 @@
+{
+	"styles": {
+		"style-5": {
+			"id": "style-5",
+			"title": "Green",
+			"stylesheets": {
+				"stylesheet-1": {
+					"id": "stylesheet-1",
+					"title": "stylesheet-1"
+				}
+			},
+			"order": 4
+		},
+		"style-7": {
+			"id": "style-7",
+			"title": "Beige",
+			"stylesheets": {
+				"stylesheet-1": {
+					"id": "stylesheet-1",
+					"title": "stylesheet-1"
+				}
+			},
+			"order": 6
+		},
+		"style-1": {
+			"id": "style-1",
+			"title": "Light Gray",
+			"stylesheets": {
+				"stylesheet-1": {
+					"id": "stylesheet-1",
+					"title": "stylesheet-1"
+				}
+			}
+		},
+		"style-8": {
+			"id": "style-8",
+			"title": "Classic Red",
+			"stylesheets": {
+				"stylesheet-1": {
+					"id": "stylesheet-1",
+					"title": "stylesheet-1"
+				}
+			},
+			"order": 7
+		},
+		"style-3": {
+			"id": "style-3",
+			"title": "Blue",
+			"stylesheets": {
+				"stylesheet-1": {
+					"id": "stylesheet-1",
+					"title": "stylesheet-1"
+				}
+			},
+			"order": 2
+		},
+		"style-4": {
+			"id": "style-4",
+			"title": "White",
+			"stylesheets": {
+				"stylesheet-1": {
+					"id": "stylesheet-1",
+					"title": "stylesheet-1"
+				}
+			},
+			"order": 3
+		},
+		"style-6": {
+			"id": "style-6",
+			"title": "Yellow",
+			"stylesheets": {
+				"stylesheet-1": {
+					"id": "stylesheet-1",
+					"title": "stylesheet-1"
+				}
+			},
+			"order": 5
+		},
+		"style-2": {
+			"id": "style-2",
+			"title": "Dark Gray",
+			"stylesheets": {
+				"stylesheet-1": {
+					"id": "stylesheet-1",
+					"title": "stylesheet-1"
+				}
+			},
+			"order": 1
+		}
+	}
+}

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="fWL-e2-OzL">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Editor-->
+        <scene sceneID="60E-BX-zDS">
+            <objects>
+                <viewController id="JWL-VG-p9L" userLabel="Editor" customClass="CssEditorViewController" customModule="StyleEditorPlugin" customModuleProvider="target" sceneMemberID="viewController">
+                    <customView key="view" identifier="EditorCustomView" wantsLayer="YES" id="ViG-CX-suj" customClass="TextContainerView" customModule="StyloCoreMac">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="451"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="YAw-Rk-Pft" customClass="EditorSideView" customModule="StyloCoreMac">
+                                <rect key="frame" x="0.0" y="0.0" width="16" height="451"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="a1U-eq-JnH"/>
+                                </constraints>
+                            </customView>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulp-5Q-0Wt" userLabel="Editor Scroll View - View" customClass="EditorSynchronizedScrollView" customModule="StyloCoreMac">
+                                <rect key="frame" x="16" y="0.0" width="334" height="451"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="dFY-vo-FWv" customClass="StyloClipView" customModule="StyloCoreMac">
+                                    <rect key="frame" x="0.0" y="0.0" width="334" height="451"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="npx-8a-4Yi">
+                                            <rect key="frame" x="136" y="145" width="141" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                    <color key="value" red="0.1647058874" green="0.16078431900000001" blue="0.15686275059999999" alpha="1" colorSpace="deviceRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.80000000000000004" green="0.45098039220000002" blue="0.88235294119999996" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                </clipView>
+                                <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="ki4-5d-CMc">
+                                    <rect key="frame" x="-100" y="-100" width="181" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Fvk-Kd-5sk">
+                                    <rect key="frame" x="-100" y="-100" width="16" height="451"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ulp-5Q-0Wt" firstAttribute="leading" secondItem="YAw-Rk-Pft" secondAttribute="trailing" id="8vD-2t-Hpt"/>
+                            <constraint firstItem="YAw-Rk-Pft" firstAttribute="leading" secondItem="ViG-CX-suj" secondAttribute="leading" id="Jwa-bm-bvH"/>
+                            <constraint firstItem="ulp-5Q-0Wt" firstAttribute="top" secondItem="ViG-CX-suj" secondAttribute="top" id="SQX-5X-zRC"/>
+                            <constraint firstAttribute="bottom" secondItem="ulp-5Q-0Wt" secondAttribute="bottom" id="YmX-FN-dS4"/>
+                            <constraint firstAttribute="bottom" secondItem="YAw-Rk-Pft" secondAttribute="bottom" id="dAW-wv-tSO"/>
+                            <constraint firstAttribute="trailing" secondItem="ulp-5Q-0Wt" secondAttribute="trailing" id="nJy-Ql-myt"/>
+                            <constraint firstItem="YAw-Rk-Pft" firstAttribute="top" secondItem="ViG-CX-suj" secondAttribute="top" id="oXO-sZ-4NL"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="variableSizeSides" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="editorScrollView" destination="ulp-5Q-0Wt" id="ddD-ml-M02"/>
+                            <outlet property="leftView" destination="YAw-Rk-Pft" id="TAD-77-jYf"/>
+                        </connections>
+                    </customView>
+                    <connections>
+                        <outlet property="leftView" destination="YAw-Rk-Pft" id="jZA-aW-t9h"/>
+                        <outlet property="resourceEditorScrollView" destination="ulp-5Q-0Wt" id="dTT-H8-dXR"/>
+                        <outlet property="textContainerView" destination="ViG-CX-suj" id="HR6-4S-aHh"/>
+                    </connections>
+                </viewController>
+                <customObject id="f7m-CA-B3j" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="LKs-Vk-GFI"/>
+            </objects>
+            <point key="canvasLocation" x="2377" y="630.5"/>
+        </scene>
+        <!--CssHelpCommands-->
+        <scene sceneID="63Z-lm-oB8">
+            <objects>
+                <controllerPlaceholder storyboardIdentifier="CssHelpCommands" storyboardName="CssHelpCommands" id="Orz-mE-xfO" sceneMemberID="viewController"/>
+                <customObject id="vTL-93-HBm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2916" y="1374"/>
+        </scene>
+        <!--DomInspector-->
+        <scene sceneID="mW1-2E-ysT">
+            <objects>
+                <controllerPlaceholder storyboardName="DomInspector" id="5n6-sm-k48" sceneMemberID="viewController"/>
+                <customObject id="bo7-EL-nQD" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2899" y="1164"/>
+        </scene>
+        <!--IssuesReporter-->
+        <scene sceneID="NVO-8T-wR7">
+            <objects>
+                <controllerPlaceholder storyboardName="IssuesReporter" id="Byk-dH-Ryc" sceneMemberID="viewController"/>
+                <customObject id="NKr-Yr-cSI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2900" y="1276"/>
+        </scene>
+        <!--Css Editor Tools Tab View Controller-->
+        <scene sceneID="DrH-jr-wZc">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="1" tabStyle="unspecified" id="fGu-BO-yL0" customClass="CssEditorToolsTabViewController" customModule="StyleEditorPlugin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="1Qc-BB-Ft6"/>
+                        <tabViewItem id="3Zt-m2-OLS"/>
+                        <tabViewItem id="M09-Il-jXZ"/>
+                    </tabViewItems>
+                    <tabView key="tabView" wantsLayer="YES" drawsBackground="NO" type="noTabsNoBorder" id="urd-wc-Yuy">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="system"/>
+                        <connections>
+                            <outlet property="delegate" destination="fGu-BO-yL0" id="wy0-BC-mAd"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="urd-wc-Yuy" id="Ybq-Mn-ZKT"/>
+                        <segue destination="5n6-sm-k48" kind="relationship" relationship="tabItems" id="avV-0a-3Vj"/>
+                        <segue destination="Byk-dH-Ryc" kind="relationship" relationship="tabItems" id="pD0-Qj-Ni1"/>
+                        <segue destination="Orz-mE-xfO" kind="relationship" relationship="tabItems" id="dcq-hu-cme"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="XWr-Ho-xI9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2368" y="1276"/>
+        </scene>
+        <!--Css Editor Split View Controller-->
+        <scene sceneID="Z6h-jp-zo3">
+            <objects>
+                <splitViewController id="fWL-e2-OzL" customClass="CssEditorSplitViewController" customModule="StyleEditorPlugin" customModuleProvider="target" sceneMemberID="viewController">
+                    <splitViewItems>
+                        <splitViewItem id="Rl3-b5-8ll"/>
+                        <splitViewItem collapsed="YES" id="sFN-cG-bwR"/>
+                    </splitViewItems>
+                    <splitView key="splitView" wantsLayer="YES" dividerStyle="thin" id="aht-70-Y4U" customClass="StyloSplitView" customModule="StyloCoreMac">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="delegate" destination="fWL-e2-OzL" id="Dit-mI-NeO"/>
+                        </connections>
+                    </splitView>
+                    <connections>
+                        <outlet property="splitView" destination="aht-70-Y4U" id="o8F-qf-IZT"/>
+                        <segue destination="JWL-VG-p9L" kind="relationship" relationship="splitItems" id="gwm-iD-FPn"/>
+                        <segue destination="cQ6-qj-FeH" kind="relationship" relationship="splitItems" id="PCj-9f-Epx"/>
+                    </connections>
+                </splitViewController>
+                <customObject id="yGR-2H-PIW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1779" y="827"/>
+        </scene>
+        <!--Css Editor Tools Menu View Controller-->
+        <scene sceneID="ooh-QX-gjS">
+            <objects>
+                <viewController id="cQ6-qj-FeH" customClass="CssEditorToolsMenuViewController" customModule="StyleEditorPlugin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="1is-hG-vUR">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="IMB-vA-0mZ" customClass="EditorToolsTitlePanelView" customModule="StyloCoreMac">
+                                <rect key="frame" x="0.0" y="278" width="350" height="22"/>
+                                <subviews>
+                                    <stackView distribution="fillEqually" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Pd-qf-tlk">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="22"/>
+                                        <subviews>
+                                            <button identifier="dom" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hr0-Um-VVW">
+                                                <rect key="frame" x="0.0" y="4" width="111" height="15"/>
+                                                <buttonCell key="cell" type="roundRect" title="DOM" bezelStyle="roundedRect" alignment="center" imageScaling="proportionallyDown" inset="2" id="nOp-cc-eSo">
+                                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="selectTool:" target="cQ6-qj-FeH" id="UjA-tf-q7q"/>
+                                                    <binding destination="cQ6-qj-FeH" name="hidden" keyPath="self.domToolsDisabled" id="1Fj-b0-oDf"/>
+                                                    <binding destination="cQ6-qj-FeH" name="value" keyPath="stylesheetManager.presentingDom" id="257-nW-ov8"/>
+                                                </connections>
+                                            </button>
+                                            <button identifier="errors" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LE2-Rf-9Ka">
+                                                <rect key="frame" x="119" y="4" width="112" height="15"/>
+                                                <buttonCell key="cell" type="roundRect" title="Issues" bezelStyle="roundedRect" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="uYk-6g-VZo">
+                                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="selectTool:" target="cQ6-qj-FeH" id="l7q-bM-Qbd"/>
+                                                    <binding destination="cQ6-qj-FeH" name="value" keyPath="stylesheetManager.presentingErrors" id="icg-e1-oqE"/>
+                                                </connections>
+                                            </button>
+                                            <button identifier="commands" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TQV-N1-msX">
+                                                <rect key="frame" x="239" y="4" width="111" height="15"/>
+                                                <buttonCell key="cell" type="roundRect" title="Help" bezelStyle="roundedRect" alignment="center" imageScaling="proportionallyDown" inset="2" id="fA5-5o-3uU">
+                                                    <behavior key="behavior" pushIn="YES" changeContents="YES" lightByContents="YES"/>
+                                                    <font key="font" metaFont="cellTitle"/>
+                                                </buttonCell>
+                                                <connections>
+                                                    <action selector="selectTool:" target="cQ6-qj-FeH" id="whI-Fk-PRg"/>
+                                                    <binding destination="cQ6-qj-FeH" name="hidden" keyPath="self.helpDisabled" id="oH0-Z2-XaR"/>
+                                                    <binding destination="cQ6-qj-FeH" name="value" keyPath="stylesheetManager.presentingHelp" id="CAW-dF-HxP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3Pd-qf-tlk" firstAttribute="top" secondItem="IMB-vA-0mZ" secondAttribute="top" id="1eu-Tq-Q5s"/>
+                                    <constraint firstAttribute="height" constant="22" id="6ya-aI-IBw"/>
+                                    <constraint firstItem="3Pd-qf-tlk" firstAttribute="leading" secondItem="IMB-vA-0mZ" secondAttribute="leading" id="GFL-RY-cAu"/>
+                                    <constraint firstAttribute="bottom" secondItem="3Pd-qf-tlk" secondAttribute="bottom" id="RIJ-gk-2vA"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Pd-qf-tlk" secondAttribute="trailing" id="Uaa-LY-HOR"/>
+                                </constraints>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Bq3-xJ-HIP" customClass="ColoredLineView" customModule="StyloCoreMac">
+                                <rect key="frame" x="0.0" y="277" width="350" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="tou-Ai-UvT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" name="TableCellSeparatorColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="hGc-Fd-rIO" customClass="ColoredView" customModule="StyloCoreMac">
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="277"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="SjX-sU-5Wm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" name="UnselectedTableCellViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="fGu-BO-yL0" kind="embed" id="1XN-Vb-fhb"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Bq3-xJ-HIP" firstAttribute="top" secondItem="IMB-vA-0mZ" secondAttribute="bottom" id="F5x-wO-8nn"/>
+                            <constraint firstAttribute="trailing" secondItem="Bq3-xJ-HIP" secondAttribute="trailing" id="P0l-DH-moq"/>
+                            <constraint firstItem="IMB-vA-0mZ" firstAttribute="leading" secondItem="1is-hG-vUR" secondAttribute="leading" id="Ss0-lV-w8z"/>
+                            <constraint firstAttribute="bottom" secondItem="hGc-Fd-rIO" secondAttribute="bottom" id="U5z-jR-Nv3"/>
+                            <constraint firstItem="IMB-vA-0mZ" firstAttribute="top" secondItem="1is-hG-vUR" secondAttribute="top" id="bQF-Hc-1sJ"/>
+                            <constraint firstItem="hGc-Fd-rIO" firstAttribute="top" secondItem="Bq3-xJ-HIP" secondAttribute="bottom" id="d2a-tH-0PN"/>
+                            <constraint firstItem="Bq3-xJ-HIP" firstAttribute="leading" secondItem="1is-hG-vUR" secondAttribute="leading" id="nOy-ov-d9W"/>
+                            <constraint firstItem="hGc-Fd-rIO" firstAttribute="leading" secondItem="1is-hG-vUR" secondAttribute="leading" id="oI2-e4-BaG"/>
+                            <constraint firstAttribute="trailing" secondItem="hGc-Fd-rIO" secondAttribute="trailing" id="u6S-Yy-wsy"/>
+                            <constraint firstAttribute="trailing" secondItem="IMB-vA-0mZ" secondAttribute="trailing" id="zQt-cn-YSF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="domPanelButton" destination="hr0-Um-VVW" id="s2D-ME-GEm"/>
+                        <outlet property="editorToolsTitlePanelView" destination="IMB-vA-0mZ" id="Iop-Ym-fE4"/>
+                        <outlet property="errorMessagesPanelButton" destination="LE2-Rf-9Ka" id="kML-Ff-I17"/>
+                        <outlet property="helpPanelButton" destination="TQV-N1-msX" id="74B-BE-S7N"/>
+                    </connections>
+                </viewController>
+                <customObject id="hmb-b5-cyL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="OrA-Vx-PBD"/>
+            </objects>
+            <point key="canvasLocation" x="1830" y="1260"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="TableCellSeparatorColor">
+            <color red="0.83137254901960789" green="0.83137254901960789" blue="0.83137254901960789" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="UnselectedTableCellViewBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

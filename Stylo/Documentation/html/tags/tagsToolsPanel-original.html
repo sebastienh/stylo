@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body> 
+        <h1>Tags Tool Panel</h1>
+<p>The <em>Tags Tool</em> panel shows all the controls to manage tags in Stylo/Nodio. A tag is a representation of a <a href="../markdown#mdAttributes">Markdown attribute</a> in the form of a token. Markdown attributes are defined in the source text files using the syntax defined in the documentation for <a href="../markdown#mdAttributes">Markdown attributes</a>.</p>
+<p>The <em>Tags Tool</em> panel shows all the attributes values defined in the currently selected <a href="../nodio#editorsPanel"><em>Editors Panel</em></a>.</p>
+<p>The tags are selectable and when some tags are selected the <a href="../nodio#editorsPanel"><em>editors panel</em></a> will change the display mode to <em>tags highlight mode</em>. In this mode, the text parts attributed with the <a href="../markdown#mdAttributes">Markdown attributes</a> represented by the selected tags will become highlighted making them easily identifiable from their context. The visual form that the highlight might take is style dependant.</p>
+<p>The <em>Tags Tool</em> panel also allows to navigate through the selected tags using the <em>Tags Tool Toolbar</em>'s <em>Previous</em> and <em>Next</em> buttons temporarly higlighthing the text attributed with the target tag revealing it among the text attributed with the other selected tags.</p>
+<h2 id="attributes-display-mode">Display modes</h2>
+<p><a href="../markdown#mdAttributes">Markdown attributes</a> can be displayed two ways: in <em>Values</em> and in <em>Attributes</em> mode.</p>
+<h3>Attributes</h3>
+<p>In <em>Attributes</em> display mode, the attributes are displayed with their keys, all values for each key being displayed in its own dedicated section.</p>
+<p>This means that if we have defined two tags like:</p>
+<pre><code>{.revised}
+Tagged text.
+</code></pre>
+<p>and:</p>
+<pre><code>{status=revised}
+Another tagged text.
+</code></pre>
+<p>In the  <em>Tags Tools</em>, the first tag will be shown under the <code>class</code> section and the second will be shown under the <code>status</code> section.</p>
+<h3>Values</h3>
+<p>In <em>Values</em> display mode, only the values of the attributes are shown in the tags list. All attributes with a same value will be represented using only one tag even if they come from different attributes <em>key</em>. Using the previous example, in <em>Values</em> display mode, they will both be shown with the <code>revised</code> tag in the <em>Tags Tool</em>.</p>
+<h2 class="actions">Actions</h2>
+<h3>Open_Tags Tool_</h3>
+<p>To open the <em>Tags Tool</em>:</p>
+<ul>
+<li>From the <a href="../common#navigatorTitle"><em>Navigator Title Bar</em></a>: click on the <a href="../common#toolSelectorButton"><em>tool selector button</em></a> and choose the <code>Tags</code> item.</li>
+</ul>
+
+    </body>
+</html>

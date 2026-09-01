@@ -1,0 +1,144 @@
+
+:root {
+    
+     --body-b1: rgb(242,242,242);
+     --body-b2: rgb(234,234,234);
+     
+     --caret-sts3: var(--pink-0-sts6, yellow);
+     --caret-sts4: var(--pink-0-sts8, yellow);
+     
+     --pink-0-sts1: #fcdadc;
+     --pink-0-sts2: #f9bcc0;
+     --pink-0-sts3: #f38b92;
+     --pink-0-sts4: #f0727b;
+     --pink-0-sts5: #ef666f;
+     --pink-0-sts6: #ed5963;
+     --pink-0-sts7: #ed505a;
+     --pink-0-sts8: #ec4651;
+     --pink-0-sts9: #ec3d48;
+     --pink-0-sts10: #eb333f;
+     
+     --pink-1-sts1: #fac6ca;
+     --pink-1-sts2: #f7a1a7;
+     --pink-1-sts3: #ed5963;
+     --pink-1-sts4: #e9515b;
+     --pink-1-sts5: #e54853;
+     --pink-1-sts6: #e1404b;
+     --pink-1-sts7: #dd3742;
+     --pink-1-sts8: #d92f3a;
+     --pink-1-sts9: #d52631;
+     --pink-1-sts10: #cc1420;
+     
+     --pink-2-sts1: #f8b4ba;
+     --pink-2-sts2: #f58e95;
+     --pink-2-sts3: #e93541;
+     --pink-2-sts4: #dd2f3a;
+     --pink-2-sts5: #d12833;
+     --pink-2-sts6: #c8232e;
+     --pink-2-sts7: #c01f2a;
+     --pink-2-sts8: #b81a25;
+     --pink-2-sts9: #b01620;
+     --pink-2-sts10: #a7111b;
+     
+     --teal-sts1: #CBDAE2;
+     --teal-sts2: #8abad0;
+     --teal-sts3: #4082a0;
+     --teal-sts4: #3e7d99;
+     --teal-sts5: #3b7792;
+     --teal-sts6: #38718b;
+     --teal-sts7: #356b83;
+     --teal-sts8: #2f5f75;
+     --teal-sts9: #295367;
+     --teal-sts10: #234758;
+     
+     --emph-text-3-sts1: #adadad;
+     --emph-text-3-sts2: #8F8F8F;
+     --emph-text-3-sts3: #333333;
+     --emph-text-3-sts4: var(--pink-2-sts4, yellow);
+     --emph-text-3-sts5: var(--pink-2-sts5, yellow);
+     --emph-text-3-sts6: var(--pink-2-sts6, yellow);
+     --emph-text-3-sts7: var(--pink-2-sts7, yellow);
+     --emph-text-3-sts8: var(--pink-2-sts8, yellow);
+     --emph-text-3-sts9: var(--pink-2-sts9, yellow);
+     --emph-text-3-sts10: var(--pink-2-sts10, yellow);
+    
+     --emph-text-2-sts1: #b1b1b1;
+     --emph-text-2-sts2: #969696;
+     --emph-text-2-sts3: #454545;
+     --emph-text-2-sts4: var(--pink-2-sts3, yellow);
+     --emph-text-2-sts5: var(--pink-2-sts4, yellow);
+     --emph-text-2-sts6: var(--pink-2-sts5, yellow);
+     --emph-text-2-sts7: var(--pink-2-sts6, yellow);
+     --emph-text-2-sts8: var(--pink-2-sts7, yellow);
+     --emph-text-2-sts9: var(--pink-2-sts8, yellow);
+     --emph-text-2-sts10: var(--pink-2-sts9, yellow);
+     
+     --emph-text-1-sts1: #b5b5b5;
+     --emph-text-1-sts2: #9C9C9C;
+     --emph-text-1-sts3: #575757;
+     --emph-text-1-sts4: var(--pink-1-sts4, yellow);
+     --emph-text-1-sts5: var(--pink-1-sts5, yellow);
+     --emph-text-1-sts6: var(--pink-1-sts6, yellow);
+     --emph-text-1-sts7: var(--pink-1-sts7, yellow);
+     --emph-text-1-sts8: var(--pink-1-sts8, yellow);
+     --emph-text-1-sts9: var(--pink-1-sts9, yellow);
+     --emph-text-1-sts10: var(--pink-1-sts10, yellow);
+     
+     --emph-text-0-sts1: #b9b9b9;
+     --emph-text-0-sts2: #A3A3A3;
+     --emph-text-0-sts3: #696969;
+     --emph-text-0-sts4: var(--pink-1-sts3, yellow);
+     --emph-text-0-sts5: var(--pink-1-sts4, yellow);
+     --emph-text-0-sts6: var(--pink-1-sts5, yellow);
+     --emph-text-0-sts7: var(--pink-1-sts6, yellow);
+     --emph-text-0-sts8: var(--pink-1-sts7, yellow);
+     --emph-text-0-sts9: var(--pink-1-sts8, yellow);
+     --emph-text-0-sts10: var(--pink-1-sts9, yellow);
+     
+     --text-sts1: #bdbdbd;
+     --text-sts2: #A9A9A9;
+     --text-sts3: #7b7b7b;
+     --text-sts4: var(--pink-0-sts4, yellow);
+     --text-sts5: var(--pink-0-sts5, yellow);
+     --text-sts6: var(--pink-0-sts6, yellow);
+     --text-sts7: var(--pink-0-sts7, yellow);
+     --text-sts8: var(--pink-0-sts8, yellow);
+     --text-sts9: var(--pink-0-sts9, yellow);
+     --text-sts10: var(--pink-0-sts10, yellow);
+     
+     --de-emph-text-0-sts1: #c1c1c1;
+     --de-emph-text-0-sts2: #B6B6B6;
+     --de-emph-text-0-sts3: #9f9f9f;
+     --de-emph-text-0-sts4: var(--pink-0-sts3, yellow);
+     --de-emph-text-0-sts5: var(--pink-0-sts4, yellow);
+     --de-emph-text-0-sts6: var(--pink-0-sts5, yellow);
+     --de-emph-text-0-sts7: var(--pink-0-sts6, yellow);
+     --de-emph-text-0-sts8: var(--pink-0-sts7, yellow);
+     --de-emph-text-0-sts9: var(--pink-0-sts8, yellow);
+     --de-emph-text-0-sts10: var(--pink-0-sts9, yellow);
+     
+     --de-emph-text-1-sts1: #c5c5c5;
+     --de-emph-text-1-sts2: #BCBCBC;
+     --de-emph-text-1-sts3: #b1b1b1;
+     --de-emph-text-1-sts4: var(--pink-0-sts2, yellow);
+     --de-emph-text-1-sts5: var(--pink-0-sts3, yellow);
+     --de-emph-text-1-sts6: var(--pink-0-sts4, yellow);
+     --de-emph-text-1-sts7: var(--pink-0-sts5, yellow);
+     --de-emph-text-1-sts8: var(--pink-0-sts6, yellow);
+     --de-emph-text-1-sts9: var(--pink-0-sts8, yellow);
+     --de-emph-text-1-sts10: var(--pink-0-sts9, yellow);
+     
+     
+     --de-emph-text-2-sts1: #cccccc;
+     --de-emph-text-2-sts2: #C2C2C2;
+     --de-emph-text-2-sts3: #c2c2c2;
+     --de-emph-text-2-sts4: var(--pink-0-sts1, yellow);
+     --de-emph-text-2-sts5: var(--pink-0-sts2, yellow);
+     --de-emph-text-2-sts6: var(--pink-0-sts3, yellow);
+     --de-emph-text-2-sts7: var(--pink-0-sts4, yellow);
+     --de-emph-text-2-sts8: var(--pink-0-sts5, yellow);
+     --de-emph-text-2-sts9: var(--pink-0-sts6, yellow);
+     --de-emph-text-2-sts10: var(--pink-0-sts7, yellow);
+    
+}
+

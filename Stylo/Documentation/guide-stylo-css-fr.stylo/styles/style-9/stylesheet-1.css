@@ -1,0 +1,25 @@
+@namespace foo "http://net.daringfireball.markdown";
+
+body {
+   color: black;
+   font-family: "Avenir Next";
+	background-color: rgb(100,100,100);
+}
+
+h1 {
+	
+	color: darkblue;
+}
+
+h2 {
+	color: red;
+}
+
+h3 {
+	color: orange;
+}
+
+foo|html-block {
+	  
+	color: blue;
+}

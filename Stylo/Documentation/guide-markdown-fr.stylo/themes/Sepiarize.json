@@ -1,0 +1,119 @@
+{
+    
+    "name": "Sepiarize",
+    
+    "theme": {
+        
+        "common": {
+            
+            "dark": {
+                "background": {
+                    "color": "#2E170A"
+                }
+            },
+            "light": {
+                "background": {
+                    "color": "#fdf6e3"
+                }
+            }
+        },
+        "css": {
+            
+            "common": {
+                
+                "foreground": {
+                    "color": "#D3AF86",
+                    "fontFamily": "Menlo",
+                    "fontSize": "10pt"
+                },
+                "function": {
+                    "color": "#EDB200"
+                },
+                "comment": {
+                    "color": "#84613D"
+                },
+                "classSelector": {
+                    "color": "#F06431"
+                },
+                "atRuleName": {
+                    "color": "#EDB200"
+                },
+                "namespacePrefix": {
+                    "color": "#EDB200"
+                },
+                "namespaceUri": {
+                    "color": "#EDB200"
+                },
+                "typeSelector": {
+                    "color": "#EDB200"
+                },
+                "attributeName": {
+                    "color": "#b68a00"
+                },
+                "attributeMatch": {
+                    "color": "#859900"
+                },
+                "combinator": {
+                    "color": "#93a1a1"
+                },
+                "propertyName": {
+                    "color": "#84613D"
+                },
+                "important": {
+                    "color": "#859900"
+                },
+                "string": {
+                    "color": "#889B4A"
+                },
+                "fontStyle": {
+                    "color": "#F79A32"
+                },
+                "colorKeyword": {
+                    "color": "#F79A32"
+                },
+                "dimension": {
+                    "color": "#859900"
+                },
+                "number": {
+                    "color": "#F06431"
+                },
+                "invalid": {
+                    "color": "#D3AF86"
+                },
+                "pseudoSelectorOperator": {
+                    "color": "#DDB700"
+                },
+                "pseudoSelectorValue": {
+                    "color": "#DC3958"
+                }
+            },
+            "errors": {
+                
+                "common": {
+                    "unselectedMessage": {
+                        "color": "rgba(220,57,88, 0.5)"
+                    },
+                    "selectedMessage": {
+                        "color": "#DC3958"
+                    }
+                }
+            }
+        },
+        "html": {
+            
+            "preview": {
+                
+                "dark": {
+                    "foreground": {
+                        "color": "white"
+                    }
+                },
+                "light": {
+                    "foreground": {
+                        "color": "#221A0F"
+                    }
+                }
+            }
+        }
+    }
+}

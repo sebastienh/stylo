@@ -1,0 +1,44 @@
+/*
+ source - single error - light
+ 
+ source css file for handling a single error highlighting
+ in dark mode.
+ */
+
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+    color: #999 !important;
+    background-color: rgb(42,41,40);
+}
+
+property-name {
+    color: #999 !important;
+}
+
+property-value {
+    color: #999 !important;
+}
+
+pseudo-element-selector {
+    color: #999 !important;
+}
+
+color-value {
+    color: #999 !important;
+}
+
+[nw-message-id] {
+    color: rgb(199,21,133) !important;
+}
+
+/* the later will select only the error to highlight */
+ 
+ /***********
+ 
+ *Important Note: This rule should always be the last rule
+ 
+ ***********/
+[nw-message-id=""] {
+    color: red !important;
+}

@@ -1,0 +1,624 @@
+
+
+/********************************************/
+/*                 flash                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:flash {
+    
+}
+
+h2:flash {
+    
+}
+
+h3:flash {
+    
+}
+
+h4:flash {
+    
+}
+
+h5:flash {
+    
+}
+
+h6:flash {
+    
+}
+
+h1::tag:flash {
+    
+}
+
+h2::tag:flash {
+    
+}
+
+h3::tag:flash {
+    
+}
+
+h4::tag:flash {
+    
+}
+
+h5::tag:flash {
+    
+}
+
+h6::tag:flash {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:flash {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:flash {
+    
+    
+}
+
+em:flash {
+    
+    
+}
+
+s:flash {
+    
+    
+}
+
+:flash strong {
+    
+    
+}
+
+:flash em {
+    
+    
+}
+
+:flash s {
+    
+    
+}
+
+:flash strong::tag {
+    
+    
+}
+
+:flash em::tag {
+    
+    
+}
+
+:flash s::tag {
+    
+    
+}
+
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:flash {
+    
+    
+}
+
+blockquote::tag:flash {
+    
+    
+}
+
+:flash blockquote {
+    
+    
+}
+
+
+:flash blockquote::tag {
+    
+    
+}
+
+:flash blockquote {
+    
+    
+}
+
+:flash blockquote::tag {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:flash {
+    
+}
+
+ol:flash {
+    
+}
+
+li:flash {
+    
+}
+
+li::tag:flash {
+    
+}
+
+:flash ul {
+    
+}
+
+:flash ol {
+    
+}
+
+:flash li {
+    
+}
+
+:flash li::tag {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax flashing
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:flash {
+    
+}
+
+code::tag:flash {
+    
+}
+
+code::params:flash {
+    
+}
+
+:flash code {
+    
+}
+
+:flash code::tag {
+    
+}
+
+:flash code::params {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:flash {
+    
+}
+
+thead:flash {
+    
+}
+
+tbody:flash {
+    
+    
+}
+
+tr:flash {
+    
+}
+
+td:flash {
+    
+}
+
+:flash thead {
+    
+}
+
+:flash tbody {
+    
+    
+}
+
+:flash tr {
+    
+}
+
+:flash td {
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:flash {
+    
+}
+
+/* title: the title of the link */
+a::title:flash {
+    
+    
+}
+
+:flash a {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:flash a::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:flash a::text {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:flash a::destination {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:flash a::label {
+    
+}
+
+/* title: the title of the link */
+:flash a::title {
+    
+    
+}
+
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+img:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:flash {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+img::destination:flash {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+img::label:flash {
+    
+}
+
+/* title: the title of the image link */
+img::title:flash {
+    
+}
+
+:flash img {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:flash img::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:flash img::text {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:flash img::destination {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:flash img::label {
+    
+}
+
+/* title: the title of the image link */
+:flash img::title {
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:flash {
+    
+}
+
+/*
+    ref
+*/
+
+ref:flash {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+ref::tag:flash {
+    
+}
+
+/* label: the part between the two square braquets */
+ref::label:flash {
+    
+}
+
+
+/* destination: the destination URI */
+ref::destination:flash {
+    
+}
+
+/* title: the ref title */
+ref::title:flash {
+    
+}
+
+:flash ref {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:flash ref::tag {
+    
+}
+
+/* label: the part between the two square braquets */
+:flash ref::label {
+    
+}
+
+
+/* destination: the destination URI */
+:flash ref::destination {
+    
+}
+
+/* title: the ref title */
+:flash ref::title {
+    
+}
+
+
+/* attributes */
+
+
+/* :flash */
+key-value-attr:flash {
+
+}
+
+key-value-attr::tag:flash {
+    
+}
+
+class-attr:flash {
+
+
+}
+
+class-attr::tag:flash {
+
+}
+
+id-attr:flash {
+
+}
+
+id-attr::tag:flash {
+
+}
+
+/* :flash normal */
+:flash key-value-attr {
+
+}
+
+:flash key-value-attr::tag {
+    
+}
+
+:flash class-attr {
+
+
+}
+
+:flash class-attr::tag {
+
+}
+
+:flash id-attr {
+
+}
+
+:flash id-attr::tag {
+
+}
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS font-weight property</title>
+		<meta name="description" content="CSS font-weight property description page."></meta>
+		<meta name="KEYWORDS" content="font, weight, font-weight, css, properties, property, bold, normal, bolder, lighter, 100, 200, 300, 400, 500, 600, 600, 700, 800, 900"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+		<!-- css/cssFontWeightProperty.html -->
+<h1>font-weight</h1>
+<p>The <code>font-weight</code> property  allows to assign a thickness to a font. All values ​​are converted into one of the following numbers: 100, 200, 300, 400, 500, 600, 700, 800, 900, ranging from the thinnest (100) to the thickest (900). The value 400 is equivalent to normal and the value 700 is equivalent to bold.</p>
+<p>Formal definition: <code>
+font-weight: normal | bold | bolder | lighter | number
+| <a href="cssPropertyValuesInitial.html">initial</a>
+| <a href="cssPropertyValuesInherit.html">inherit</a>;</code></p>
+<p>The two keywords <code>lighter</code> and <code>bolder</code> define the value of the thickness of the current font relative to the inherited thickness. The final value is computed using this table:</p>
+<table>
+<thead>
+<tr>
+<th>Inherited value</th>
+<th> bolder </th>
+<th> lighter </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 100 </td>
+<td> 400</td>
+<td> 100 </td>
+</tr>
+<tr>
+<td> 200 </td>
+<td> 400 </td>
+<td> 100 </td>
+</tr>
+<tr>
+<td> 300 </td>
+<td> 400 </td>
+<td> 100 </td>
+</tr>
+<tr>
+<td> 400 </td>
+<td> 700 </td>
+<td> 100 </td>
+</tr>
+<tr>
+<td> 500 </td>
+<td> 700 </td>
+<td> 100 </td>
+</tr>
+<tr>
+<td> 600 </td>
+<td> 900 </td>
+<td> 400 </td>
+</tr>
+<tr>
+<td> 700 </td>
+<td> 900 </td>
+<td> 400 </td>
+</tr>
+<tr>
+<td> 800 </td>
+<td> 900 </td>
+<td> 700 </td>
+</tr>
+<tr>
+<td> 900 </td>
+<td> 900 </td>
+<td> 700 </td>
+</tr>
+</tbody>
+</table>
+<p>In the following example, we give <code>h1</code> elements <code>font-weight</code> property the <code>bold</code> value:</p>
+<p>CSS:</p>
+<pre><code class="language-css">h1 {
+    font-weight: bold; 
+}
+</code></pre>
+		</body>
+</html>

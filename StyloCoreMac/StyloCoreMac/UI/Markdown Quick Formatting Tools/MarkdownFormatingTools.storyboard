@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="56Y-ld-1ro">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Markdown Quick Formatting Tools View Controller-->
+        <scene sceneID="IfM-gL-9E7">
+            <objects>
+                <viewController id="56Y-ld-1ro" customClass="MarkdownQuickFormattingToolsViewController" customModule="StyloCoreMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="U7p-Oe-oel">
+                        <rect key="frame" x="0.0" y="0.0" width="40" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="6" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wct-TU-XhH" customClass="MarkdownFormattingButtonsStackView" customModule="StyloCoreMac" customModuleProvider="target">
+                                <rect key="frame" x="9" y="28" width="23" height="244"/>
+                                <subviews>
+                                    <button toolTip="Heading 1 ⌘1" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="caQ-nR-Miu" userLabel="H1 Panel Button" customClass="StyloStateButton" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="2" y="224" width="19" height="20"/>
+                                        <buttonCell key="cell" type="roundRect" title="h1" bezelStyle="roundedRect" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="aoV-Q9-3nI">
+                                            <behavior key="behavior" lightByContents="YES"/>
+                                            <font key="font" textStyle="title3" name=".SFNS-Regular"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="makeH1:" target="z0z-tJ-4tF" id="f4Q-Yn-AeT"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Heading 2 ⌘2" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="vX9-HZ-y5s" userLabel="H2 Panel Button" customClass="StyloStateButton" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="198" width="22" height="20"/>
+                                        <buttonCell key="cell" type="roundRect" title="h2" bezelStyle="roundedRect" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="AbC-gB-cB7">
+                                            <behavior key="behavior" lightByContents="YES"/>
+                                            <font key="font" textStyle="title3" name=".SFNS-Regular"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="makeH2:" target="z0z-tJ-4tF" id="PaB-o5-pcN"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Heading 3 ⌘3" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="cti-Oy-JhW" userLabel="H3 Panel Button" customClass="StyloStateButton" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="172" width="22" height="20"/>
+                                        <buttonCell key="cell" type="roundRect" title="h3" bezelStyle="roundedRect" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="vMt-VE-ryU">
+                                            <behavior key="behavior" lightByContents="YES"/>
+                                            <font key="font" textStyle="title3" name=".SFNS-Regular"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="makeH3:" target="z0z-tJ-4tF" id="GCe-ax-Mkl"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Heading 4 ⌘4" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="vYb-q0-p13" userLabel="H4 Panel Button" customClass="StyloStateButton" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="146" width="23" height="20"/>
+                                        <buttonCell key="cell" type="roundRect" title="h4" bezelStyle="roundedRect" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="Qfe-ly-Y6J">
+                                            <behavior key="behavior" lightByContents="YES"/>
+                                            <font key="font" textStyle="title3" name=".SFNS-Regular"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="makeH4:" target="z0z-tJ-4tF" id="tJq-sG-ekt"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Indent Block ⌘&gt;" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="qUo-md-Qoi" userLabel="Block quote Panel Button" customClass="StyloStateButton" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="120" width="14" height="20"/>
+                                        <buttonCell key="cell" type="roundRect" title="&gt;" bezelStyle="roundedRect" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="7SJ-iA-Gtk">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" textStyle="title3" name=".SFNS-Regular"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="makeBlockQuote:" target="z0z-tJ-4tF" id="u50-1A-Woo"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Unordered list ⌘L" translatesAutoresizingMaskIntoConstraints="NO" id="m1l-c1-F1A" userLabel="Bulleted List Button" customClass="StyloStateButton" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="3" y="98" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" priority="750" constant="16" id="oMo-N9-TW1"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="16" id="sB9-xm-Fqk"/>
+                                            <constraint firstAttribute="height" constant="16" id="uQm-QH-aF4"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" title="-" bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="px6-mJ-3Pd">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" textStyle="title3" name=".SFNS-Regular"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="makeBulletedList:" target="z0z-tJ-4tF" id="Hno-js-VSv"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Ordered list ⇧⌘L" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="VMQ-0e-SiT" userLabel="Numbered List Button" customClass="StyloStateButton" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="3" y="76" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" priority="750" constant="16" placeholder="YES" id="Kuj-MV-FII"/>
+                                            <constraint firstAttribute="height" priority="750" constant="16" id="M3H-84-ovr"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="16" id="ajg-LU-vau"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="uP2-yg-lu9"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="square" title="1." bezelStyle="shadowlessSquare" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="hHo-Z3-MLy">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" textStyle="title3" name=".SFNS-Regular"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="makeNumberedList:" target="z0z-tJ-4tF" id="0Ny-jL-cJp"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Bold ⌘B" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="zhS-K5-yZj" userLabel="Bold Panel Button" customClass="StyloStateButton" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="50" width="14" height="20"/>
+                                        <buttonCell key="cell" type="roundRect" title="B" bezelStyle="roundedRect" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="eBa-mw-PKj">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" textStyle="title3" name=".SFNS-Regular"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="makeBold:" target="z0z-tJ-4tF" id="06c-ju-Hnm"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Italic ⌘I" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="M0r-Cl-Et5" userLabel="Italic Panel Button" customClass="StyloStateButton" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="7" y="26" width="9" height="18"/>
+                                        <buttonCell key="cell" type="roundRect" title="I" bezelStyle="roundedRect" alignment="center" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="7Pw-km-4FH">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" size="15" name="Helvetica-Oblique"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="makeItalic:" target="z0z-tJ-4tF" id="lB1-fy-Luu"/>
+                                        </connections>
+                                    </button>
+                                    <button toolTip="Strikethrough ⌘-" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="jFD-fq-5q9" userLabel="Strikethrough Panel Button" customClass="StyloStateButton" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="4" y="0.0" width="14" height="20"/>
+                                        <buttonCell key="cell" type="roundRect" title="S" bezelStyle="roundedRect" imagePosition="overlaps" alignment="center" controlSize="mini" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" id="CpO-Ep-BLb">
+                                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" textStyle="title3" name=".SFNS-Regular"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="makeStrikethrough:" target="z0z-tJ-4tF" id="sSL-tZ-kgP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wct-TU-XhH" firstAttribute="centerY" secondItem="U7p-Oe-oel" secondAttribute="centerY" id="5ST-i7-xVn"/>
+                            <constraint firstItem="wct-TU-XhH" firstAttribute="centerX" secondItem="U7p-Oe-oel" secondAttribute="centerX" id="VZ9-Ts-E1L"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="markdownFormattingButtonsStackView" destination="wct-TU-XhH" id="2Gc-sS-7fV"/>
+                    </connections>
+                </viewController>
+                <customObject id="z0z-tJ-4tF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.5" y="-116"/>
+        </scene>
+    </scenes>
+</document>

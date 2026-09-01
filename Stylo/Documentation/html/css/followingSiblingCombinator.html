@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS Following sibling selector combinator</title>
+		<meta name="description" content="CSS Following sibling selector combinator page."></meta>
+		<meta name="KEYWORDS" content=""></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- css/followingSiblingCombinator.html -->
+<h1>Following sibling combinator</h1>
+<p><strong>following sibling selector</strong> matches the elements that are following sibling of an element. It is represented by the sign &quot;~&quot; between the selectors. In the HTML of the previous document, we can use a <em>following sibling</em> selector to select the <code>h2</code> and <code>p</code> elements as follows:</p>
+<p>CSS:</p>
+<pre><code class="language-css">h1 ~ * {
+    ...
+}
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;title 1&lt;/h1&gt; 
+        &lt;h2&gt;title 2&lt;/h2&gt;
+        &lt;p&gt; 
+            &lt;h2&gt;title 2 in p&lt;/h2&gt;
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+	</body>
+</html>

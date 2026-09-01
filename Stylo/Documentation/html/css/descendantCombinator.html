@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS Descendant selector combinator</title>
+		<meta name="description" content="CSS Descendant selector combinator description, how to use it and some examples."></meta>
+		<meta name="KEYWORDS" content="descendant, combinator, selector, cascading, css"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- css/descendantCombinator.html -->
+<h1>Descendant combinator</h1>
+<p><strong>descendant selector</strong> is used to select the descendants of an element. A descendant selector combinator is represented by a space (' ') between the selectors. For example, to select all headers level 2 descendant of the body element, the following CSS could be used:</p>
+<p>CSS:</p>
+<pre><code class="language-css">body h2 {
+    ...
+}
+</code></pre>
+<p>In this example, the two <code>h2</code> elements of the HTML document are selected.</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;title 1&lt;/h1&gt; 
+        &lt;h2&gt;title 2&lt;/h2&gt;
+        &lt;p&gt; 
+            &lt;h2&gt;title 2 in p&lt;/h2&gt;
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>Markdown image element</title>
+		<meta name="description" content="Description and usage examples of the Markdown image element."></meta>
+		<meta name="KEYWORDS" content="markdown, image, img, element"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- markdown/mdImage.html -->
+<h1>Image</h1>
+<p>An image element, corresponding to the <code>img</code> HTML element, is an inline link to an image. Unlike the link element, it is replaced by the destination image at loading time: it doesn't need to be clicked to be accessed.</p>
+<h2>Syntax</h2>
+<p>The syntax difference with the link is the presence of an exclamation mark <code>!</code> before the image link definition.</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">![Logo](http://www.textually.net/images/stylo/logo.png)
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p&gt;&lt;img src=&quot;http://www.textually.net/images/stylo/logo.png&quot; alt=&quot;Logo&quot; /&gt;&lt;/p&gt;
+</code></pre>
+<p>With a title:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">![Logo](http://www.textually.net/images/stylo/logo.png &quot;Logo&quot;)
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p&gt;&lt;img src=&quot;http://www.textually.net/images/stylo/logo.png&quot; alt=&quot;Logo&quot; title=&quot;Logo&quot; /&gt;&lt;/p&gt;
+</code></pre>
+<p>Like the links, the images also have a syntax in reference format:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">![alternative text][idImage]
+
+[idImage]: http://www.textually.net/images/stylo/logo.png &quot;Logo&quot;
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;p&gt;&lt;img src=&quot;http://www.textually.net/images/stylo/logo.png&quot; alt=&quot;alternative text&quot; title=&quot;Logo&quot; /&gt;&lt;/p&gt;
+</code></pre>
+<p>An image can reference a local file or a remote file on Internet but only the remote files will be shown in the HTML preview.</p>
+<h2>Pseudo-elements</h2>
+<ul>
+<li><code>tag</code>: the region that includes the start and end square braquet( &quot;[&quot;, &quot;]&quot;) and the two parenthesis (&quot;(&quot;, &quot;)&quot;)</li>
+<li><code>text</code>: the part between the two square braquets</li>
+<li><code>destination</code>: the destination URI if the image link does not point to a reference</li>
+<li><code>label</code>: the destination reference if the image link points to a reference</li>
+<li><code>title</code>: the title of the image link</li>
+</ul>
+	</body>
+</html>

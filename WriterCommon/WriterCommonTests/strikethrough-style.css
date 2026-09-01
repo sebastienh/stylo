@@ -1,0 +1,11 @@
+body {
+    color: black;
+}
+
+s {
+    color: red;
+}
+
+::tag {
+    color: blue;
+}

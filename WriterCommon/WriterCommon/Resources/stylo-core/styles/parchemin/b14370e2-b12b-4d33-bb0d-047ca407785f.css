@@ -1,0 +1,81 @@
+
+
+body, th {
+
+    font-family: "Noto Serif JP";
+    font-size: 1.2vw;
+}
+
+h1 {
+    
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+}
+
+h5 {
+    font-size: 1.3rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+code, html-block {
+    font-family: Inconsolata;
+    font-size: 1.35vw;
+}
+
+
+table, th, table::tag {
+    font-family: Inconsolata;
+    font-size: 1.1vw;
+}
+
+em {
+    font-style: italic;
+}
+
+th {
+    font-weight: 600;
+}
+
+strong {
+    font-style: normal;
+    font-weight: bold;
+}
+
+code, html-block {
+    font-family: Inconsolata;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

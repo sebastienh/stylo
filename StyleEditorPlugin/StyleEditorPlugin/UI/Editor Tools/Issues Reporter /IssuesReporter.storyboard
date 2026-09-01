@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="VUt-ZH-RFb">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab View Issues Reporter View Controller-->
+        <scene sceneID="xfL-sY-11K">
+            <objects>
+                <tabViewController tabStyle="unspecified" id="VUt-ZH-RFb" customClass="TabViewIssuesReporterViewController" customModule="StyleEditorPlugin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem id="XRB-rc-fMn"/>
+                        <tabViewItem id="GDN-dK-Vdc"/>
+                    </tabViewItems>
+                    <tabView key="tabView" drawsBackground="NO" type="noTabsNoBorder" id="7Rx-x5-CNS">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="system"/>
+                        <connections>
+                            <outlet property="delegate" destination="VUt-ZH-RFb" id="ziI-K3-q0k"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="7Rx-x5-CNS" id="t8i-OZ-VUE"/>
+                        <segue destination="1Kf-oj-LrA" kind="relationship" relationship="tabItems" id="aQG-tS-JZl"/>
+                        <segue destination="b8h-dM-9FR" kind="relationship" relationship="tabItems" id="IE6-Qq-zMl"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="gor-BY-Cbn" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="89"/>
+        </scene>
+        <!--No Issues View Controller-->
+        <scene sceneID="xAp-3m-wWS">
+            <objects>
+                <viewController id="b8h-dM-9FR" customClass="NoIssuesViewController" customModule="StyleEditorPlugin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="UwR-9h-kQX">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="vlH-kF-xcX" customClass="NoIssuesView" customModule="StyleEditorPlugin" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5fF-ey-NXZ">
+                                        <rect key="frame" x="120" y="136" width="110" height="29"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="No Issues" id="r6g-Tg-SP4">
+                                            <font key="font" metaFont="system" size="25"/>
+                                            <color key="textColor" name="secondarySelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5fF-ey-NXZ" firstAttribute="centerY" secondItem="vlH-kF-xcX" secondAttribute="centerY" id="SoK-ZE-qJO"/>
+                                    <constraint firstItem="5fF-ey-NXZ" firstAttribute="centerX" secondItem="vlH-kF-xcX" secondAttribute="centerX" id="nki-lG-MRY"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="vlH-kF-xcX" firstAttribute="leading" secondItem="UwR-9h-kQX" secondAttribute="leading" id="Erg-OK-ppt"/>
+                            <constraint firstItem="vlH-kF-xcX" firstAttribute="top" secondItem="UwR-9h-kQX" secondAttribute="top" id="R2E-Y9-gLD"/>
+                            <constraint firstAttribute="trailing" secondItem="vlH-kF-xcX" secondAttribute="trailing" id="ZU5-E3-edY"/>
+                            <constraint firstAttribute="bottom" secondItem="vlH-kF-xcX" secondAttribute="bottom" id="cdU-3R-aPP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="noErrorsView" destination="vlH-kF-xcX" id="qVr-Ka-aCs"/>
+                    </connections>
+                </viewController>
+                <customObject id="rXr-mO-11G" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656" y="-44"/>
+        </scene>
+        <!--Issues Reporter View Controller-->
+        <scene sceneID="vZI-wh-BI6">
+            <objects>
+                <viewController id="1Kf-oj-LrA" customClass="IssuesReporterViewController" customModule="StyleEditorPlugin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" misplaced="YES" id="DqH-ga-16i">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="299"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="32" horizontalPageScroll="10" verticalLineScroll="32" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOS-Hg-fev">
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="295"/>
+                                <clipView key="contentView" copiesOnScroll="NO" id="4Wt-vp-fXB">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="295"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="plain" selectionHighlightStyle="none" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="30" rowSizeStyle="automatic" viewBased="YES" id="SuD-9b-tPd" customClass="IssuesReporterTableView" customModule="StyleEditorPlugin" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="453" height="295"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" name="UnselectedTableCellViewBackgroundColor"/>
+                                            <color key="gridColor" name="UnselectedTableCellViewBackgroundColor"/>
+                                            <tableColumns>
+                                                <tableColumn identifier="Errors" width="450" minWidth="40" maxWidth="1000" id="DCv-2V-VeP" customClass="IssuesReporterTableColumn" customModule="StyleEditorPlugin" customModuleProvider="target">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="fT9-bW-tIE">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView id="Hjm-5A-ZYc" customClass="IssuesReporterTableCellView" customModule="StyleEditorPlugin" customModuleProvider="target">
+                                                            <rect key="frame" x="1" y="1" width="459" height="30"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jZv-U1-y1e">
+                                                                    <rect key="frame" x="4" y="8" width="36" height="15"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="ona-FI-7rc">
+                                                                        <font key="font" size="13" name="HelveticaNeue"/>
+                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                    </textFieldCell>
+                                                                    <connections>
+                                                                        <binding destination="Hjm-5A-ZYc" name="textColor" keyPath="labelColor" id="W0U-u9-eaX"/>
+                                                                        <binding destination="Hjm-5A-ZYc" name="font" keyPath="labelFont" id="GOe-cg-qQL"/>
+                                                                    </connections>
+                                                                </textField>
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" allowsExpansionToolTips="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ww0-ca-nk1">
+                                                                    <rect key="frame" x="42" y="7" width="92" height="15"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Gf4-8z-dWw">
+                                                                        <font key="font" size="13" name="HelveticaNeue"/>
+                                                                        <color key="textColor" name="SecondaryTextColor"/>
+                                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="jZv-U1-y1e" firstAttribute="leading" secondItem="Hjm-5A-ZYc" secondAttribute="leading" constant="6" id="BEr-vp-dDr"/>
+                                                                <constraint firstItem="Ww0-ca-nk1" firstAttribute="leading" secondItem="jZv-U1-y1e" secondAttribute="trailing" constant="6" id="NYZ-Ig-0Ac"/>
+                                                                <constraint firstItem="jZv-U1-y1e" firstAttribute="centerY" secondItem="Hjm-5A-ZYc" secondAttribute="centerY" id="PdI-Z7-XHh"/>
+                                                                <constraint firstItem="Ww0-ca-nk1" firstAttribute="firstBaseline" secondItem="jZv-U1-y1e" secondAttribute="firstBaseline" constant="1" id="s8F-s1-l6J"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="label" destination="jZv-U1-y1e" id="Bfx-mE-mfQ"/>
+                                                                <outlet property="message" destination="Ww0-ca-nk1" id="oq0-E6-0Dy"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <binding destination="IgO-Jc-OCj" name="content" keyPath="arrangedObjects" id="WNh-Gp-fuS"/>
+                                                <outlet property="dataSource" destination="1Kf-oj-LrA" id="05g-HT-KDx"/>
+                                                <outlet property="delegate" destination="1Kf-oj-LrA" id="OEy-D2-nor"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="dDD-wg-Gje">
+                                    <rect key="frame" x="-100" y="-100" width="450" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="NNL-Ht-xPv">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="SOS-Hg-fev" firstAttribute="top" secondItem="DqH-ga-16i" secondAttribute="top" id="CqX-rC-r8b"/>
+                            <constraint firstAttribute="trailing" secondItem="SOS-Hg-fev" secondAttribute="trailing" id="OM4-kx-Knu"/>
+                            <constraint firstAttribute="bottom" secondItem="SOS-Hg-fev" secondAttribute="bottom" id="aqK-XK-nuP"/>
+                            <constraint firstItem="SOS-Hg-fev" firstAttribute="leading" secondItem="DqH-ga-16i" secondAttribute="leading" id="dlO-1f-ufP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="issuesTableView" destination="SuD-9b-tPd" id="edO-RH-GOc"/>
+                        <outlet property="scrollView" destination="SOS-Hg-fev" id="fmb-iH-tk7"/>
+                    </connections>
+                </viewController>
+                <customObject id="si6-Rn-IUf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <arrayController id="IgO-Jc-OCj">
+                    <connections>
+                        <binding destination="1Kf-oj-LrA" name="contentArray" keyPath="self.representedObject.cssFailableResourceModel.displayedErrors" id="Gad-jC-3F1"/>
+                    </connections>
+                </arrayController>
+                <userDefaultsController representsSharedInstance="YES" id="b9S-jG-Eyb"/>
+            </objects>
+            <point key="canvasLocation" x="687" y="408"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="SecondaryTextColor">
+            <color red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="UnselectedTableCellViewBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

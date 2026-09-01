@@ -1,0 +1,823 @@
+
+
+/********************************************/
+/*                 fade                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:fade {
+    
+}
+
+h2:fade {
+    
+}
+
+h3:fade {
+    
+}
+
+h4:fade {
+    
+}
+
+h5:fade {
+    
+}
+
+h6:fade {
+    
+}
+
+h1::tag:fade {
+    
+}
+
+h2::tag:fade {
+    
+}
+
+h3::tag:fade {
+    
+}
+
+h4::tag:fade {
+    
+}
+
+h5::tag:fade {
+    
+}
+
+h6::tag:fade {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:fade {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:fade {
+    
+    
+}
+
+em:fade {
+    
+    
+}
+
+s:fade {
+    
+    
+}
+
+:fade strong {
+    
+    
+}
+
+:fade em {
+    
+    
+}
+
+:fade s {
+    
+    
+}
+
+:fade strong::tag {
+    
+    
+}
+
+:fade em::tag {
+    
+    
+}
+
+:fade s::tag {
+    
+    
+}
+
+:fade strong:fade {
+    
+    
+}
+
+:fade em:fade {
+    
+    
+}
+
+:fade s:fade {
+    
+    
+}
+
+:fade strong::tag:fade {
+    
+    
+}
+
+:fade em::tag:fade {
+    
+    
+}
+
+:fade s::tag:fade {
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:fade {
+    
+    
+}
+
+blockquote::tag:fade {
+    
+    
+}
+
+:fade blockquote {
+    
+    
+}
+
+
+:fade blockquote::tag {
+    
+    
+}
+
+:fade blockquote {
+    
+    
+}
+
+:fade blockquote::tag {
+    
+    
+}
+
+:fade blockquote::tag:fade {
+    
+    
+}
+
+:fade blockquote:fade {
+    
+    
+}
+
+:fade blockquote::tag:fade {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:fade {
+    
+}
+
+ol:fade {
+    
+}
+
+li:fade {
+    
+}
+
+li::tag:fade {
+    
+}
+
+:fade ul {
+    
+}
+
+:fade ol {
+    
+}
+
+:fade li {
+    
+}
+
+:fade li::tag {
+    
+}
+
+:fade ul:fade {
+    
+}
+
+:fade ol:fade {
+    
+}
+
+:fade li:fade {
+    
+}
+
+:fade li::tag:fade {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax fadeing
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:fade {
+    
+}
+
+code::tag:fade {
+    
+}
+
+code::params:fade {
+    
+}
+
+:fade code {
+    
+}
+
+:fade code::tag {
+    
+}
+
+:fade code::params {
+    
+}
+
+:fade code:fade {
+    
+}
+
+:fade code::tag:fade {
+    
+}
+
+:fade code::params:fade {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:fade {
+    
+}
+
+thead:fade {
+    
+}
+
+tbody:fade {
+    
+    
+}
+
+tr:fade {
+    
+}
+
+td:fade {
+    
+}
+
+:fade thead {
+    
+}
+
+:fade tbody {
+    
+    
+}
+
+:fade tr {
+    
+}
+
+:fade td {
+    
+}
+
+
+:fade thead:fade {
+    
+}
+
+:fade tbody:fade {
+    
+    
+}
+
+:fade tr:fade {
+    
+}
+
+:fade td:fade {
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:fade {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:fade {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:fade {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:fade {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:fade {
+    
+}
+
+/* title: the title of the link */
+a::title:fade {
+    
+    
+}
+
+:fade a {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:fade a::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:fade a::text {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:fade a::destination {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:fade a::label {
+    
+}
+
+/* title: the title of the link */
+:fade a::title {
+    
+    
+}
+
+:fade a:fade {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:fade a::tag:fade {
+    
+}
+
+/* text: the part between the two square braquets */
+:fade a::text:fade {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:fade a::destination:fade {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:fade a::label:fade {
+    
+}
+
+/* title: the title of the link */
+:fade a::title:fade {
+    
+    
+}
+
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+img:fade {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:fade {
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:fade {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+img::destination:fade {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+img::label:fade {
+    
+}
+
+/* title: the title of the image link */
+img::title:fade {
+    
+}
+
+:fade img {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:fade img::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:fade img::text {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:fade img::destination {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:fade img::label {
+    
+}
+
+/* title: the title of the image link */
+:fade img::title {
+    
+}
+
+
+:fade img:fade {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:fade img::tag:fade {
+    
+}
+
+/* text: the part between the two square braquets */
+:fade img::text:fade {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:fade img::destination:fade {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:fade img::label:fade {
+    
+}
+
+/* title: the title of the image link */
+:fade img::title:fade {
+    
+}
+
+/*
+    html-block
+*/
+
+html-block:fade {
+    
+}
+
+/*
+    ref
+*/
+
+ref:fade {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+ref::tag:fade {
+    
+}
+
+/* label: the part between the two square braquets */
+ref::label:fade {
+    
+}
+
+
+/* destination: the destination URI */
+ref::destination:fade {
+    
+}
+
+/* title: the ref title */
+ref::title:fade {
+    
+}
+
+:fade ref {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:fade ref::tag {
+    
+}
+
+/* label: the part between the two square braquets */
+:fade ref::label {
+    
+}
+
+
+/* destination: the destination URI */
+:fade ref::destination {
+    
+}
+
+/* title: the ref title */
+:fade ref::title {
+    
+}
+
+:fade ref:fade {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:fade ref::tag:fade {
+    
+}
+
+/* label: the part between the two square braquets */
+:fade ref::label:fade {
+    
+}
+
+
+/* destination: the destination URI */
+:fade ref::destination:fade {
+    
+}
+
+/* title: the ref title */
+:fade ref::title:fade {
+    
+}
+
+
+/* attributes */
+
+
+/* :fade */
+key-value-attr:fade {
+
+}
+
+key-value-attr::tag:fade {
+    
+}
+
+class-attr:fade {
+
+
+}
+
+class-attr::tag:fade {
+
+}
+
+id-attr:fade {
+
+}
+
+id-attr::tag:fade {
+
+}
+
+/* :fade normal */
+:fade key-value-attr {
+
+}
+
+:fade key-value-attr::tag {
+    
+}
+
+:fade class-attr {
+
+
+}
+
+:fade class-attr::tag {
+
+}
+
+:fade id-attr {
+
+}
+
+:fade id-attr::tag {
+
+}
+
+/* :fade :fade */
+:fade key-value-attr:fade {
+
+}
+
+:fade key-value-attr::tag:fade {
+    
+}
+
+:fade class-attr:fade {
+
+
+}
+
+:fade class-attr::tag:fade {
+
+}
+
+:fade id-attr:fade {
+
+}
+
+:fade id-attr::tag:fade {
+
+}

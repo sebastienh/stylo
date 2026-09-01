@@ -1,0 +1,131 @@
+@namespace test "http://www.daring.fireball.com";
+
+body,
+a::text,
+img::text {
+    
+    background-color: #F7F7F7;
+    color: rgb(100,100,100);
+    font-family: "Avenir Next";
+    color: hsla(100,10%,10%, 0.1);
+    
+    text-decoration-line: overline;
+    text-decoration-style: solid;
+    text-decoration-color: red;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(180,180,180);
+}
+
+.class {
+    color: blue;
+}
+
+h1::tag,
+h2::tag,
+h3::tag,
+h4::tag,
+h5::tag,
+h6::tag {
+    
+    color: orange;
+}
+
+html-block {
+    
+    color: #01A8C6;
+}
+
+a::destination,
+img::destination {
+    color: rgb(120,120,120);
+}
+
+
+a::label,
+img::label {
+    color: rgb(80,80,80);
+}
+
+code {
+    color: #01A8C6;
+    font-family: "Hack";
+    font-size: 12pt;
+}
+
+a::tag, img::tag, reference::tag {
+    
+    color: rgba(255,69,0,0.7);
+    
+}
+
+reference::label {
+    color: rgb(180,180,180);
+}
+
+reference::destination {
+    color: rgb(80,80,80);
+}
+
+reference::title {
+    color: rgb(80,80,80);
+}
+
+em::tag {
+    
+    color: #01A8C6;
+}
+
+strong::tag {
+    color: blue;
+    color: red;
+}
+
+table {
+    color: rgb(80,80,80);
+}
+
+table::tag {
+    color: orange;
+}
+
+th {
+    color: rgba(255,69,0,0.7);
+}
+
+td {
+    color: rgb(80,80,80);
+}
+
+h1 {
+    
+    color: red;
+    font-size: 12pt;
+    font-style: italic;
+    font-weight: 800;
+    
+}
+
+blockquote {
+    color: rgb(0,255,0);
+}
+
+blockquote::tag {
+    color: rgb(255,0,0);;
+}
+
+h2 {
+    color: red;
+    color: blueviolet;
+    color: red;
+    color: red;
+    color: blue;
+    color: violet;
+}
+

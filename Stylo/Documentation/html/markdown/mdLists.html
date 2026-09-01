@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>Markdown list element</title>
+		<meta name="description" content="Description and usage examples of the Markdown list element."></meta>
+		<meta name="KEYWORDS" content="markdown, list, ul, ol, li, element"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- markdown/mdLists.html -->
+<h1>Lists</h1>
+<p>A list in Markdown, equivalent to the element <em>ul</em> or <em>ol</em>, for <em>unordered list</em> and <em>ordered list</em>, is a sequence of elements that belongs to the same logical set. As in its HTML version, a list can be ordered or unordered.</p>
+<h2>Syntax</h2>
+<h3>Unordered</h3>
+<p>The <code>*</code>, <code>-</code> or the <code>+</code> can be used to create unordered lists. At the start of each line of a list, simply use the same marker for all list items inside one list.</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">* list element
+* list element
+* list element
+</code></pre>
+<p>or</p>
+<pre><code class="language-markdown">- list element
+- list element
+- list element
+</code></pre>
+<p>or</p>
+<pre><code class="language-markdown">+ list element
++ list element
++ list element
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;list element&lt;/li&gt;
+    &lt;li&gt;list element&lt;/li&gt;
+    &lt;li&gt;list element&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Using a different marker force to start a new list.</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">- item one
+- item two
++ other list item one
++ other list item  two
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;item one&lt;/li&gt;
+    &lt;li&gt;item two&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+    &lt;li&gt;other list item one&lt;/li&gt;
+    &lt;li&gt;other list item two&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<h3>Ordered</h3>
+<p>The <code>&lt;number&gt;.</code> or the <code>&lt;number&gt;)</code> syntax can be used to create ordered lists.</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">1. first item  
+2. second item 
+3. third item 
+</code></pre>
+<p>or</p>
+<pre><code class="language-markdown">1) first item  
+2) second item 
+3) third item 
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;ol&gt;
+    &lt;li&gt;first item&lt;/li&gt;
+    &lt;li&gt;second item&lt;/li&gt;
+    &lt;li&gt;third item&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<p>We can also start the numbering at a specific value, as in the following example:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">57. item 57
+1. item 58
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;ol start=&quot;57&quot;&gt;
+    &lt;li&gt;item 57&lt;/li&gt;
+    &lt;li&gt;item 58&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<h3>Nested</h3>
+<p>To nest a list inside another list simply indent all items of the nested list by a minimum of two spaces from the start of the line of the nesting list.</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">- item one
+- item two
+  + nested list using two spaces after the start of nesting list  
+  + nested sublist item 
+    * another nested list started two spaces after the nesting list (four from the start)
+    * another nested list
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;item one&lt;/li&gt;
+    &lt;li&gt;item two
+        &lt;ul&gt;
+            &lt;li&gt;nested list using two spaces after the start of nesting list &lt;/li&gt;
+            &lt;li&gt;nested sublist item
+                &lt;ul&gt;
+                    &lt;li&gt;another nested list, started two spaces after the nesting list, four spaces after the list nesting the nesting list&lt;/li&gt;
+                    &lt;li&gt;another nested list&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<h2>Pseudo-elements</h2>
+<p>In the case of lists, the list items are the elements that contain pseudo-element, and there is one:</p>
+<ul>
+<li><code>tag</code>: covers the list item mark</li>
+</ul>
+<p>In the previous example we could put &quot;57.&quot; and &quot;1.&quot; in red using the following CSS:</p>
+<p>CSS:</p>
+<pre><code class="language-css">li::tag {
+    color: blue;
+}
+</code></pre>
+<p>or more specifically the elements of any ordered lists:</p>
+<p>CSS:</p>
+<pre><code class="language-css">ol li::tag {
+    color: blue;
+}
+</code></pre>
+	</body>
+</html>

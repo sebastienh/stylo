@@ -1,0 +1,21 @@
+/*
+ source - dom element - light
+ 
+ source css file for handling a single error highlighting
+ in dark mode.
+ */
+
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+    color: rgb(211,211,211);
+}
+
+/***********
+ 
+ Important Note: This rule should always be the last rule
+ 
+ ***********/
+[nw-element-id=""] {
+    color: blue;
+}

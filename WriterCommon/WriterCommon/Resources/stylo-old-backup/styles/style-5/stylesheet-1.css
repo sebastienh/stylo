@@ -1,0 +1,70 @@
+
+/**
+ Lavender
+ https://coolors.co/7daa92-896978-a63d40-fefae0-2e6171
+ */
+
+body, th {
+    
+    background-color: #7DAA92;
+    color: #FEFAE0;
+    font-family: Arvo;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #A63D40;
+}
+
+::tag, hr {
+    color: #896978;
+}
+
+a::destination,
+img::destination,
+table,
+td,
+ref::destination,
+a::label,
+img::label,
+ref::title,
+code,
+blockquote,
+html-block {
+    color: #2E6171;
+}
+
+blockquote::tag {
+    color: #0EBBC1;
+}
+
+code, html-block {
+    font-family: "Hack";
+    font-size: 97%;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+th {
+    font-weight: 500;
+}
+
+s {
+    text-decoration-style: solid;
+    text-decoration-line: line-through;
+    text-decoration-color: #9E2B25;
+}
+
+s::tag {
+    text-decoration-line: none;
+}

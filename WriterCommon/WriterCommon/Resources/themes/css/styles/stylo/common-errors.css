@@ -1,0 +1,29 @@
+
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+
+    --red: rgb(235,77,61);
+    --fadded-red: rgba(235,77,61, 0.4);
+    --yellow: rgb(247,205,70);
+    font-family: var(--theme-foreground-fontFamily, "Noto Sans Mono");
+    font-size: var(--theme-foreground-fontSize, 11pt);
+    font-style: var(--theme-foreground-fontStyle, normal);
+    font-weight: var(--theme-foreground-fontWeight, 400);
+    color: var(--theme-foreground-color, gray);
+    background-color: var(--theme-background-color, black);
+    caret-color: var(--theme-caret-color, black);
+}
+
+[nw-message-id].error {
+
+    color: var(--theme-selectedErrorMessage-color, red) !important;
+    
+}
+
+[nw-message-id].warning {
+
+    color: var(--theme-selectedWarningMessage-color, yellow) !important;
+    font-style: var(--theme-selectedWarningMessage-fontStyle, normal);
+    
+}

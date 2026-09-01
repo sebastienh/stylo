@@ -1,0 +1,7712 @@
+/********************************************/
+/*                  Source                  */
+/********************************************/
+
+
+/*
+ Body
+ - background-color
+ - default font-famly
+ - default font-size
+ 
+ Available pseudo-classes:
+  - highlight
+*/
+
+
+body {
+    color: var(--body-color);
+    
+}
+
+/********************************************/
+/*                  Source                  */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1 {
+    color: var(--h1-color);
+    
+}
+
+h2 {
+    color: var(--h2-color);
+    
+}
+
+h3 {
+    color: var(--h3-color);
+    
+}
+
+h4 {
+    color: var(--h4-color);
+    
+}
+
+h5 {
+    color: var(--h5-color);
+    
+}
+
+h6 {
+    color: var(--h6-color);
+    
+}
+
+h1::tag {
+    color: var(--h1-tag-color);
+    
+}
+
+h2::tag {
+    color: var(--h2-tag-color);
+    
+}
+
+h3::tag {
+    color: var(--h3-tag-color);
+    
+}
+
+h4::tag {
+    color: var(--h4-tag-color);
+    
+}
+
+h5::tag {
+    color: var(--h5-tag-color);
+    
+}
+
+h6::tag {
+    color: var(--h6-tag-color);
+    
+}
+
+/*
+ ## Paragraph
+*/
+p {
+    color: var(--text-sts1);
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr {
+    color: var(--hr-color);
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong {
+    color: var(--strong-color);
+}
+
+em {
+    color: var(--em-color);
+}
+
+s {
+    color: var(--s-color);
+}
+
+strong::tag {
+    color: var(--strong-tag-color);
+    
+    
+}
+
+em::tag {
+    color: var(--em-tag-color);
+    
+    
+}
+
+s::tag {
+    color: var(--s-tag-color);
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote {
+    color: var(--blockquote-color);
+    
+    
+}
+
+blockquote::tag {
+    color: var(--blockquote-tag-color);
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul {
+    color: var(--ul-color);
+    
+}
+
+ol {
+    color: var(--ol-color);
+    
+}
+
+li {
+    color: var(--li-color);
+    
+}
+
+li::tag {
+    color: var(--li-tag-color);
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+    color: var(-- var foo = function_(bar)-color);
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code {
+    color: var(--code-color);
+    
+}
+
+code::tag {
+    color: var(--code-tag-color);
+    
+}
+
+code::params {
+    color: var(--code-params-color);
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table {
+    color: var(--table-color);
+    
+}
+
+thead {
+    color: var(--thead-color);
+    
+}
+
+tbody {
+    color: var(--tbody-color);
+    
+    
+}
+
+tr {
+    color: var(--tr-color);
+    
+}
+
+td {
+    color: var(--td-color);
+    
+}
+
+table::tag {
+    color: var(--table-tag-color);
+    
+    
+}
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a {
+    color: var(--a-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag {
+    color: var(--a-tag-color);
+    
+}
+
+/* text: the part between the two square braquets */
+a::text {
+    color: var(--a-text-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination {
+    color: var(--a-dest-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label {
+    color: var(--a-lbl-color);
+    
+}
+
+/* title: the title of the link */
+a::title {
+    color: var(--a-title-color);
+    
+    
+}
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+img {
+    color: var(--img-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag {
+    color: var(--img-tag-color);
+    
+}
+
+/* text: the part between the two square braquets */
+img::text {
+    color: var(--img-text-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+img::destination {
+    color: var(--img-dest-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+img::label {
+    color: var(--img-lbl-color);
+    
+}
+
+/* title: the title of the image link */
+img::title {
+    color: var(--img-title-color);
+    
+}
+
+/*
+    html-block
+*/
+
+html-block {
+    color: var(--html-block-color);
+    
+}
+
+/*
+    ref
+*/
+
+ref {
+    color: var(--ref-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+ref::tag {
+    color: var(--ref-tag-color);
+    
+}
+
+/* label: the part between the two square braquets */
+ref::label {
+    color: var(--ref-lbl-color);
+    
+}
+
+
+/* destination: the destination URI */
+ref::destination {
+    color: var(--ref-dest-color);
+    
+}
+
+/* title: the ref title */
+ref::title {
+    color: var(--ref-title-color);
+    
+}
+
+/* attributes */
+
+key-value-attr {
+    color: var(--key-value-attr-color);
+
+}
+
+key-value-attr::tag {
+    color: var(--key-value-attr-tag-color);
+    
+}
+
+class-attr {
+    color: var(--class-attr-color);
+
+
+}
+
+class-attr::tag {
+    color: var(--class-attr-tag-color);
+
+}
+
+id-attr {
+    color: var(--id-attr-color);
+
+}
+
+id-attr::tag {
+    color: var(--id-attr-tag-color);
+
+}
+
+/************************/
+/*      highlight       */
+/************************/
+
+
+
+body:highlight {
+    color: var(--body-highlight-color);
+    
+}
+
+/********************************************/
+/*                 highlight                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:highlight {
+    color: var(--h1-highlight-color);
+    
+}
+
+h2:highlight {
+    color: var(--h2-highlight-color);
+    
+}
+
+h3:highlight {
+    color: var(--h3-highlight-color);
+    
+}
+
+h4:highlight {
+    color: var(--h4-highlight-color);
+    
+}
+
+h5:highlight {
+    color: var(--h5-highlight-color);
+    
+}
+
+h6:highlight {
+    color: var(--h6-highlight-color);
+    
+}
+
+h1::tag:highlight {
+    color: var(--h1-tag-highlight-color);
+    
+}
+
+h2::tag:highlight {
+    color: var(--h2-tag-highlight-color);
+    
+}
+
+h3::tag:highlight {
+    color: var(--h3-tag-highlight-color);
+    
+}
+
+h4::tag:highlight {
+    color: var(--h4-tag-highlight-color);
+    
+}
+
+h5::tag:highlight {
+    color: var(--h5-tag-highlight-color);
+    
+}
+
+h6::tag:highlight {
+    color: var(--h6-tag-highlight-color);
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:highlight {
+    color: var(--hr-highlight-color);
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:highlight {
+    color: var(--strong-highlight-color);
+    
+    
+}
+
+em:highlight {
+    color: var(--em-highlight-color);
+    
+    
+}
+
+s:highlight {
+    color: var(--s-highlight-color);
+    
+    
+}
+
+:highlight strong {
+    color: var(--highlight_strong-color);
+    
+    
+}
+
+:highlight em {
+    color: var(--highlight_em-color);
+    
+    
+}
+
+:highlight s {
+    color: var(--highlight_s-color);
+    
+    
+}
+
+:highlight strong::tag {
+    color: var(--highlight_strong-tag-color);
+    
+    
+}
+
+:highlight em::tag {
+    color: var(--highlight_em-tag-color);
+    
+    
+}
+
+:highlight s::tag {
+    color: var(--highlight_s-tag-color);
+    
+    
+}
+
+:highlight strong:highlight {
+    color: var(--highlight_strong-highlight-color);
+    
+    
+}
+
+:highlight em:highlight {
+    color: var(--highlight_em-highlight-color);
+    
+    
+}
+
+:highlight s:highlight {
+    color: var(--highlight_s-highlight-color);
+    
+    
+}
+
+:highlight strong::tag:highlight {
+    color: var(--highlight_strong-tag-highlight-color);
+    
+    
+}
+
+:highlight em::tag:highlight {
+    color: var(--highlight_em-tag-highlight-color);
+    
+    
+}
+
+:highlight s::tag:highlight {
+    color: var(--highlight_s-tag-highlight-color);
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:highlight {
+    color: var(--blockquote-highlight-color);
+    
+    
+}
+
+blockquote::tag:highlight {
+    color: var(--blockquote-tag-highlight-color);
+    
+    
+}
+
+:highlight blockquote {
+    color: var(--highlight_blockquote-color);
+    
+    
+}
+
+
+:highlight blockquote::tag {
+    color: var(--highlight_blockquote-tag-color);
+    
+    
+}
+
+:highlight blockquote {
+    color: var(--highlight_blockquote-color);
+    
+    
+}
+
+:highlight blockquote::tag {
+    color: var(--highlight_blockquote-tag-color);
+    
+    
+}
+
+:highlight blockquote::tag:highlight {
+    color: var(--highlight_blockquote-tag-highlight-color);
+    
+    
+}
+
+:highlight blockquote:highlight {
+    color: var(--highlight_blockquote-highlight-color);
+    
+    
+}
+
+:highlight blockquote::tag:highlight {
+    color: var(--highlight_blockquote-tag-highlight-color);
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:highlight {
+    color: var(--ul-highlight-color);
+    
+}
+
+ol:highlight {
+    color: var(--ol-highlight-color);
+    
+}
+
+li:highlight {
+    color: var(--li-highlight-color);
+    
+}
+
+li::tag:highlight {
+    color: var(--li-tag-highlight-color);
+    
+}
+
+:highlight ul {
+    color: var(--highlight_ul-color);
+    
+}
+
+:highlight ol {
+    color: var(--highlight_ol-color);
+    
+}
+
+:highlight li {
+    color: var(--highlight_li-color);
+    
+}
+
+:highlight li::tag {
+    color: var(--highlight_li-tag-color);
+    
+}
+
+:highlight ul:highlight {
+    color: var(--highlight_ul-highlight-color);
+    
+}
+
+:highlight ol:highlight {
+    color: var(--highlight_ol-highlight-color);
+    
+}
+
+:highlight li:highlight {
+    color: var(--highlight_li-highlight-color);
+    
+}
+
+:highlight li::tag:highlight {
+    color: var(--highlight_li-tag-highlight-color);
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+    color: var(-- var foo = function_(bar)-color);
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:highlight {
+    color: var(--code-highlight-color);
+    
+}
+
+code::tag:highlight {
+    color: var(--code-tag-highlight-color);
+    
+}
+
+code::params:highlight {
+    color: var(--code-params-highlight-color);
+    
+}
+
+:highlight code {
+    color: var(--highlight_code-color);
+    
+}
+
+:highlight code::tag {
+    color: var(--highlight_code-tag-color);
+    
+}
+
+:highlight code::params {
+    color: var(--highlight_code-params-color);
+    
+}
+
+:highlight code:highlight {
+    color: var(--highlight_code-highlight-color);
+    
+}
+
+:highlight code::tag:highlight {
+    color: var(--highlight_code-tag-highlight-color);
+    
+}
+
+:highlight code::params:highlight {
+    color: var(--highlight_code-params-highlight-color);
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:highlight {
+    color: var(--table-highlight-color);
+    
+}
+
+thead:highlight {
+    color: var(--thead-highlight-color);
+    
+}
+
+tbody:highlight {
+    color: var(--tbody-highlight-color);
+    
+    
+}
+
+tr:highlight {
+    color: var(--tr-highlight-color);
+    
+}
+
+td:highlight {
+    color: var(--td-highlight-color);
+    
+}
+
+:highlight thead {
+    color: var(--highlight_thead-color);
+    
+}
+
+:highlight tbody {
+    color: var(--highlight_tbody-color);
+    
+    
+}
+
+:highlight tr {
+    color: var(--highlight_tr-color);
+    
+}
+
+:highlight td {
+    color: var(--highlight_td-color);
+    
+}
+
+
+:highlight thead:highlight {
+    color: var(--highlight_thead-highlight-color);
+    
+}
+
+:highlight tbody:highlight {
+    color: var(--highlight_tbody-highlight-color);
+    
+    
+}
+
+:highlight tr:highlight {
+    color: var(--highlight_tr-highlight-color);
+    
+}
+
+:highlight td:highlight {
+    color: var(--highlight_td-highlight-color);
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:highlight {
+    color: var(--a-highlight-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:highlight {
+    color: var(--a-tag-highlight-color);
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:highlight {
+    color: var(--a-text-highlight-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:highlight {
+    color: var(--a-dest-highlight-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:highlight {
+    color: var(--a-lbl-highlight-color);
+    
+}
+
+/* title: the title of the link */
+a::title:highlight {
+    color: var(--a-title-highlight-color);
+    
+    
+}
+
+:highlight a {
+    color: var(--highlight_a-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag {
+    color: var(--highlight_a-tag-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text {
+    color: var(--highlight_a-text-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination {
+    color: var(--highlight_a-dest-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label {
+    color: var(--highlight_a-lbl-color);
+    
+}
+
+/* title: the title of the link */
+:highlight a::title {
+    color: var(--highlight_a-title-color);
+    
+    
+}
+
+:highlight a:highlight {
+    color: var(--highlight_a-highlight-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:highlight {
+    color: var(--highlight_a-tag-highlight-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:highlight {
+    color: var(--highlight_a-text-highlight-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:highlight {
+    color: var(--highlight_a-dest-highlight-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:highlight {
+    color: var(--highlight_a-lbl-highlight-color);
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:highlight {
+    color: var(--highlight_a-title-highlight-color);
+    
+    
+}
+
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+img:highlight {
+    color: var(--img-highlight-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:highlight {
+    color: var(--img-tag-highlight-color);
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:highlight {
+    color: var(--img-text-highlight-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+img::destination:highlight {
+    color: var(--img-dest-highlight-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+img::label:highlight {
+    color: var(--img-lbl-highlight-color);
+    
+}
+
+/* title: the title of the image link */
+img::title:highlight {
+    color: var(--img-title-highlight-color);
+    
+}
+
+:highlight img {
+    color: var(--highlight_img-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag {
+    color: var(--highlight_img-tag-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text {
+    color: var(--highlight_img-text-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:highlight img::destination {
+    color: var(--highlight_img-dest-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:highlight img::label {
+    color: var(--highlight_img-lbl-color);
+    
+}
+
+/* title: the title of the image link */
+:highlight img::title {
+    color: var(--highlight_img-title-color);
+    
+}
+
+
+:highlight img:highlight {
+    color: var(--highlight_img-highlight-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:highlight {
+    color: var(--highlight_img-tag-highlight-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:highlight {
+    color: var(--highlight_img-text-highlight-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:highlight img::destination:highlight {
+    color: var(--highlight_img-dest-highlight-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:highlight img::label:highlight {
+    color: var(--highlight_img-lbl-highlight-color);
+    
+}
+
+/* title: the title of the image link */
+:highlight img::title:highlight {
+    color: var(--highlight_img-title-highlight-color);
+    
+}
+
+/*
+    html-block
+*/
+
+html-block:highlight {
+    color: var(--html-block-highlight-color);
+    
+}
+
+/*
+    ref
+*/
+
+ref:highlight {
+    color: var(--ref-highlight-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+ref::tag:highlight {
+    color: var(--ref-tag-highlight-color);
+    
+}
+
+/* label: the part between the two square braquets */
+ref::label:highlight {
+    color: var(--ref-lbl-highlight-color);
+    
+}
+
+
+/* destination: the destination URI */
+ref::destination:highlight {
+    color: var(--ref-dest-highlight-color);
+    
+}
+
+/* title: the ref title */
+ref::title:highlight {
+    color: var(--ref-title-highlight-color);
+    
+}
+
+:highlight ref {
+    color: var(--highlight_ref-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:highlight ref::tag {
+    color: var(--highlight_ref-tag-color);
+    
+}
+
+/* label: the part between the two square braquets */
+:highlight ref::label {
+    color: var(--highlight_ref-lbl-color);
+    
+}
+
+
+/* destination: the destination URI */
+:highlight ref::destination {
+    color: var(--highlight_ref-dest-color);
+    
+}
+
+/* title: the ref title */
+:highlight ref::title {
+    color: var(--highlight_ref-title-color);
+    
+}
+
+:highlight ref:highlight {
+    color: var(--highlight_ref-highlight-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:highlight ref::tag:highlight {
+    color: var(--highlight_ref-tag-highlight-color);
+    
+}
+
+/* label: the part between the two square braquets */
+:highlight ref::label:highlight {
+    color: var(--highlight_ref-lbl-highlight-color);
+    
+}
+
+
+/* destination: the destination URI */
+:highlight ref::destination:highlight {
+    color: var(--highlight_ref-dest-highlight-color);
+    
+}
+
+/* title: the ref title */
+:highlight ref::title:highlight {
+    color: var(--highlight_ref-title-highlight-color);
+    
+}
+
+
+/* attributes */
+
+/* :highlight */
+key-value-attr:highlight {
+    color: var(--key-value-attr-highlight-color);
+
+}
+
+key-value-attr::tag:highlight {
+    color: var(--key-value-attr-tag-highlight-color);
+    
+}
+
+class-attr:highlight {
+    color: var(--class-attr-highlight-color);
+
+
+}
+
+class-attr::tag:highlight {
+    color: var(--class-attr-tag-highlight-color);
+
+}
+
+id-attr:highlight {
+    color: var(--id-attr-highlight-color);
+
+}
+
+id-attr::tag:highlight {
+    color: var(--id-attr-tag-highlight-color);
+
+}
+
+/* :highlight  */
+
+:highlight key-value-attr {
+    color: var(--highlight_key-value-attr-color);
+
+}
+
+:highlight key-value-attr::tag {
+    color: var(--highlight_key-value-attr-tag-color);
+    
+}
+
+:highlight class-attr {
+    color: var(--highlight_class-attr-color);
+
+}
+
+:highlight class-attr::tag {
+    color: var(--highlight_class-attr-tag-color);
+
+}
+
+:highlight id-attr {
+    color: var(--highlight_id-attr-color);
+
+}
+
+:highlight id-attr::tag {
+    color: var(--highlight_id-attr-tag-color);
+
+}
+
+/* :highlight :highlight */
+
+:highlight key-value-attr:highlight {
+    color: var(--highlight_key-value-attr-highlight-color);
+
+}
+
+:highlight key-value-attr::tag:highlight {
+    color: var(--highlight_key-value-attr-tag-highlight-color);
+    
+}
+
+:highlight class-attr:highlight {
+    color: var(--highlight_class-attr-highlight-color);
+
+
+}
+
+:highlight class-attr::tag:highlight {
+    color: var(--highlight_class-attr-tag-highlight-color);
+
+}
+
+:highlight id-attr:highlight {
+    color: var(--highlight_id-attr-highlight-color);
+
+}
+
+:highlight id-attr::tag:highlight {
+    color: var(--highlight_id-attr-tag-highlight-color);
+
+}
+
+
+/********************************************/
+/*                 flash                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:flash {
+    color: var(--h1-flash-color);
+    
+}
+
+h2:flash {
+    color: var(--h2-flash-color);
+    
+}
+
+h3:flash {
+    color: var(--h3-flash-color);
+    
+}
+
+h4:flash {
+    color: var(--h4-flash-color);
+    
+}
+
+h5:flash {
+    color: var(--h5-flash-color);
+    
+}
+
+h6:flash {
+    color: var(--h6-flash-color);
+    
+}
+
+h1::tag:flash {
+    color: var(--h1-tag-flash-color);
+    
+}
+
+h2::tag:flash {
+    color: var(--h2-tag-flash-color);
+    
+}
+
+h3::tag:flash {
+    color: var(--h3-tag-flash-color);
+    
+}
+
+h4::tag:flash {
+    color: var(--h4-tag-flash-color);
+    
+}
+
+h5::tag:flash {
+    color: var(--h5-tag-flash-color);
+    
+}
+
+h6::tag:flash {
+    color: var(--h6-tag-flash-color);
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:flash {
+    color: var(--hr-flash-color);
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:flash {
+    color: var(--strong-flash-color);
+    
+    
+}
+
+em:flash {
+    color: var(--em-flash-color);
+    
+    
+}
+
+s:flash {
+    color: var(--s-flash-color);
+    
+    
+}
+
+:flash strong {
+    color: var(--flash_strong-color);
+    
+    
+}
+
+:flash em {
+    color: var(--flash_em-color);
+    
+    
+}
+
+:flash s {
+    color: var(--flash_s-color);
+    
+    
+}
+
+:flash strong::tag {
+    color: var(--flash_strong-tag-color);
+    
+    
+}
+
+:flash em::tag {
+    color: var(--flash_em-tag-color);
+    
+    
+}
+
+:flash s::tag {
+    color: var(--flash_s-tag-color);
+    
+    
+}
+
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:flash {
+    color: var(--blockquote-flash-color);
+    
+    
+}
+
+blockquote::tag:flash {
+    color: var(--blockquote-tag-flash-color);
+    
+    
+}
+
+:flash blockquote {
+    color: var(--flash_blockquote-color);
+    
+    
+}
+
+
+:flash blockquote::tag {
+    color: var(--flash_blockquote-tag-color);
+    
+    
+}
+
+:flash blockquote {
+    color: var(--flash_blockquote-color);
+    
+    
+}
+
+:flash blockquote::tag {
+    color: var(--flash_blockquote-tag-color);
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:flash {
+    color: var(--ul-flash-color);
+    
+}
+
+ol:flash {
+    color: var(--ol-flash-color);
+    
+}
+
+li:flash {
+    color: var(--li-flash-color);
+    
+}
+
+li::tag:flash {
+    color: var(--li-tag-flash-color);
+    
+}
+
+:flash ul {
+    color: var(--flash_ul-color);
+    
+}
+
+:flash ol {
+    color: var(--flash_ol-color);
+    
+}
+
+:flash li {
+    color: var(--flash_li-color);
+    
+}
+
+:flash li::tag {
+    color: var(--flash_li-tag-color);
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax flashing
+
+ ``` js
+ var foo = function (bar) {
+    color: var(-- var foo = function_(bar)-color);
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:flash {
+    color: var(--code-flash-color);
+    
+}
+
+code::tag:flash {
+    color: var(--code-tag-flash-color);
+    
+}
+
+code::params:flash {
+    color: var(--code-params-flash-color);
+    
+}
+
+:flash code {
+    color: var(--flash_code-color);
+    
+}
+
+:flash code::tag {
+    color: var(--flash_code-tag-color);
+    
+}
+
+:flash code::params {
+    color: var(--flash_code-params-color);
+    
+}
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:flash {
+    color: var(--table-flash-color);
+    
+}
+
+thead:flash {
+    color: var(--thead-flash-color);
+    
+}
+
+tbody:flash {
+    color: var(--tbody-flash-color);
+    
+    
+}
+
+tr:flash {
+    color: var(--tr-flash-color);
+    
+}
+
+td:flash {
+    color: var(--td-flash-color);
+    
+}
+
+:flash thead {
+    color: var(--flash_thead-color);
+    
+}
+
+:flash tbody {
+    color: var(--flash_tbody-color);
+    
+    
+}
+
+:flash tr {
+    color: var(--flash_tr-color);
+    
+}
+
+:flash td {
+    color: var(--flash_td-color);
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:flash {
+    color: var(--a-flash-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:flash {
+    color: var(--a-tag-flash-color);
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:flash {
+    color: var(--a-text-flash-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:flash {
+    color: var(--a-dest-flash-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:flash {
+    color: var(--a-lbl-flash-color);
+    
+}
+
+/* title: the title of the link */
+a::title:flash {
+    color: var(--a-title-flash-color);
+    
+    
+}
+
+:flash a {
+    color: var(--flash_a-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:flash a::tag {
+    color: var(--flash_a-tag-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:flash a::text {
+    color: var(--flash_a-text-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:flash a::destination {
+    color: var(--flash_a-dest-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:flash a::label {
+    color: var(--flash_a-lbl-color);
+    
+}
+
+/* title: the title of the link */
+:flash a::title {
+    color: var(--flash_a-title-color);
+    
+    
+}
+
+
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+img:flash {
+    color: var(--img-flash-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:flash {
+    color: var(--img-tag-flash-color);
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:flash {
+    color: var(--img-text-flash-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+img::destination:flash {
+    color: var(--img-dest-flash-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+img::label:flash {
+    color: var(--img-lbl-flash-color);
+    
+}
+
+/* title: the title of the image link */
+img::title:flash {
+    color: var(--img-title-flash-color);
+    
+}
+
+:flash img {
+    color: var(--flash_img-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:flash img::tag {
+    color: var(--flash_img-tag-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:flash img::text {
+    color: var(--flash_img-text-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:flash img::destination {
+    color: var(--flash_img-dest-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:flash img::label {
+    color: var(--flash_img-lbl-color);
+    
+}
+
+/* title: the title of the image link */
+:flash img::title {
+    color: var(--flash_img-title-color);
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:flash {
+    color: var(--html-block-flash-color);
+    
+}
+
+/*
+    ref
+*/
+
+ref:flash {
+    color: var(--ref-flash-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+ref::tag:flash {
+    color: var(--ref-tag-flash-color);
+    
+}
+
+/* label: the part between the two square braquets */
+ref::label:flash {
+    color: var(--ref-lbl-flash-color);
+    
+}
+
+
+/* destination: the destination URI */
+ref::destination:flash {
+    color: var(--ref-dest-flash-color);
+    
+}
+
+/* title: the ref title */
+ref::title:flash {
+    color: var(--ref-title-flash-color);
+    
+}
+
+:flash ref {
+    color: var(--flash_ref-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:flash ref::tag {
+    color: var(--flash_ref-tag-color);
+    
+}
+
+/* label: the part between the two square braquets */
+:flash ref::label {
+    color: var(--flash_ref-lbl-color);
+    
+}
+
+
+/* destination: the destination URI */
+:flash ref::destination {
+    color: var(--flash_ref-dest-color);
+    
+}
+
+/* title: the ref title */
+:flash ref::title {
+    color: var(--flash_ref-title-color);
+    
+}
+
+
+/* attributes */
+
+
+/* :flash */
+key-value-attr:flash {
+    color: var(--key-value-attr-flash-color);
+
+}
+
+key-value-attr::tag:flash {
+    color: var(--key-value-attr-tag-flash-color);
+    
+}
+
+class-attr:flash {
+    color: var(--class-attr-flash-color);
+
+
+}
+
+class-attr::tag:flash {
+    color: var(--class-attr-tag-flash-color);
+
+}
+
+id-attr:flash {
+    color: var(--id-attr-flash-color);
+
+}
+
+id-attr::tag:flash {
+    color: var(--id-attr-tag-flash-color);
+
+}
+
+/* :flash normal */
+:flash key-value-attr {
+    color: var(--flash_key-value-attr-color);
+
+}
+
+:flash key-value-attr::tag {
+    color: var(--flash_key-value-attr-tag-color);
+    
+}
+
+:flash class-attr {
+    color: var(--flash_class-attr-color);
+
+
+}
+
+:flash class-attr::tag {
+    color: var(--flash_class-attr-tag-color);
+
+}
+
+:flash id-attr {
+    color: var(--flash_id-attr-color);
+
+}
+
+:flash id-attr::tag {
+    color: var(--flash_id-attr-tag-color);
+
+}
+
+
+
+/********************************************/
+/*                 fade                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:fade {
+    color: var(--h1-fade-color);
+    
+}
+
+h2:fade {
+    color: var(--h2-fade-color);
+    
+}
+
+h3:fade {
+    color: var(--h3-fade-color);
+    
+}
+
+h4:fade {
+    color: var(--h4-fade-color);
+    
+}
+
+h5:fade {
+    color: var(--h5-fade-color);
+    
+}
+
+h6:fade {
+    color: var(--h6-fade-color);
+    
+}
+
+h1::tag:fade {
+    color: var(--h1-tag-fade-color);
+    
+}
+
+h2::tag:fade {
+    color: var(--h2-tag-fade-color);
+    
+}
+
+h3::tag:fade {
+    color: var(--h3-tag-fade-color);
+    
+}
+
+h4::tag:fade {
+    color: var(--h4-tag-fade-color);
+    
+}
+
+h5::tag:fade {
+    color: var(--h5-tag-fade-color);
+    
+}
+
+h6::tag:fade {
+    color: var(--h6-tag-fade-color);
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:fade {
+    color: var(--hr-fade-color);
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:fade {
+    color: var(--strong-fade-color);
+    
+    
+}
+
+em:fade {
+    color: var(--em-fade-color);
+    
+    
+}
+
+s:fade {
+    color: var(--s-fade-color);
+    
+    
+}
+
+:fade strong {
+    color: var(--fade_strong-color);
+    
+    
+}
+
+:fade em {
+    color: var(--fade_em-color);
+    
+    
+}
+
+:fade s {
+    color: var(--fade_s-color);
+    
+    
+}
+
+:fade strong::tag {
+    color: var(--fade_strong-tag-color);
+    
+    
+}
+
+:fade em::tag {
+    color: var(--fade_em-tag-color);
+    
+    
+}
+
+:fade s::tag {
+    color: var(--fade_s-tag-color);
+    
+    
+}
+
+:fade strong:fade {
+    color: var(--fade_strong-fade-color);
+    
+    
+}
+
+:fade em:fade {
+    color: var(--fade_em-fade-color);
+    
+    
+}
+
+:fade s:fade {
+    color: var(--fade_s-fade-color);
+    
+    
+}
+
+:fade strong::tag:fade {
+    color: var(--fade_strong-tag-fade-color);
+    
+    
+}
+
+:fade em::tag:fade {
+    color: var(--fade_em-tag-fade-color);
+    
+    
+}
+
+:fade s::tag:fade {
+    color: var(--fade_s-tag-fade-color);
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:fade {
+    color: var(--blockquote-fade-color);
+    
+    
+}
+
+blockquote::tag:fade {
+    color: var(--blockquote-tag-fade-color);
+    
+    
+}
+
+:fade blockquote {
+    color: var(--fade_blockquote-color);
+    
+    
+}
+
+
+:fade blockquote::tag {
+    color: var(--fade_blockquote-tag-color);
+    
+    
+}
+
+:fade blockquote {
+    color: var(--fade_blockquote-color);
+    
+    
+}
+
+:fade blockquote::tag {
+    color: var(--fade_blockquote-tag-color);
+    
+    
+}
+
+:fade blockquote::tag:fade {
+    color: var(--fade_blockquote-tag-fade-color);
+    
+    
+}
+
+:fade blockquote:fade {
+    color: var(--fade_blockquote-fade-color);
+    
+    
+}
+
+:fade blockquote::tag:fade {
+    color: var(--fade_blockquote-tag-fade-color);
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:fade {
+    color: var(--ul-fade-color);
+    
+}
+
+ol:fade {
+    color: var(--ol-fade-color);
+    
+}
+
+li:fade {
+    color: var(--li-fade-color);
+    
+}
+
+li::tag:fade {
+    color: var(--li-tag-fade-color);
+    
+}
+
+:fade ul {
+    color: var(--fade_ul-color);
+    
+}
+
+:fade ol {
+    color: var(--fade_ol-color);
+    
+}
+
+:fade li {
+    color: var(--fade_li-color);
+    
+}
+
+:fade li::tag {
+    color: var(--fade_li-tag-color);
+    
+}
+
+:fade ul:fade {
+    color: var(--fade_ul-fade-color);
+    
+}
+
+:fade ol:fade {
+    color: var(--fade_ol-fade-color);
+    
+}
+
+:fade li:fade {
+    color: var(--fade_li-fade-color);
+    
+}
+
+:fade li::tag:fade {
+    color: var(--fade_li-tag-fade-color);
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax fadeing
+
+ ``` js
+ var foo = function (bar) {
+    color: var(-- var foo = function_(bar)-color);
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:fade {
+    color: var(--code-fade-color);
+    
+}
+
+code::tag:fade {
+    color: var(--code-tag-fade-color);
+    
+}
+
+code::params:fade {
+    color: var(--code-params-fade-color);
+    
+}
+
+:fade code {
+    color: var(--fade_code-color);
+    
+}
+
+:fade code::tag {
+    color: var(--fade_code-tag-color);
+    
+}
+
+:fade code::params {
+    color: var(--fade_code-params-color);
+    
+}
+
+:fade code:fade {
+    color: var(--fade_code-fade-color);
+    
+}
+
+:fade code::tag:fade {
+    color: var(--fade_code-tag-fade-color);
+    
+}
+
+:fade code::params:fade {
+    color: var(--fade_code-params-fade-color);
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:fade {
+    color: var(--table-fade-color);
+    
+}
+
+thead:fade {
+    color: var(--thead-fade-color);
+    
+}
+
+tbody:fade {
+    color: var(--tbody-fade-color);
+    
+    
+}
+
+tr:fade {
+    color: var(--tr-fade-color);
+    
+}
+
+td:fade {
+    color: var(--td-fade-color);
+    
+}
+
+:fade thead {
+    color: var(--fade_thead-color);
+    
+}
+
+:fade tbody {
+    color: var(--fade_tbody-color);
+    
+    
+}
+
+:fade tr {
+    color: var(--fade_tr-color);
+    
+}
+
+:fade td {
+    color: var(--fade_td-color);
+    
+}
+
+
+:fade thead:fade {
+    color: var(--fade_thead-fade-color);
+    
+}
+
+:fade tbody:fade {
+    color: var(--fade_tbody-fade-color);
+    
+    
+}
+
+:fade tr:fade {
+    color: var(--fade_tr-fade-color);
+    
+}
+
+:fade td:fade {
+    color: var(--fade_td-fade-color);
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:fade {
+    color: var(--a-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:fade {
+    color: var(--a-tag-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:fade {
+    color: var(--a-text-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:fade {
+    color: var(--a-dest-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:fade {
+    color: var(--a-lbl-fade-color);
+    
+}
+
+/* title: the title of the link */
+a::title:fade {
+    color: var(--a-title-fade-color);
+    
+    
+}
+
+:fade a {
+    color: var(--fade_a-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:fade a::tag {
+    color: var(--fade_a-tag-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:fade a::text {
+    color: var(--fade_a-text-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:fade a::destination {
+    color: var(--fade_a-dest-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:fade a::label {
+    color: var(--fade_a-lbl-color);
+    
+}
+
+/* title: the title of the link */
+:fade a::title {
+    color: var(--fade_a-title-color);
+    
+    
+}
+
+:fade a:fade {
+    color: var(--fade_a-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:fade a::tag:fade {
+    color: var(--fade_a-tag-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:fade a::text:fade {
+    color: var(--fade_a-text-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:fade a::destination:fade {
+    color: var(--fade_a-dest-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:fade a::label:fade {
+    color: var(--fade_a-lbl-fade-color);
+    
+}
+
+/* title: the title of the link */
+:fade a::title:fade {
+    color: var(--fade_a-title-fade-color);
+    
+    
+}
+
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+img:fade {
+    color: var(--img-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:fade {
+    color: var(--img-tag-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:fade {
+    color: var(--img-text-fade-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+img::destination:fade {
+    color: var(--img-dest-fade-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+img::label:fade {
+    color: var(--img-lbl-fade-color);
+    
+}
+
+/* title: the title of the image link */
+img::title:fade {
+    color: var(--img-title-fade-color);
+    
+}
+
+:fade img {
+    color: var(--fade_img-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:fade img::tag {
+    color: var(--fade_img-tag-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:fade img::text {
+    color: var(--fade_img-text-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:fade img::destination {
+    color: var(--fade_img-dest-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:fade img::label {
+    color: var(--fade_img-lbl-color);
+    
+}
+
+/* title: the title of the image link */
+:fade img::title {
+    color: var(--fade_img-title-color);
+    
+}
+
+
+:fade img:fade {
+    color: var(--fade_img-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:fade img::tag:fade {
+    color: var(--fade_img-tag-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:fade img::text:fade {
+    color: var(--fade_img-text-fade-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:fade img::destination:fade {
+    color: var(--fade_img-dest-fade-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:fade img::label:fade {
+    color: var(--fade_img-lbl-fade-color);
+    
+}
+
+/* title: the title of the image link */
+:fade img::title:fade {
+    color: var(--fade_img-title-fade-color);
+    
+}
+
+/*
+    html-block
+*/
+
+html-block:fade {
+    color: var(--html-block-fade-color);
+    
+}
+
+/*
+    ref
+*/
+
+ref:fade {
+    color: var(--ref-fade-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+ref::tag:fade {
+    color: var(--ref-tag-fade-color);
+    
+}
+
+/* label: the part between the two square braquets */
+ref::label:fade {
+    color: var(--ref-lbl-fade-color);
+    
+}
+
+
+/* destination: the destination URI */
+ref::destination:fade {
+    color: var(--ref-dest-fade-color);
+    
+}
+
+/* title: the ref title */
+ref::title:fade {
+    color: var(--ref-title-fade-color);
+    
+}
+
+:fade ref {
+    color: var(--fade_ref-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:fade ref::tag {
+    color: var(--fade_ref-tag-color);
+    
+}
+
+/* label: the part between the two square braquets */
+:fade ref::label {
+    color: var(--fade_ref-lbl-color);
+    
+}
+
+
+/* destination: the destination URI */
+:fade ref::destination {
+    color: var(--fade_ref-dest-color);
+    
+}
+
+/* title: the ref title */
+:fade ref::title {
+    color: var(--fade_ref-title-color);
+    
+}
+
+:fade ref:fade {
+    color: var(--fade_ref-fade-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:fade ref::tag:fade {
+    color: var(--fade_ref-tag-fade-color);
+    
+}
+
+/* label: the part between the two square braquets */
+:fade ref::label:fade {
+    color: var(--fade_ref-lbl-fade-color);
+    
+}
+
+
+/* destination: the destination URI */
+:fade ref::destination:fade {
+    color: var(--fade_ref-dest-fade-color);
+    
+}
+
+/* title: the ref title */
+:fade ref::title:fade {
+    color: var(--fade_ref-title-fade-color);
+    
+}
+
+
+/* attributes */
+
+
+/* :fade */
+key-value-attr:fade {
+    color: var(--key-value-attr-fade-color);
+
+}
+
+key-value-attr::tag:fade {
+    color: var(--key-value-attr-tag-fade-color);
+    
+}
+
+class-attr:fade {
+    color: var(--class-attr-fade-color);
+
+
+}
+
+class-attr::tag:fade {
+    color: var(--class-attr-tag-fade-color);
+
+}
+
+id-attr:fade {
+    color: var(--id-attr-fade-color);
+
+}
+
+id-attr::tag:fade {
+    color: var(--id-attr-tag-fade-color);
+
+}
+
+/* :fade normal */
+:fade key-value-attr {
+    color: var(--fade_key-value-attr-color);
+
+}
+
+:fade key-value-attr::tag {
+    color: var(--fade_key-value-attr-tag-color);
+    
+}
+
+:fade class-attr {
+    color: var(--fade_class-attr-color);
+
+
+}
+
+:fade class-attr::tag {
+    color: var(--fade_class-attr-tag-color);
+
+}
+
+:fade id-attr {
+    color: var(--fade_id-attr-color);
+
+}
+
+:fade id-attr::tag {
+    color: var(--fade_id-attr-tag-color);
+
+}
+
+/* :fade :fade */
+:fade key-value-attr:fade {
+    color: var(--fade_key-value-attr-fade-color);
+
+}
+
+:fade key-value-attr::tag:fade {
+    color: var(--fade_key-value-attr-tag-fade-color);
+    
+}
+
+:fade class-attr:fade {
+    color: var(--fade_class-attr-fade-color);
+
+
+}
+
+:fade class-attr::tag:fade {
+    color: var(--fade_class-attr-tag-fade-color);
+
+}
+
+:fade id-attr:fade {
+    color: var(--fade_id-attr-fade-color);
+
+}
+
+:fade id-attr::tag:fade {
+    color: var(--fade_id-attr-tag-fade-color);
+
+}
+
+
+/********************************************/
+/*                 focus                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:focus {
+    color: var(--h1-focus-color);
+    
+}
+
+h2:focus {
+    color: var(--h2-focus-color);
+    
+}
+
+h3:focus {
+    color: var(--h3-focus-color);
+    
+}
+
+h4:focus {
+    color: var(--h4-focus-color);
+    
+}
+
+h5:focus {
+    color: var(--h5-focus-color);
+    
+}
+
+h6:focus {
+    color: var(--h6-focus-color);
+    
+}
+
+h1::tag:focus {
+    color: var(--h1-tag-focus-color);
+    
+}
+
+h2::tag:focus {
+    color: var(--h2-tag-focus-color);
+    
+}
+
+h3::tag:focus {
+    color: var(--h3-tag-focus-color);
+    
+}
+
+h4::tag:focus {
+    color: var(--h4-tag-focus-color);
+    
+}
+
+h5::tag:focus {
+    color: var(--h5-tag-focus-color);
+    
+}
+
+h6::tag:focus {
+    color: var(--h6-tag-focus-color);
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:focus {
+    color: var(--hr-focus-color);
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:focus {
+    color: var(--strong-focus-color);
+    
+    
+}
+
+em:focus {
+    color: var(--em-focus-color);
+    
+    
+}
+
+s:focus {
+    color: var(--s-focus-color);
+    
+    
+}
+
+:focus strong {
+    color: var(--focus_strong-color);
+    
+    
+}
+
+:focus em {
+    color: var(--focus_em-color);
+    
+    
+}
+
+:focus s {
+    color: var(--focus_s-color);
+    
+    
+}
+
+:focus strong::tag {
+    color: var(--focus_strong-tag-color);
+    
+    
+}
+
+:focus em::tag {
+    color: var(--focus_em-tag-color);
+    
+    
+}
+
+:focus s::tag {
+    color: var(--focus_s-tag-color);
+    
+    
+}
+
+:focus strong:focus {
+    color: var(--focus_strong-focus-color);
+    
+    
+}
+
+:focus em:focus {
+    color: var(--focus_em-focus-color);
+    
+    
+}
+
+:focus s:focus {
+    color: var(--focus_s-focus-color);
+    
+    
+}
+
+:focus strong::tag:focus {
+    color: var(--focus_strong-tag-focus-color);
+    
+    
+}
+
+:focus em::tag:focus {
+    color: var(--focus_em-tag-focus-color);
+    
+    
+}
+
+:focus s::tag:focus {
+    color: var(--focus_s-tag-focus-color);
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:focus {
+    color: var(--blockquote-focus-color);
+    
+    
+}
+
+blockquote::tag:focus {
+    color: var(--blockquote-tag-focus-color);
+    
+    
+}
+
+:focus blockquote {
+    color: var(--focus_blockquote-color);
+    
+    
+}
+
+
+:focus blockquote::tag {
+    color: var(--focus_blockquote-tag-color);
+    
+    
+}
+
+:focus blockquote {
+    color: var(--focus_blockquote-color);
+    
+    
+}
+
+:focus blockquote::tag {
+    color: var(--focus_blockquote-tag-color);
+    
+    
+}
+
+:focus blockquote::tag:focus {
+    color: var(--focus_blockquote-tag-focus-color);
+    
+    
+}
+
+:focus blockquote:focus {
+    color: var(--focus_blockquote-focus-color);
+    
+    
+}
+
+:focus blockquote::tag:focus {
+    color: var(--focus_blockquote-tag-focus-color);
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:focus {
+    color: var(--ul-focus-color);
+    
+}
+
+ol:focus {
+    color: var(--ol-focus-color);
+    
+}
+
+li:focus {
+    color: var(--li-focus-color);
+    
+}
+
+li::tag:focus {
+    color: var(--li-tag-focus-color);
+    
+}
+
+:focus ul {
+    color: var(--focus_ul-color);
+    
+}
+
+:focus ol {
+    color: var(--focus_ol-color);
+    
+}
+
+:focus li {
+    color: var(--focus_li-color);
+    
+}
+
+:focus li::tag {
+    color: var(--focus_li-tag-color);
+    
+}
+
+:focus ul:focus {
+    color: var(--focus_ul-focus-color);
+    
+}
+
+:focus ol:focus {
+    color: var(--focus_ol-focus-color);
+    
+}
+
+:focus li:focus {
+    color: var(--focus_li-focus-color);
+    
+}
+
+:focus li::tag:focus {
+    color: var(--focus_li-tag-focus-color);
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax focusing
+
+ ``` js
+ var foo = function (bar) {
+    color: var(-- var foo = function_(bar)-color);
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:focus {
+    color: var(--code-focus-color);
+    
+}
+
+code::tag:focus {
+    color: var(--code-tag-focus-color);
+    
+}
+
+code::params:focus {
+    color: var(--code-params-focus-color);
+    
+}
+
+:focus code {
+    color: var(--focus_code-color);
+    
+}
+
+:focus code::tag {
+    color: var(--focus_code-tag-color);
+    
+}
+
+:focus code::params {
+    color: var(--focus_code-params-color);
+    
+}
+
+:focus code:focus {
+    color: var(--focus_code-focus-color);
+    
+}
+
+:focus code::tag:focus {
+    color: var(--focus_code-tag-focus-color);
+    
+}
+
+:focus code::params:focus {
+    color: var(--focus_code-params-focus-color);
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:focus {
+    color: var(--table-focus-color);
+    
+}
+
+thead:focus {
+    color: var(--thead-focus-color);
+    
+}
+
+tbody:focus {
+    color: var(--tbody-focus-color);
+    
+    
+}
+
+tr:focus {
+    color: var(--tr-focus-color);
+    
+}
+
+td:focus {
+    color: var(--td-focus-color);
+    
+}
+
+:focus thead {
+    color: var(--focus_thead-color);
+    
+}
+
+:focus tbody {
+    color: var(--focus_tbody-color);
+    
+    
+}
+
+:focus tr {
+    color: var(--focus_tr-color);
+    
+}
+
+:focus td {
+    color: var(--focus_td-color);
+    
+}
+
+
+:focus thead:focus {
+    color: var(--focus_thead-focus-color);
+    
+}
+
+:focus tbody:focus {
+    color: var(--focus_tbody-focus-color);
+    
+    
+}
+
+:focus tr:focus {
+    color: var(--focus_tr-focus-color);
+    
+}
+
+:focus td:focus {
+    color: var(--focus_td-focus-color);
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:focus {
+    color: var(--a-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:focus {
+    color: var(--a-tag-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:focus {
+    color: var(--a-text-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:focus {
+    color: var(--a-dest-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:focus {
+    color: var(--a-lbl-focus-color);
+    
+}
+
+/* title: the title of the link */
+a::title:focus {
+    color: var(--a-title-focus-color);
+    
+    
+}
+
+:focus a {
+    color: var(--focus_a-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:focus a::tag {
+    color: var(--focus_a-tag-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:focus a::text {
+    color: var(--focus_a-text-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:focus a::destination {
+    color: var(--focus_a-dest-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:focus a::label {
+    color: var(--focus_a-lbl-color);
+    
+}
+
+/* title: the title of the link */
+:focus a::title {
+    color: var(--focus_a-title-color);
+    
+    
+}
+
+:focus a:focus {
+    color: var(--focus_a-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:focus a::tag:focus {
+    color: var(--focus_a-tag-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:focus a::text:focus {
+    color: var(--focus_a-text-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:focus a::destination:focus {
+    color: var(--focus_a-dest-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:focus a::label:focus {
+    color: var(--focus_a-lbl-focus-color);
+    
+}
+
+/* title: the title of the link */
+:focus a::title:focus {
+    color: var(--focus_a-title-focus-color);
+    
+    
+}
+
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+img:focus {
+    color: var(--img-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:focus {
+    color: var(--img-tag-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:focus {
+    color: var(--img-text-focus-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+img::destination:focus {
+    color: var(--img-dest-focus-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+img::label:focus {
+    color: var(--img-lbl-focus-color);
+    
+}
+
+/* title: the title of the image link */
+img::title:focus {
+    color: var(--img-title-focus-color);
+    
+}
+
+:focus img {
+    color: var(--focus_img-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:focus img::tag {
+    color: var(--focus_img-tag-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:focus img::text {
+    color: var(--focus_img-text-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:focus img::destination {
+    color: var(--focus_img-dest-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:focus img::label {
+    color: var(--focus_img-lbl-color);
+    
+}
+
+/* title: the title of the image link */
+:focus img::title {
+    color: var(--focus_img-title-color);
+    
+}
+
+
+:focus img:focus {
+    color: var(--focus_img-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:focus img::tag:focus {
+    color: var(--focus_img-tag-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:focus img::text:focus {
+    color: var(--focus_img-text-focus-color);
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:focus img::destination:focus {
+    color: var(--focus_img-dest-focus-color);
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:focus img::label:focus {
+    color: var(--focus_img-lbl-focus-color);
+    
+}
+
+/* title: the title of the image link */
+:focus img::title:focus {
+    color: var(--focus_img-title-focus-color);
+    
+}
+
+/*
+    html-block
+*/
+
+html-block:focus {
+    color: var(--html-block-focus-color);
+    
+}
+
+/*
+    ref
+*/
+
+ref:focus {
+    color: var(--ref-focus-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+ref::tag:focus {
+    color: var(--ref-tag-focus-color);
+    
+}
+
+/* label: the part between the two square braquets */
+ref::label:focus {
+    color: var(--ref-lbl-focus-color);
+    
+}
+
+
+/* destination: the destination URI */
+ref::destination:focus {
+    color: var(--ref-dest-focus-color);
+    
+}
+
+/* title: the ref title */
+ref::title:focus {
+    color: var(--ref-title-focus-color);
+    
+}
+
+:focus ref {
+    color: var(--focus_ref-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:focus ref::tag {
+    color: var(--focus_ref-tag-color);
+    
+}
+
+/* label: the part between the two square braquets */
+:focus ref::label {
+    color: var(--focus_ref-lbl-color);
+    
+}
+
+
+/* destination: the destination URI */
+:focus ref::destination {
+    color: var(--focus_ref-dest-color);
+    
+}
+
+/* title: the ref title */
+:focus ref::title {
+    color: var(--focus_ref-title-color);
+    
+}
+
+:focus ref:focus {
+    color: var(--focus_ref-focus-color);
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:focus ref::tag:focus {
+    color: var(--focus_ref-tag-focus-color);
+    
+}
+
+/* label: the part between the two square braquets */
+:focus ref::label:focus {
+    color: var(--focus_ref-lbl-focus-color);
+    
+}
+
+
+/* destination: the destination URI */
+:focus ref::destination:focus {
+    color: var(--focus_ref-dest-focus-color);
+    
+}
+
+/* title: the ref title */
+:focus ref::title:focus {
+    color: var(--focus_ref-title-focus-color);
+    
+}
+
+
+/* attributes */
+
+
+/* :focus */
+key-value-attr:focus {
+    color: var(--key-value-attr-focus-color);
+
+}
+
+key-value-attr::tag:focus {
+    color: var(--key-value-attr-tag-focus-color);
+    
+}
+
+class-attr:focus {
+    color: var(--class-attr-focus-color);
+
+
+}
+
+class-attr::tag:focus {
+    color: var(--class-attr-tag-focus-color);
+
+}
+
+id-attr:focus {
+    color: var(--id-attr-focus-color);
+
+}
+
+id-attr::tag:focus {
+    color: var(--id-attr-tag-focus-color);
+
+}
+
+/* :focus normal */
+:focus key-value-attr {
+    color: var(--focus_key-value-attr-color);
+
+}
+
+:focus key-value-attr::tag {
+    color: var(--focus_key-value-attr-tag-color);
+    
+}
+
+:focus class-attr {
+    color: var(--focus_class-attr-color);
+
+
+}
+
+:focus class-attr::tag {
+    color: var(--focus_class-attr-tag-color);
+
+}
+
+:focus id-attr {
+    color: var(--focus_id-attr-color);
+
+}
+
+:focus id-attr::tag {
+    color: var(--focus_id-attr-tag-color);
+
+}
+
+/* :focus :focus */
+:focus key-value-attr:focus {
+    color: var(--focus_key-value-attr-focus-color);
+
+}
+
+:focus key-value-attr::tag:focus {
+    color: var(--focus_key-value-attr-tag-focus-color);
+    
+}
+
+:focus class-attr:focus {
+    color: var(--focus_class-attr-focus-color);
+
+
+}
+
+:focus class-attr::tag:focus {
+    color: var(--focus_class-attr-tag-focus-color);
+
+}
+
+:focus id-attr:focus {
+    color: var(--focus_id-attr-focus-color);
+
+}
+
+:focus id-attr::tag:focus {
+    color: var(--focus_id-attr-tag-focus-color);
+
+}
+
+
+/********************************************/
+/*           highlight-fade                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:highlight:fade {
+    color: var(--h1-highlight-fade-color);
+    
+}
+
+h2:highlight:fade {
+    color: var(--h2-highlight-fade-color);
+    
+}
+
+h3:highlight:fade {
+    color: var(--h3-highlight-fade-color);
+    
+}
+
+h4:highlight:fade {
+    color: var(--h4-highlight-fade-color);
+    
+}
+
+h5:highlight:fade {
+    color: var(--h5-highlight-fade-color);
+    
+}
+
+h6:highlight:fade {
+    color: var(--h6-highlight-fade-color);
+    
+}
+
+h1::tag:highlight:fade {
+    color: var(--h1-tag-highlight-fade-color);
+    
+}
+
+h2::tag:highlight:fade {
+    color: var(--h2-tag-highlight-fade-color);
+    
+}
+
+h3::tag:highlight:fade {
+    color: var(--h3-tag-highlight-fade-color);
+    
+}
+
+h4::tag:highlight:fade {
+    color: var(--h4-tag-highlight-fade-color);
+    
+}
+
+h5::tag:highlight:fade {
+    color: var(--h5-tag-highlight-fade-color);
+    
+}
+
+h6::tag:highlight:fade {
+    color: var(--h6-tag-highlight-fade-color);
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:highlight:fade {
+    color: var(--hr-highlight-fade-color);
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+/* :highlight:fade */
+strong:highlight:fade {
+    color: var(--strong-highlight-fade-color);
+    
+    
+}
+
+em:highlight:fade {
+    color: var(--em-highlight-fade-color);
+    
+    
+}
+
+s:highlight:fade {
+    color: var(--s-highlight-fade-color);
+    
+    
+}
+
+strong::tag:highlight:fade {
+    color: var(--strong-tag-highlight-fade-color);
+    
+    
+}
+
+em::tag:highlight:fade {
+    color: var(--em-tag-highlight-fade-color);
+    
+    
+}
+
+s::tag:highlight:fade {
+    color: var(--s-tag-highlight-fade-color);
+    
+
+}
+
+/* :highlight :fade */
+:highlight strong:fade {
+    color: var(--highlight_strong-fade-color);
+    
+    
+}
+
+:highlight em:fade {
+    color: var(--highlight_em-fade-color);
+    
+    
+}
+
+:highlight s:fade {
+    color: var(--highlight_s-fade-color);
+    
+    
+}
+
+:highlight strong::tag:fade {
+    color: var(--highlight_strong-tag-fade-color);
+    
+    
+}
+
+:highlight em::tag:fade {
+    color: var(--highlight_em-tag-fade-color);
+    
+    
+}
+
+:highlight s::tag:fade {
+    color: var(--highlight_s-tag-fade-color);
+    
+
+}
+
+
+/* :highlight :highlight:fade */
+:highlight strong:highlight:fade {
+    color: var(--highlight_strong-highlight-fade-color);
+    
+    
+}
+
+:highlight em:highlight:fade {
+    color: var(--highlight_em-highlight-fade-color);
+    
+    
+}
+
+:highlight s:highlight:fade {
+    color: var(--highlight_s-highlight-fade-color);
+    
+    
+}
+
+:highlight strong::tag:highlight:fade {
+    color: var(--highlight_strong-tag-highlight-fade-color);
+    
+    
+}
+
+:highlight em::tag:highlight:fade {
+    color: var(--highlight_em-tag-highlight-fade-color);
+    
+    
+}
+
+:highlight s::tag:highlight:fade {
+    color: var(--highlight_s-tag-highlight-fade-color);
+    
+
+}
+
+/* :highlight:fade :highlight:fade */
+:highlight:fade strong:highlight:fade {
+    color: var(--highlight-fade_strong-highlight-fade-color);
+    
+    
+}
+
+:highlight:fade em:highlight:fade {
+    color: var(--highlight-fade_em-highlight-fade-color);
+    
+    
+}
+
+:highlight:fade s:highlight:fade {
+    color: var(--highlight-fade_s-highlight-fade-color);
+    
+    
+}
+
+:highlight:fade strong::tag:highlight:fade {
+    color: var(--highlight-fade_strong-tag-highlight-fade-color);
+    
+    
+}
+
+:highlight:fade em::tag:highlight:fade {
+    color: var(--highlight-fade_em-tag-highlight-fade-color);
+    
+    
+}
+
+:highlight:fade s::tag:highlight:fade {
+    color: var(--highlight-fade_s-tag-highlight-fade-color);
+    
+
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+/* :highlight:fade */
+blockquote:highlight:fade {
+    color: var(--blockquote-highlight-fade-color);
+    
+    
+}
+
+blockquote::tag:highlight:fade {
+    color: var(--blockquote-tag-highlight-fade-color);
+    
+    
+}
+
+/* :highlight :fade */
+:highlight blockquote:fade {
+    color: var(--highlight_blockquote-fade-color);
+    
+    
+}
+
+
+:highlight blockquote::tag:fade {
+    color: var(--highlight_blockquote-tag-fade-color);
+    
+    
+}
+
+
+/* :highlight :highlight:fade */
+:highlight blockquote:highlight:fade {
+    color: var(--highlight_blockquote-highlight-fade-color);
+    
+    
+}
+
+
+:highlight blockquote::tag:highlight:fade {
+    color: var(--highlight_blockquote-tag-highlight-fade-color);
+    
+    
+}
+
+/* :highlight:fade :highlight:fade */
+:highlight:fade blockquote:highlight:fade {
+    color: var(--highlight-fade_blockquote-highlight-fade-color);
+    
+    
+}
+
+:highlight:fade blockquote::tag:highlight:fade {
+    color: var(--highlight-fade_blockquote-tag-highlight-fade-color);
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+/* :highlight:fade */
+ul:highlight:fade {
+    color: var(--ul-highlight-fade-color);
+    
+}
+
+ol:highlight:fade {
+    color: var(--ol-highlight-fade-color);
+    
+}
+
+li:highlight:fade {
+    color: var(--li-highlight-fade-color);
+    
+}
+
+li::tag:highlight:fade {
+    color: var(--li-tag-highlight-fade-color);
+    
+}
+
+/* :highlight :fade */
+:highlight ul:fade {
+    color: var(--highlight_ul-fade-color);
+    
+}
+
+:highlight ol:fade {
+    color: var(--highlight_ol-fade-color);
+    
+}
+
+:highlight li:fade {
+    color: var(--highlight_li-fade-color);
+    
+}
+
+:highlight li::tag:fade {
+    color: var(--highlight_li-tag-fade-color);
+    
+}
+
+/* :highlight :highlight:fade */
+:highlight ul:highlight:fade {
+    color: var(--highlight_ul-highlight-fade-color);
+    
+}
+
+:highlight ol:highlight:fade {
+    color: var(--highlight_ol-highlight-fade-color);
+    
+}
+
+:highlight li:highlight:fade {
+    color: var(--highlight_li-highlight-fade-color);
+    
+}
+
+:highlight li::tag:highlight:fade {
+    color: var(--highlight_li-tag-highlight-fade-color);
+    
+}
+
+/* :highlight:fade :highlight:fade */
+:highlight:fade ul:highlight:fade {
+    color: var(--highlight-fade_ul-highlight-fade-color);
+    
+}
+
+:highlight:fade ol:highlight:fade {
+    color: var(--highlight-fade_ol-highlight-fade-color);
+    
+}
+
+:highlight:fade li:highlight:fade {
+    color: var(--highlight-fade_li-highlight-fade-color);
+    
+}
+
+:highlight:fade li::tag:highlight:fade {
+    color: var(--highlight-fade_li-tag-highlight-fade-color);
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+    color: var(-- var foo = function_(bar)-color);
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+/* :highlight:fade */
+code:highlight:fade {
+    color: var(--code-highlight-fade-color);
+    
+}
+
+code::tag:highlight:fade {
+    color: var(--code-tag-highlight-fade-color);
+    
+}
+
+code::params:highlight:fade {
+    color: var(--code-params-highlight-fade-color);
+    
+}
+
+/* :highlight :fade */
+:highlight code:fade {
+    color: var(--highlight_code-fade-color);
+    
+}
+
+:highlight code::tag:fade {
+    color: var(--highlight_code-tag-fade-color);
+    
+}
+
+:highlight code::params:fade {
+    color: var(--highlight_code-params-fade-color);
+    
+}
+
+/* :highlight :highlight:fade */
+:highlight code:highlight:fade {
+    color: var(--highlight_code-highlight-fade-color);
+    
+}
+
+:highlight code::tag:highlight:fade {
+    color: var(--highlight_code-tag-highlight-fade-color);
+    
+}
+
+:highlight code::params:highlight:fade {
+    color: var(--highlight_code-params-highlight-fade-color);
+    
+}
+
+/* :highlight:fade :highlight:fade */
+:highlight:fade code:highlight:fade {
+    color: var(--highlight-fade_code-highlight-fade-color);
+    
+}
+
+:highlight:fade code::tag:highlight:fade {
+    color: var(--highlight-fade_code-tag-highlight-fade-color);
+    
+}
+
+:highlight:fade code::params:highlight:fade {
+    color: var(--highlight-fade_code-params-highlight-fade-color);
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+/* :highlight:fade */
+
+
+table:highlight:fade {
+    color: var(--table-highlight-fade-color);
+    
+}
+
+thead:highlight:fade {
+    color: var(--thead-highlight-fade-color);
+    
+}
+
+tbody:highlight:fade {
+    color: var(--tbody-highlight-fade-color);
+    
+    
+}
+
+tr:highlight:fade {
+    color: var(--tr-highlight-fade-color);
+    
+}
+
+td:highlight:fade {
+    color: var(--td-highlight-fade-color);
+    
+}
+
+/* :highlight :fade */
+:highlight thead:fade {
+    color: var(--highlight_thead-fade-color);
+    
+}
+
+:highlight tbody:fade {
+    color: var(--highlight_tbody-fade-color);
+    
+    
+}
+
+:highlight tr:fade {
+    color: var(--highlight_tr-fade-color);
+    
+}
+
+:highlight td:fade {
+    color: var(--highlight_td-fade-color);
+    
+}
+
+/* :highlight :highlight:fade */
+:highlight thead:highlight:fade {
+    color: var(--highlight_thead-highlight-fade-color);
+    
+}
+
+:highlight tbody:highlight:fade {
+    color: var(--highlight_tbody-highlight-fade-color);
+    
+    
+}
+
+:highlight tr:highlight:fade {
+    color: var(--highlight_tr-highlight-fade-color);
+    
+}
+
+:highlight td :highlight:fade {
+    color: var(--highlight_td_-highlight-fade-color);
+    
+}
+
+/* :highlight:fade :highlight:fade */
+:highlight:fade thead:highlight:fade {
+    color: var(--highlight-fade_thead-highlight-fade-color);
+    
+}
+
+:highlight:fade tbody:highlight:fade {
+    color: var(--highlight-fade_tbody-highlight-fade-color);
+    
+    
+}
+
+:highlight:fade tr:highlight:fade {
+    color: var(--highlight-fade_tr-highlight-fade-color);
+    
+}
+
+:highlight:fade td:highlight:fade {
+    color: var(--highlight-fade_td-highlight-fade-color);
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+/* :highlight:fade */
+
+a:highlight:fade {
+    color: var(--a-highlight-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:highlight:fade {
+    color: var(--a-tag-highlight-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:highlight:fade {
+    color: var(--a-text-highlight-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:highlight:fade {
+    color: var(--a-dest-highlight-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:highlight:fade {
+    color: var(--a-lbl-highlight-fade-color);
+    
+}
+
+/* title: the title of the link */
+a::title:highlight:fade {
+    color: var(--a-title-highlight-fade-color);
+    
+    
+}
+
+/* :highlight :fade */
+:highlight a:fade {
+    color: var(--highlight_a-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:fade {
+    color: var(--highlight_a-tag-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:fade {
+    color: var(--highlight_a-text-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:fade {
+    color: var(--highlight_a-dest-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:fade {
+    color: var(--highlight_a-lbl-fade-color);
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:fade {
+    color: var(--highlight_a-title-fade-color);
+    
+    
+}
+
+/* :highlight :highlight:fade */
+:highlight a:highlight:fade {
+    color: var(--highlight_a-highlight-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:highlight:fade {
+    color: var(--highlight_a-tag-highlight-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:highlight:fade {
+    color: var(--highlight_a-text-highlight-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:highlight:fade {
+    color: var(--highlight_a-dest-highlight-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:highlight:fade {
+    color: var(--highlight_a-lbl-highlight-fade-color);
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:highlight:fade {
+    color: var(--highlight_a-title-highlight-fade-color);
+    
+    
+}
+
+
+/* :highlight:fade :highlight:fade */
+
+:highlight:fade a:highlight:fade {
+    color: var(--highlight-fade_a-highlight-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight:fade a::tag:highlight:fade {
+    color: var(--highlight-fade_a-tag-highlight-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight:fade a::text:highlight:fade {
+    color: var(--highlight-fade_a-text-highlight-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight:fade a::destination:highlight:fade {
+    color: var(--highlight-fade_a-dest-highlight-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight:fade a::label:highlight:fade {
+    color: var(--highlight-fade_a-lbl-highlight-fade-color);
+    
+}
+
+/* title: the title of the link */
+:highlight:fade a::title:highlight:fade {
+    color: var(--highlight-fade_a-title-highlight-fade-color);
+    
+    
+}
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+
+/* :highlight:fade */
+
+img:highlight:fade {
+    color: var(--img-highlight-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:highlight:fade {
+    color: var(--img-tag-highlight-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:highlight:fade {
+    color: var(--img-text-highlight-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+img::destination:highlight:fade {
+    color: var(--img-dest-highlight-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+img::label:highlight:fade {
+    color: var(--img-lbl-highlight-fade-color);
+    
+}
+
+/* title: the title of the link */
+img::title:highlight:fade {
+    color: var(--img-title-highlight-fade-color);
+    
+    
+}
+
+/* :highlight :fade */
+:highlight img:fade {
+    color: var(--highlight_img-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:fade {
+    color: var(--highlight_img-tag-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:fade {
+    color: var(--highlight_img-text-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight img::destination:fade {
+    color: var(--highlight_img-dest-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight img::label:fade {
+    color: var(--highlight_img-lbl-fade-color);
+    
+}
+
+/* title: the title of the link */
+:highlight img::title:fade {
+    color: var(--highlight_img-title-fade-color);
+    
+    
+}
+
+/* :highlight :highlight:fade */
+:highlight img:highlight:fade {
+    color: var(--highlight_img-highlight-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:highlight:fade {
+    color: var(--highlight_img-tag-highlight-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:highlight:fade {
+    color: var(--highlight_img-text-highlight-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight img::destination:highlight:fade {
+    color: var(--highlight_img-dest-highlight-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight img::label:highlight:fade {
+    color: var(--highlight_img-lbl-highlight-fade-color);
+    
+}
+
+/* title: the title of the link */
+:highlight img::title:highlight:fade {
+    color: var(--highlight_img-title-highlight-fade-color);
+    
+    
+}
+
+
+/* :highlight:fade :highlight:fade */
+
+:highlight:fade img:highlight:fade {
+    color: var(--highlight-fade_img-highlight-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight:fade img::tag:highlight:fade {
+    color: var(--highlight-fade_img-tag-highlight-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight:fade img::text:highlight:fade {
+    color: var(--highlight-fade_img-text-highlight-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight:fade img::destination:highlight:fade {
+    color: var(--highlight-fade_img-dest-highlight-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight:fade img::label:highlight:fade {
+    color: var(--highlight-fade_img-lbl-highlight-fade-color);
+    
+}
+
+/* title: the title of the link */
+:highlight:fade img::title:highlight:fade {
+    color: var(--highlight-fade_img-title-highlight-fade-color);
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:highlight:fade {
+    color: var(--html-block-highlight-fade-color);
+    
+}
+
+/*
+    ref
+*/
+
+
+/* :highlight:fade */
+
+ref:highlight:fade {
+    color: var(--ref-highlight-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+ref::tag:highlight:fade {
+    color: var(--ref-tag-highlight-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+ref::text:highlight:fade {
+    color: var(--ref-text-highlight-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+ref::destination:highlight:fade {
+    color: var(--ref-dest-highlight-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+ref::label:highlight:fade {
+    color: var(--ref-lbl-highlight-fade-color);
+    
+}
+
+/* title: the title of the link */
+ref::title:highlight:fade {
+    color: var(--ref-title-highlight-fade-color);
+    
+    
+}
+
+/* :highlight :fade */
+:highlight ref:fade {
+    color: var(--highlight_ref-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight ref::tag:fade {
+    color: var(--highlight_ref-tag-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight ref::text:fade {
+    color: var(--highlight_ref-text-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight ref::destination:fade {
+    color: var(--highlight_ref-dest-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight ref::label:fade {
+    color: var(--highlight_ref-lbl-fade-color);
+    
+}
+
+/* title: the title of the link */
+:highlight ref::title:fade {
+    color: var(--highlight_ref-title-fade-color);
+    
+    
+}
+
+/* :highlight :highlight:fade */
+:highlight ref:highlight:fade {
+    color: var(--highlight_ref-highlight-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight ref::tag:highlight:fade {
+    color: var(--highlight_ref-tag-highlight-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight ref::text:highlight:fade {
+    color: var(--highlight_ref-text-highlight-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight ref::destination:highlight:fade {
+    color: var(--highlight_ref-dest-highlight-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight ref::label:highlight:fade {
+    color: var(--highlight_ref-lbl-highlight-fade-color);
+    
+}
+
+/* title: the title of the link */
+:highlight ref::title:highlight:fade {
+    color: var(--highlight_ref-title-highlight-fade-color);
+    
+    
+}
+
+
+/* :highlight:fade :highlight:fade */
+
+:highlight:fade ref:highlight:fade {
+    color: var(--highlight-fade_ref-highlight-fade-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight:fade ref::tag:highlight:fade {
+    color: var(--highlight-fade_ref-tag-highlight-fade-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight:fade ref::text:highlight:fade {
+    color: var(--highlight-fade_ref-text-highlight-fade-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight:fade ref::destination:highlight:fade {
+    color: var(--highlight-fade_ref-dest-highlight-fade-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight:fade ref::label:highlight:fade {
+    color: var(--highlight-fade_ref-lbl-highlight-fade-color);
+    
+}
+
+/* title: the title of the link */
+:highlight:fade ref::title:highlight:fade {
+    color: var(--highlight-fade_ref-title-highlight-fade-color);
+    
+    
+}
+
+
+
+/* attributes */
+
+/* :highlight:fade */
+key-value-attr:highlight:fade {
+    color: var(--key-value-attr-highlight-fade-color);
+
+}
+
+key-value-attr::tag:highlight:fade {
+    color: var(--key-value-attr-tag-highlight-fade-color);
+    
+}
+
+class-attr:highlight:fade {
+    color: var(--class-attr-highlight-fade-color);
+
+
+}
+
+class-attr::tag:highlight:fade {
+    color: var(--class-attr-tag-highlight-fade-color);
+
+}
+
+id-attr:highlight:fade {
+    color: var(--id-attr-highlight-fade-color);
+
+}
+
+id-attr::tag:highlight:fade {
+    color: var(--id-attr-tag-highlight-fade-color);
+
+}
+
+/* :highlight :fade */
+
+:highlight key-value-attr:fade {
+    color: var(--highlight_key-value-attr-fade-color);
+
+}
+
+:highlight key-value-attr::tag:fade {
+    color: var(--highlight_key-value-attr-tag-fade-color);
+    
+}
+
+:highlight class-attr:fade {
+    color: var(--highlight_class-attr-fade-color);
+
+}
+
+:highlight class-attr::tag:fade {
+    color: var(--highlight_class-attr-tag-fade-color);
+
+}
+
+:highlight id-attr:fade {
+    color: var(--highlight_id-attr-fade-color);
+
+}
+
+:highlight id-attr::tag:fade {
+    color: var(--highlight_id-attr-tag-fade-color);
+
+}
+
+/* :highlight :highlight:fade */
+
+:highlight key-value-attr:highlight:fade {
+    color: var(--highlight_key-value-attr-highlight-fade-color);
+
+}
+
+:highlight key-value-attr::tag:highlight:fade {
+    color: var(--highlight_key-value-attr-tag-highlight-fade-color);
+    
+}
+
+:highlight class-attr:highlight:fade {
+    color: var(--highlight_class-attr-highlight-fade-color);
+
+
+}
+
+:highlight class-attr::tag:highlight:fade {
+    color: var(--highlight_class-attr-tag-highlight-fade-color);
+
+}
+
+:highlight id-attr:highlight:fade {
+    color: var(--highlight_id-attr-highlight-fade-color);
+
+}
+
+:highlight id-attr::tag:highlight:fade {
+    color: var(--highlight_id-attr-tag-highlight-fade-color);
+
+}
+
+/* :highlight:fade :highlight:fade */
+
+:highlight:fade key-value-attr:highlight:fade {
+    color: var(--highlight-fade_key-value-attr-highlight-fade-color);
+
+}
+
+:highlight:fade key-value-attr::tag:highlight:fade {
+    color: var(--highlight-fade_key-value-attr-tag-highlight-fade-color);
+    
+}
+
+:highlight:fade class-attr:highlight:fade {
+    color: var(--highlight-fade_class-attr-highlight-fade-color);
+
+
+}
+
+:highlight:fade class-attr::tag:highlight:fade {
+    color: var(--highlight-fade_class-attr-tag-highlight-fade-color);
+
+}
+
+:highlight:fade id-attr:highlight:fade {
+    color: var(--highlight-fade_id-attr-highlight-fade-color);
+
+}
+
+:highlight:fade id-attr::tag:highlight:fade {
+    color: var(--highlight-fade_id-attr-tag-highlight-fade-color);
+
+}
+
+
+/********************************************/
+/*           highlight-focus                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:highlight:focus {
+    color: var(--h1-highlight-focus-color);
+    
+}
+
+h2:highlight:focus {
+    color: var(--h2-highlight-focus-color);
+    
+}
+
+h3:highlight:focus {
+    color: var(--h3-highlight-focus-color);
+    
+}
+
+h4:highlight:focus {
+    color: var(--h4-highlight-focus-color);
+    
+}
+
+h5:highlight:focus {
+    color: var(--h5-highlight-focus-color);
+    
+}
+
+h6:highlight:focus {
+    color: var(--h6-highlight-focus-color);
+    
+}
+
+h1::tag:highlight:focus {
+    color: var(--h1-tag-highlight-focus-color);
+    
+}
+
+h2::tag:highlight:focus {
+    color: var(--h2-tag-highlight-focus-color);
+    
+}
+
+h3::tag:highlight:focus {
+    color: var(--h3-tag-highlight-focus-color);
+    
+}
+
+h4::tag:highlight:focus {
+    color: var(--h4-tag-highlight-focus-color);
+    
+}
+
+h5::tag:highlight:focus {
+    color: var(--h5-tag-highlight-focus-color);
+    
+}
+
+h6::tag:highlight:focus {
+    color: var(--h6-tag-highlight-focus-color);
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:highlight:focus {
+    color: var(--hr-highlight-focus-color);
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+/* :highlight:focus */
+strong:highlight:focus {
+    color: var(--strong-highlight-focus-color);
+    
+    
+}
+
+em:highlight:focus {
+    color: var(--em-highlight-focus-color);
+    
+    
+}
+
+s:highlight:focus {
+    color: var(--s-highlight-focus-color);
+    
+    
+}
+
+strong::tag:highlight:focus {
+    color: var(--strong-tag-highlight-focus-color);
+    
+    
+}
+
+em::tag:highlight:focus {
+    color: var(--em-tag-highlight-focus-color);
+    
+    
+}
+
+s::tag:highlight:focus {
+    color: var(--s-tag-highlight-focus-color);
+    
+
+}
+
+/* :highlight :focus */
+:highlight strong:focus {
+    color: var(--highlight_strong-focus-color);
+    
+    
+}
+
+:highlight em:focus {
+    color: var(--highlight_em-focus-color);
+    
+    
+}
+
+:highlight s:focus {
+    color: var(--highlight_s-focus-color);
+    
+    
+}
+
+:highlight strong::tag:focus {
+    color: var(--highlight_strong-tag-focus-color);
+    
+    
+}
+
+:highlight em::tag:focus {
+    color: var(--highlight_em-tag-focus-color);
+    
+    
+}
+
+:highlight s::tag:focus {
+    color: var(--highlight_s-tag-focus-color);
+    
+
+}
+
+
+/* :highlight :highlight:focus */
+:highlight strong:highlight:focus {
+    color: var(--highlight_strong-highlight-focus-color);
+    
+    
+}
+
+:highlight em:highlight:focus {
+    color: var(--highlight_em-highlight-focus-color);
+    
+    
+}
+
+:highlight s:highlight:focus {
+    color: var(--highlight_s-highlight-focus-color);
+    
+    
+}
+
+:highlight strong::tag:highlight:focus {
+    color: var(--highlight_strong-tag-highlight-focus-color);
+    
+    
+}
+
+:highlight em::tag:highlight:focus {
+    color: var(--highlight_em-tag-highlight-focus-color);
+    
+    
+}
+
+:highlight s::tag:highlight:focus {
+    color: var(--highlight_s-tag-highlight-focus-color);
+    
+
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus strong:highlight:focus {
+    color: var(--highlight-focus_strong-highlight-focus-color);
+    
+    
+}
+
+:highlight:focus em:highlight:focus {
+    color: var(--highlight-focus_em-highlight-focus-color);
+    
+    
+}
+
+:highlight:focus s:highlight:focus {
+    color: var(--highlight-focus_s-highlight-focus-color);
+    
+    
+}
+
+:highlight:focus strong::tag:highlight:focus {
+    color: var(--highlight-focus_strong-tag-highlight-focus-color);
+    
+    
+}
+
+:highlight:focus em::tag:highlight:focus {
+    color: var(--highlight-focus_em-tag-highlight-focus-color);
+    
+    
+}
+
+:highlight:focus s::tag:highlight:focus {
+    color: var(--highlight-focus_s-tag-highlight-focus-color);
+    
+
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+/* :highlight:focus */
+blockquote:highlight:focus {
+    color: var(--blockquote-highlight-focus-color);
+    
+    
+}
+
+blockquote::tag:highlight:focus {
+    color: var(--blockquote-tag-highlight-focus-color);
+    
+    
+}
+
+/* :highlight :focus */
+:highlight blockquote:focus {
+    color: var(--highlight_blockquote-focus-color);
+    
+    
+}
+
+
+:highlight blockquote::tag:focus {
+    color: var(--highlight_blockquote-tag-focus-color);
+    
+    
+}
+
+
+/* :highlight :highlight:focus */
+:highlight blockquote:highlight:focus {
+    color: var(--highlight_blockquote-highlight-focus-color);
+    
+    
+}
+
+
+:highlight blockquote::tag:highlight:focus {
+    color: var(--highlight_blockquote-tag-highlight-focus-color);
+    
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus blockquote:highlight:focus {
+    color: var(--highlight-focus_blockquote-highlight-focus-color);
+    
+    
+}
+
+:highlight:focus blockquote::tag:highlight:focus {
+    color: var(--highlight-focus_blockquote-tag-highlight-focus-color);
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+/* :highlight:focus */
+ul:highlight:focus {
+    color: var(--ul-highlight-focus-color);
+    
+}
+
+ol:highlight:focus {
+    color: var(--ol-highlight-focus-color);
+    
+}
+
+li:highlight:focus {
+    color: var(--li-highlight-focus-color);
+    
+}
+
+li::tag:highlight:focus {
+    color: var(--li-tag-highlight-focus-color);
+    
+}
+
+/* :highlight :focus */
+:highlight ul:focus {
+    color: var(--highlight_ul-focus-color);
+    
+}
+
+:highlight ol:focus {
+    color: var(--highlight_ol-focus-color);
+    
+}
+
+:highlight li:focus {
+    color: var(--highlight_li-focus-color);
+    
+}
+
+:highlight li::tag:focus {
+    color: var(--highlight_li-tag-focus-color);
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight ul:highlight:focus {
+    color: var(--highlight_ul-highlight-focus-color);
+    
+}
+
+:highlight ol:highlight:focus {
+    color: var(--highlight_ol-highlight-focus-color);
+    
+}
+
+:highlight li:highlight:focus {
+    color: var(--highlight_li-highlight-focus-color);
+    
+}
+
+:highlight li::tag:highlight:focus {
+    color: var(--highlight_li-tag-highlight-focus-color);
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus ul:highlight:focus {
+    color: var(--highlight-focus_ul-highlight-focus-color);
+    
+}
+
+:highlight:focus ol:highlight:focus {
+    color: var(--highlight-focus_ol-highlight-focus-color);
+    
+}
+
+:highlight:focus li:highlight:focus {
+    color: var(--highlight-focus_li-highlight-focus-color);
+    
+}
+
+:highlight:focus li::tag:highlight:focus {
+    color: var(--highlight-focus_li-tag-highlight-focus-color);
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+    color: var(-- var foo = function_(bar)-color);
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+/* :highlight:focus */
+code:highlight:focus {
+    color: var(--code-highlight-focus-color);
+    
+}
+
+code::tag:highlight:focus {
+    color: var(--code-tag-highlight-focus-color);
+    
+}
+
+code::params:highlight:focus {
+    color: var(--code-params-highlight-focus-color);
+    
+}
+
+/* :highlight :focus */
+:highlight code:focus {
+    color: var(--highlight_code-focus-color);
+    
+}
+
+:highlight code::tag:focus {
+    color: var(--highlight_code-tag-focus-color);
+    
+}
+
+:highlight code::params:focus {
+    color: var(--highlight_code-params-focus-color);
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight code:highlight:focus {
+    color: var(--highlight_code-highlight-focus-color);
+    
+}
+
+:highlight code::tag:highlight:focus {
+    color: var(--highlight_code-tag-highlight-focus-color);
+    
+}
+
+:highlight code::params:highlight:focus {
+    color: var(--highlight_code-params-highlight-focus-color);
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus code:highlight:focus {
+    color: var(--highlight-focus_code-highlight-focus-color);
+    
+}
+
+:highlight:focus code::tag:highlight:focus {
+    color: var(--highlight-focus_code-tag-highlight-focus-color);
+    
+}
+
+:highlight:focus code::params:highlight:focus {
+    color: var(--highlight-focus_code-params-highlight-focus-color);
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+/* :highlight:focus */
+
+
+table:highlight:focus {
+    color: var(--table-highlight-focus-color);
+    
+}
+
+thead:highlight:focus {
+    color: var(--thead-highlight-focus-color);
+    
+}
+
+tbody:highlight:focus {
+    color: var(--tbody-highlight-focus-color);
+    
+    
+}
+
+tr:highlight:focus {
+    color: var(--tr-highlight-focus-color);
+    
+}
+
+td:highlight:focus {
+    color: var(--td-highlight-focus-color);
+    
+}
+
+/* :highlight :focus */
+:highlight thead:focus {
+    color: var(--highlight_thead-focus-color);
+    
+}
+
+:highlight tbody:focus {
+    color: var(--highlight_tbody-focus-color);
+    
+    
+}
+
+:highlight tr:focus {
+    color: var(--highlight_tr-focus-color);
+    
+}
+
+:highlight td:focus {
+    color: var(--highlight_td-focus-color);
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight thead:highlight:focus {
+    color: var(--highlight_thead-highlight-focus-color);
+    
+}
+
+:highlight tbody:highlight:focus {
+    color: var(--highlight_tbody-highlight-focus-color);
+    
+    
+}
+
+:highlight tr:highlight:focus {
+    color: var(--highlight_tr-highlight-focus-color);
+    
+}
+
+:highlight td :highlight:focus {
+    color: var(--highlight_td_-highlight-focus-color);
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus thead:highlight:focus {
+    color: var(--highlight-focus_thead-highlight-focus-color);
+    
+}
+
+:highlight:focus tbody:highlight:focus {
+    color: var(--highlight-focus_tbody-highlight-focus-color);
+    
+    
+}
+
+:highlight:focus tr:highlight:focus {
+    color: var(--highlight-focus_tr-highlight-focus-color);
+    
+}
+
+:highlight:focus td:highlight:focus {
+    color: var(--highlight-focus_td-highlight-focus-color);
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+/* :highlight:focus */
+
+a:highlight:focus {
+    color: var(--a-highlight-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:highlight:focus {
+    color: var(--a-tag-highlight-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:highlight:focus {
+    color: var(--a-text-highlight-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:highlight:focus {
+    color: var(--a-dest-highlight-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:highlight:focus {
+    color: var(--a-lbl-highlight-focus-color);
+    
+}
+
+/* title: the title of the link */
+a::title:highlight:focus {
+    color: var(--a-title-highlight-focus-color);
+    
+    
+}
+
+/* :highlight :focus */
+:highlight a:focus {
+    color: var(--highlight_a-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:focus {
+    color: var(--highlight_a-tag-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:focus {
+    color: var(--highlight_a-text-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:focus {
+    color: var(--highlight_a-dest-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:focus {
+    color: var(--highlight_a-lbl-focus-color);
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:focus {
+    color: var(--highlight_a-title-focus-color);
+    
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight a:highlight:focus {
+    color: var(--highlight_a-highlight-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:highlight:focus {
+    color: var(--highlight_a-tag-highlight-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:highlight:focus {
+    color: var(--highlight_a-text-highlight-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:highlight:focus {
+    color: var(--highlight_a-dest-highlight-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:highlight:focus {
+    color: var(--highlight_a-lbl-highlight-focus-color);
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:highlight:focus {
+    color: var(--highlight_a-title-highlight-focus-color);
+    
+    
+}
+
+
+/* :highlight:focus :highlight:focus */
+
+:highlight:focus a:highlight:focus {
+    color: var(--highlight-focus_a-highlight-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight:focus a::tag:highlight:focus {
+    color: var(--highlight-focus_a-tag-highlight-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight:focus a::text:highlight:focus {
+    color: var(--highlight-focus_a-text-highlight-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight:focus a::destination:highlight:focus {
+    color: var(--highlight-focus_a-dest-highlight-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight:focus a::label:highlight:focus {
+    color: var(--highlight-focus_a-lbl-highlight-focus-color);
+    
+}
+
+/* title: the title of the link */
+:highlight:focus a::title:highlight:focus {
+    color: var(--highlight-focus_a-title-highlight-focus-color);
+    
+    
+}
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+
+/* :highlight:focus */
+
+img:highlight:focus {
+    color: var(--img-highlight-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:highlight:focus {
+    color: var(--img-tag-highlight-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:highlight:focus {
+    color: var(--img-text-highlight-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+img::destination:highlight:focus {
+    color: var(--img-dest-highlight-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+img::label:highlight:focus {
+    color: var(--img-lbl-highlight-focus-color);
+    
+}
+
+/* title: the title of the link */
+img::title:highlight:focus {
+    color: var(--img-title-highlight-focus-color);
+    
+    
+}
+
+/* :highlight :focus */
+:highlight img:focus {
+    color: var(--highlight_img-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:focus {
+    color: var(--highlight_img-tag-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:focus {
+    color: var(--highlight_img-text-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight img::destination:focus {
+    color: var(--highlight_img-dest-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight img::label:focus {
+    color: var(--highlight_img-lbl-focus-color);
+    
+}
+
+/* title: the title of the link */
+:highlight img::title:focus {
+    color: var(--highlight_img-title-focus-color);
+    
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight img:highlight:focus {
+    color: var(--highlight_img-highlight-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:highlight:focus {
+    color: var(--highlight_img-tag-highlight-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:highlight:focus {
+    color: var(--highlight_img-text-highlight-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight img::destination:highlight:focus {
+    color: var(--highlight_img-dest-highlight-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight img::label:highlight:focus {
+    color: var(--highlight_img-lbl-highlight-focus-color);
+    
+}
+
+/* title: the title of the link */
+:highlight img::title:highlight:focus {
+    color: var(--highlight_img-title-highlight-focus-color);
+    
+    
+}
+
+
+/* :highlight:focus :highlight:focus */
+
+:highlight:focus img:highlight:focus {
+    color: var(--highlight-focus_img-highlight-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight:focus img::tag:highlight:focus {
+    color: var(--highlight-focus_img-tag-highlight-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight:focus img::text:highlight:focus {
+    color: var(--highlight-focus_img-text-highlight-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight:focus img::destination:highlight:focus {
+    color: var(--highlight-focus_img-dest-highlight-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight:focus img::label:highlight:focus {
+    color: var(--highlight-focus_img-lbl-highlight-focus-color);
+    
+}
+
+/* title: the title of the link */
+:highlight:focus img::title:highlight:focus {
+    color: var(--highlight-focus_img-title-highlight-focus-color);
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:highlight:focus {
+    color: var(--html-block-highlight-focus-color);
+    
+}
+
+/*
+    ref
+*/
+
+
+/* :highlight:focus */
+
+ref:highlight:focus {
+    color: var(--ref-highlight-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+ref::tag:highlight:focus {
+    color: var(--ref-tag-highlight-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+ref::text:highlight:focus {
+    color: var(--ref-text-highlight-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+ref::destination:highlight:focus {
+    color: var(--ref-dest-highlight-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+ref::label:highlight:focus {
+    color: var(--ref-lbl-highlight-focus-color);
+    
+}
+
+/* title: the title of the link */
+ref::title:highlight:focus {
+    color: var(--ref-title-highlight-focus-color);
+    
+    
+}
+
+/* :highlight :focus */
+:highlight ref:focus {
+    color: var(--highlight_ref-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight ref::tag:focus {
+    color: var(--highlight_ref-tag-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight ref::text:focus {
+    color: var(--highlight_ref-text-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight ref::destination:focus {
+    color: var(--highlight_ref-dest-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight ref::label:focus {
+    color: var(--highlight_ref-lbl-focus-color);
+    
+}
+
+/* title: the title of the link */
+:highlight ref::title:focus {
+    color: var(--highlight_ref-title-focus-color);
+    
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight ref:highlight:focus {
+    color: var(--highlight_ref-highlight-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight ref::tag:highlight:focus {
+    color: var(--highlight_ref-tag-highlight-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight ref::text:highlight:focus {
+    color: var(--highlight_ref-text-highlight-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight ref::destination:highlight:focus {
+    color: var(--highlight_ref-dest-highlight-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight ref::label:highlight:focus {
+    color: var(--highlight_ref-lbl-highlight-focus-color);
+    
+}
+
+/* title: the title of the link */
+:highlight ref::title:highlight:focus {
+    color: var(--highlight_ref-title-highlight-focus-color);
+    
+    
+}
+
+
+/* :highlight:focus :highlight:focus */
+
+:highlight:focus ref:highlight:focus {
+    color: var(--highlight-focus_ref-highlight-focus-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight:focus ref::tag:highlight:focus {
+    color: var(--highlight-focus_ref-tag-highlight-focus-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight:focus ref::text:highlight:focus {
+    color: var(--highlight-focus_ref-text-highlight-focus-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight:focus ref::destination:highlight:focus {
+    color: var(--highlight-focus_ref-dest-highlight-focus-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight:focus ref::label:highlight:focus {
+    color: var(--highlight-focus_ref-lbl-highlight-focus-color);
+    
+}
+
+/* title: the title of the link */
+:highlight:focus ref::title:highlight:focus {
+    color: var(--highlight-focus_ref-title-highlight-focus-color);
+    
+    
+}
+
+
+/* attributes */
+
+/* :highlight:focus */
+key-value-attr:highlight:focus {
+    color: var(--key-value-attr-highlight-focus-color);
+
+}
+
+key-value-attr::tag:highlight:focus {
+    color: var(--key-value-attr-tag-highlight-focus-color);
+    
+}
+
+class-attr:highlight:focus {
+    color: var(--class-attr-highlight-focus-color);
+
+
+}
+
+class-attr::tag:highlight:focus {
+    color: var(--class-attr-tag-highlight-focus-color);
+
+}
+
+id-attr:highlight:focus {
+    color: var(--id-attr-highlight-focus-color);
+
+}
+
+id-attr::tag:highlight:focus {
+    color: var(--id-attr-tag-highlight-focus-color);
+
+}
+
+/* :highlight :focus */
+
+:highlight key-value-attr:focus {
+    color: var(--highlight_key-value-attr-focus-color);
+
+}
+
+:highlight key-value-attr::tag:focus {
+    color: var(--highlight_key-value-attr-tag-focus-color);
+    
+}
+
+:highlight class-attr:focus {
+    color: var(--highlight_class-attr-focus-color);
+
+}
+
+:highlight class-attr::tag:focus {
+    color: var(--highlight_class-attr-tag-focus-color);
+
+}
+
+:highlight id-attr:focus {
+    color: var(--highlight_id-attr-focus-color);
+
+}
+
+:highlight id-attr::tag:focus {
+    color: var(--highlight_id-attr-tag-focus-color);
+
+}
+
+/* :highlight :highlight:focus */
+
+:highlight key-value-attr:highlight:focus {
+    color: var(--highlight_key-value-attr-highlight-focus-color);
+
+}
+
+:highlight key-value-attr::tag:highlight:focus {
+    color: var(--highlight_key-value-attr-tag-highlight-focus-color);
+    
+}
+
+:highlight class-attr:highlight:focus {
+    color: var(--highlight_class-attr-highlight-focus-color);
+
+
+}
+
+:highlight class-attr::tag:highlight:focus {
+    color: var(--highlight_class-attr-tag-highlight-focus-color);
+
+}
+
+:highlight id-attr:highlight:focus {
+    color: var(--highlight_id-attr-highlight-focus-color);
+
+}
+
+:highlight id-attr::tag:highlight:focus {
+    color: var(--highlight_id-attr-tag-highlight-focus-color);
+
+}
+
+/* :highlight:focus :highlight:focus */
+
+:highlight:focus key-value-attr:highlight:focus {
+    color: var(--highlight-focus_key-value-attr-highlight-focus-color);
+
+}
+
+:highlight:focus key-value-attr::tag:highlight:focus {
+    color: var(--highlight-focus_key-value-attr-tag-highlight-focus-color);
+    
+}
+
+:highlight:focus class-attr:highlight:focus {
+    color: var(--highlight-focus_class-attr-highlight-focus-color);
+
+
+}
+
+:highlight:focus class-attr::tag:highlight:focus {
+    color: var(--highlight-focus_class-attr-tag-highlight-focus-color);
+
+}
+
+:highlight:focus id-attr:highlight:focus {
+    color: var(--highlight);
+
+}
+
+:highlight:focus id-attr::tag:highlight:focus {
+    color: var(--highlight-focus_id-attr-tag-highlight-focus-color);
+
+}
+
+
+/********************************************/
+/*           highlight-flash                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:highlight:flash {
+    color: var(--h1-highlight-flash-color);
+    
+}
+
+h2:highlight:flash {
+    color: var(--h2-highlight-flash-color);
+    
+}
+
+h3:highlight:flash {
+    color: var(--h3-highlight-flash-color);
+    
+}
+
+h4:highlight:flash {
+    color: var(--h4-highlight-flash-color);
+    
+}
+
+h5:highlight:flash {
+    color: var(--h5-highlight-flash-color);
+    
+}
+
+h6:highlight:flash {
+    color: var(--h6-highlight-flash-color);
+    
+}
+
+h1::tag:highlight:flash {
+    color: var(--h1-tag-highlight-flash-color);
+    
+}
+
+h2::tag:highlight:flash {
+    color: var(--h2-tag-highlight-flash-color);
+    
+}
+
+h3::tag:highlight:flash {
+    color: var(--h3-tag-highlight-flash-color);
+    
+}
+
+h4::tag:highlight:flash {
+    color: var(--h4-tag-highlight-flash-color);
+    
+}
+
+h5::tag:highlight:flash {
+    color: var(--h5-tag-highlight-flash-color);
+    
+}
+
+h6::tag:highlight:flash {
+    color: var(--h6-tag-highlight-flash-color);
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:highlight:flash {
+    color: var(--hr-highlight-flash-color);
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+/* :highlight:flash */
+strong:highlight:flash {
+    color: var(--strong-highlight-flash-color);
+    
+    
+}
+
+em:highlight:flash {
+    color: var(--em-highlight-flash-color);
+    
+    
+}
+
+s:highlight:flash {
+    color: var(--s-highlight-flash-color);
+    
+    
+}
+
+strong::tag:highlight:flash {
+    color: var(--strong-tag-highlight-flash-color);
+    
+    
+}
+
+em::tag:highlight:flash {
+    color: var(--em-tag-highlight-flash-color);
+    
+    
+}
+
+s::tag:highlight:flash {
+    color: var(--s-tag-highlight-flash-color);
+    
+
+}
+
+/* :highlight :flash */
+:highlight strong:flash {
+    color: var(--highlight_strong-flash-color);
+    
+    
+}
+
+:highlight em:flash {
+    color: var(--highlight_em-flash-color);
+    
+    
+}
+
+:highlight s:flash {
+    color: var(--highlight_s-flash-color);
+    
+    
+}
+
+:highlight strong::tag:flash {
+    color: var(--highlight_strong-tag-flash-color);
+    
+    
+}
+
+:highlight em::tag:flash {
+    color: var(--highlight_em-tag-flash-color);
+    
+    
+}
+
+:highlight s::tag:flash {
+    color: var(--highlight_s-tag-flash-color);
+    
+
+}
+
+
+/* :highlight :highlight:flash */
+:highlight strong:highlight:flash {
+    color: var(--highlight_strong-highlight-flash-color);
+    
+    
+}
+
+:highlight em:highlight:flash {
+    color: var(--highlight_em-highlight-flash-color);
+    
+    
+}
+
+:highlight s:highlight:flash {
+    color: var(--highlight_s-highlight-flash-color);
+    
+    
+}
+
+:highlight strong::tag:highlight:flash {
+    color: var(--highlight_strong-tag-highlight-flash-color);
+    
+    
+}
+
+:highlight em::tag:highlight:flash {
+    color: var(--highlight_em-tag-highlight-flash-color);
+    
+    
+}
+
+:highlight s::tag:highlight:flash {
+    color: var(--highlight_s-tag-highlight-flash-color);
+    
+
+}
+
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+/* :highlight:flash */
+blockquote:highlight:flash {
+    color: var(--blockquote-highlight-flash-color);
+    
+    
+}
+
+blockquote::tag:highlight:flash {
+    color: var(--blockquote-tag-highlight-flash-color);
+    
+    
+}
+
+/* :highlight :flash */
+:highlight blockquote:flash {
+    color: var(--highlight_blockquote-flash-color);
+    
+    
+}
+
+
+:highlight blockquote::tag:flash {
+    color: var(--highlight_blockquote-tag-flash-color);
+    
+    
+}
+
+
+/* :highlight :highlight:flash */
+:highlight blockquote:highlight:flash {
+    color: var(--highlight_blockquote-highlight-flash-color);
+    
+    
+}
+
+
+:highlight blockquote::tag:highlight:flash {
+    color: var(--highlight_blockquote-tag-highlight-flash-color);
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+/* :highlight:flash */
+ul:highlight:flash {
+    color: var(--ul-highlight-flash-color);
+    
+}
+
+ol:highlight:flash {
+    color: var(--ol-highlight-flash-color);
+    
+}
+
+li:highlight:flash {
+    color: var(--li-highlight-flash-color);
+    
+}
+
+li::tag:highlight:flash {
+    color: var(--li-tag-highlight-flash-color);
+    
+}
+
+/* :highlight :flash */
+:highlight ul:flash {
+    color: var(--highlight_ul-flash-color);
+    
+}
+
+:highlight ol:flash {
+    color: var(--highlight_ol-flash-color);
+    
+}
+
+:highlight li:flash {
+    color: var(--highlight_li-flash-color);
+    
+}
+
+:highlight li::tag:flash {
+    color: var(--highlight_li-tag-flash-color);
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight ul:highlight:flash {
+    color: var(--highlight_ul-highlight-flash-color);
+    
+}
+
+:highlight ol:highlight:flash {
+    color: var(--highlight_ol-highlight-flash-color);
+    
+}
+
+:highlight li:highlight:flash {
+    color: var(--highlight_li-highlight-flash-color);
+    
+}
+
+:highlight li::tag:highlight:flash {
+    color: var(--highlight_li-tag-highlight-flash-color);
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+    color: var(-- var foo = function_(bar)-color);
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+/* :highlight:flash */
+code:highlight:flash {
+    color: var(--code-highlight-flash-color);
+    
+}
+
+code::tag:highlight:flash {
+    color: var(--code-tag-highlight-flash-color);
+    
+}
+
+code::params:highlight:flash {
+    color: var(--code-params-highlight-flash-color);
+    
+}
+
+/* :highlight :flash */
+:highlight code:flash {
+    color: var(--highlight_code-flash-color);
+    
+}
+
+:highlight code::tag:flash {
+    color: var(--highlight_code-tag-flash-color);
+    
+}
+
+:highlight code::params:flash {
+    color: var(--highlight_code-params-flash-color);
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight code:highlight:flash {
+    color: var(--highlight_code-highlight-flash-color);
+    
+}
+
+:highlight code::tag:highlight:flash {
+    color: var(--highlight_code-tag-highlight-flash-color);
+    
+}
+
+:highlight code::params:highlight:flash {
+    color: var(--highlight_code-params-highlight-flash-color);
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+/* :highlight:flash */
+
+
+table:highlight:flash {
+    color: var(--table-highlight-flash-color);
+    
+}
+
+thead:highlight:flash {
+    color: var(--thead-highlight-flash-color);
+    
+}
+
+tbody:highlight:flash {
+    color: var(--tbody-highlight-flash-color);
+    
+    
+}
+
+tr:highlight:flash {
+    color: var(--tr-highlight-flash-color);
+    
+}
+
+td:highlight:flash {
+    color: var(--td-highlight-flash-color);
+    
+}
+
+/* :highlight :flash */
+:highlight thead:flash {
+    color: var(--highlight_thead-flash-color);
+    
+}
+
+:highlight tbody:flash {
+    color: var(--highlight_tbody-flash-color);
+    
+    
+}
+
+:highlight tr:flash {
+    color: var(--highlight_tr-flash-color);
+    
+}
+
+:highlight td:flash {
+    color: var(--highlight_td-flash-color);
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight thead:highlight:flash {
+    color: var(--highlight_thead-highlight-flash-color);
+    
+}
+
+:highlight tbody:highlight:flash {
+    color: var(--highlight_tbody-highlight-flash-color);
+    
+    
+}
+
+:highlight tr:highlight:flash {
+    color: var(--highlight_tr-highlight-flash-color);
+    
+}
+
+:highlight td :highlight:flash {
+    color: var(--highlight_td_-highlight-flash-color);
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+/* :highlight:flash */
+
+a:highlight:flash {
+    color: var(--a-highlight-flash-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:highlight:flash {
+    color: var(--a-tag-highlight-flash-color);
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:highlight:flash {
+    color: var(--a-text-highlight-flash-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:highlight:flash {
+    color: var(--a-dest-highlight-flash-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:highlight:flash {
+    color: var(--a-lbl-highlight-flash-color);
+    
+}
+
+/* title: the title of the link */
+a::title:highlight:flash {
+    color: var(--a-title-highlight-flash-color);
+    
+    
+}
+
+/* :highlight :flash */
+:highlight a:flash {
+    color: var(--highlight_a-flash-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:flash {
+    color: var(--highlight_a-tag-flash-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:flash {
+    color: var(--highlight_a-text-flash-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:flash {
+    color: var(--highlight_a-dest-flash-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:flash {
+    color: var(--highlight_a-lbl-flash-color);
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:flash {
+    color: var(--highlight_a-title-flash-color);
+    
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight a:highlight:flash {
+    color: var(--highlight_a-highlight-flash-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:highlight:flash {
+    color: var(--highlight_a-tag-highlight-flash-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:highlight:flash {
+    color: var(--highlight_a-text-highlight-flash-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:highlight:flash {
+    color: var(--highlight_a-dest-highlight-flash-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:highlight:flash {
+    color: var(--highlight_a-lbl-highlight-flash-color);
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:highlight:flash {
+    color: var(--highlight_a-title-highlight-flash-color);
+    
+    
+}
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+
+/* :highlight:flash */
+
+img:highlight:flash {
+    color: var(--img-highlight-flash-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:highlight:flash {
+    color: var(--img-tag-highlight-flash-color);
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:highlight:flash {
+    color: var(--img-text-highlight-flash-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+img::destination:highlight:flash {
+    color: var(--img-dest-highlight-flash-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+img::label:highlight:flash {
+    color: var(--img-lbl-highlight-flash-color);
+    
+}
+
+/* title: the title of the link */
+img::title:highlight:flash {
+    color: var(--img-title-highlight-flash-color);
+    
+    
+}
+
+/* :highlight :flash */
+:highlight img:flash {
+    color: var(--highlight_img-flash-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:flash {
+    color: var(--highlight_img-tag-flash-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:flash {
+    color: var(--highlight_img-text-flash-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight img::destination:flash {
+    color: var(--highlight_img-dest-flash-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight img::label:flash {
+    color: var(--highlight_img-lbl-flash-color);
+    
+}
+
+/* title: the title of the link */
+:highlight img::title:flash {
+    color: var(--highlight_img-title-flash-color);
+    
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight img:highlight:flash {
+    color: var(--highlight_img-highlight-flash-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight img::tag:highlight:flash {
+    color: var(--highlight_img-tag-highlight-flash-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight img::text:highlight:flash {
+    color: var(--highlight_img-text-highlight-flash-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight img::destination:highlight:flash {
+    color: var(--highlight_img-dest-highlight-flash-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight img::label:highlight:flash {
+    color: var(--highlight_img-lbl-highlight-flash-color);
+    
+}
+
+/* title: the title of the link */
+:highlight img::title:highlight:flash {
+    color: var(--highlight_img-title-highlight-flash-color);
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:highlight:flash {
+    color: var(--html-block-highlight-flash-color);
+    
+}
+
+/*
+    ref
+*/
+
+
+/* :highlight:flash */
+
+ref:highlight:flash {
+    color: var(--ref-highlight-flash-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+ref::tag:highlight:flash {
+    color: var(--ref-tag-highlight-flash-color);
+    
+}
+
+/* text: the part between the two square braquets */
+ref::text:highlight:flash {
+    color: var(--ref-text-highlight-flash-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+ref::destination:highlight:flash {
+    color: var(--ref-dest-highlight-flash-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+ref::label:highlight:flash {
+    color: var(--ref-lbl-highlight-flash-color);
+    
+}
+
+/* title: the title of the link */
+ref::title:highlight:flash {
+    color: var(--ref-title-highlight-flash-color);
+    
+    
+}
+
+/* :highlight :flash */
+:highlight ref:flash {
+    color: var(--highlight_ref-flash-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight ref::tag:flash {
+    color: var(--highlight_ref-tag-flash-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight ref::text:flash {
+    color: var(--highlight_ref-text-flash-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight ref::destination:flash {
+    color: var(--highlight_ref-dest-flash-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight ref::label:flash {
+    color: var(--highlight_ref-lbl-flash-color);
+    
+}
+
+/* title: the title of the link */
+:highlight ref::title:flash {
+    color: var(--highlight_ref-title-flash-color);
+    
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight ref:highlight:flash {
+    color: var(--highlight_ref-highlight-flash-color);
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight ref::tag:highlight:flash {
+    color: var(--highlight_ref-tag-highlight-flash-color);
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight ref::text:highlight:flash {
+    color: var(--highlight_ref-text-highlight-flash-color);
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight ref::destination:highlight:flash {
+    color: var(--highlight_ref-dest-highlight-flash-color);
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight ref::label:highlight:flash {
+    color: var(--highlight_ref-lbl-highlight-flash-color);
+    
+}
+
+/* title: the title of the link */
+:highlight ref::title:highlight:flash {
+    color: var(--highlight_ref-title-highlight-flash-color);
+    
+    
+}
+
+
+/* attributes */
+
+/* :highlight:flash */
+key-value-attr:highlight:flash {
+    color: var(--key-value-attr-highlight-flash-color);
+
+}
+
+key-value-attr::tag:highlight:flash {
+    color: var(--key-value-attr-tag-highlight-flash-color);
+    
+}
+
+class-attr:highlight:flash {
+    color: var(--class-attr-highlight-flash-color);
+
+
+}
+
+class-attr::tag:highlight:flash {
+    color: var(--class-attr-tag-highlight-flash-color);
+
+}
+
+id-attr:highlight:flash {
+    color: var(--id-attr-highlight-flash-color);
+
+}
+
+id-attr::tag:highlight:flash {
+    color: var(--id-attr-tag-highlight-flash-color);
+
+}
+
+/* :highlight :flash */
+
+:highlight key-value-attr:flash {
+    color: var(--highlight_key-value-attr-flash-color);
+
+}
+
+:highlight key-value-attr::tag:flash {
+    color: var(--highlight_key-value-attr-tag-flash-color);
+    
+}
+
+:highlight class-attr:flash {
+    color: var(--highlight_class-attr-flash-color);
+
+}
+
+:highlight class-attr::tag:flash {
+    color: var(--highlight_class-attr-tag-flash-color);
+
+}
+
+:highlight id-attr:flash {
+    color: var(--highlight_id-attr-flash-color);
+
+}
+
+:highlight id-attr::tag:flash {
+    color: var(--highlight_id-attr-tag-flash-color);
+
+}
+
+/* :highlight :highlight:flash */
+
+:highlight key-value-attr:highlight:flash {
+    color: var(--highlight_key-value-attr-highlight-flash-color);
+
+}
+
+:highlight key-value-attr::tag:highlight:flash {
+    color: var(--highlight_key-value-attr-tag-highlight-flash-color);
+    
+}
+
+:highlight class-attr:highlight:flash {
+    color: var(--highlight_class-attr-highlight-flash-color);
+
+
+}
+
+:highlight class-attr::tag:highlight:flash {
+    color: var(--highlight_class-attr-tag-highlight-flash-color);
+
+}
+
+:highlight id-attr:highlight:flash {
+    color: var(--highlight_id-attr-highlight-flash-color);
+
+}
+
+:highlight id-attr::tag:highlight:flash {
+    color: var(--highlight_id-attr-tag-highlight-flash-color);
+
+}
+

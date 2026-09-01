@@ -1,0 +1,47 @@
+/**************************************************************
+ CSS User Agent StyleSheet
+ 
+ This is the user agent style sheet for any other css style sheet.
+ 
+ **************************************************************/
+
+css-style-sheet {
+    font-family: Courier New;
+    color: blue;
+}
+
+/**************************************************************
+ 
+ The generated tree for font-family property declaration
+ with this example :
+ 
+    font-family : arial, “Times New Roman”;
+ 
+                                                ::declaration
+                                                      |
+                            __________________________|___________________________
+                           /                                     				  \
+                          /						                                   \
+            ::property-name.font-family                                ::property-value-block
+                         |                                                          |
+                         |                          ________________________________|___________________________
+              css-token.string-token               /                                |                           \
+                                                  /     						    |							 \
+                                css-token.colon.delimiter			  		::property-value         css-token.semi-colon.delimiter								          		    |
+                                                          __________________________|___________________________
+                                                         /                          |           				\
+                                                        /			  			    |                            \
+                                            ::font-family-name.arial         css-token.coma       ::font-family-name.time-new-roman
+                                                        |														  |
+                                                        |														  |
+                                                css-token.ident-token  								css-token.string.time-new-roman
+ 
+ we can style the each font-family property value to it's
+ own computed value usging the following css :
+ with the following:
+ 
+ **************************************************************/
+
+font-family-name {
+    font-family: selected-value;
+}

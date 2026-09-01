@@ -1,0 +1,153 @@
+
+:root {
+    
+    --body-b1: #191919;
+    --body-b2: #141414;
+   
+    --caret-t3: #0075F2;
+    --caret-t4: #006CE0;
+    
+    --emph-text-2-t1: #464646;
+    --emph-text-2-t2: #999999;
+    --emph-text-2-t3: #cccccc;
+    --emph-text-2-t4: #d1d1d1;
+    --emph-text-2-t5: #d6d6d6;
+    --emph-text-2-t6: #dbdbdb;
+    --emph-text-2-t7: #e0e0e0;
+    --emph-text-2-t8: #e6e6e6;
+    --emph-text-2-t9: #ebebeb;
+    --emph-text-2-t10: #f0f0f0;
+    
+    --emph-text-1-t1: #444444;
+    --emph-text-1-t2: #7A7A7A;
+    --emph-text-1-t3: #adadad;
+    --emph-text-1-t4: #b8b8b8;
+    --emph-text-1-t5: #c2c2c2;
+    --emph-text-1-t6: #cccccc;
+    --emph-text-1-t7: #d6d6d6;
+    --emph-text-1-t8: #e0e0e0;
+    --emph-text-1-t9: #ebebeb;
+    --emph-text-1-t10: #f5f5f5;
+    
+    --emph-text-0-t1: #404040;
+    --emph-text-0-t2: #666666;
+    --emph-text-0-t3: #858585;
+    --emph-text-0-t4: #919191;
+    --emph-text-0-t5: #9d9d9d;
+    --emph-text-0-t6: #aaaaaa;
+    --emph-text-0-t7: #b6b6b6;
+    --emph-text-0-t8: #c2c2c2;
+    --emph-text-0-t9: #cecece;
+    --emph-text-0-t10: #dadada;
+    
+    --text-t1: #3e3e3e;
+    --text-t2: #5c5c5c;
+    --text-t3: #a7a7a7;
+    --text-t4: #ababab;
+    --text-t5: #afafaf;
+    --text-t6: #b7b7b7;
+    --text-t7: #c6c6c6;
+    --text-t8: #d6d6d6;
+    --text-t9: #dedede;
+    --text-t10: #e5e5e5;
+    
+    --de-emph-text-0-t1: #3c3c3c;
+    --de-emph-text-0-t2: #525252;
+    --de-emph-text-0-t3: #a3a3a3;
+    --de-emph-text-0-t4: #acacac;
+    --de-emph-text-0-t5: #b5b5b5;
+    --de-emph-text-0-t6: #bfbfbf;
+    --de-emph-text-0-t7: #c8c8c8;
+    --de-emph-text-0-t8: #d1d1d1;
+    --de-emph-text-0-t9: #dadada;
+    --de-emph-text-0-t10: #e3e3e3;
+    
+    --de-emph-text-1-t1: #383838;
+    --de-emph-text-1-t2: #474747;
+    --de-emph-text-1-t3: #858585;
+    --de-emph-text-1-t4: #8f8f8f;
+    --de-emph-text-1-t5: #999999;
+    --de-emph-text-1-t6: #a3a3a3;
+    --de-emph-text-1-t7: #adadad;
+    --de-emph-text-1-t8: #b8b8b8;
+    --de-emph-text-1-t9: #c2c2c2;
+    --de-emph-text-1-t10: #cccccc;
+    
+    --de-emph-text-2-t1: #313131;
+    --de-emph-text-2-t2: #3D3D3D;
+    --de-emph-text-2-t3: #707070;
+    --de-emph-text-2-t4: #7a7a7a;
+    --de-emph-text-2-t5: #858585;
+    --de-emph-text-2-t6: #8f8f8f;
+    --de-emph-text-2-t7: #999999;
+    --de-emph-text-2-t8: #a3a3a3;
+    --de-emph-text-2-t9: #adadad;
+    --de-emph-text-2-t10: #b8b8b8;
+    
+    --de-emph-text-3-t1: #292929;
+    --de-emph-text-3-t2: #333333;
+    --de-emph-text-3-t3: #5c5c5c;
+    --de-emph-text-3-t4: #666666;
+    --de-emph-text-3-t5: #707070;
+    --de-emph-text-3-t6: #7a7a7a;
+    --de-emph-text-3-t7: #858585;
+    --de-emph-text-3-t8: #8f8f8f;
+    --de-emph-text-3-t9: #999999;
+    --de-emph-text-3-t10: #a3a3a3;
+
+    --deep-sparkle-t1: #292F2F;
+    --deep-sparkle-t2: #303838;
+    --deep-sparkle-t3: #4c5b5c;
+    --deep-sparkle-t4: #5c6f70;
+    --deep-sparkle-t5: #657a7b;
+    --deep-sparkle-t6: #6e8587;
+    --deep-sparkle-t7: #788f91;
+    --deep-sparkle-t8: #84999a;
+    --deep-sparkle-t9: #8fa2a3;
+    --deep-sparkle-t10: #9aabac;
+    
+    --space-sparkle-t1: #394141;
+    --space-sparkle-t2: #5E6E6E;
+    --space-sparkle-t3: #84989a;
+    --space-sparkle-t4: #8fa2a3;
+    --space-sparkle-t5: #9aabac;
+    --space-sparkle-t6: #a5b4b6;
+    --space-sparkle-t7: #b0bebf;
+    --space-sparkle-t8: #bcc7c8;
+    --space-sparkle-t9: #c7d0d1;
+    --space-sparkle-t10: #d2dada;
+    
+    --orange-t1: #823021;
+    --orange-t2: #a23c2a;
+    --orange-t3: #bb4430;
+    --orange-t4: #cd523c;
+    --orange-t5: #d1604d;
+    --orange-t6: #d56f5d;
+    --orange-t7: #d97d6d;
+    --orange-t8: #de8c7d;
+    --orange-t9: #e29a8d;
+    --orange-t10: #e6a99e;
+      
+    --copper-t1: #3E2D14;
+    --copper-t2: #895D1A;
+    --copper-t3: #ca8216;
+    --copper-t4: #dc8e18;
+    --copper-t5: #e79823;
+    --copper-t6: #e9a135;
+    --copper-t7: #eba947;
+    --copper-t8: #edb25a;
+    --copper-t9: #efba6c;
+    --copper-t10: #f1c37e;
+    
+    --blue-t1: #13222F;
+    --blue-t2: #183E63;
+    --blue-t3: #10497e;
+    --blue-t4: #135490;
+    --blue-t5: #155ea2;
+    --blue-t6: #1769b5;
+    --blue-t7: #1a73c7;
+    --blue-t8: #1c7ed9;
+    --blue-t9: #2688e3;
+    --blue-t10: #3892e5;
+}
+

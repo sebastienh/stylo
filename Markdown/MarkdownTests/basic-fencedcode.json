@@ -1,0 +1,16 @@
+ [
+  {
+  "type": "fence",
+  "tag": "code",
+  "attrs": null,
+  "nesting": 0,
+  "level": 0,
+  "children": null,
+  "content": "var foo = function (bar) {\n  return bar++;\n};\n\nconsole.log(foo(5));\n",
+  "markup": "```",
+  "info": " js",
+  "meta": null,
+  "block": true,
+  "hidden": false
+  }
+  ]

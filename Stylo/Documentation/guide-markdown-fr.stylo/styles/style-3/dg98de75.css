@@ -1,0 +1,29 @@
+
+body {
+    color: white;
+    font-family: "Avenir Next";
+    background-color: rgb(234,123,34);
+    font-size: 16pt;
+}
+
+h1 {
+    color: blue;
+}
+
+h2 {
+    color: red;
+}
+
+h4 {
+	color: rgb(123,234,123);
+}
+
+strong {
+    
+    font-style: oblique;
+}
+
+
+code {
+	color: blue;
+}

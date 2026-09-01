@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Markdown elements types</h1>
+<p>There is two kinds of Markdown elements:</p>
+<ul>
+<li>blocs elements</li>
+<li>inline elements</li>
+</ul>
+<p>A Markdown document is parsed as a sequence of blocs. A bloc element is essentially a container of other Markdown elements which, in turn, can themselves be blocs and/or inline elements. A bloc can be either of <code>container</code> or <code>leaf</code> type depending if it can contain other blocs or not.</p>
+<p>Container blocs include:</p>
+<ul>
+<li><a href="#mdBlockquote">Blockquote</a></li>
+<li><a href="#mdLists">List and list items</a></li>
+<li><a href="#mdTable">Table</a></li>
+</ul>
+<p>Leaf blocs include:</p>
+<ul>
+<li><a href="#mdParagraph">Paragraph</a></li>
+<li><a href="#mdHorizontalBar">Horizontal Bar</a></li>
+<li><a href="#mdHeaders">Headers</a></li>
+<li><a href="#mdCode">Indented Code Block</a></li>
+<li><a href="#mdCode">Fenced Code Block</a></li>
+<li>HTML Block</li>
+<li><a href="#mdReference">Reference</a></li>
+<li>Blank Lines</li>
+<li><a href="#mdAttributes">Attributes Blocs</a></li>
+</ul>
+<p>An inline element is complete in itself and does not allow any other content.</p>
+<p>Inline elements include:</p>
+<ul>
+<li><a href="#mdStrikethrough">Strikethrough</a></li>
+<li><a href="#mdEmphasis">Emphasis</a></li>
+<li><a href="#mdCode">Inline Code</a></li>
+<li>HTML Entities</li>
+<li><a href="#mdLink">Link</a></li>
+<li><a href="#mdImage">Image</a></li>
+<li>Autolink</li>
+<li>Inline Raw HTML</li>
+<li><a href="#mdAttributes">Attributes Blocs*</a></li>
+</ul>
+<p>For more information, read the <a href="https://spec.commonmark.org/0.29/#blocks-and-inlines">CommonMark specification</a>.</p>
+<p>*Attributes Blocs have a dual nature as they be defined inline e.g. inside a paragraph, or as a bloc, at the root or inside another bloc.</p>
+
+    </body>
+</html>

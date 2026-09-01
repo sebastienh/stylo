@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS attribute selector, contains word match.</title>
+		<meta name="description" content="Text match expression &quot;contains word match&quot; description, used in the  CSS attribute selector."></meta>
+		<meta name="KEYWORDS" content=""></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- css/containsWordMatch.html -->
+<h1>Contains word match</h1>
+<p><em>[attribute_name~=&quot;match_text&quot;]</em> matches the elements whose attribute &quot;attribute_name&quot;'s value <em>contains</em> the word &quot;match_text&quot;. An attribute contains a list of words; with this text selection expression we are looking for a specific word inside this list. This value needs to be the exact match of one these words for example:</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;h1 authors=&quot;john marc&quot;&gt;Title 1&lt;/h1&gt;
+</code></pre>
+<p>With the attribute selector below, we could select the <code>h1</code> element:</p>
+<p>CSS:</p>
+<pre><code class="language-css">[authors~=&quot;marc&quot;] {
+    ...
+}
+</code></pre>
+<p>The following CSS would <em>not</em> work since it does not contains a complete value's substring:</p>
+<p>CSS:</p>
+<pre><code class="language-css">[authors~=&quot;ma&quot;] {
+    ...
+}
+</code></pre>
+	</body>
+</html>

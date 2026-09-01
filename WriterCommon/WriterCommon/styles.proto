@@ -1,0 +1,76 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+message StyleSetMetadata {
+    
+    repeated StyleMetadata styles = 1;
+}
+
+message StyleMetadata {
+    
+    // unique id of the style which correspond to the directory name
+    string id = 1;
+    string title = 2;
+    repeated StylesheetMetadata stylesheets = 3;
+    map<string, TextStylePreviewMetadata> stylePreviews = 4;
+}
+
+message StylesheetMetadata {
+    
+    string id = 1;
+    string name = 2;
+    repeated AppearanceMetadata appearances = 3;
+}
+
+enum AppearanceMetadata {
+
+    dark=0;
+    light=1;
+}
+
+message TextStylePreviewMetadata {
+    
+    Color body = 1;
+    Color h1 = 2;
+    Color h2 = 3;
+    Color h3 = 4;
+    Color h4 = 5;
+    Color h5 = 6;
+    Color h6 = 7;
+    Color code = 8;
+    Color hr = 9;
+    Color blockquote = 10;
+    Color p = 11;
+    Color h1Tag = 12;
+    Color h2Tag = 13;
+    Color h3Tag = 14;
+    Color h4Tag = 15;
+    Color h5Tag = 16;
+    Color h6Tag = 17;
+}
+
+message Color {
+    
+    // The amount of red in the color as a value in the interval [0, 1].
+    float red = 1;
+
+    // The amount of green in the color as a value in the interval [0, 1].
+    float green = 2;
+
+    // The amount of blue in the color as a value in the interval [0, 1].
+    float blue = 3;
+
+    // The fraction of this color that should be applied to the pixel. That is,
+    // the final pixel color is defined by the equation:
+    //
+    //   pixel color = alpha * (this color) + (1.0 - alpha) * (background color)
+    //
+    // This means that a value of 1.0 corresponds to a solid color, whereas
+    // a value of 0.0 corresponds to a completely transparent color. This
+    // uses a wrapper message rather than a simple float scalar so that it is
+    // possible to distinguish between a default value and the value being unset.
+    // If omitted, this color object is to be rendered as a solid color
+    // (as if the alpha value had been explicitly given with a value of 1.0).
+    google.protobuf.FloatValue alpha = 4;
+}

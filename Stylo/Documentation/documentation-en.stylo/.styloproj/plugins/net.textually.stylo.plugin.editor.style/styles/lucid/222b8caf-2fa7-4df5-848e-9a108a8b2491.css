@@ -1,0 +1,476 @@
+
+:root {
+    
+    --h-t1: var(--blue-t1, yellow);
+    --h-t2: var(--blue-t2, yellow);
+    --h-t3: var(--blue-t3, yellow);
+    --h-t4: var(--blue-t4, yellow);
+    --h-t5: var(--blue-t5, yellow);
+    --h-t6: var(--blue-t6, yellow);
+    --h-t7: var(--blue-t7, yellow);
+    --h-t8: var(--blue-t8, yellow);
+    --h-t9: var(--blue-t9, yellow);
+    --h-t10: var(--blue-t10, yellow);
+    
+    
+    --h-tag-t1: var(--pink-t1, yellow);
+    --h-tag-t2: var(--pink-t2, yellow);
+    --h-tag-t3: var(--pink-t3, yellow);
+    --h-tag-t4: var(--pink-t4, yellow);
+    --h-tag-t5: var(--pink-t5, yellow);
+    --h-tag-t6: var(--pink-t6, yellow);
+    --h-tag-t7: var(--pink-t7, yellow);
+    --h-tag-t8: var(--pink-t8, yellow);
+    --h-tag-t9: var(--pink-t9, yellow);
+    --h-tag-t10: var(--pink-t10, yellow);
+
+    --hr-t1: var(--blue-t1, yellow);
+    --hr-t2: var(--blue-t2, yellow);
+    --hr-t3: var(--blue-t3, yellow);
+    --hr-t4: var(--blue-t4, yellow);
+    --hr-t5: var(--blue-t5, yellow);
+    --hr-t6: var(--blue-t6, yellow);
+    --hr-t7: var(--blue-t7, yellow);
+    --hr-t8: var(--blue-t8, yellow);
+    --hr-t9: var(--blue-t9, yellow);
+    --hr-t10: var(--blue-t10, yellow);
+
+    --strong-em-t1: var(--text-t1, yellow);
+    --strong-em-t2: var(--text-t2, yellow);
+    --strong-em-t3: var(--text-t3, yellow);
+    --strong-em-t4: var(--text-t4, yellow);
+    --strong-em-t5: var(--text-t5, yellow);
+    --strong-em-t6: var(--text-t6, yellow);
+    --strong-em-t7: var(--text-t7, yellow);
+    --strong-em-t8: var(--text-t8, yellow);
+    --strong-em-t9: var(--text-t9, yellow);
+    --strong-em-t10: var(--text-t10, yellow);
+
+    --s-t1: var(--de-emph-text-0-t1, yellow);
+    --s-t2: var(--de-emph-text-0-t2, yellow);
+    --s-t3: var(--de-emph-text-0-t3, yellow);
+    --s-t4: var(--de-emph-text-0-t4, yellow);
+    --s-t5: var(--de-emph-text-0-t5, yellow);
+    --s-t6: var(--de-emph-text-0-t6, yellow);
+    --s-t7: var(--de-emph-text-0-t7, yellow);
+    --s-t8: var(--de-emph-text-0-t8, yellow);
+    --s-t9: var(--de-emph-text-0-t9, yellow);
+    --s-t10: var(--de-emph-text-0-t10, yellow);
+
+    --h-s-t1: var(--purple-t1, yellow);
+    --h-s-t2: var(--purple-t2, yellow);
+    --h-s-t3: var(--purple-t3, yellow);
+    --h-s-t4: var(--purple-t4, yellow);
+    --h-s-t5: var(--purple-t5, yellow);
+    --h-s-t6: var(--purple-t6, yellow);
+    --h-s-t7: var(--purple-t7, yellow);
+    --h-s-t8: var(--purple-t8, yellow);
+    --h-s-t9: var(--purple-t9, yellow);
+    --h-s-t10: var(--purple-t10, yellow);
+
+    --h-s-tag-t1: var(--purple-t1, yellow);
+    --h-s-tag-t2: var(--purple-t2, yellow);
+    --h-s-tag-t3: var(--purple-t3, yellow);
+    --h-s-tag-t4: var(--purple-t4, yellow);
+    --h-s-tag-t5: var(--purple-t5, yellow);
+    --h-s-tag-t6: var(--purple-t6, yellow);
+    --h-s-tag-t7: var(--purple-t7, yellow);
+    --h-s-tag-t8: var(--purple-t8, yellow);
+    --h-s-tag-t9: var(--purple-t9, yellow);
+    --h-s-tag-t10: var(--purple-t10, yellow);
+    
+    --h-s-strikethrough-t1: var(--pink-t1, yellow);
+    --h-s-strikethrough-t2: var(--pink-t2, yellow);
+    --h-s-strikethrough-t3: var(--pink-t3, yellow);
+    --h-s-strikethrough-t4: var(--pink-t4, yellow);
+    --h-s-strikethrough-t5: var(--pink-t5, yellow);
+    --h-s-strikethrough-t6: var(--pink-t6, yellow);
+    --h-s-strikethrough-t7: var(--pink-t7, yellow);
+    --h-s-strikethrough-t8: var(--pink-t8, yellow);
+    --h-s-strikethrough-t9: var(--pink-t9, yellow);
+    --h-s-strikethrough-t10: var(--pink-t10, yellow);
+    
+    
+    --s-strikethrough-t1: var(--pink-t1, yellow);
+    --s-strikethrough-t2: var(--pink-t2, yellow);
+    --s-strikethrough-t3: var(--pink-t3, yellow);
+    --s-strikethrough-t4: var(--pink-t4, yellow);
+    --s-strikethrough-t5: var(--pink-t5, yellow);
+    --s-strikethrough-t6: var(--pink-t6, yellow);
+    --s-strikethrough-t7: var(--pink-t7, yellow);
+    --s-strikethrough-t8: var(--pink-t8, yellow);
+    --s-strikethrough-t9: var(--pink-t9, yellow);
+    --s-strikethrough-t10: var(--pink-t10, yellow);
+    
+    --s-tag-t1: var(--dark-gray-t1, yellow);
+    --s-tag-t2: var(--dark-gray-t2, yellow);
+    --s-tag-t3: var(--dark-gray-t3, yellow);
+    --s-tag-t4: var(--dark-gray-t4, yellow);
+    --s-tag-t5: var(--dark-gray-t5, yellow);
+    --s-tag-t6: var(--dark-gray-t6, yellow);
+    --s-tag-t7: var(--dark-gray-t7, yellow);
+    --s-tag-t8: var(--dark-gray-t8, yellow);
+    --s-tag-t9: var(--dark-gray-t9, yellow);
+    --s-tag-t10: var(--dark-gray-t10, yellow);
+
+    --strong-em-tag-t1: var(--emph-text-t1, yellow);
+    --strong-em-tag-t2: var(--emph-text-t2, yellow);
+    --strong-em-tag-t3: var(--emph-text-t3, yellow);
+    --strong-em-tag-t4: var(--emph-text-t4, yellow);
+    --strong-em-tag-t5: var(--emph-text-t5, yellow);
+    --strong-em-tag-t6: var(--emph-text-t6, yellow);
+    --strong-em-tag-t7: var(--emph-text-t7, yellow);
+    --strong-em-tag-t8: var(--emph-text-t8, yellow);
+    --strong-em-tag-t9: var(--emph-text-t9, yellow);
+    --strong-em-tag-t10: var(--emph-text-t10, yellow);
+
+    
+    --h-strong-em-t1: var(--dark-blue-t1, yellow);
+    --h-strong-em-t2: var(--dark-blue-t2, yellow);
+    --h-strong-em-t3: var(--dark-blue-t3, yellow);
+    --h-strong-em-t4: var(--dark-blue-t4, yellow);
+    --h-strong-em-t5: var(--dark-blue-t5, yellow);
+    --h-strong-em-t6: var(--dark-blue-t6, yellow);
+    --h-strong-em-t7: var(--dark-blue-t7, yellow);
+    --h-strong-em-t8: var(--dark-blue-t8, yellow);
+    --h-strong-em-t9: var(--dark-blue-t9, yellow);
+    --h-strong-em-t10: var(--dark-blue-t10, yellow);
+
+    --h-strong-em-tag-t1: var(--purple-t1, yellow);
+    --h-strong-em-tag-t2: var(--purple-t2, yellow);
+    --h-strong-em-tag-t3: var(--purple-t3, yellow);
+    --h-strong-em-tag-t4: var(--purple-t4, yellow);
+    --h-strong-em-tag-t5: var(--purple-t5, yellow);
+    --h-strong-em-tag-t6: var(--purple-t6, yellow);
+    --h-strong-em-tag-t7: var(--purple-t7, yellow);
+    --h-strong-em-tag-t8: var(--purple-t8, yellow);
+    --h-strong-em-tag-t9: var(--purple-t9, yellow);
+    --h-strong-em-tag-t10: var(--purple-t10, yellow);
+    
+    --blockquote-tag-t1: var(--blue-t1, yellow);
+    --blockquote-tag-t2: var(--blue-t2, yellow);
+    --blockquote-tag-t3: var(--blue-t3, yellow);
+    --blockquote-tag-t4: var(--blue-t4, yellow);
+    --blockquote-tag-t5: var(--blue-t5, yellow);
+    --blockquote-tag-t6: var(--blue-t6, yellow);
+    --blockquote-tag-t7: var(--blue-t7, yellow);
+    --blockquote-tag-t8: var(--blue-t8, yellow);
+    --blockquote-tag-t9: var(--blue-t9, yellow);
+    --blockquote-tag-t10: var(--blue-t10, yellow);
+
+    --blockquote-t1: var(--blue-t1, yellow);
+    --blockquote-t2: var(--blue-t2, yellow);
+    --blockquote-t3: var(--blue-t3, yellow);
+    --blockquote-t4: var(--blue-t4, yellow);
+    --blockquote-t5: var(--blue-t5, yellow);
+    --blockquote-t6: var(--blue-t6, yellow);
+    --blockquote-t7: var(--blue-t7, yellow);
+    --blockquote-t8: var(--blue-t8, yellow);
+    --blockquote-t9: var(--blue-t9, yellow);
+    --blockquote-t10: var(--blue-t10, yellow);
+
+    --ul-t1: var(--text-t1, yellow);
+    --ul-t2: var(--text-t2, yellow);
+    --ul-t3: var(--text-t3, yellow);
+    --ul-t4: var(--text-t4, yellow);
+    --ul-t5: var(--text-t5, yellow);
+    --ul-t6: var(--text-t6, yellow);
+    --ul-t7: var(--text-t7, yellow);
+    --ul-t8: var(--text-t8, yellow);
+    --ul-t9: var(--text-t9, yellow);
+    --ul-t10: var(--text-t10, yellow);
+
+    --ol-t1: var(--text-t1, yellow);
+    --ol-t2: var(--text-t2, yellow);
+    --ol-t3: var(--text-t3, yellow);
+    --ol-t4: var(--text-t4, yellow);
+    --ol-t5: var(--text-t5, yellow);
+    --ol-t6: var(--text-t6, yellow);
+    --ol-t7: var(--text-t7, yellow);
+    --ol-t8: var(--text-t8, yellow);
+    --ol-t9: var(--text-t9, yellow);
+    --ol-t10: var(--text-t10, yellow);
+
+    --li-t1: var(--text-t1, yellow);
+    --li-t2: var(--text-t2, yellow);
+    --li-t3: var(--text-t3, yellow);
+    --li-t4: var(--text-t4, yellow);
+    --li-t5: var(--text-t5, yellow);
+    --li-t6: var(--text-t6, yellow);
+    --li-t7: var(--text-t7, yellow);
+    --li-t8: var(--text-t8, yellow);
+    --li-t9: var(--text-t9, yellow);
+    --li-t10: var(--text-t10, yellow);
+
+    --li-tag-t1: var(--violet-t1, yellow);
+    --li-tag-t2: var(--violet-t2, yellow);
+    --li-tag-t3: var(--violet-t3, yellow);
+    --li-tag-t4: var(--violet-t4, yellow);
+    --li-tag-t5: var(--violet-t5, yellow);
+    --li-tag-t6: var(--violet-t6, yellow);
+    --li-tag-t7: var(--violet-t7, yellow);
+    --li-tag-t8: var(--violet-t8, yellow);
+    --li-tag-t9: var(--violet-t9, yellow);
+    --li-tag-t10: var(--violet-t10, yellow);
+    
+    --code-tag-t1: var(--pink-t1, yellow);
+    --code-tag-t2: var(--pink-t2, yellow);
+    --code-tag-t3: var(--pink-t3, yellow);
+    --code-tag-t4: var(--pink-t4, yellow);
+    --code-tag-t5: var(--pink-t5, yellow);
+    --code-tag-t6: var(--pink-t6, yellow);
+    --code-tag-t7: var(--pink-t7, yellow);
+    --code-tag-t8: var(--pink-t8, yellow);
+    --code-tag-t9: var(--pink-t9, yellow);
+    --code-tag-t10: var(--pink-t10, yellow);
+
+    --code-params-t1: var(--blue-t1, yellow);
+    --code-params-t2: var(--blue-t2, yellow);
+    --code-params-t3: var(--blue-t3, yellow);
+    --code-params-t4: var(--blue-t4, yellow);
+    --code-params-t5: var(--blue-t5, yellow);
+    --code-params-t6: var(--blue-t6, yellow);
+    --code-params-t7: var(--blue-t7, yellow);
+    --code-params-t8: var(--blue-t8, yellow);
+    --code-params-t9: var(--blue-t9, yellow);
+    --code-params-t10: var(--blue-t10, yellow);
+    
+    --table-t1: var(--text-t1, yellow);
+    --table-t2: var(--text-t2, yellow);
+    --table-t3: var(--text-t3, yellow);
+    --table-t4: var(--text-t4, yellow);
+    --table-t5: var(--text-t5, yellow);
+    --table-t6: var(--text-t6, yellow);
+    --table-t7: var(--text-t7, yellow);
+    --table-t8: var(--text-t8, yellow);
+    --table-t9: var(--text-t9, yellow);
+    --table-t10: var(--text-t10, yellow);
+    
+    --table-tag-t1: var(--turquoise-t1, yellow);
+    --table-tag-t2: var(--turquoise-t2, yellow);
+    --table-tag-t3: var(--turquoise-t3, yellow);
+    --table-tag-t4: var(--turquoise-t4, yellow);
+    --table-tag-t5: var(--turquoise-t5, yellow);
+    --table-tag-t6: var(--turquoise-t6, yellow);
+    --table-tag-t7: var(--turquoise-t7, yellow);
+    --table-tag-t8: var(--turquoise-t8, yellow);
+    --table-tag-t9: var(--turquoise-t9, yellow);
+    --table-tag-t10: var(--turquoise-t10, yellow);
+    
+    --thead-t1: var(--emph-text-t1, yellow);
+    --thead-t2: var(--emph-text-t2, yellow);
+    --thead-t3: var(--emph-text-t3, yellow);
+    --thead-t4: var(--emph-text-t4, yellow);
+    --thead-t5: var(--emph-text-t5, yellow);
+    --thead-t6: var(--emph-text-t6, yellow);
+    --thead-t7: var(--emph-text-t7, yellow);
+    --thead-t8: var(--emph-text-t8, yellow);
+    --thead-t9: var(--emph-text-t9, yellow);
+    --thead-t10: var(--emph-text-t10, yellow);
+                    
+    --tbody-t1: var(--de-emph-text-0-t1, yellow);
+    --tbody-t2: var(--de-emph-text-0-t2, yellow);
+    --tbody-t3: var(--de-emph-text-0-t3, yellow);
+    --tbody-t4: var(--de-emph-text-0-t4, yellow);
+    --tbody-t5: var(--de-emph-text-0-t5, yellow);
+    --tbody-t6: var(--de-emph-text-0-t6, yellow);
+    --tbody-t7: var(--de-emph-text-0-t7, yellow);
+    --tbody-t8: var(--de-emph-text-0-t8, yellow);
+    --tbody-t9: var(--de-emph-text-0-t9, yellow);
+    --tbody-t10: var(--de-emph-text-0-t10, yellow);
+
+    --a-img-ref-t1: var(--emph-text-t1, yellow);
+    --a-img-ref-t2: var(--emph-text-t2, yellow);
+    --a-img-ref-t3: var(--emph-text-t3, yellow);
+    --a-img-ref-t4: var(--emph-text-t4, yellow);
+    --a-img-ref-t5: var(--emph-text-t5, yellow);
+    --a-img-ref-t6: var(--emph-text-t6, yellow);
+    --a-img-ref-t7: var(--emph-text-t7, yellow);
+    --a-img-ref-t8: var(--emph-text-t8, yellow);
+    --a-img-ref-t9: var(--emph-text-t9, yellow);
+    --a-img-ref-t10: var(--emph-text-t10, yellow);
+
+    --h-a-img-t1: var(--blue-t1, yellow);
+    --h-a-img-t2: var(--blue-t2, yellow);
+    --h-a-img-t3: var(--blue-t3, yellow);
+    --h-a-img-t4: var(--blue-t4, yellow);
+    --h-a-img-t5: var(--blue-t5, yellow);
+    --h-a-img-t6: var(--blue-t6, yellow);
+    --h-a-img-t7: var(--blue-t7, yellow);
+    --h-a-img-t8: var(--blue-t8, yellow);
+    --h-a-img-t9: var(--blue-t9, yellow);
+    --h-a-img-t10: var(--blue-t10, yellow);
+
+    --h-a-img-tag-t1: var(--purple-t1, yellow);
+    --h-a-img-tag-t2: var(--purple-t2, yellow);
+    --h-a-img-tag-t3: var(--purple-t3, yellow);
+    --h-a-img-tag-t4: var(--purple-t4, yellow);
+    --h-a-img-tag-t5: var(--purple-t5, yellow);
+    --h-a-img-tag-t6: var(--purple-t6, yellow);
+    --h-a-img-tag-t7: var(--purple-t7, yellow);
+    --h-a-img-tag-t8: var(--purple-t8, yellow);
+    --h-a-img-tag-t9: var(--purple-t9, yellow);
+    --h-a-img-tag-t10: var(--purple-t10, yellow);
+    
+    --h-a-img-title-t1: var(--violet-t1, yellow);
+    --h-a-img-title-t2: var(--violet-t2, yellow);
+    --h-a-img-title-t3: var(--violet-t3, yellow);
+    --h-a-img-title-t4: var(--violet-t4, yellow);
+    --h-a-img-title-t5: var(--violet-t5, yellow);
+    --h-a-img-title-t6: var(--violet-t6, yellow);
+    --h-a-img-title-t7: var(--violet-t7, yellow);
+    --h-a-img-title-t8: var(--violet-t8, yellow);
+    --h-a-img-title-t9: var(--violet-t9, yellow);
+    --h-a-img-title-t10: var(--violet-t10, yellow);
+    
+    --a-img-ref-title-t1: var(--dark-blue-t1, yellow);
+    --a-img-ref-title-t2: var(--dark-blue-t2, yellow);
+    --a-img-ref-title-t3: var(--dark-blue-t3, yellow);
+    --a-img-ref-title-t4: var(--dark-blue-t4, yellow);
+    --a-img-ref-title-t5: var(--dark-blue-t5, yellow);
+    --a-img-ref-title-t6: var(--dark-blue-t6, yellow);
+    --a-img-ref-title-t7: var(--dark-blue-t7, yellow);
+    --a-img-ref-title-t8: var(--dark-blue-t8, yellow);
+    --a-img-ref-title-t9: var(--dark-blue-t9, yellow);
+    --a-img-ref-title-t10: var(--dark-blue-t10, yellow);
+    
+    --h-a-img-lbl-t1: var(--dark-blue-t1, yellow);
+    --h-a-img-lbl-t2: var(--dark-blue-t2, yellow);
+    --h-a-img-lbl-t3: var(--dark-blue-t3, yellow);
+    --h-a-img-lbl-t4: var(--dark-blue-t4, yellow);
+    --h-a-img-lbl-t5: var(--dark-blue-t5, yellow);
+    --h-a-img-lbl-t6: var(--dark-blue-t6, yellow);
+    --h-a-img-lbl-t7: var(--dark-blue-t7, yellow);
+    --h-a-img-lbl-t8: var(--dark-blue-t8, yellow);
+    --h-a-img-lbl-t9: var(--dark-blue-t9, yellow);
+    --h-a-img-lbl-t10: var(--dark-blue-t10, yellow);
+    
+    --h-a-img-dest-t1: var(--dark-blue-t1, yellow);
+    --h-a-img-dest-t2: var(--dark-blue-t2, yellow);
+    --h-a-img-dest-t3: var(--dark-blue-t3, yellow);
+    --h-a-img-dest-t4: var(--dark-blue-t4, yellow);
+    --h-a-img-dest-t5: var(--dark-blue-t5, yellow);
+    --h-a-img-dest-t6: var(--dark-blue-t6, yellow);
+    --h-a-img-dest-t7: var(--dark-blue-t7, yellow);
+    --h-a-img-dest-t8: var(--dark-blue-t8, yellow);
+    --h-a-img-dest-t9: var(--dark-blue-t9, yellow);
+    --h-a-img-dest-t10: var(--dark-blue-t10, yellow);
+    
+    --h-a-img-text-t1: var(--blue-t1, yellow);
+    --h-a-img-text-t2: var(--blue-t2, yellow);
+    --h-a-img-text-t3: var(--blue-t3, yellow);
+    --h-a-img-text-t4: var(--blue-t4, yellow);
+    --h-a-img-text-t5: var(--blue-t5, yellow);
+    --h-a-img-text-t6: var(--blue-t6, yellow);
+    --h-a-img-text-t7: var(--blue-t7, yellow);
+    --h-a-img-text-t8: var(--blue-t8, yellow);
+    --h-a-img-text-t9: var(--blue-t9, yellow);
+    --h-a-img-text-t10: var(--blue-t10, yellow);
+    
+    
+    --a-img-ref-tag-t1: var(--de-emph-text-0-t1, yellow);
+    --a-img-ref-tag-t2: var(--de-emph-text-0-t2, yellow);
+    --a-img-ref-tag-t3: var(--de-emph-text-0-t3, yellow);
+    --a-img-ref-tag-t4: var(--de-emph-text-0-t4, yellow);
+    --a-img-ref-tag-t5: var(--de-emph-text-0-t5, yellow);
+    --a-img-ref-tag-t6: var(--de-emph-text-0-t6, yellow);
+    --a-img-ref-tag-t7: var(--de-emph-text-0-t7, yellow);
+    --a-img-ref-tag-t8: var(--de-emph-text-0-t8, yellow);
+    --a-img-ref-tag-t9: var(--de-emph-text-0-t9, yellow);
+    --a-img-ref-tag-t10: var(--de-emph-text-0-t10, yellow);
+
+    --a-img-ref-text-t1: var(--emph-text-t1, yellow);
+    --a-img-ref-text-t2: var(--emph-text-t2, yellow);
+    --a-img-ref-text-t3: var(--emph-text-t3, yellow);
+    --a-img-ref-text-t4: var(--emph-text-t4, yellow);
+    --a-img-ref-text-t5: var(--emph-text-t5, yellow);
+    --a-img-ref-text-t6: var(--emph-text-t6, yellow);
+    --a-img-ref-text-t7: var(--emph-text-t7, yellow);
+    --a-img-ref-text-t8: var(--emph-text-t8, yellow);
+    --a-img-ref-text-t9: var(--emph-text-t9, yellow);
+    --a-img-ref-text-t10: var(--emph-text-t10, yellow);
+
+    --a-img-ref-dest-t1: var(--de-emph-text-0-t1, yellow);
+    --a-img-ref-dest-t2: var(--de-emph-text-0-t2, yellow);
+    --a-img-ref-dest-t3: var(--de-emph-text-0-t3, yellow);
+    --a-img-ref-dest-t4: var(--de-emph-text-0-t4, yellow);
+    --a-img-ref-dest-t5: var(--de-emph-text-0-t5, yellow);
+    --a-img-ref-dest-t6: var(--de-emph-text-0-t6, yellow);
+    --a-img-ref-dest-t7: var(--de-emph-text-0-t7, yellow);
+    --a-img-ref-dest-t8: var(--de-emph-text-0-t8, yellow);
+    --a-img-ref-dest-t9: var(--de-emph-text-0-t9, yellow);
+    --a-img-ref-dest-t10: var(--de-emph-text-0-t10, yellow);
+
+    --a-img-ref-lbl-t1: var(--de-emph-text-0-t1, yellow);
+    --a-img-ref-lbl-t2: var(--de-emph-text-0-t2, yellow);
+    --a-img-ref-lbl-t3: var(--de-emph-text-0-t3, yellow);
+    --a-img-ref-lbl-t4: var(--de-emph-text-0-t4, yellow);
+    --a-img-ref-lbl-t5: var(--de-emph-text-0-t5, yellow);
+    --a-img-ref-lbl-t6: var(--de-emph-text-0-t6, yellow);
+    --a-img-ref-lbl-t7: var(--de-emph-text-0-t7, yellow);
+    --a-img-ref-lbl-t8: var(--de-emph-text-0-t8, yellow);
+    --a-img-ref-lbl-t9: var(--de-emph-text-0-t9, yellow);
+    --a-img-ref-lbl-t10: var(--de-emph-text-0-t10, yellow);
+
+    --a-img-ref-title-t1: var(--dark-blue-t1, yellow);
+    --a-img-ref-title-t2: var(--dark-blue-t2, yellow);
+    --a-img-ref-title-t3: var(--dark-blue-t3, yellow);
+    --a-img-ref-title-t4: var(--dark-blue-t4, yellow);
+    --a-img-ref-title-t5: var(--dark-blue-t5, yellow);
+    --a-img-ref-title-t6: var(--dark-blue-t6, yellow);
+    --a-img-ref-title-t7: var(--dark-blue-t7, yellow);
+    --a-img-ref-title-t8: var(--dark-blue-t8, yellow);
+    --a-img-ref-title-t9: var(--dark-blue-t9, yellow);
+    --a-img-ref-title-t10: var(--dark-blue-t10, yellow);
+
+    --html-block-t1: var(--pink-t1, yellow);
+    --html-block-t2: var(--pink-t2, yellow);
+    --html-block-t3: var(--pink-t3, yellow);
+    --html-block-t4: var(--pink-t4, yellow);
+    --html-block-t5: var(--pink-t5, yellow);
+    --html-block-t6: var(--pink-t6, yellow);
+    --html-block-t7: var(--pink-t7, yellow);
+    --html-block-t8: var(--pink-t8, yellow);
+    --html-block-t9: var(--pink-t9, yellow);
+    --html-block-t10: var(--pink-t10, yellow);
+
+    
+    --attr-bloc-tag-t1: var(--violet-t1, yellow);
+    --attr-bloc-tag-t2: var(--violet-t2, yellow);
+    --attr-bloc-tag-t3: var(--violet-t3, yellow);
+    --attr-bloc-tag-t4: var(--violet-t4, yellow);
+    --attr-bloc-tag-t5: var(--violet-t5, yellow);
+    --attr-bloc-tag-t6: var(--violet-t6, yellow);
+    --attr-bloc-tag-t7: var(--violet-t7, yellow);
+    --attr-bloc-tag-t8: var(--violet-t8, yellow);
+    --attr-bloc-tag-t9: var(--violet-t9, yellow);
+    --attr-bloc-tag-t10: var(--violet-t10, yellow);
+  
+    
+    --key-value-attr-class-attr-id-attr-t1: var(--light-blue-t1, yellow);
+    --key-value-attr-class-attr-id-attr-t2: var(--light-blue-t2, yellow);
+    --key-value-attr-class-attr-id-attr-t3: var(--light-blue-t3, yellow);
+    --key-value-attr-class-attr-id-attr-t4: var(--light-blue-t4, yellow);
+    --key-value-attr-class-attr-id-attr-t5: var(--light-blue-t5, yellow);
+    --key-value-attr-class-attr-id-attr-t6: var(--light-blue-t6, yellow);
+    --key-value-attr-class-attr-id-attr-t7: var(--light-blue-t7, yellow);
+    --key-value-attr-class-attr-id-attr-t8: var(--light-blue-t8, yellow);
+    --key-value-attr-class-attr-id-attr-t9: var(--light-blue-t9, yellow);
+    --key-value-attr-class-attr-id-attr-t10: var(--light-blue-t10, yellow);
+
+    --key-value-attr-class-attr-id-attr-tag-t1: var(--violet-t1, yellow);
+    --key-value-attr-class-attr-id-attr-tag-t2: var(--violet-t2, yellow);
+    --key-value-attr-class-attr-id-attr-tag-t3: var(--violet-t3, yellow);
+    --key-value-attr-class-attr-id-attr-tag-t4: var(--violet-t4, yellow);
+    --key-value-attr-class-attr-id-attr-tag-t5: var(--violet-t5, yellow);
+    --key-value-attr-class-attr-id-attr-tag-t6: var(--violet-t6, yellow);
+    --key-value-attr-class-attr-id-attr-tag-t7: var(--violet-t7, yellow);
+    --key-value-attr-class-attr-id-attr-tag-t8: var(--violet-t8, yellow);
+    --key-value-attr-class-attr-id-attr-tag-t9: var(--violet-t9, yellow);
+    --key-value-attr-class-attr-id-attr-tag-t10: var(--violet-t10, yellow);
+
+  
+  
+}
+
+

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Markdown Reference</h1>
+<p>Markdown is the lightweight markup language used in Stylo. It's a simple language that emphasizes readability and ease of use. Markdown exists in several versions but a version seems to make more and more consensus: <em>CommonMark</em>, and this is the version implemented by <em>Stylo Core</em> which is shared by both Stylo and Nodio Apps. For any questions regarding the Markdown syntax, the official site of <a href="https://commonmark.org/">CommonMark</a> offers a complete <a href="https://spec.commonmark.org">documentation</a> and an <a href="https://spec.commonmark.org/dingus/">online test tool</a>.</p>
+<p>CommonMark currently lacks the table and strikethough elements, Stylo adds them in their GitHub flavoured versions. See the GitHub Markdown documentation for a complete reference: <a href="https://github.github.com/gfm/#tables-extension-">GFM tables</a> and <a href="https://github.github.com/gfm/#strikethrough-extension-">GFM strikethrough</a>.</p>
+<p>Markdown defines a non-intrusive syntax that allows to define HTML elements. As a last resort, since valid HTML code is interpreted as such by Markdown, it is always possible to resort to HTML when an element is not supported. It should be noted that there is no <em>invalid</em> Markdown. A text document is a valid Markdown document. If a tag is not recognized it will simply be interpreted as text.</p>
+<p>In Stylo*, an element can also define one or more sub-regions that can be targeted by a pseudo-element (see <a href="../css/pseudoElementSelector.html">Pseudo-element selector</a> section) selector section. For each element, the associated pseudo-elements will be listed in the section pertaining to the element in the subsection <em>Pseudo-elements</em>.</p>
+<p>CSS is used to style and specify the appearance of the Markdown text. To use CSS we need a way to identify elements to style. Since some Markdown elements have no correspondent HTML elements, we defined <a href="markdownSpecificElements.html">Markdown specific elements</a> for them, to allow targeting them in CSS.</p>
+<p>Here is a simplified inventory of the main syntax rules. Please refer to the <a href="https://spec.commonmark.org">CommonMark Specification</a> and <a href="https://help.github.com/articles/github-flavored-markdown">GitHub Flavoured Markdown</a> for more information.</p>
+<ul>
+<li><a href="#mdElementTypes">Markdown elements types</a></li>
+<li><a href="#markdownSpecificElements">Markdown Specific Elements</a></li>
+<li><a href="#headers">Headers</a></li>
+<li><a href="#mdHorizontalBar">Horizontal Bar</a></li>
+<li><a href="#mdEmphasis">Emphasis</a></li>
+<li><a href="#mdStrikethrough">Strikethrough</a></li>
+<li><a href="#mdBlockquote">Blockquote</a></li>
+<li><a href="#mdLists">List</a></li>
+<li><a href="#mdCode">Code</a></li>
+<li><a href="#mdTable">Table</a></li>
+<li><a href="#mdReference">Reference</a></li>
+<li><a href="#mdLink">Link</a></li>
+<li><a href="#mdImage">Image</a></li>
+<li><a href="#mdAttributes">Attributes</a></li>
+</ul>
+<p><em>Note</em>: This feature is part of the <em>Style Editor</em> which is currently unavailable in Nodio.</p>
+
+    </body>
+</html>

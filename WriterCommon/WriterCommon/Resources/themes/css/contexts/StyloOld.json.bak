@@ -1,0 +1,218 @@
+
+
+{
+
+    "name": "Stylo Old",
+
+    "theme": {
+
+        "dark": {
+            "background": {
+                "color": "#1E1E1E"
+            }
+        },
+        "light": {
+            "background": {
+                "color": "#F7F7F7"
+            }
+        },
+        "print": {
+            "body": {
+                "fontSize": "10pt"
+            },
+            "h1": {
+                "fontSize": "14pt"
+            },
+            "h2": {
+                "fontSize": "13pt"
+            },
+            "h3": {
+                "fontSize": "12pt"
+            },
+            "h4": {
+                "fontSize": "11pt"
+            },
+            "h5": {
+                "fontSize": "11pt"
+            },
+            "h6": {
+                "fontSize": "10pt"
+            }
+        },
+        "css": {
+
+            "foreground": {
+                "color": "#E69300",
+                "fontFamily": "Hack",
+                "fontSize": "10pt"
+            },
+            "light": {
+                "background": {
+                    "color": "#f0f0f0"
+                }
+            },
+            "source": {
+
+                "function": {
+                    "color": "#01768B"
+                },
+                "comment": {
+                    "color": "#E69300"
+                },
+                "classSelector": {
+                    "color": "#01768B"
+                },
+                "atRuleName": {
+                    "color": "#124E78"
+                },
+                "namespacePrefix": {
+                    "color": "#01768B"
+                },
+                "namespaceUri": {
+                    "color": "#E69300"
+                },
+                "typeSelector": {
+                    "color": "#124E78"
+                },
+                "attributeName": {
+                    "color": "#01768B"
+                },
+                "attributeMatch": {
+                    "color": "#D11149"
+                },
+                "combinator": {
+                    "color": "#D11149"
+                },
+                "propertyName": {
+                    "color": "#01768B"
+                },
+                "important": {
+                    "color": "#DCDCDC"
+                },
+                "string": {
+                    "color": "#D11149"
+                },
+                "fontStyle": {
+                    "color": "#D11149"
+                },
+                "colorKeyword": {
+                    "color": "#D11149"
+                },
+                "colorHash": {
+                    "color": "#D11149"
+                },
+                "dimension": {
+                    "color": "#D11149"
+                },
+                "number": {
+                    "color": "#E69300"
+                },
+                "invalid": {
+                    "color": "#D11149"
+                },
+                "pseudoSelectorOperator": {
+                    "color": "#01768B"
+                },
+                "pseudoSelectorValue": {
+                    "color": "#D11149"
+                }
+            },
+            "errors": {
+
+                "foreground": {
+                    "color": "#124E78",
+                },
+                "unselectedErrorMessage": {
+                    "color": "#01768B"
+                },
+                "selectedErrorMessage": {
+                    "color": "#95180C"
+                },
+                "light": {
+                    "foreground": {
+                        "color": "#124E78",
+                    },
+                    "unselectedErrorMessage": {
+                        "color": "#01768B"
+                    },
+                    "selectedErrorMessage": {
+                        "color": "#D61400"
+                    }
+                }
+            }
+        },
+
+        "html": {
+
+            "preview": {
+
+                "dark": {
+                    "foreground": {
+                        "color": "rgb(242,242,242)",
+                        "fontFamily": "Avenir Next",
+                    },
+                    "background": {
+                        "color": "rgb(30,30,30)"
+                    },
+                    "codeBackground": {
+                        "color": "rgb(50,50,50)"
+                    },
+                    "linkColor" : {
+                        "color": "rgb(242,242,242)"
+                    },
+                    "linkUnderline": {
+                        "color": "rgb(242,242,242)"
+                    },
+                },
+                "light": {
+                    "foreground": {
+                        "color": "black",
+                        "fontFamily": "Avenir Next",
+                    },
+                    "background": {
+                        "color": "rgb(247,247,247)"
+                    },
+                    "codeBackground": {
+                        "color": "rgb(230,230,230)"
+                    },
+                    "linkColor" : {
+                        "color": "black"
+                    },
+                    "linkUnderline": {
+                        "color": "black"
+                    },
+                    "h1": {
+                        "color": "black"
+                    },
+                    "h2": {
+                        "color": "black"
+                    },
+                    "h3": {
+                        "color": "black"
+                    },
+                    "h4": {
+                        "color": "black"
+                    },
+                    "h5": {
+                        "color": "black"
+                    },
+                    "h6": {
+                        "color": "black"
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

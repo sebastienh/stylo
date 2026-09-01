@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="YyF-7U-rtR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Css Help Commands View Controller-->
+        <scene sceneID="flt-7w-OAk">
+            <objects>
+                <viewController id="YyF-7U-rtR" customClass="CssHelpCommandsViewController" customModule="StyleEditorPlugin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="yB9-Q1-aOn" customClass="CssHelpView" customModule="StyleEditorPlugin" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="QwL-WY-nnq" customClass="ColoredView" customModule="StyloCoreMac">
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tdl-4d-7YS">
+                                        <rect key="frame" x="144" y="142" width="62" height="16"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="CSS Help" id="zuK-sL-Lhi">
+                                            <font key="font" metaFont="label" size="13"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tdl-4d-7YS" firstAttribute="centerX" secondItem="QwL-WY-nnq" secondAttribute="centerX" id="JDk-hn-7nd"/>
+                                    <constraint firstItem="tdl-4d-7YS" firstAttribute="centerY" secondItem="QwL-WY-nnq" secondAttribute="centerY" id="PrD-li-MsT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" name="UnselectedTableCellViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="QwL-WY-nnq" secondAttribute="bottom" id="EZ9-1u-6Vw"/>
+                            <constraint firstItem="QwL-WY-nnq" firstAttribute="top" secondItem="yB9-Q1-aOn" secondAttribute="top" id="VqH-T3-bgP"/>
+                            <constraint firstAttribute="trailing" secondItem="QwL-WY-nnq" secondAttribute="trailing" id="gpn-an-cyU"/>
+                            <constraint firstItem="QwL-WY-nnq" firstAttribute="leading" secondItem="yB9-Q1-aOn" secondAttribute="leading" id="x36-Cu-c2y"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cssHelpView" destination="yB9-Q1-aOn" id="p2i-qo-de7"/>
+                    </connections>
+                </viewController>
+                <customObject id="PQA-m6-EH6" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="69"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="UnselectedTableCellViewBackgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

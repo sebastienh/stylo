@@ -1,0 +1,448 @@
+/********************************************/
+/*                  Source                  */
+/********************************************/
+
+
+/*
+ Body
+ - background-color
+ - default font-famly
+ - default font-size
+ 
+ Available pseudo-classes:
+  - highlight
+*/
+
+
+body {
+    
+}
+
+/********************************************/
+/*                  Source                  */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1 {
+    
+}
+
+h2 {
+    
+}
+
+h3 {
+    
+}
+
+h4 {
+    
+}
+
+h5 {
+    
+}
+
+h6 {
+    
+}
+
+h1::tag {
+    
+}
+
+h2::tag {
+    
+}
+
+h3::tag {
+    
+}
+
+h4::tag {
+    
+}
+
+h5::tag {
+    
+}
+
+h6::tag {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong {
+    
+    
+}
+
+em {
+    
+    
+}
+
+s {
+    
+    
+}
+
+strong::tag {
+    
+    
+}
+
+em::tag {
+    
+    
+}
+
+s::tag {
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote {
+    
+    
+}
+
+blockquote::tag {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul {
+    
+}
+
+ol {
+    
+}
+
+li {
+    
+}
+
+li::tag {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code {
+    
+}
+
+code::tag {
+    
+}
+
+code::params {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table {
+    
+}
+
+thead {
+    
+}
+
+tbody {
+    
+    
+}
+
+tr {
+    
+}
+
+td {
+    
+}
+
+table::tag {
+    
+    
+}
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label {
+    
+}
+
+/* title: the title of the link */
+a::title {
+    
+    
+}
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+img {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+img::text {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+img::destination {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+img::label {
+    
+}
+
+/* title: the title of the image link */
+img::title {
+    
+}
+
+/*
+    html-block
+*/
+
+html-block {
+    
+}
+
+/*
+    ref
+*/
+
+ref {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+ref::tag {
+    
+}
+
+/* label: the part between the two square braquets */
+ref::label {
+    
+}
+
+
+/* destination: the destination URI */
+ref::destination {
+    
+}
+
+/* title: the ref title */
+ref::title {
+    
+}
+
+/* attributes */
+
+key-value-attr {
+
+}
+
+key-value-attr::tag {
+    
+}
+
+class-attr {
+
+
+}
+
+class-attr::tag {
+
+}
+
+id-attr {
+
+}
+
+id-attr::tag {
+
+}

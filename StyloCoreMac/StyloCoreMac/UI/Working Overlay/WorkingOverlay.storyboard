@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Document Working View Controller-->
+        <scene sceneID="6ap-Ug-idu">
+            <objects>
+                <viewController storyboardIdentifier="DocumentWorkingViewController" id="fhA-JR-0yX" customClass="DocumentWorkingViewController" customModule="StyloCoreMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="Xej-rz-fRc" customClass="BackgroundView" customModule="StyloCoreMac" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <customView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-3r-kjc" customClass="DocumentWorkingBackgroundView" customModule="StyloCoreMac" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="6Tl-wo-uyP" customClass="ColoredView" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="145" y="70" width="160" height="160"/>
+                                        <subviews>
+                                            <progressIndicator wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" maxValue="100" bezeled="NO" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="qJu-lV-SAj">
+                                                <rect key="frame" x="48" y="48" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="0p0-yZ-cml"/>
+                                                    <constraint firstAttribute="width" constant="64" id="jJC-hF-xFT"/>
+                                                </constraints>
+                                            </progressIndicator>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="qJu-lV-SAj" firstAttribute="centerX" secondItem="6Tl-wo-uyP" secondAttribute="centerX" id="5DC-BS-gd5"/>
+                                            <constraint firstAttribute="height" constant="160" id="LYk-eH-DpK"/>
+                                            <constraint firstItem="qJu-lV-SAj" firstAttribute="centerY" secondItem="6Tl-wo-uyP" secondAttribute="centerY" id="O9l-aC-6Xn"/>
+                                            <constraint firstAttribute="width" constant="160" id="wxJ-fF-xmt"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                                <color key="value" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6Tl-wo-uyP" firstAttribute="centerY" secondItem="ldV-3r-kjc" secondAttribute="centerY" id="Wtt-e2-ROs"/>
+                                    <constraint firstItem="6Tl-wo-uyP" firstAttribute="centerX" secondItem="ldV-3r-kjc" secondAttribute="centerX" id="eVJ-AH-B6I"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ldV-3r-kjc" secondAttribute="bottom" id="QWF-gD-Yny"/>
+                            <constraint firstItem="ldV-3r-kjc" firstAttribute="leading" secondItem="Xej-rz-fRc" secondAttribute="leading" id="a33-cv-Ymu"/>
+                            <constraint firstItem="ldV-3r-kjc" firstAttribute="top" secondItem="Xej-rz-fRc" secondAttribute="top" id="fWc-1l-O3t"/>
+                            <constraint firstAttribute="trailing" secondItem="ldV-3r-kjc" secondAttribute="trailing" id="i5e-HJ-Q6a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressIndicator" destination="qJu-lV-SAj" id="26g-v6-DQ2"/>
+                    </connections>
+                </viewController>
+                <customObject id="5lV-WF-hCo" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="877" y="180"/>
+        </scene>
+    </scenes>
+</document>

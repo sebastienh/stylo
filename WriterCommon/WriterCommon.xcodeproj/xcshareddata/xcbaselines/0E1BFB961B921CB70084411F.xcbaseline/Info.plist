@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>runDestinationsByUUID</key>
+	<dict>
+		<key>2A91A318-E1E3-4CFE-A4BD-DB407BD87254</key>
+		<dict>
+			<key>localComputer</key>
+			<dict>
+				<key>busSpeedInMHz</key>
+				<integer>100</integer>
+				<key>cpuCount</key>
+				<integer>1</integer>
+				<key>cpuKind</key>
+				<string>Intel Core i7</string>
+				<key>cpuSpeedInMHz</key>
+				<integer>2600</integer>
+				<key>logicalCPUCoresPerPackage</key>
+				<integer>8</integer>
+				<key>modelCode</key>
+				<string>MacBookPro10,1</string>
+				<key>physicalCPUCoresPerPackage</key>
+				<integer>4</integer>
+				<key>platformIdentifier</key>
+				<string>com.apple.platform.macosx</string>
+			</dict>
+			<key>targetArchitecture</key>
+			<string>x86_64</string>
+		</dict>
+		<key>4FFB2357-A61E-40E0-9805-C49903A31730</key>
+		<dict>
+			<key>localComputer</key>
+			<dict>
+				<key>busSpeedInMHz</key>
+				<integer>400</integer>
+				<key>cpuCount</key>
+				<integer>1</integer>
+				<key>cpuKind</key>
+				<string>8-Core Intel Core i9</string>
+				<key>cpuSpeedInMHz</key>
+				<integer>2400</integer>
+				<key>logicalCPUCoresPerPackage</key>
+				<integer>16</integer>
+				<key>modelCode</key>
+				<string>MacBookPro16,1</string>
+				<key>physicalCPUCoresPerPackage</key>
+				<integer>8</integer>
+				<key>platformIdentifier</key>
+				<string>com.apple.platform.macosx</string>
+			</dict>
+			<key>targetArchitecture</key>
+			<string>x86_64h</string>
+		</dict>
+		<key>522B7CE8-6E9C-46B9-A0A3-603EFB56A3CF</key>
+		<dict>
+			<key>localComputer</key>
+			<dict>
+				<key>busSpeedInMHz</key>
+				<integer>400</integer>
+				<key>cpuCount</key>
+				<integer>1</integer>
+				<key>cpuKind</key>
+				<string>8-Core Intel Core i9</string>
+				<key>cpuSpeedInMHz</key>
+				<integer>2400</integer>
+				<key>logicalCPUCoresPerPackage</key>
+				<integer>16</integer>
+				<key>modelCode</key>
+				<string>MacBookPro16,1</string>
+				<key>physicalCPUCoresPerPackage</key>
+				<integer>8</integer>
+				<key>platformIdentifier</key>
+				<string>com.apple.platform.macosx</string>
+			</dict>
+			<key>targetArchitecture</key>
+			<string>x86_64</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

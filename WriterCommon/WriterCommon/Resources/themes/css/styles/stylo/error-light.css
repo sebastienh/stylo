@@ -1,0 +1,10 @@
+
+:root {
+
+    --theme-caret-color: black;
+    --theme-foreground-color: #CCCCCC;
+    --theme-background-color: rgb(255,255,255);
+    --theme-unselectedErrorMessage-color: var(--fadded-red, pink);
+    --theme-selectedErrorMessage-color: var(--red, red);
+    --theme-selectedWarningMessage-color: var(--yellow, yellow);
+}

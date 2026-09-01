@@ -1,0 +1,90 @@
+syntax = "proto3";
+
+import "stylo_1.proto";
+import "styles.proto";
+
+message FileMetadata {
+    
+    string id = 1;
+
+    // the path of this element relative to the document
+    // it includes the file name
+    string name = 2;
+    
+    // links to other files
+    // LinkedFiles linkedFiles = 8;
+    
+    // links to associated audio files
+    // AudioFileSet audioFiles = 9;
+    
+    // versions will go here
+    // repeated VersionnedRange versionRanges = 10;
+}
+
+message DirectoryMetadata {
+    
+    string id = 1;
+    
+    // the path of this element relative to the document
+    // it includes the file name
+    string name = 2;
+    
+    repeated DirectoryItemMetadata items = 3;
+}
+
+message DirectoryItemMetadata {
+    
+    oneof item {
+        
+        FileMetadata file = 1;
+        DirectoryMetadata directory = 2;
+    }
+}
+
+message ExternalFilesSetMetadata {
+
+    // TODO: define an external file representation
+}
+
+message SourceSetMetadata {
+    
+    repeated DirectoryItemMetadata items = 1;
+    // external files, here because we need all files id
+    // to be defined in the source set manager
+    // repeated ExternalFilesGroup externalGroups = 3;
+}
+
+message FilesOutlineMetadata {
+    
+    string id = 1;
+    string name = 2;
+    
+    // Array of all files outline user selected items.
+    repeated string outlineUserSelectedItems = 3;
+    
+    // Array of all files outline expanded items.
+    repeated string outlineExpandedItems = 4;
+    
+    // Array of all editors array collapsed items
+    // Note: this is not the outline.
+    repeated string collapsedEditorItems = 5;
+}
+
+message FilesOutlineSetMetadata {
+    
+    string id = 1;
+    string selectedFilesOutlineId = 2;
+    repeated FilesOutlineMetadata filesOutlines = 3;
+}
+
+message DocumentMetadata {
+    
+    string id = 1;
+    string name = 2;
+    SemanticVersion releaseVersion = 3;
+    SourceSetMetadata sourceSet = 4;
+    FilesOutlineSetMetadata filesOutlineSet = 5;
+    SemanticVersion formatVersion = 6;
+    string globalStyleId = 7;
+}
+

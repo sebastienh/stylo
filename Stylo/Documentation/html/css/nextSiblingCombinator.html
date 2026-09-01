@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS next sibling selector combinator</title>
+		<meta name="description" content="CSS next sibling selector (+) combinator description, how to use it and some examples."></meta>
+		<meta name="KEYWORDS" content="next-sibling-combinator, next, sibling, combinator, selector, cascading, css"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- css/nextSiblingCombinator.html -->
+<h1>Next sibling combinator</h1>
+<p><strong>next sibling selector</strong> selects the next sibling element (the one right after an element). A <em>next sibling</em> selectors combinator is represented by the <code>+</code> sign between the selectors. In the HTML of the previous document, we could use a next sibling selector to select the <code>h2</code> element  under the first <code>h1</code> as follows:</p>
+<p>CSS:</p>
+<pre><code class="language-css">h1 + h2 {
+    ...
+}
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;title 1&lt;/h1&gt; 
+        &lt;h2&gt;title 2&lt;/h2&gt;
+        &lt;p&gt; 
+            &lt;h2&gt;title 2 in p&lt;/h2&gt;
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+	</body>
+</html>

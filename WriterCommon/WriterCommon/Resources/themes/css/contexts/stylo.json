@@ -1,0 +1,141 @@
+
+
+{
+    
+    "name": "Stylo",
+    
+    "theme": {
+        
+        "dark": {
+            "background": {
+                "color": "#1E1E1E"
+            }
+        },
+        "light": {
+            "background": {
+                "color": "#A3BAC3"
+            }
+        },
+        "css": {
+            
+            "foreground": {
+                "color": "#E69300",
+                "fontFamily": "Hack",
+                "fontSize": "10pt"
+            },
+            "light": {
+                "background": {
+                    "color": "#FFFFFF"
+                }
+            },
+            "dark": {
+                "background": {
+                    "color": "#1E1E22"
+                }
+            },
+            "source": {
+                
+                "function": {
+                    "color": "#01768B"
+                },
+                "comment": {
+                    "color": "#E69300"
+                },
+                "classSelector": {
+                    "color": "#01768B"
+                },
+                "atRuleName": {
+                    "color": "#124E78"
+                },
+                "namespacePrefix": {
+                    "color": "#01768B"
+                },
+                "namespaceUri": {
+                    "color": "#E69300"
+                },
+                "typeSelector": {
+                    "color": "#124E78"
+                },
+                "attributeName": {
+                    "color": "#01768B"
+                },
+                "attributeMatch": {
+                    "color": "#D11149"
+                },
+                "combinator": {
+                    "color": "#D11149"
+                },
+                "propertyName": {
+                    "color": "#01768B"
+                },
+                "important": {
+                    "color": "#DCDCDC"
+                },
+                "string": {
+                    "color": "#D11149"
+                },
+                "fontStyle": {
+                    "color": "#D11149"
+                },
+                "colorKeyword": {
+                    "color": "#D11149"
+                },
+                "colorHash": {
+                    "color": "#D11149"
+                },
+                "dimension": {
+                    "color": "#D11149"
+                },
+                "number": {
+                    "color": "#E69300"
+                },
+                "invalid": {
+                    "color": "#B80C09"
+                },
+                "pseudoSelectorOperator": {
+                    "color": "#01768B"
+                },
+                "pseudoSelectorValue": {
+                    "color": "#D11149"
+                }
+            },
+            "errors": {
+                
+                "foreground": {
+                    "color": "#124E78"
+                },
+                "unselectedErrorMessage": {
+                    "color": "#01768B"
+                },
+                "selectedErrorMessage": {
+                    "color": "#B80C09"
+                },
+                "unselectedWarningMessag": {
+                    "color": "#01768B"
+                },
+                "selectedWarningMessage": {
+                    "color": "#E69300"
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

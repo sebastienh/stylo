@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS Attribute existence selector</title>
+		<meta name="description" content="How to use the CSS attribute selector in a context where we want to select elements who have a particular attribute."></meta>
+		<meta name="KEYWORDS" content=""></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- css/attributeExistence.html -->
+<h1>Attribute existence</h1>
+<p>The attribute selector allows to select elements based on the existence of an attribute. To do that, we need to use the name of the attribute in square brackets. In the case of the following HTML document:</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1 author=&quot;john&quot;&gt;Title 1&lt;/h1&gt;
+        &lt;h2 class=&quot;other-class title&quot;&gt;Title 2&lt;/h2&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>it is possible to assign the red color to the <code>h1</code> element using the style declaration:</p>
+<p>CSS:</p>
+<pre><code class="language-css">[author] {
+    color: red;
+}
+</code></pre>
+<p>Here, we use the attribute selector to select all the elements that have the &quot;author&quot; attribute set, regardless of the it's value.</p>
+	</body>
+</html>

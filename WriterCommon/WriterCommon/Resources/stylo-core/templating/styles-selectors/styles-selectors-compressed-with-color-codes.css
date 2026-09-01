@@ -1,0 +1,1991 @@
+
+body {
+    color: var(--text-sts1);
+    background-color: var(--body-b1);
+}
+
+h1 , h2, h3, h4, h5, h6 {
+    color: var(--h-sts3);
+}
+
+h1::tag, h2::tag, h3::tag, h4::tag, h5::tag, h6::tag {
+    color: var(--h-tag-sts3);
+}
+
+
+p {
+    color: var(--text-sts3);
+}
+
+hr {
+    color: var(--hr-sts3);
+}
+
+strong, em {
+    color: var(--strong-em-sts3);
+}
+
+s {
+    color: var(--s-sts3);
+    text-decoration-color: var(--s-strikethrough-sts3);
+}
+
+strong::tag, em::tag {
+    color: var(--strong-em-tag-sts3);
+}
+
+s::tag {
+    color: var(--s-tag-sts3);
+}
+
+blockquote {
+    color: var(--blockquote-sts3);
+}
+
+blockquote::tag {
+    color: var(--blockquote-tag-sts3);
+}
+
+ul {
+    color: var(--ul-sts3);
+}
+
+ol {
+    color: var(--ol-sts3);
+}
+
+li {
+    color: var(--li-sts3);
+}
+
+li::tag {
+    color: var(--li-tag-sts3);
+}
+
+code {
+    color: var(--code-sts3);
+}
+
+code::tag {
+    color: var(--code-tag-sts3);
+}
+
+code::params {
+    color: var(--code-params-sts3);
+}
+
+table {
+    color: var(--table-sts3);
+}
+
+table::tag {
+    color: var(--table-tag-sts3);
+}
+
+thead {
+    color: var(--thead-sts3);
+}
+
+tbody {
+    color: var(--tbody-sts3);
+}
+
+tr {
+    color: var(--tr-sts3);
+}
+
+td {
+    color: var(--td-sts3);
+}
+
+a,
+img,
+ref {
+    color: var(--a-img-ref-sts3);
+}
+
+a::tag,
+img::tag,
+ref::tag {
+    color: var(--a-img-ref-tag-sts3);
+}
+
+a::text,
+img::text,
+ref::text {
+    color: var(--a-img-ref-text-sts3);
+}
+
+a::destination,
+img::destination,
+ref::destination {
+    color: var(--a-img-ref-dest-sts3);
+}
+
+a::label,
+img::label,
+ref::label {
+    color: var(--a-img-ref-lbl-sts3);
+}
+
+a::title,
+img::title,
+ref::title {
+    color: var(--a-img-ref-title-sts3);
+}
+
+html-block {
+    color: var(--html-block-sts3);
+}
+
+key-value-attr, class-attr, id-attr {
+    color: var(--key-value-attr-class-attr-id-attr-sts3);
+}
+
+key-value-attr::tag, class-attr::tag, id-attr::tag {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts3);
+}
+
+body:highlight {
+    color: var(--text-sts2);
+    background-color: var(--body-b2);
+}
+
+h1:highlight, h2:highlight, h3:highlight, h4:highlight, h5:highlight, h6:highlight {
+    color: var(--h-sts4);
+}
+
+h1::tag:highlight, h2::tag:highlight, h3::tag:highlight, h4::tag:highlight, h5::tag:highlight, h6::tag:highlight {
+    color: var(--h-tag-sts4);
+}
+
+p:highlight {
+    color: var(--text-sts4);
+}
+
+hr:highlight {
+    color: var(--hr-sts4);
+}
+
+:highlight strong::tag, :highlight em::tag, strong:highlight, em:highlight {
+    color: var(--strong-em-sts4);
+}
+
+:highlight s, s:highlight {
+    color: var(--s-sts4);
+    text-decoration-color: var(--s-strikethrough-sts4);
+}
+
+:highlight strong, :highlight em {
+    color: var(--strong-em-sts4);
+}
+
+:highlight s::tag {
+    color: var(--s-sts4);
+}
+
+:highlight strong:highlight,
+:highlight em:highlight {
+    color: var(--strong-em-sts7);
+}
+
+:highlight s:highlight {
+    color: var(--s-sts7);
+    text-decoration-color: var(--s-strikethrough-sts7);
+}
+
+:highlight strong::tag:highlight,
+:highlight em::tag:highlight  {
+    color: var(--strong-em-tag-sts7);
+}
+
+:highlight s::tag:highlight  {
+    color: var(--s-tag-sts7);
+}
+
+blockquote:highlight, :highlight blockquote {
+    color: var(--blockquote-sts4);
+}
+
+blockquote::tag:highlight, :highlight blockquote::tag {
+    color: var(--blockquote-tag-sts4);
+}
+
+:highlight blockquote::tag:highlight {
+    color: var(--blockquote-tag-sts7);
+}
+
+:highlight blockquote:highlight {
+    color: var(--blockquote-sts7);
+}
+
+ul:highlight, :highlight ul {
+    color: var(--ul-sts4);
+}
+
+ol:highlight, :highlight ol {
+    color: var(--ol-sts4);
+}
+
+li:highlight, :highlight li {
+    color: var(--li-sts4);
+}
+
+li::tag:highlight, :highlight li::tag {
+    color: var(--li-tag-sts4);
+}
+
+:highlight ul:highlight {
+    color: var(--ul-sts7);
+}
+
+:highlight ol:highlight {
+    color: var(--ol-sts7);
+}
+
+:highlight li:highlight {
+    color: var(--li-sts7);
+}
+
+:highlight li::tag:highlight {
+    color: var(--li-tag-sts7);
+}
+
+code:highlight, :highlight code {
+    color: var(--code-sts4);
+}
+
+code::tag:highlight, :highlight code::tag {
+    color: var(--code-tag-sts4);
+}
+
+code::params:highlight, :highlight code::params {
+    color: var(--code-params-sts4);
+}
+
+:highlight code:highlight {
+    color: var(--code-sts7);
+}
+
+:highlight code::tag:highlight {
+    color: var(--code-tag-sts7);
+}
+
+:highlight code::params:highlight {
+    color: var(--code-params-sts7);
+}
+
+table:highlight {
+    color: var(--table-sts4);
+}
+
+table::tag:highlight {
+    color: var(--table-tag-sts4);
+}
+
+thead:highlight, :highlight thead {
+    color: var(--thead-sts4);
+}
+
+tbody:highlight, :highlight tbody {
+    color: var(--tbody-sts4);
+}
+
+tr:highlight, :highlight tr {
+    color: var(--tr-sts4);
+}
+
+td:highlight, :highlight td {
+    color: var(--td-sts4);
+}
+
+:highlight thead:highlight {
+    color: var(--thead-sts7);
+}
+
+:highlight tbody:highlight {
+    color: var(--tbody-sts7);
+}
+
+:highlight tr:highlight {
+    color: var(--tr-sts7);
+}
+
+:highlight td:highlight {
+    color: var(--td-sts7);
+}
+
+a:highlight,
+img:highlight,
+ref:highlight,
+:highlight a,
+:highlight img,
+:highlight ref {
+    color: var(--a-img-ref-sts4);
+}
+
+a::tag:highlight,
+img::tag:highlight,
+ref::tag:highlight,
+:highlight a::tag,
+:highlight img::tag,
+:highlight ref::tag {
+    color: var(--a-img-ref-tag-sts4);
+}
+
+a::text:highlight,
+img::text:highlight,
+ref::text:highlight,
+:highlight a::text,
+:highlight img::text,
+:highlight ref::text {
+    color: var(--a-img-ref-text-sts4);
+}
+
+a::destination:highlight,
+img::destination:highlight,
+ref::destination:highlight,
+:highlight a::destination,
+:highlight img::destination,
+:highlight ref::destination {
+    color: var(--a-img-ref-dest-sts4);
+}
+
+a::label:highlight,
+img::label:highlight,
+ref::label:highlight,
+:highlight a::label,
+:highlight img::label,
+:highlight ref::label {
+    color: var(--a-img-ref-lbl-sts4);
+}
+
+a::title:highlight,
+img::title:highlight,
+ref::title:highlight,
+:highlight a::title,
+:highlight img::title,
+:highlight ref::title {
+    color: var(--a-img-ref-title-sts4);
+}
+
+:highlight a:highlight,
+:highlight img:highlight,
+:highlight ref:highlight {
+    color: var(--a-img-ref-sts7);
+}
+
+:highlight a::tag:highlight,
+:highlight img::tag:highlight,
+:highlight ref::tag:highlight {
+    color: var(--a-img-ref-tag-sts7);
+}
+
+:highlight a::text:highlight,
+:highlight img::text:highlight,
+:highlight ref::text:highlight {
+    color: var(--a-img-ref-text-sts7);
+}
+
+:highlight a::destination:highlight,
+:highlight img::destination:highlight,
+:highlight ref::destination:highlight {
+    color: var(--a-img-ref-dest-sts7);
+}
+
+:highlight a::label:highlight,
+:highlight img::label:highlight,
+:highlight ref::label:highlight {
+    color: var(--a-img-ref-lbl-sts7);
+}
+
+:highlight a::title:highlight,
+:highlight img::title:highlight,
+:highlight ref::title:highlight {
+    color: var(--a-img-ref-title-sts7);
+}
+
+html-block:highlight {
+    color: var(--html-block-sts4);
+}
+
+key-value-attr:highlight,
+class-attr:highlight,
+id-attr:highlight,
+:highlight key-value-attr,
+:highlight class-attr,
+:highlight id-attr {
+    color: var();
+}
+
+key-value-attr::tag:highlight,
+class-attr::tag:highlight,
+id-attr::tag:highlight,
+:highlight key-value-attr::tag,
+:highlight class-attr::tag,
+:highlight id-attr::tag {
+    color: var(--key-value-attr-class-attr-id-attr-sts4);
+}
+
+:highlight key-value-attr:highlight,
+:highlight class-attr:highlight,
+:highlight id-attr:highlight {
+    color: var(--key-value-attr-class-attr-id-attr-sts7);
+}
+
+:highlight key-value-attr::tag:highlight,
+:highlight class-attr::tag:highlight,
+:highlight id-attr::tag:highlight {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts7);
+}
+
+h1:flash,
+h2:flash,
+h3:flash,
+h4:flash,
+h5:flash,
+h6:flash {
+    color: var(--h-sts6);
+}
+
+h1::tag:flash,
+h2::tag:flash,
+h3::tag:flash,
+h4::tag:flash,
+h5::tag:flash,
+h6::tag:flash {
+    color: var(--h-tag-sts6);
+}
+
+p:flash {
+    color: var(--text-sts6);
+}
+
+hr:flash {
+    color: var(--hr-sts6);
+}
+
+strong:flash,
+em:flash,
+:flash strong,
+:flash em {
+    color: var(--strong-em-sts6);
+}
+
+s:flash,
+:flash s {
+    color: var(--s-sts6);
+    text-decoration-color: var(--s-strikethrough-sts6);
+}
+
+:flash strong::tag,
+:flash em::tag {
+    color: var(--strong-em-tag-sts6);
+}
+
+:flash s::tag {
+    color: var(--s-tag-sts6);
+}
+
+blockquote:flash,
+:flash blockquote {
+    color: var(--blockquote-sts6);
+}
+
+blockquote::tag:flash,
+:flash blockquote::tag {
+    color: var(--blockquote-tag-sts6);
+}
+
+ul:flash,
+:flash ul {
+    color: var(--ul-sts6);
+}
+
+ol:flash,
+:flash ol {
+    color: var(--ol-sts6);
+}
+
+li:flash,
+:flash li {
+    color: var(--li-sts6);
+}
+
+li::tag:flash,
+:flash li::tag {
+    color: var(--li-tag-sts6);
+}
+
+code:flash,
+:flash code {
+    color: var(--code-sts6);
+}
+
+code::tag:flash,
+:flash code::tag {
+    color: var(--code-tag-sts6);
+}
+
+code::params:flash,
+:flash code::params {
+    color: var(--code-params-sts6);
+}
+
+table:flash {
+    color: var(--table-sts6);
+}
+
+table::tag:flash {
+    color: var(--table-tag-sts6);
+}
+
+thead:flash,
+:flash thead {
+    color: var(--thead-sts6);
+}
+
+tbody:flash,
+:flash tbody {
+    color: var(--tbody-sts6);
+}
+
+tr:flash,
+:flash tr {
+    color: var(--tr-sts6);
+}
+
+td:flash,
+:flash td {
+    color: var(--td-sts6);
+}
+
+a:flash,
+img:flash,
+ref:flash,
+:flash a,
+:flash img,
+:flash ref {
+    color: var(--a-img-ref-sts6);
+}
+
+a::tag:flash,
+img::tag:flash,
+ref::tag:flash,
+:flash a::tag,
+:flash img::tag,
+:flash ref::tag {
+    color: var(--a-img-ref-tag-sts6);
+}
+
+a::text:flash,
+img::text:flash,
+ref::text:flash,
+:flash a::text,
+:flash img::text,
+:flash ref::text {
+    color: var(--a-img-ref-text-sts6);
+}
+
+a::destination:flash,
+img::destination:flash,
+ref::destination:flash,
+:flash a::destination,
+:flash img::destination,
+:flash ref::destination {
+    color: var(--a-img-ref-dest-sts6);
+}
+
+
+a::label:flash,
+img::label:flash,
+ref::label:flash,
+:flash a::label,
+:flash img::label,
+:flash ref::label {
+    color: var(--a-img-ref-lbl-sts6);
+}
+
+a::title:flash,
+img::title:flash,
+ref::title:flash,
+:flash a::title,
+:flash img::title,
+:flash ref::title {
+    color: var(--a-img-ref-title-sts6);
+}
+
+html-block:flash {
+    color: var(--html-block-sts6);
+}
+
+key-value-attr:flash ,
+class-attr:flash,
+id-attr:flash,
+:flash key-value-attr,
+:flash class-attr,
+:flash id-attr {
+    color: var(--key-value-attr-class-attr-id-attr-sts6);
+}
+
+key-value-attr::tag:flash,
+class-attr::tag:flash,
+id-attr::tag:flash,
+:flash key-value-attr::tag,
+:flash class-attr::tag,
+:flash id-attr::tag {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts6);
+}
+
+h1:fade,
+h2:fade,
+h3:fade,
+h4:fade,
+h5:fade,
+h6:fade {
+    color: var(--h-sts1);
+}
+
+h1::tag:fade,
+h2::tag:fade,
+h3::tag:fade,
+h4::tag:fade,
+h5::tag:fade,
+h6::tag:fade {
+    color: var(--h-tag-sts1);
+}
+
+p:fade {
+    color: var(--text-sts1);
+}
+
+hr:fade {
+    color: var(--hr-sts1);
+}
+
+strong:fade,
+em:fade,
+:fade strong,
+:fade em  {
+    color: var(--strong-em-sts1);
+}
+
+s:fade,
+:fade s {
+    color: var(--s-sts1);
+    text-decoration-color: var(--s-strikethrough-sts1);
+}
+
+:fade strong::tag,
+:fade em::tag {
+    color: var(--strong-em-tag-sts1);
+}
+
+:fade s::tag {
+    color: var(--s-tag-sts1);
+}
+
+blockquote:fade,
+:fade blockquote {
+    color: var(--blockquote-sts1);
+}
+
+blockquote::tag:fade,
+:fade blockquote::tag  {
+    color: var(--blockquote-tag-sts1);
+}
+
+ul:fade,
+:fade ul {
+    color: var(--ul-sts1);
+}
+
+ol:fade,
+:fade ol {
+    color: var(--ol-sts1);
+}
+
+li:fade,
+:fade li {
+    color: var(--li-sts1);
+}
+
+li::tag:fade,
+:fade li::tag {
+    color: var(--li-tag-sts1);
+}
+
+code:fade,
+:fade code {
+    color: var(--code-sts1);
+}
+
+code::tag:fade,
+:fade code::tag {
+    color: var(--code-tag-sts1);
+}
+
+code::params:fade,
+:fade code::params {
+    color: var(--code-params-sts1);
+}
+
+table:fade {
+    color: var(--table-sts1);
+}
+
+table::tag:fade {
+    color: var(--table-tag-sts1);
+}
+
+thead:fade,
+:fade thead {
+    color: var(--thead-sts1);
+}
+
+tbody:fade,
+:fade tbody {
+    color: var(--tbody-sts1);
+}
+
+tr:fade,
+:fade tr {
+    color: var(--tr-sts1);
+}
+
+td:fade,
+:fade td {
+    color: var(--td-sts1);
+}
+
+a:fade,
+img:fade,
+ref:fade,
+:fade a,
+:fade img,
+:fade ref {
+    color: var(--a-img-ref-sts1);
+}
+
+a::tag:fade,
+img::tag:fade,
+ref::tag:fade,
+:fade a::tag,
+:fade img::tag,
+:fade ref::tag {
+    color: var(--a-img-ref-tag-sts1);
+}
+
+a::text:fade,
+img::text:fade,
+ref::text:fade,
+:fade a::text,
+:fade img::text,
+:fade ref::text {
+    color: var(--a-img-ref-text-sts1);
+}
+
+a::destination:fade,
+img::destination:fade,
+ref::destination:fade,
+:fade a::destination,
+:fade img::destination,
+:fade ref::destination {
+    color: var(--a-img-ref-dest-sts1);
+}
+
+a::label:fade,
+img::label:fade,
+ref::label:fade,
+:fade a::label,
+:fade img::label,
+:fade ref::label {
+    color: var(--a-img-ref-lbl-sts1);
+}
+
+a::title:fade,
+img::title:fade,
+ref::title:fade,
+:fade a::title,
+:fade img::title,
+:fade ref::title {
+    color: var(--a-img-ref-title-sts1);
+}
+
+html-block:fade {
+    color: var(--html-block-sts1);
+}
+
+key-value-attr:fade,
+class-attr:fade,
+id-attr:fade,
+:fade key-value-attr::tag,
+:fade class-attr::tag,
+:fade id-attr::tag {
+    color: var(--key-value-attr-class-attr-id-attr-sts1);
+}
+
+key-value-attr::tag:fade,
+class-attr::tag:fade,
+id-attr::tag:fade,
+:fade key-value-attr,
+:fade class-attr,
+:fade id-attr  {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts1);
+}
+
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus {
+    color: var(--h-sts5);
+}
+
+h1::tag:focus,
+h2::tag:focus,
+h3::tag:focus,
+h4::tag:focus,
+h5::tag:focus,
+h6::tag:focus {
+    color: var(--h-tag-sts5);
+}
+
+p:focus {
+    color: var(--text-sts5);
+}
+
+hr:focus {
+    color: var(--hr-sts5);
+}
+
+strong:focus,
+em:focus,
+:focus strong,
+:focus em {
+    color: var(--strong-em-sts5);
+}
+
+s:focus,
+:focus s {
+    color: var(--s-sts5);
+    text-decoration-color: var(--s-strikethrough-sts5);
+}
+
+:focus strong::tag,
+:focus em::tag {
+    color: var(--strong-em-tag-sts5);
+}
+
+:focus s::tag {
+    color: var(--s-tag-sts5);
+}
+
+blockquote:focus,
+:focus blockquote {
+    color: var(--blockquote-sts5);
+}
+
+blockquote::tag:focus,
+:focus blockquote::tag {
+    color: var(--blockquote-tag-sts5);
+}
+
+ul:focus,
+:focus ul {
+    color: var(--ul-sts5);
+}
+
+ol:focus,
+:focus ol {
+    color: var(--ol-sts5);
+}
+
+li:focus,
+:focus li {
+    color: var(--li-sts5);
+}
+
+li::tag:focus,
+:focus li::tag {
+    color: var(--li-tag-sts5);
+}
+
+code:focus,
+:focus code {
+    color: var(--code-sts5);
+}
+
+code::tag:focus,
+:focus code::tag {
+    color: var(--code-tag-sts5);
+}
+
+code::params:focus,
+:focus code::params {
+    color: var(--code-params-sts5);
+}
+
+table:focus {
+    color: var(--table-sts5);
+}
+
+table::tag:focus {
+    color: var(--table-tag-sts5);
+}
+
+thead:focus,
+:focus thead {
+    color: var(--thead-sts5);
+}
+
+tbody:focus,
+:focus tbody {
+    color: var(--tbody-sts5);
+}
+
+tr:focus,
+:focus tr {
+    color: var(--tr-sts5);
+}
+
+td:focus,
+:focus td {
+    color: var(--td-sts5);
+}
+
+a:focus,
+img:focus,
+ref:focus,
+:focus a,
+:focus img,
+:focus ref {
+    color: var(--a-img-ref-sts5);
+}
+
+a::tag:focus,
+img::tag:focus,
+ref::tag:focus,
+:focus a::tag,
+:focus img::tag,
+:focus ref::tag {
+    color: var(--a-img-ref-tag-sts5);
+}
+
+a::text:focus,
+img::text:focus,
+ref::text:focus,
+:focus a::text,
+:focus img::text,
+:focus ref::text {
+    color: var(--a-img-ref-text-sts5);
+}
+
+a::destination:focus,
+img::destination:focus,
+ref::destination:focus,
+:focus a::destination,
+:focus img::destination,
+:focus ref::destination {
+    color: var(--a-img-ref-dest-sts5);
+}
+
+a::label:focus,
+img::label:focus,
+ref::label:focus,
+:focus a::label,
+:focus img::label,
+:focus ref::label {
+    color: var(--a-img-ref-lbl-sts5);
+}
+
+a::title:focus,
+img::title:focus,
+ref::title:focus,
+:focus a::title,
+:focus img::title,
+:focus ref::title {
+    color: var(--a-img-ref-title-sts5);
+}
+
+html-block:focus {
+    color: var(--html-block-sts5);
+}
+
+key-value-attr:focus,
+class-attr:focus,
+id-attr:focus,
+:focus key-value-attr,
+:focus class-attr,
+:focus id-attr {
+    color: var(--key-value-attr-class-attr-id-attr-sts5);
+}
+
+key-value-attr::tag:focus,
+class-attr::tag:focus,
+id-attr::tag:focus,
+:focus key-value-attr::tag,
+:focus class-attr::tag,
+:focus id-attr::tag {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts5);
+}
+
+h1:highlight:fade,
+h2:highlight:fade,
+h3:highlight:fade,
+h4:highlight:fade,
+h5:highlight:fade,
+h6:highlight:fade {
+    color: var(--h-sts2);
+}
+
+h1::tag:highlight:fade,
+h2::tag:highlight:fade,
+h3::tag:highlight:fade,
+h4::tag:highlight:fade,
+h5::tag:highlight:fade,
+h6::tag:highlight:fade {
+    color: var(--h-tag-sts2);
+}
+
+p:highlight:fade {
+    color: var(--text-sts2);
+}
+
+hr:highlight:fade {
+    color: var(--hr-sts2);
+}
+
+strong:highlight:fade,
+em:highlight:fade,
+:highlight strong:fade,
+:highlight em:fade {
+    color: var(--strong-em-sts2);
+}
+
+s:highlight:fade,
+:highlight s:fade {
+    color: var(--s-sts2);
+    text-decoration-color: var(--s-strikethrough-sts2);
+}
+
+strong::tag:highlight:fade,
+em::tag:highlight:fade,
+:highlight strong::tag:fade,
+:highlight em::tag:fade {
+    color: var(--strong-em-tag-sts2);
+}
+
+s::tag:highlight:fade,
+:highlight s::tag:fade {
+    color: var(--s-tag-sts2);
+}
+
+:highlight strong:highlight:fade,
+:highlight em:highlight:fade {
+    color: var(--strong-em-sts3);
+}
+
+:highlight s:highlight:fade {
+    color: var(--s-tag-sts3);
+    text-decoration-color: var(--s-strikethrough-sts3);
+}
+
+:highlight strong::tag:highlight:fade,
+:highlight em::tag:highlight:fade {
+    color: var(--strong-em-tag-sts3);
+}
+
+:highlight s::tag:highlight:fade {
+    color: var(--s-tag-sts3);
+}
+
+blockquote:highlight:fade,
+:highlight blockquote:fade {
+    color: var(--blockquote-sts2);
+}
+
+blockquote::tag:highlight:fade,
+:highlight blockquote::tag:fade {
+    color: var(--blockquote-tag-sts2);
+}
+
+:highlight blockquote:highlight:fade {
+    color: var(--blockquote-sts3);
+}
+
+:highlight blockquote::tag:highlight:fade {
+    color: var(--blockquote-tag-sts3);
+}
+
+ul:highlight:fade,
+:highlight ul:fade {
+    color: var(--ul-sts2);
+}
+
+ol:highlight:fade,
+:highlight ol:fade {
+    color: var(--ol-sts2);
+}
+
+li:highlight:fade,
+:highlight li:fade {
+    color: var(--li-sts2);
+}
+
+li::tag:highlight:fade,
+:highlight li::tag:fade {
+    color: var(--li-tag-sts2);
+}
+
+:highlight ul:highlight:fade {
+    color: var(--ul-sts3);
+}
+
+:highlight ol:highlight:fade {
+    color: var(--ol-sts3);
+}
+
+:highlight li:highlight:fade {
+    color: var(--li-sts3);
+}
+
+:highlight li::tag:highlight:fade {
+    color: var(--li-tag-sts3);
+}
+
+code:highlight:fade,
+:highlight code:fade {
+    color: var(--code-sts2);
+}
+
+code::tag:highlight:fade,
+:highlight code::tag:fade {
+    color: var(--code-tag-sts2);
+}
+
+code::params:highlight:fade,
+:highlight code::params:fade {
+    color: var(--code-params-sts2);
+}
+
+:highlight code:highlight:fade {
+    color: var(--code-sts3);
+}
+
+:highlight code::tag:highlight:fade {
+    color: var(--code-tag-sts3);
+}
+
+:highlight code::params:highlight:fade {
+    color: var(--code-params-sts3);
+}
+
+table:highlight:fade {
+    color: var(--table-sts2);
+}
+
+table::tag:highlight:fade {
+    color: var(--table-tag-sts2);
+}
+
+thead:highlight:fade,
+:highlight thead:fade {
+    color: var(--thead-sts2);
+}
+
+tbody:highlight:fade,
+:highlight tbody:fade {
+    color: var(--tbody-sts2);
+}
+
+tr:highlight:fade,
+:highlight tr:fade {
+    color: var(--tr-sts2);
+}
+
+td:highlight:fade,
+:highlight td:fade {
+    color: var(--td-sts2);
+}
+
+:highlight thead:highlight:fade {
+    color: var(--thead-sts3);
+}
+
+:highlight tbody:highlight:fade {
+    color: var(--tbody-sts3);
+}
+
+:highlight tr:highlight:fade {
+    color: var(--tr-sts3);
+}
+
+:highlight td :highlight:fade {
+    color: var(--td-sts3);
+}
+
+a:highlight:fade,
+img:highlight:fade,
+ref:highlight:fade,
+:highlight a:fade,
+:highlight img:fade,
+:highlight ref:fade {
+    color: var(--a-img-ref-sts2);
+}
+
+a::tag:highlight:fade,
+img::tag:highlight:fade,
+ref::tag:highlight:fade,
+:highlight a::tag:fade,
+:highlight img::tag:fade,
+:highlight ref::tag:fade {
+    color: var(--a-img-ref-tag-sts2);
+}
+
+a::text:highlight:fade,
+img::text:highlight:fade,
+ref::text:highlight:fade,
+:highlight a::text:fade,
+:highlight img::text:fade,
+:highlight ref::text:fade {
+    color: var(--a-img-ref-text-sts2);
+}
+
+a::destination:highlight:fade,
+img::destination:highlight:fade,
+ref::destination:highlight:fade,
+:highlight a::destination:fade,
+:highlight img::destination:fade,
+:highlight ref::destination:fade {
+    color: var(--a-img-ref-dest-sts2);
+}
+
+a::label:highlight:fade,
+img::label:highlight:fade,
+ref::label:highlight:fade,
+:highlight a::label:fade,
+:highlight img::label:fade,
+:highlight ref::label:fade {
+    color: var(--a-img-ref-lbl-sts2);
+}
+
+a::title:highlight:fade,
+img::title:highlight:fade,
+ref::title:highlight:fade,
+:highlight a::title:fade,
+:highlight img::title:fade,
+:highlight ref::title:fade {
+    color: var(--a-img-ref-title-sts2);
+}
+
+:highlight a:highlight:fade,
+:highlight img:highlight:fade,
+:highlight ref:highlight:fade {
+    color: var(--a-img-ref-sts3);
+}
+
+:highlight a::tag:highlight:fade,
+:highlight img::tag:highlight:fade,
+:highlight ref::tag:highlight:fade {
+    color: var(--a-img-ref-tag-sts3);
+}
+
+:highlight a::text:highlight:fade,
+:highlight img::text:highlight:fade,
+:highlight ref::text:highlight:fade {
+    color: var(--a-img-ref-text-sts3);
+}
+
+:highlight a::destination:highlight:fade,
+:highlight img::destination:highlight:fade,
+:highlight ref::destination:highlight:fade {
+    color: var(--a-img-ref-dest-sts3);
+}
+
+:highlight a::label:highlight:fade,
+:highlight img::label:highlight:fade,
+:highlight ref::label:highlight:fade {
+    color: var(--a-img-ref-lbl-sts3);
+}
+
+:highlight a::title:highlight:fade,
+:highlight img::title:highlight:fade,
+:highlight ref::title:highlight:fade {
+    color: var(--a-img-ref-title-sts3);
+}
+
+html-block:highlight:fade {
+    color: var(--html-block-sts2);
+}
+
+key-value-attr:highlight:fade,
+class-attr:highlight:fade,
+id-attr:highlight:fade,
+:highlight key-value-attr:fade,
+:highlight class-attr:fade,
+:highlight id-attr:fade {
+    color: var(--key-value-attr-class-attr-id-attr-sts2);
+}
+
+key-value-attr::tag:highlight:fade,
+class-attr::tag:highlight:fade,
+id-attr::tag:highlight:fade,
+:highlight key-value-attr::tag:fade,
+:highlight class-attr::tag:fade,
+:highlight id-attr::tag:fade {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts2);
+}
+
+:highlight key-value-attr:highlight:fade,
+:highlight class-attr:highlight:fade,
+:highlight id-attr:highlight:fade {
+    color: var(--key-value-attr-class-attr-id-attr-sts3);
+}
+
+:highlight key-value-attr::tag:highlight:fade,
+:highlight class-attr::tag:highlight:fade,
+:highlight id-attr::tag:highlight:fade {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts3);
+}
+
+h1:highlight:focus,
+h2:highlight:focus,
+h3:highlight:focus,
+h4:highlight:focus,
+h5:highlight:focus,
+h6:highlight:focus {
+    color: var(--h-sts7);
+}
+
+h1::tag:highlight:focus,
+h2::tag:highlight:focus,
+h3::tag:highlight:focus,
+h4::tag:highlight:focus,
+h5::tag:highlight:focus,
+h6::tag:highlight:focus {
+    color: var(--h-tag-sts7);
+}
+
+p:highlight:focus {
+    color: var(--text-sts7);
+}
+
+hr:highlight:focus {
+    color: var(--hr-sts7);
+}
+
+strong:highlight:focus,
+em:highlight:focus,
+:highlight strong:focus,
+:highlight em:focus {
+    color: var(--strong-em-sts7);
+}
+
+s:highlight:focus,
+:highlight s:focus {
+    color: var(--s-sts7);
+    text-decoration-color: var(--s-strikethrough-sts7);
+}
+
+strong::tag:highlight:focus,
+em::tag:highlight:focus,
+:highlight strong::tag:focus,
+:highlight em::tag:focus {
+    color: var(--strong-em-tag-sts7);
+}
+
+s::tag:highlight:focus,
+:highlight s::tag:focus {
+    color: var(--s-tag-sts7);
+}
+
+:highlight strong:highlight:focus,
+:highlight em:highlight:focus {
+    color: var(--strong-em-sts8);
+}
+
+:highlight s:highlight:focus {
+    color: var(--s-sts8);
+    text-decoration-color: var(--s-strikethrough-sts8);
+}
+
+:highlight strong::tag:highlight:focus,
+:highlight em::tag:highlight:focus {
+    color: var(--strong-em-tag-sts8);
+}
+
+:highlight s::tag:highlight:focus {
+    color: var(--s-tag-sts8);
+}
+
+blockquote:highlight:focus,
+:highlight blockquote:focus {
+    color: var(--blockquote-sts7);
+}
+
+blockquote::tag:highlight:focus,
+:highlight blockquote::tag:focus {
+    color: var(--blockquote-tag-sts7);
+}
+
+:highlight blockquote:highlight:focus {
+    color: var(--blockquote-sts8);
+}
+
+:highlight blockquote::tag:highlight:focus {
+    color: var(--blockquote-tag-sts8);
+}
+
+ul:highlight:focus,
+:highlight ul:focus {
+    color: var(--ul-sts7);
+}
+
+ol:highlight:focus,
+:highlight ol:focus {
+    color: var(--ol-sts7);
+}
+
+li:highlight:focus,
+:highlight li:focus {
+    color: var(--li-sts7);
+}
+
+li::tag:highlight:focus,
+:highlight li::tag:focus {
+    color: var(--li-tag-sts7);
+}
+
+:highlight ul:highlight:focus {
+    color: var(--ul-sts8);
+}
+
+:highlight ol:highlight:focus {
+    color: var(--ol-sts8);
+}
+
+:highlight li:highlight:focus {
+    color: var(--li-sts8);
+}
+
+:highlight li::tag:highlight:focus {
+    color: var(--li-tag-sts8);
+}
+
+code:highlight:focus,
+:highlight code:focus {
+    color: var(--code-sts7);
+}
+
+code::tag:highlight:focus,
+:highlight code::tag:focus {
+    color: var(--code-tag-sts7);
+}
+
+code::params:highlight:focus,
+:highlight code::params:focus {
+    color: var(--code-params-sts7);
+}
+
+:highlight code:highlight:focus {
+    color: var(--code-sts8);
+}
+
+:highlight code::tag:highlight:focus {
+    color: var(--code-tag-sts8);
+}
+
+:highlight code::params:highlight:focus {
+    color: var(--code-params-sts8);
+}
+
+table:highlight:focus {
+    color: var(--table-sts7);
+}
+
+table::tag:highlight:focus {
+    color: var(--table-tag-sts7);
+}
+
+thead:highlight:focus,
+:highlight thead:focus {
+    color: var(--thead-sts7);
+}
+
+tbody:highlight:focus,
+:highlight tbody:focus {
+    color: var(--tbody-sts7);
+}
+
+tr:highlight:focus,
+:highlight tr:focus {
+    color: var(--tr-sts7);
+}
+
+td:highlight:focus,
+:highlight td:focus {
+    color: var(--td-sts7);
+}
+
+:highlight thead:highlight:focus {
+    color: var(--thead-sts8);
+}
+
+:highlight tbody:highlight:focus {
+    color: var(--tbody-sts8);
+}
+
+:highlight tr:highlight:focus {
+    color: var(--tr-sts8);
+}
+
+:highlight td:highlight:focus {
+    color: var(--td-sts8);
+}
+
+a:highlight:focus,
+img:highlight:focus,
+ref:highlight:focus,
+:highlight a:focus,
+:highlight img:focus,
+:highlight ref:focus {
+    color: var(--a-img-ref-sts7);
+}
+
+a::tag:highlight:focus,
+img::tag:highlight:focus,
+ref::tag:highlight:focus,
+:highlight a::tag:focus,
+:highlight img::tag:focus,
+:highlight ref::tag:focus {
+    color: var(--a-img-ref-tag-sts7);
+}
+
+a::text:highlight:focus,
+img::text:highlight:focus,
+ref::text:highlight:focus,
+:highlight a::text:focus,
+:highlight img::text:focus,
+:highlight ref::text:focus {
+    color: var(--a-img-ref-text-sts7);
+}
+
+a::destination:highlight:focus,
+img::destination:highlight:focus,
+ref::destination:highlight:focus,
+:highlight a::destination:focus,
+:highlight img::destination:focus,
+:highlight ref::destination:focus {
+    color: var(--a-img-ref-dest-sts7);
+}
+
+a::label:highlight:focus,
+img::label:highlight:focus,
+ref::label:highlight:focus,
+:highlight a::label:focus,
+:highlight img::label:focus,
+:highlight ref::label:focus {
+    color: var(--a-img-ref-lbl-sts7);
+}
+
+a::title:highlight:focus,
+img::title:highlight:focus,
+ref::title:highlight:focus,
+:highlight a::title:focus,
+:highlight img::title:focus,
+:highlight ref::title:focus {
+    color: var(--a-img-ref-title-sts7);
+}
+
+:highlight a:highlight:focus,
+:highlight img:highlight:focus,
+:highlight ref:highlight:focus {
+    color: var(--a-img-ref-sts8);
+}
+
+:highlight a::tag:highlight:focus,
+:highlight img::tag:highlight:focus,
+:highlight ref::tag:highlight:focus {
+    color: var(--a-img-ref-tag-sts8);
+}
+
+:highlight a::text:highlight:focus,
+:highlight img::text:highlight:focus,
+:highlight ref::text:highlight:focus {
+    color: var(--a-img-ref-text-sts8);
+}
+
+:highlight a::destination:highlight:focus,
+:highlight img::destination:highlight:focus,
+:highlight ref::destination:highlight:focus {
+    color: var(--a-img-ref-dest-sts8);
+}
+
+:highlight a::label:highlight:focus,
+:highlight img::label:highlight:focus,
+:highlight ref::label:highlight:focus {
+    color: var(--a-img-ref-lbl-sts8);
+}
+
+:highlight a::title:highlight:focus,
+:highlight img::title:highlight:focus,
+:highlight ref::title:highlight:focus {
+    color: var(--a-img-ref-title-sts8);
+}
+
+html-block:highlight:focus {
+    color: var(--html-block-sts7);
+}
+
+key-value-attr:highlight:focus,
+class-attr:highlight:focus,
+id-attr:highlight:focus,
+:highlight key-value-attr:focus,
+:highlight class-attr:focus,
+:highlight id-attr:focus {
+    color: var(--key-value-attr-class-attr-id-attr-sts7);
+}
+
+key-value-attr::tag:highlight:focus,
+class-attr::tag:highlight:focus,
+id-attr::tag:highlight:focus,
+:highlight key-value-attr::tag:focus,
+:highlight class-attr::tag:focus,
+:highlight id-attr::tag:focus {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts7);
+}
+
+:highlight key-value-attr:highlight:focus,
+:highlight class-attr:highlight:focus,
+:highlight id-attr:highlight:focus {
+    color: var(--key-value-attr-class-attr-id-attr-sts8);
+}
+
+:highlight key-value-attr::tag:highlight:focus,
+:highlight class-attr::tag:highlight:focus,
+:highlight id-attr::tag:highlight:focus {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts8);
+}
+
+h1:highlight:flash,
+h2:highlight:flash,
+h3:highlight:flash,
+h4:highlight:flash,
+h5:highlight:flash,
+h6:highlight:flash {
+    color: var(--h-sts8);
+}
+
+h1::tag:highlight:flash,
+h2::tag:highlight:flash,
+h3::tag:highlight:flash,
+h4::tag:highlight:flash,
+h5::tag:highlight:flash,
+h6::tag:highlight:flash {
+    color: var(--h-tag-sts8);
+}
+
+p:highlight:flash {
+    color: var(--text-sts8);
+}
+
+hr:highlight:flash {
+    color: var(--hr-sts8);
+}
+
+strong:highlight:flash,
+em:highlight:flash,
+:highlight strong:flash,
+:highlight em:flash {
+    color: var(--strong-em-sts8);
+}
+
+s:highlight:flash,
+:highlight s:flash {
+    color: var(--s-sts8);
+    text-decoration-color: var(--s-strikethrough-sts8);
+}
+
+strong::tag:highlight:flash,
+em::tag:highlight:flash,
+:highlight strong::tag:flash,
+:highlight em::tag:flash {
+    color: var(--strong-em-tag-sts8);
+}
+
+s::tag:highlight:flash,
+:highlight s::tag:flash {
+    color: var(--s-tag-sts8);
+}
+
+:highlight:flash strong:highlight,
+:highlight:flash em:highlight {
+    color: var(--strong-em-sts9);
+}
+
+:highlight:flash s:highlight {
+    color: var(--s-sts9);
+    text-decoration-color: var(--s-strikethrough-sts9);
+}
+
+:highlight:flash strong::tag:highlight,
+:highlight:flash em::tag:highlight {
+    color: var(--strong-em-tag-sts9);
+}
+
+:highlight:flash s::tag:highlight {
+    color: var(--s-tag-sts9);
+}
+
+blockquote:highlight:flash,
+:highlight blockquote:flash {
+    color: var(--blockquote-sts8);
+}
+
+blockquote::tag:highlight:flash,
+:highlight blockquote::tag:flash {
+    color: var(--blockquote-tag-sts8);
+}
+
+:highlight:flash blockquote:highlight {
+    color: var(--blockquote-sts9);
+}
+
+:highlight:flash blockquote::tag:highlight {
+    color: var(--blockquote-tag-sts9);
+}
+
+ul:highlight:flash,
+:highlight ul:flash {
+    color: var(--ul-sts8);
+}
+
+ol:highlight:flash,
+:highlight ol:flash {
+    color: var(--ol-sts8);
+}
+
+li:highlight:flash,
+:highlight li:flash {
+    color: var(--li-sts8);
+}
+
+li::tag:highlight:flash,
+:highlight li::tag:flash {
+    color: var(--li-tag-sts8);
+}
+
+:highlight:flash ul:highlight {
+    color: var(--ul-sts9);
+}
+
+:highlight:flash ol:highlight {
+    color: var(--ol-sts9);
+}
+
+:highlight:flash li:highlight {
+    color: var(--li-sts9);
+}
+
+:highlight:flash li::tag:highlight {
+    color: var(--li-tag-sts9);
+}
+
+code:highlight:flash,
+:highlight code:flash {
+    color: var(--code-sts8);
+}
+
+code::tag:highlight:flash,
+:highlight code::tag:flash {
+    color: var(--code-tag-sts8);
+}
+
+code::params:highlight:flash,
+:highlight code::params:flash {
+    color: var(--code-params-sts8);
+}
+
+:highlight:flash code:highlight {
+    color: var(--code-sts9);
+}
+
+:highlight:flash code::tag:highlight {
+    color: var(--code-tag-sts9);
+}
+
+:highlight:flash code::params:highlight {
+    color: var(--code-params-sts9);
+}
+
+table:highlight:flash {
+    color: var(--table-sts8);
+}
+
+table::tag:highlight:flash {
+    color: var(--table-tag-sts8);
+}
+
+thead:highlight:flash,
+:highlight thead:flash {
+    color: var(--thead-sts8);
+}
+
+tbody:highlight:flash,
+:highlight tbody:flash {
+    color: var(--tbody-sts8);
+}
+
+tr:highlight:flash,
+:highlight tr:flash {
+    color: var(--tr-sts8);
+}
+
+td:highlight:flash,
+:highlight td:flash {
+    color: var(--td-sts8);
+}
+
+:highlight:flash thead:highlight {
+    color: var(--thead-sts9);
+}
+
+:highlight:flash tbody:highlight {
+    color: var(--tbody-sts9);
+}
+
+:highlight:flash tr:highlight {
+    color: var(--tr-sts9);
+}
+
+:highlight:flash td :highlight {
+    color: var(--td-sts9);
+}
+
+a:highlight:flash,
+img:highlight:flash,
+ref:highlight:flash,
+:highlight a:flash,
+:highlight img:flash,
+:highlight ref:flash {
+    color: var(--a-img-ref-sts8);
+}
+
+a::tag:highlight:flash,
+img::tag:highlight:flash,
+ref::tag:highlight:flash,
+:highlight a::tag:flash,
+:highlight img::tag:flash,
+:highlight ref::tag:flash {
+    color: var(--a-img-ref-tag-sts8);
+}
+
+a::text:highlight:flash,
+img::text:highlight:flash,
+ref::text:highlight:flash,
+:highlight a::text:flash,
+:highlight img::text:flash,
+:highlight ref::text:flash {
+    color: var(--a-img-ref-text-sts8);
+}
+
+a::destination:highlight:flash,
+img::destination:highlight:flash,
+ref::destination:highlight:flash,
+:highlight a::destination:flash,
+:highlight img::destination:flash,
+:highlight ref::destination:flash {
+    color: var(--a-img-ref-dest-sts8);
+}
+
+a::label:highlight:flash,
+img::label:highlight:flash,
+ref::label:highlight:flash,
+:highlight a::label:flash,
+:highlight img::label:flash,
+:highlight ref::label:flash{
+    color: var(--a-img-ref-lbl-sts8);
+}
+
+a::title:highlight:flash,
+img::title:highlight:flash,
+ref::title:highlight:flash,
+:highlight a::title:flash,
+:highlight img::title:flash,
+:highlight ref::title:flash {
+    color: var(--a-img-ref-title-sts8);
+}
+
+:highlight:flash a:highlight,
+:highlight:flash img:highlight,
+:highlight:flash ref:highlight {
+    color: var(--a-img-ref-sts9);
+}
+
+:highlight:flash a::tag:highlight,
+:highlight:flash img::tag:highlight,
+:highlight:flash ref::tag:highlight {
+    color: var(--a-img-ref-tag-sts9);
+}
+
+:highlight:flash a::text:highlight,
+:highlight:flash img::text:highlight,
+:highlight:flash ref::text:highlight {
+    color: var(--a-img-ref-text-sts9);
+}
+
+:highlight:flash a::destination:highlight,
+:highlight:flash img::destination:highlight,
+:highlight:flash ref::destination:highlight {
+    color: var(--a-img-ref-dest-sts9);
+}
+
+:highlight:flash a::label:highlight,
+:highlight:flash img::label:highlight,
+:highlight:flash ref::label:highlight {
+    color: var(--a-img-ref-lbl-sts9);
+}
+
+:highlight:flash a::title:highlight,
+:highlight:flash img::title:highlight,
+:highlight:flash ref::title:highlight {
+    color: var(--a-img-ref-title-sts9);
+}
+
+html-block:highlight:flash {
+    color: var(--html-block-sts8);
+}
+
+key-value-attr:highlight:flash,
+class-attr:highlight:flash,
+id-attr:highlight:flash,
+:highlight key-value-attr:flash,
+:highlight class-attr:flash,
+:highlight id-attr:flash {
+    color: var(--key-value-attr-class-attr-id-attr-sts8);
+}
+
+key-value-attr::tag:highlight:flash,
+class-attr::tag:highlight:flash,
+id-attr::tag:highlight:flash,
+:highlight key-value-attr::tag:flash,
+:highlight class-attr::tag:flash,
+:highlight id-attr::tag:flash {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts8);
+}
+
+:highlight:flash key-value-attr:highlight,
+:highlight:flash class-attr:highlight,
+:highlight:flash id-attr:highlight {
+    color: var(--key-value-attr-class-attr-id-attr-sts9);
+}
+
+:highlight:flash key-value-attr::tag:highlight,
+:highlight:flash class-attr::tag:highlight,
+:highlight:flash id-attr::tag:highlight {
+    color: var(--key-value-attr-class-attr-id-attr-tag-sts9);
+}
+
+

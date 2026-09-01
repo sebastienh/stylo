@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="yqE-Eq-BYY">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Static Html Preview View Controller-->
+        <scene sceneID="0uk-4J-DcF">
+            <objects>
+                <viewController id="yqE-Eq-BYY" customClass="StaticHtmlPreviewViewController" customModule="Stylo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="MYO-uO-Fe5" customClass="StaticHtmlPreviewBackgroundView" customModule="Stylo" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="485" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                    <connections>
+                        <outlet property="htmlPreviewBackgroundView" destination="MYO-uO-Fe5" id="VpH-f4-IaL"/>
+                    </connections>
+                </viewController>
+                <customObject id="ck7-U9-jtI" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61" y="104"/>
+        </scene>
+    </scenes>
+</document>

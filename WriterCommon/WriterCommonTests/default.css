@@ -1,0 +1,28 @@
+/**************************************************************
+ 
+ Default CSS for StyleSheet that is applied after the ua-css.
+ This is the default CCSS style.
+ 
+ **************************************************************/
+
+css-style-sheet {
+    font-family: Times New Roman;
+    color: gray;
+}
+
+/**************************************************************
+ 
+ The generated tree for font-family property declaration
+ with this example :
+ 
+ font-family : “Times New Roman”, Arial;
+ 
+ we can style the each font-family property value to it's
+ own computed value usging the following css :
+ with the following:
+ 
+ **************************************************************/
+
+::font-family-name {
+    font-family: selected-value;
+}

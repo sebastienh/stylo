@@ -1,0 +1,68 @@
+
+/**
+ Blue
+ https://coolors.co/0b3954-dcdcdc-fb4500-4ecdc4-6b6d76
+*/
+
+body, th {
+    
+    background-color: #0B3954;
+    color: #DCDCDC;
+    font-family: "Helvetica Neue";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(220,220,220);
+}
+
+::tag {
+    color: rgb(251,69,0);
+}
+
+a::destination,
+img::destination,
+table,
+td,
+ref::destination,
+a::label,
+img::label,
+ref::title,
+code,
+hr,
+blockquote,
+html-block {
+    color: #6B6D76;
+}
+
+
+blockquote::tag {
+    color: #4ECDC4;
+}
+
+code, html-block {
+    font-family: "Hack";
+    font-size: 95%;
+}
+
+em {
+    font-style: italic;
+}
+
+s {
+    text-decoration-style: solid;
+    text-decoration-line: line-through;
+    text-decoration-color: red;
+}
+
+s::tag {
+    text-decoration-line: none;
+}
+
+hr {
+    color: rgb(251,69,0);
+}

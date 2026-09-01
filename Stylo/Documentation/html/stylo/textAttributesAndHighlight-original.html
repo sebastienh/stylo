@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Text attributes and highlight</h1>
+<p>Text attributes allows to assign attributes to any part of a text. These parts can then be highlighted using a CSS style targeting them. Use it for any purpose you may see fit! It's also a really flexible way to keep external notes in a text as they are not exported with the document.</p>
+<p>For example, we could want to mark a paragraph as needing further work:</p>
+<pre><code class="language-markdown">{.need-rework}
+I started to write when I was young. This paragraph is not complete...  
+</code></pre>
+<p>And we could also specify other things such a the subject of the paragraph:</p>
+<pre><code class="language-markdown">{.young .need-rework} 
+I started to write when I was young. This paragraph is not complete... 
+</code></pre>
+<p>Attributes can be stacked, meaning they can be defined in different attributes blocs:</p>
+<pre><code class="language-markdown">{.young} 
+{.need-rework}
+I started to write when I was young. This paragraph is not complete... 
+</code></pre>
+<p>To highlight the attributed parts of the text we just need to define a style to do so. The style would preferably make the elements we want to higlight standout against the other elements. For example, we could higlight all paragraphs that needs rework using the following simple style:</p>
+<pre><code class="language-css">body {
+	background-color: #eee;
+	color: #ccc;
+}
+.need-rework {
+	color: black;
+}
+</code></pre>
+<p>This style would look like this in Stylo:</p>
+<p><img src="./need-rework.jpg" alt="highlight-need-rework" /></p>
+<p>Three types of attributes can be added: class, key value attribute and id.</p>
+<pre><code class="language-markdown">{ .class key=value #id }
+A paragraph.
+</code></pre>
+<p><em>Attributes blocs</em> can be put before, below, on the line directly after an element, or inline where they will apply to the inline element directly preceeding them, or to the enclosing bloc if there is no such element.</p>
+<pre><code class="language-markdown">{ .class key=value }
+A _paragraph_ {.inline-class} {.paragraph-class}.
+{#id}
+</code></pre>
+<p>This completes the overview of text attributes, for more information check out the complete <a href="../markdown#mdAttributes">markdown</a> and <a href="../tags#tagsTools">tags</a> documentations.</p>
+
+    </body>
+</html>

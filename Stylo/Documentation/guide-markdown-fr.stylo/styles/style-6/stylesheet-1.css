@@ -1,0 +1,77 @@
+body, 
+a::text, 
+img::text {
+
+    background-color: rgb(40,40,40);
+    color: rgb(220,220,220);
+    font-family: "Avenir Next";
+}
+
+h1::tag, 
+h2::tag, 
+h3::tag, 
+h4::tag, 
+h5::tag, 
+h6::tag {
+
+	color: orange;
+}
+
+a::destination,
+img::destination {
+	color: rgb(80,80,80);
+}
+
+
+code {
+	color: rgb(140,140,140);
+}
+
+a::tag, img::tag, reference::tag {
+
+	color: rgba(255,69,0,0.7);
+	
+}
+
+reference::label {
+	color: rgb(180,180,180);
+}
+
+reference::destination {
+	color: rgb(80,80,80);
+}
+
+reference::title {
+	color: rgb(80,80,80);
+}
+
+em::tag {
+	
+	color: blue;
+}
+
+em::opening-tag {
+	
+	color: orange;
+}
+
+strong::tag {
+	
+	color: red;
+}
+
+table {
+	color: rgb(80,80,80);
+}
+
+table::tag {
+	color: orange;
+}
+
+th {
+	color: rgba(255,69,0,0.7);
+}
+
+td {
+	color: rgb(80,80,80);
+}

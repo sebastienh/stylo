@@ -1,0 +1,81 @@
+
+/**
+ Courier White
+ https://coolors.co/f2f2f2-000000-282828-0a0a0a-b4b4b4
+ */
+
+body, th {
+    
+    background-color: rgb(242,242,242);
+    color: black;
+    font-family: Cousine;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+h5,
+h6 {
+    color: rgb(40,40,40);
+}
+
+::tag {
+    color: rgb(10,10,10);
+}
+
+a::destination,
+img::destination,
+ref::destination,
+a::label,
+img::label,
+ref::title,
+code,
+hr,
+blockquote,
+html-block {
+    color: rgb(180,180,180);
+}
+
+a::tag, img::tag, ref::tag {
+    color: rgb(180,180,180);
+}
+
+em {
+    font-style: italic;
+}
+
+th {
+    font-weight: 600;
+}
+
+strong {
+    font-weight: bold;
+}
+
+s {
+    text-decoration-style: solid;
+    text-decoration-line: line-through;
+    text-decoration-color: black;
+}
+
+s::tag {
+    text-decoration-line: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

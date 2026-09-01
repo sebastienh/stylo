@@ -1,0 +1,230 @@
+
+:root {
+    
+    --h-sts1: var(--amaranth-sts1, yellow);
+    --h-sts2: var(--amaranth-sts2, yellow);
+    --h-sts3: var(--amaranth-sts3, yellow);
+    --h-sts4: var(--amaranth-sts4, yellow);
+    --h-sts5: var(--amaranth-sts5, yellow);
+    --h-sts6: var(--amaranth-sts6, yellow);
+    --h-sts7: var(--amaranth-sts7, yellow);
+    --h-sts8: var(--amaranth-sts8, yellow);
+    --h-sts9: var(--amaranth-sts9, yellow);
+    --h-sts10: var(--amaranth-sts10, yellow);
+    
+    --h-tag-sts1: var(--black-olive-sts1, yellow);
+    --h-tag-sts2: var(--black-olive-sts2, yellow);
+    --h-tag-sts3: var(--black-olive-sts3, yellow);
+    --h-tag-sts4: var(--black-olive-sts4, yellow);
+    --h-tag-sts5: var(--black-olive-sts5, yellow);
+    --h-tag-sts6: var(--black-olive-sts6, yellow);
+    --h-tag-sts7: var(--black-olive-sts7, yellow);
+    --h-tag-sts8: var(--black-olive-sts8, yellow);
+    --h-tag-sts9: var(--black-olive-sts9, yellow);
+    --h-tag-sts10: var(--black-olive-sts10, yellow);
+
+    --hr-sts1: var(--amaranth-sts1, yellow);
+    --hr-sts2: var(--amaranth-sts2, yellow);
+    --hr-sts3: var(--amaranth-sts3, yellow);
+    --hr-sts4: var(--amaranth-sts4, yellow);
+    --hr-sts5: var(--amaranth-sts5, yellow);
+    --hr-sts6: var(--amaranth-sts6, yellow);
+    --hr-sts7: var(--amaranth-sts7, yellow);    
+    --hr-sts8: var(--amaranth-sts8, yellow);
+    --hr-sts9: var(--amaranth-sts9, yellow);
+    --hr-sts10: var(--amaranth-sts10, yellow);
+    
+    --blockquote-tag-sts1: var(--xanadu-sts1, yellow);
+    --blockquote-tag-sts2: var(--xanadu-sts2, yellow);
+    --blockquote-tag-sts3: var(--xanadu-sts3, yellow);
+    --blockquote-tag-sts4: var(--xanadu-sts4, yellow);
+    --blockquote-tag-sts5: var(--xanadu-sts5, yellow);
+    --blockquote-tag-sts6: var(--xanadu-sts6, yellow);
+    --blockquote-tag-sts7: var(--xanadu-sts7, yellow);
+    --blockquote-tag-sts8: var(--xanadu-sts8, yellow);
+    --blockquote-tag-sts9: var(--xanadu-sts9, yellow);
+    --blockquote-tag-sts10: var(--xanadu-sts10, yellow);
+
+    --blockquote-sts1: var(--dark-slate-gray-sts1, yellow);
+    --blockquote-sts2: var(--dark-slate-gray-sts2, yellow);
+    --blockquote-sts3: var(--dark-slate-gray-sts3, yellow);
+    --blockquote-sts4: var(--dark-slate-gray-sts4, yellow);
+    --blockquote-sts5: var(--dark-slate-gray-sts5, yellow);
+    --blockquote-sts6: var(--dark-slate-gray-sts6, yellow);
+    --blockquote-sts7: var(--dark-slate-gray-sts7, yellow);
+    --blockquote-sts8: var(--dark-slate-gray-sts8, yellow);
+    --blockquote-sts9: var(--dark-slate-gray-sts9, yellow);
+    --blockquote-sts10: var(--dark-slate-gray-sts10, yellow);
+
+    --ul-sts1: var(--xanadu-sts1, yellow);
+    --ul-sts2: var(--xanadu-sts2, yellow);
+    --ul-sts3: var(--xanadu-sts3, yellow);
+    --ul-sts4: var(--xanadu-sts4, yellow);
+    --ul-sts5: var(--xanadu-sts5, yellow);
+    --ul-sts6: var(--xanadu-sts6, yellow);
+    --ul-sts7: var(--xanadu-sts7, yellow);
+    --ul-sts8: var(--xanadu-sts8, yellow);
+    --ul-sts9: var(--xanadu-sts9, yellow);
+    --ul-sts10: var(--xanadu-sts10, yellow);
+
+    --ol-sts1: var(--xanadu-sts1, yellow);
+    --ol-sts2: var(--xanadu-sts2, yellow);
+    --ol-sts3: var(--xanadu-sts3, yellow);
+    --ol-sts4: var(--xanadu-sts4, yellow);
+    --ol-sts5: var(--xanadu-sts5, yellow);
+    --ol-sts6: var(--xanadu-sts6, yellow);
+    --ol-sts7: var(--xanadu-sts7, yellow);
+    --ol-sts8: var(--xanadu-sts8, yellow);
+    --ol-sts9: var(--xanadu-sts9, yellow);
+    --ol-sts10: var(--xanadu-sts10, yellow);
+
+    --li-sts1: var(--xanadu-sts1, yellow);
+    --li-sts2: var(--xanadu-sts2, yellow);
+    --li-sts3: var(--xanadu-sts3, yellow);
+    --li-sts4: var(--xanadu-sts4, yellow);
+    --li-sts5: var(--xanadu-sts5, yellow);
+    --li-sts6: var(--xanadu-sts6, yellow);
+    --li-sts7: var(--xanadu-sts7, yellow);
+    --li-sts8: var(--xanadu-sts8, yellow);
+    --li-sts9: var(--xanadu-sts9, yellow);
+    --li-sts10: var(--xanadu-sts10, yellow);
+
+    --li-tag-sts1: var(--quick-silver-sts1, yellow);
+    --li-tag-sts2: var(--quick-silver-sts2, yellow);
+    --li-tag-sts3: var(--quick-silver-sts3, yellow);
+    --li-tag-sts4: var(--quick-silver-sts4, yellow);
+    --li-tag-sts5: var(--quick-silver-sts5, yellow);
+    --li-tag-sts6: var(--quick-silver-sts6, yellow);
+    --li-tag-sts7: var(--quick-silver-sts7, yellow);
+    --li-tag-sts8: var(--quick-silver-sts8, yellow);
+    --li-tag-sts9: var(--quick-silver-sts9, yellow);
+    --li-tag-sts10: var(--quick-silver-sts10, yellow);
+
+    --code-sts1: var(--dark-slate-gray-sts1, yellow);
+    --code-sts2: var(--dark-slate-gray-sts2, yellow);
+    --code-sts3: var(--dark-slate-gray-sts3, yellow);
+    --code-sts4: var(--dark-slate-gray-sts4, yellow);
+    --code-sts5: var(--dark-slate-gray-sts5, yellow);
+    --code-sts6: var(--dark-slate-gray-sts6, yellow);
+    --code-sts7: var(--dark-slate-gray-sts7, yellow);
+    --code-sts8: var(--dark-slate-gray-sts8, yellow);
+    --code-sts9: var(--dark-slate-gray-sts9, yellow);
+    --code-sts10: var(--dark-slate-gray-sts10, yellow);
+    
+    --code-tag-sts1: var(--xanadu-sts1, yellow);
+    --code-tag-sts2: var(--xanadu-sts2, yellow);
+    --code-tag-sts3: var(--xanadu-sts3, yellow);
+    --code-tag-sts4: var(--xanadu-sts4, yellow);
+    --code-tag-sts5: var(--xanadu-sts5, yellow);
+    --code-tag-sts6: var(--xanadu-sts6, yellow);
+    --code-tag-sts7: var(--xanadu-sts7, yellow);
+    --code-tag-sts8: var(--xanadu-sts8, yellow);
+    --code-tag-sts9: var(--xanadu-sts9, yellow);
+    --code-tag-sts10: var(--xanadu-sts10, yellow);
+
+    --code-params-sts1: var(--telemagenta-sts1, yellow);
+    --code-params-sts2: var(--telemagenta-sts2, yellow);
+    --code-params-sts3: var(--telemagenta-sts3, yellow);
+    --code-params-sts4: var(--telemagenta-sts4, yellow);
+    --code-params-sts5: var(--telemagenta-sts5, yellow);
+    --code-params-sts6: var(--telemagenta-sts6, yellow);
+    --code-params-sts7: var(--telemagenta-sts7, yellow);
+    --code-params-sts8: var(--telemagenta-sts8, yellow);
+    --code-params-sts9: var(--telemagenta-sts9, yellow);
+    --code-params-sts10: var(--telemagenta-sts10, yellow);
+    
+    --table-sts1: var(--xanadu-sts1, yellow);
+    --table-sts2: var(--xanadu-sts2, yellow);
+    --table-sts3: var(--xanadu-sts3, yellow);
+    --table-sts4: var(--xanadu-sts4, yellow);
+    --table-sts5: var(--xanadu-sts5, yellow);
+    --table-sts6: var(--xanadu-sts6, yellow);
+    --table-sts7: var(--xanadu-sts7, yellow);
+    --table-sts8: var(--xanadu-sts8, yellow);
+    --table-sts9: var(--xanadu-sts9, yellow);
+    --table-sts10: var(--xanadu-sts10, yellow);
+    
+    --table-tag-sts1: var(--quick-silver-sts1, yellow);
+    --table-tag-sts2: var(--quick-silver-sts2, yellow);
+    --table-tag-sts3: var(--quick-silver-sts3, yellow);
+    --table-tag-sts4: var(--quick-silver-sts4, yellow);
+    --table-tag-sts5: var(--quick-silver-sts5, yellow);
+    --table-tag-sts6: var(--quick-silver-sts6, yellow);
+    --table-tag-sts7: var(--quick-silver-sts7, yellow);
+    --table-tag-sts8: var(--quick-silver-sts8, yellow);
+    --table-tag-sts9: var(--quick-silver-sts9, yellow);
+    --table-tag-sts10: var(--quick-silver-sts10, yellow);
+    
+    --thead-sts1: var(--dark-slate-gray-sts1, yellow);
+    --thead-sts2: var(--dark-slate-gray-sts2, yellow);
+    --thead-sts3: var(--dark-slate-gray-sts3, yellow);
+    --thead-sts4: var(--dark-slate-gray-sts4, yellow);
+    --thead-sts5: var(--dark-slate-gray-sts5, yellow);
+    --thead-sts6: var(--dark-slate-gray-sts6, yellow);
+    --thead-sts7: var(--dark-slate-gray-sts7, yellow);
+    --thead-sts8: var(--dark-slate-gray-sts8, yellow);
+    --thead-sts9: var(--dark-slate-gray-sts9, yellow);
+    --thead-sts10: var(--dark-slate-gray-sts10, yellow);
+                    
+    --tbody-sts1: var(--xanadu-sts1, yellow);
+    --tbody-sts2: var(--xanadu-sts2, yellow);
+    --tbody-sts3: var(--xanadu-sts3, yellow);
+    --tbody-sts4: var(--xanadu-sts4, yellow);
+    --tbody-sts5: var(--xanadu-sts5, yellow);
+    --tbody-sts6: var(--xanadu-sts6, yellow);
+    --tbody-sts7: var(--xanadu-sts7, yellow);
+    --tbody-sts8: var(--xanadu-sts8, yellow);
+    --tbody-sts9: var(--xanadu-sts9, yellow);
+    --tbody-sts10: var(--xanadu-sts10, yellow);
+
+    --html-block-sts1: var(--telemagenta-sts1, yellow);
+    --html-block-sts2: var(--telemagenta-sts2, yellow);
+    --html-block-sts3: var(--telemagenta-sts3, yellow);
+    --html-block-sts4: var(--telemagenta-sts4, yellow);
+    --html-block-sts5: var(--telemagenta-sts5, yellow);
+    --html-block-sts6: var(--telemagenta-sts6, yellow);
+    --html-block-sts7: var(--telemagenta-sts7, yellow);
+    --html-block-sts8: var(--telemagenta-sts8, yellow);
+    --html-block-sts9: var(--telemagenta-sts9, yellow);
+    --html-block-sts10: var(--telemagenta-sts10, yellow);
+
+    
+    --attr-bloc-tag-sts1: var(--silver-sts1, yellow);
+    --attr-bloc-tag-sts2: var(--silver-sts2, yellow);
+    --attr-bloc-tag-sts3: var(--silver-sts3, yellow);
+    --attr-bloc-tag-sts4: var(--silver-sts4, yellow);
+    --attr-bloc-tag-sts5: var(--silver-sts5, yellow);
+    --attr-bloc-tag-sts6: var(--silver-sts6, yellow);
+    --attr-bloc-tag-sts7: var(--silver-sts7, yellow);
+    --attr-bloc-tag-sts8: var(--silver-sts8, yellow);
+    --attr-bloc-tag-sts9: var(--silver-sts9, yellow);
+    --attr-bloc-tag-sts10: var(--silver-sts10, yellow);
+  
+    
+    --key-value-attr-class-attr-id-attr-sts1: var(--xanadu-sts1, yellow);
+    --key-value-attr-class-attr-id-attr-sts2: var(--xanadu-sts2, yellow);
+    --key-value-attr-class-attr-id-attr-sts3: var(--xanadu-sts3, yellow);
+    --key-value-attr-class-attr-id-attr-sts4: var(--xanadu-sts4, yellow);
+    --key-value-attr-class-attr-id-attr-sts5: var(--xanadu-sts5, yellow);
+    --key-value-attr-class-attr-id-attr-sts6: var(--xanadu-sts6, yellow);
+    --key-value-attr-class-attr-id-attr-sts7: var(--xanadu-sts7, yellow);
+    --key-value-attr-class-attr-id-attr-sts8: var(--xanadu-sts8, yellow);
+    --key-value-attr-class-attr-id-attr-sts9: var(--xanadu-sts9, yellow);
+    --key-value-attr-class-attr-id-attr-sts10: var(--xanadu-sts10, yellow);
+
+    --key-value-attr-class-attr-id-attr-tag-sts1: var(--quick-silver-sts1, yellow);
+    --key-value-attr-class-attr-id-attr-tag-sts2: var(--quick-silver-sts2, yellow);
+    --key-value-attr-class-attr-id-attr-tag-sts3: var(--quick-silver-sts3, yellow);
+    --key-value-attr-class-attr-id-attr-tag-sts4: var(--quick-silver-sts4, yellow);
+    --key-value-attr-class-attr-id-attr-tag-sts5: var(--quick-silver-sts5, yellow);
+    --key-value-attr-class-attr-id-attr-tag-sts6: var(--quick-silver-sts6, yellow);
+    --key-value-attr-class-attr-id-attr-tag-sts7: var(--quick-silver-sts7, yellow);
+    --key-value-attr-class-attr-id-attr-tag-sts8: var(--quick-silver-sts8, yellow);
+    --key-value-attr-class-attr-id-attr-tag-sts9: var(--quick-silver-sts9, yellow);
+    --key-value-attr-class-attr-id-attr-tag-sts10: var(--quick-silver-sts10, yellow);
+
+  
+  
+}
+
+

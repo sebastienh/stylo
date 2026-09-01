@@ -1,0 +1,38 @@
+/*
+ nebula - source - all errors - light
+ 
+ source css file for handling a single error highlighting
+ in light mode.
+ */
+
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+    font-family: Menlo;
+    font-size: 10pt;
+    color: #999 !important;
+    background-color: rgb(42,41,40);
+}
+
+property-name {
+    
+    color: #999 !important;
+}
+
+property-value {
+    
+    color: #999 !important;
+}
+
+pseudo-element-selector {
+    color: #999 !important;
+}
+
+color-value {
+    
+    color: #999 !important;
+}
+
+[nw-message-id] {
+    color: red !important;
+}

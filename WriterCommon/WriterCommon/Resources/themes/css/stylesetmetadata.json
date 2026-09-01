@@ -1,0 +1,77 @@
+{
+    "styles": [
+        {
+            "id": "stylo",
+            "title": "Stylo",
+            "stylesheets" : [
+                {
+                    "id": "common-errors",
+                    "name": "common-errors",
+                    "appearances" : [
+                        "light",
+                        "dark"
+                    ]
+                },
+                {
+                    "id": "common-error",
+                    "name": "common-error",
+                    "appearances" : [
+                        "light",
+                        "dark"
+                    ]
+                },
+                {
+                    "id": "common-source",
+                    "name": "common-source",
+                    "appearances" : [
+                        "light",
+                        "dark"
+                    ]
+                },
+                {
+                    "id": "source-dark",
+                    "name": "source-dark",
+                    "appearances" : [
+                        "dark"
+                    ]
+                },
+                {
+                    "id": "source-light",
+                    "name": "source-light",
+                    "appearances" : [
+                        "light"
+                    ]
+                },
+                {
+                    "id": "error-dark",
+                    "name": "error-dark",
+                    "appearances" : [
+                        "dark"
+                    ]
+                },
+                {
+                    "id": "error-light",
+                    "name": "error-light",
+                    "appearances" : [
+                        "light"
+                    ]
+                },
+                {
+                    "id": "errors-dark",
+                    "name": "errors-dark",
+                    "appearances" : [
+                        "dark"
+                    ]
+                },
+                {
+                    "id": "errors-light",
+                    "name": "errors-light",
+                    "appearances" : [
+                        "light"
+                    ]
+                }
+            ]
+        }
+    ]
+}
+

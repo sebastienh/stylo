@@ -1,0 +1,16 @@
+ [
+  {
+  "type": "fence",
+  "tag": "code",
+  "attrs": null,
+  "nesting": 0,
+  "level": 0,
+  "children": null,
+  "content": "    java code\n    test\n",
+  "markup": "````",
+  "info": " <info>",
+  "meta": null,
+  "block": true,
+  "hidden": false
+  }
+  ]

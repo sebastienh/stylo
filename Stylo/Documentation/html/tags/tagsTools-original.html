@@ -1,0 +1,138 @@
+<html>
+    <head> 
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1 class="tagstools">Tags Tools</h1>
+<h2>Tag Tool panel</h2>
+<p>The <em>Tags Tools</em> panel shows all the controls to manage files tags in Stylo/Nodio. A tag is a representation of a <a href="../markdown#mdAttributes">Markdown attribute</a> in the form of a token. Markdown attributes are defined in the source text files using the syntax defined in the documentation for <a href="../markdown#mdAttributes">Markdown attributes</a>.</p>
+<p>The <em>Tags Tools</em> panel shows all the attributes values defined in the currently selected <em>Editors Pane</em>.</p>
+<p>The tags are selectable and when some tags are selected the <em>editors pane</em> will change the display mode to <em>tags highlight mode</em>. In this mode, the text parts attributed with the <a href="../markdown#mdAttributes">Markdown attributes</a> represented by the selected tags will become highlighted making them easily identifiable from their context. The visual form that the highlight might take is style dependant.</p>
+<p>The <em>Tags Tools</em> also allow to navigate through the selected tags using the <em>Tags Tools's Tools Bar</em>'s <em>Previous</em> and <em>Next</em> buttons temporarly higlighthing the text attributed with the target tag revealing it among the text attributed with the other selected tags.</p>
+<h3 id="attributes-display-mode">Display modes</h3>
+<p><a href="../markdown#mdAttributes">Markdown attributes</a> can be displayed two ways: in <em>Values</em> and in <em>Attributes</em> mode.</p>
+<h4>Attributes</h4>
+<p>In <em>Attributes</em> display mode, the attributes are displayed with their keys, all values for each key being displayed in its own dedicated section.</p>
+<p>This means that if we have defined two tags like:</p>
+<pre><code>{.revised}
+Tagged text.
+</code></pre>
+<p>and:</p>
+<pre><code>{status=revised}
+Another tagged text.
+</code></pre>
+<p>In the  <em>Tags Tools</em>  panel, the first tag will be shown under the <code>class</code> section and the second will be shown under the <code>status</code> section.</p>
+<h4>Values</h4>
+<p>In <em>Values</em> display mode, only the values of the attributes are shown in the tags list. All attributes with a same value will be represented using only one tag even if they come from different attributes <em>key</em>. Using the previous example, in <em>Values</em> display mode, they will both be shown with the <code>revised</code> tag in the  <em>Tags Tools</em>  panel.</p>
+<h3 class="actions">Actions</h3>
+<h4>Open/Close <em>Tags Tools</em></h4>
+<p>To open the <em>Tags Tools</em> panel:</p>
+<ul>
+<li>
+<p>From the <em>Project Tools Sidebar</em>: Mouse over the left side of the window, the <em>Project Tools Sidebar</em> should appear. Click on the tags symbol.</p>
+</li>
+<li>
+<p>To hide the <em>Tags Tools</em> panel:</p>
+</li>
+<li>
+<p>From the <em>Project Tools Sidebar</em>: Click on the tags symbol. The tags panel should collapse.</p>
+</li>
+<li>
+<p>From the menu: go to <code>View</code> -&gt; <code>Hide Project Tools</code></p>
+</li>
+<li>
+<p>From the keyboard: use <code>⌥⌘1</code></p>
+</li>
+</ul>
+<h2 class="toptoolsbar">Tags Tools's Tools Bar</h2>
+<p>The <em>Tags Tool's Tools Bar</em> is located at the top of the <em>Tags Tools</em> panel.</p>
+<p>At the left, it contains the <em>Select All</em> and a <em>Unselect All</em> buttons that allows to select or unselect all tags displayed in the <em>Tags Tools</em> panel.</p>
+<p>At the right, it contains the <em>Previous</em> and <em>Next</em> tags navigation buttons that allows to <em>navigate</em> in the text parts that are <em>attributed</em> using the Markdown attributes represented by the selected tags.</p>
+<h3>Actions</h3>
+<h4>Select all tags</h4>
+<p>To select all tags:</p>
+<ul>
+<li>
+<p>From the <em>Tags Tool's Tools Bar</em>: Click on <em>Select All</em> button on the top left.</p>
+</li>
+<li>
+<p>From the menu: go to <code>Tags</code> -&gt; <code>Select All</code></p>
+</li>
+<li>
+<p>From the keyboard: use <code>⌃⌘A</code></p>
+</li>
+</ul>
+<h4>Unselect all tags</h4>
+<p>To unselect all tags:</p>
+<ul>
+<li>
+<p>From the <em>Tags Tool's Tools Bar</em>: Click on <em>Unselect All</em> button on the top left, right after <em>Select All</em> button.</p>
+</li>
+<li>
+<p>From the menu: go to <code>Tags</code> -&gt; <code>Unselect All</code></p>
+</li>
+<li>
+<p>From the keyboard: use <code>⌃⌘U</code></p>
+</li>
+</ul>
+<h4>Navigate to previous</h4>
+<p>To navigate to the previous selected tag's <em>attributed</em> text part instance:</p>
+<ul>
+<li>
+<p>From the <em>Tags Tool's Tools Bar</em>: Click on <em>Previous</em> button on the top right, right before <em>Next</em> button.</p>
+</li>
+<li>
+<p>From the menu: go to <code>Tags</code> -&gt; <code>Go to Previous</code></p>
+</li>
+<li>
+<p>From the keyboard: use <code>⌃⌘↑</code></p>
+</li>
+</ul>
+<h4>Navigate to next</h4>
+<p>To navigate to the next selected tag's <em>attributed</em> text part instance:</p>
+<ul>
+<li>
+<p>From the <em>Tags Tool's Tools Bar</em>: Click on <em>Next</em> button on the top right, right after <em>Previous</em> button.</p>
+</li>
+<li>
+<p>From the menu: go to <code>Tags</code> -&gt; <code>Go to Next</code></p>
+</li>
+<li>
+<p>From the keyboard: use <code>⌃⌘↓</code></p>
+</li>
+</ul>
+<h2 class="bottomtoolsbar">Tags Tools's Bottom Bar</h2>
+<p>The <em>Tags Tool's Bottom Bar</em> is located at the bottom of the <em>Tags Tools</em> panel.</p>
+<p>At the left, it displays the <em>filter active</em> indicator which takes the system current accent color when the filter is active (when the filter text is not empty).</p>
+<p>In the center, there is the <em>tags filter text field</em> which allows to enter a string that will be used to filter the tags values and only show the ones that <em>contains</em> the specified filtering string.</p>
+<p>The <em>Attribute Display Mode Selector</em> button is located at the right of the <em>Tags Tool's Bottom Bar</em>. It allows to select the <a href="#attributes-display-mode">attributes display mode</a>: <em>Values</em> or <em>Attributes</em>.</p>
+<h3>Actions</h3>
+<h4>Filter text</h4>
+<p>To filter tags enter any string value in the <em>tags filter text field</em>.</p>
+<h4>Remove filtering</h4>
+<p>To remove the tags filter delete the string value in the <em>tags filter text field</em>.</p>
+<h4>Set <code>Values</code> Tags Display Mode</h4>
+<p>To set the <code>Values</code> display mode:</p>
+<ul>
+<li>
+<p>From the <em>Tags Tool's Bottom Bar</em>: Click on <em>Attribute Display Mode Selector</em> button and select the <code>Values</code> mode.</p>
+</li>
+<li>
+<p>*From the menu: go to <code>Tags</code> -&gt; <code>Filtering Mode</code> -&gt; <code>Values</code></p>
+</li>
+</ul>
+<p>*Note: this option is only available if the <em>Tags Tools</em> panel is visible.</p>
+<h4>Set <code>Attributes</code> Tags Display Mode</h4>
+<p>To set the <code>Attributes</code> display mode:</p>
+<ul>
+<li>
+<p>From the <em>Tags Tool's Bottom Bar</em>: Click on <em>Attribute Display Mode Selector</em> button and select the <code>Attributes</code> mode.</p>
+</li>
+<li>
+<p>*From the menu: go to <code>Tags</code> -&gt; <code>Filtering Mode</code> -&gt; <code>Attributes</code></p>
+</li>
+</ul>
+<p>*Note: this option is only available if the <em>Tags Tools</em> panel is visible.</p>
+
+    </body>
+</html>

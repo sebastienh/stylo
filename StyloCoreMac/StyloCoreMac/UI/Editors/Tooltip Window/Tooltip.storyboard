@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14112" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="RuX-0G-rhM">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14112"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tooltip View Controller-->
+        <scene sceneID="aHF-FW-Tik">
+            <objects>
+                <viewController storyboardIdentifier="Tooltip" id="RuX-0G-rhM" customClass="TooltipViewController" customModule="Nebula_Writer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" misplaced="YES" id="1W7-eM-4iV">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="27"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="501" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u2L-E1-BNA">
+                                <rect key="frame" x="25" y="5" width="92" height="17"/>
+                                <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Multiline Label" id="3CZ-35-McS">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="RuX-0G-rhM" name="value" keyPath="self.representedObject.localizedMessage" id="N16-1k-Njt"/>
+                                </connections>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d19-MP-Er1">
+                                <rect key="frame" x="4" y="5" width="18" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="FwZ-q7-Bqy"/>
+                                    <constraint firstAttribute="width" constant="18" id="PDD-7F-R5k"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="W43-pM-Iuk"/>
+                                <connections>
+                                    <binding destination="RuX-0G-rhM" name="value" keyPath="self.representedObject.image" id="cJZ-OC-vwj"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="d19-MP-Er1" firstAttribute="leading" secondItem="1W7-eM-4iV" secondAttribute="leading" constant="4" id="QS0-zs-hlR"/>
+                            <constraint firstAttribute="bottom" secondItem="u2L-E1-BNA" secondAttribute="bottom" constant="5" id="ThG-Re-Cod"/>
+                            <constraint firstItem="d19-MP-Er1" firstAttribute="centerY" secondItem="1W7-eM-4iV" secondAttribute="centerY" id="cyL-43-vPp"/>
+                            <constraint firstItem="u2L-E1-BNA" firstAttribute="leading" secondItem="d19-MP-Er1" secondAttribute="trailing" constant="5" id="dqY-PG-nMI"/>
+                            <constraint firstAttribute="trailing" secondItem="u2L-E1-BNA" secondAttribute="trailing" constant="5" id="r37-vi-18T"/>
+                            <constraint firstItem="u2L-E1-BNA" firstAttribute="top" secondItem="1W7-eM-4iV" secondAttribute="top" constant="5" id="tSf-Xj-NKg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="d19-MP-Er1" id="1vV-NO-2Qb"/>
+                    </connections>
+                </viewController>
+                <customObject id="3dj-xL-ffi" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="Nn4-WI-1FB"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="31.5"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,33 @@
+/*
+ source - all errors - light
+ 
+ source css file for handling a single error highlighting
+ in dark mode.
+ */
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+    color: blue !important;
+    font-family: Arial;
+    font-size: 14pt;
+    background-color: red;
+    font-weight: bold;
+}
+
+css-style-rule {
+    color: red !important;
+    font-family: Menlo;
+    font-size: 12pt;
+    background-color: red;
+    font-weight: bold;
+}
+
+property-name {
+    color: red !important;
+    font-family: Menlo;
+    font-size: 12pt;
+    background-color: red;
+    font-weight: bold;
+}
+
+h1

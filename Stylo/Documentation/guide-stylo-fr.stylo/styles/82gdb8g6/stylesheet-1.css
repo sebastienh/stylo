@@ -1,0 +1,9 @@
+body {
+   color: white;
+   font-family: "Avenir Next";
+	background-color: rgb(70,70,70);
+}
+
+h1.ctee[test~="joy"] {
+	color: #D3AF86;
+}

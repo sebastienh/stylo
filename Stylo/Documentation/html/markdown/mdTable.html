@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>Markdown table element</title>
+		<meta name="robots" content="KEYWORDS"></meta>
+		<meta name="description" content="Description and usage examples of the Markdown table element."></meta>
+		<meta name="KEYWORDS" content="markdown, table, element, gfm, github, thead, table, td, tr"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- markdown/mdTable.html -->
+<h1>Table</h1>
+<p>A table is used to tabulate information. It corresponds to the <em>table</em> HTML element.</p>
+<h2>Syntax</h2>
+<p>Each row of a table starts at the beginning of a line and is optionnally indicated by a vertical bar: &quot;| &quot;. Each column is separated from the previous ones by a vertical bar, and the last column of a row optionnally ends with a vertical bar.</p>
+<p>The first row is the title row. It allows to give a title to each of the columns of the table, the title of each column can be empty.</p>
+<p>The second row is the separators row. It separates the titles row from the values rows. Each column of this row, like that of the titles, optionnally begins with a vertical bar, and the last column is optionnally terminated by a vertical bar. Each column must contain at least a hyphen &quot;-&quot;. This dash may optionally be preceded or followed by a &quot;:&quot; colon to specify a left alignment of the corresponding column, or a right alignment, respectively. The absence of two-point signifies an alignment in the center.</p>
+<p>Then come the values rows which follow the same pattern as the title row but contains the values ​​of each column.</p>
+<p>Some examples:</p>
+<p>A table with two centred columns and three rows of values:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">| Column 1 | Column 2 |
+| - | - |
+| Text column 1   | Text column 2 |
+| Text column 1   | Text column 2 |
+| Text column 1   | Text column 2 |
+</code></pre>
+<p>HTML</p>
+<pre><code class="language-html">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Column 1&lt;/th&gt;
+            &lt;th&gt;Column 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Text column 1&lt;/td&gt;
+            &lt;td&gt;Text column 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Text column 1&lt;/td&gt;
+            &lt;td&gt;Text colonne 2&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Text column 1&lt;/td&gt;
+            &lt;td&gt;Text column 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p>A table with right-aligned columns:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">| Column 1 | Column 2 |
+| ------:| -----------:|
+| column 1 long text  | column 2 long text |
+| column 1 long text  | column 2 long text |
+| column 1 long text  | column 2 long text |
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th style=&quot;text-align:right&quot;&gt;Column 1&lt;/th&gt;
+            &lt;th style=&quot;text-align:right&quot;&gt;Column 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td style=&quot;text-align:right&quot;&gt;column 1 long text&lt;/td&gt;
+            &lt;td style=&quot;text-align:right&quot;&gt;column 2 long text&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td style=&quot;text-align:right&quot;&gt;column 1 long text&lt;/td&gt;
+            &lt;td style=&quot;text-align:right&quot;&gt;column 2 long text&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td style=&quot;text-align:right&quot;&gt;column 1 long text&lt;/td&gt;
+            &lt;td style=&quot;text-align:right&quot;&gt;column 2 long text&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p>A table with left-aligned columns:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">| Column 1 | Column 2 |
+| :------| :-----------|
+| column 1 long text  | column 2 long text |
+| column 1 long text  | column 2 long text |
+| column 1 long text  | column 2 long text |
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th style=&quot;text-align:left&quot;&gt;Column 1&lt;/th&gt;
+            &lt;th style=&quot;text-align:left&quot;&gt;Column 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td style=&quot;text-align:left&quot;&gt;column 1 long text&lt;/td&gt;
+            &lt;td style=&quot;text-align:left&quot;&gt;column 2 long text&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td style=&quot;text-align:left&quot;&gt;column 1 long text&lt;/td&gt;
+            &lt;td style=&quot;text-align:left&quot;&gt;column 2 long text&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td style=&quot;text-align:left&quot;&gt;column 1 long text&lt;/td&gt;
+            &lt;td style=&quot;text-align:left&quot;&gt;column 2 long text&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<h2>Pseudo-elements</h2>
+<p>The <code>table</code> element supports the <code>tag</code> pseudo-element which contains all the vertical separators as well as the line separating the title row from the values rows. It can be used as follows:</p>
+<pre><code class="language-css">table::tag {
+    color: orange;
+}
+</code></pre>
+	</body>
+</html>

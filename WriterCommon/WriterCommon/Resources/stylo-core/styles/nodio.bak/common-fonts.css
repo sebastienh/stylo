@@ -1,0 +1,34 @@
+
+body, th {
+
+    font-family: Inconsolata;
+    font-size: 1.2vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 900;
+    font-size: 1.2vw;
+}
+
+blockquote::tag {
+    font-weight: 500;
+}
+
+em {
+    font-style: italic;
+}
+
+
+strong {
+    font-style: normal;
+    font-weight: bold;
+}
+
+th {
+    font-weight: 500;
+}

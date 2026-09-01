@@ -1,0 +1,27 @@
+body {
+    color: black;
+}
+
+img {
+    color: red;
+}
+
+img::tag {
+    color: blue;
+}
+
+img::text {
+    color: yellow;
+}
+
+img::destination {
+    color: pink;
+}
+
+img::label {
+    color: green;
+}
+
+img::title {
+    color: white;
+}

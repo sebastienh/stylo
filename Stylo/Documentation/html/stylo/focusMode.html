@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+        <link rel="stylesheet" href="../../css/help.css"></link>
+        <title>Focus Mode</title>
+        <meta name="description" content="Focus Mode description."></meta>
+        <meta name="KEYWORDS" content="fade, focus, sentence, bloc, paragraph"></meta>
+    </head>
+    <body id="help">
+        <a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+        <h1>Focus Mode</h1>
+<p>Focus mode allows to <em>focus</em> on an edited text element. Nodio supports 3 focus mode, appart from disabled.</p>
+<ul>
+<li>sentence</li>
+<li>paragraph</li>
+<li>bloc</li>
+</ul>
+<p>In sentence mode, the text is focused on the surrounding sentence inside the text. In some context where the text is part of a bloc element like a <code>blockquote</code>, the sentence may be reduced to a line.</p>
+<p>In paragraph mode, the entire paragraph is focused. A paragraph is any continuous text not broken by a new line.</p>
+<p>Bloc mode allows to keep the focus at the bloc level, might it be a list or a quote for example. The focus will always be at the top level bloc, so if we have text like the following:</p>
+<pre><code class="language-markdown">&gt; first line
+&gt; &gt; second line
+&gt; third line
+
+</code></pre>
+<p>writing in the second line will still keep the focus on the entire first level blockquote.</p>
+
+    </body>
+</html>

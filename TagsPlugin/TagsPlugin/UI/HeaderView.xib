@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="SectionHeaderView" customModule="TagsPlugin" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="5bb-mk-iWY" customClass="ColoredView" customModule="StyloCoreMac">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="50"/>
+                    <subviews>
+                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="L9E-dG-MTB">
+                            <rect key="frame" x="194" y="16" width="93" height="18"/>
+                            <textFieldCell key="cell" lineBreakMode="clipping" title="Section Title" drawsBackground="YES" id="bMc-2j-C4v">
+                                <font key="font" size="15" name="SFProText-Regular"/>
+                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </textFieldCell>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="L9E-dG-MTB" firstAttribute="centerY" secondItem="5bb-mk-iWY" secondAttribute="centerY" id="7HQ-vi-qQt"/>
+                        <constraint firstItem="L9E-dG-MTB" firstAttribute="centerX" secondItem="5bb-mk-iWY" secondAttribute="centerX" id="SpJ-c7-CT6"/>
+                    </constraints>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="5bb-mk-iWY" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="GAJ-nj-Y94"/>
+                <constraint firstAttribute="trailing" secondItem="5bb-mk-iWY" secondAttribute="trailing" id="PfI-yA-UVg"/>
+                <constraint firstAttribute="bottom" secondItem="5bb-mk-iWY" secondAttribute="bottom" id="Tc2-kQ-1Fp"/>
+                <constraint firstItem="5bb-mk-iWY" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" id="gIx-al-hVD"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                    <color key="value" name="tags-section-background-color"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="coverView" destination="5bb-mk-iWY" id="bkZ-6z-1kR"/>
+                <outlet property="sectionTitle" destination="L9E-dG-MTB" id="Kqh-tR-OR1"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <namedColor name="tags-section-background-color">
+            <color red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS combinators</title>
+		<meta name="description" content="CSS combinators general description."></meta>
+		<meta name="KEYWORDS" content="cascading, css"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+		<!-- css/combinators.html -->
+<h1>Combinators</h1>
+<p>Selector combinator allows to combine multiple selectors into one by defining the relationship between each of them. For example, we may want to select all <code>h1</code>'s descendant elements that are of type <code>strong</code>. To do this we would need to use the descendant combinator as in the following example:</p>
+<pre><code class="language-css">h1 strong {
+	...
+}
+</code></pre>
+<p>In the previous example, we used the descendant combinator, represented by a space between the two type selectors. The complete selector is evaluated from left to right as follows: first it selects all elements in the document, and then selects the elements of type <code>h1</code>,  and then apply the descendant selector by retaining all descandants of all <code>h1</code> elements previously selected. The selector then continues by evaluating the <code>strong</code> type selector to keep only the elements of this type.</p>
+<p>At the end of the selection process we effectively end up with all <code>strong</code> elements that are descendants of <code>h1</code> elements.</p>
+<p>There exists four kinds of selector combinators:</p>
+<ul>
+<li><a href="descendantCombinator.html">Descandant combinator</a></li>
+<li><a href="childCombinator.html">Child combinator</a></li>
+<li><a href="followingSiblingCombinator.html">Following sibling combinator</a></li>
+<li><a href="nextSiblingCombinator.html">Next sibling combinator</a></li>
+</ul>
+<p>Note: It may be helpful to re-read the <a href="../html/definitions.html">Definitions</a> section of &quot;Element&quot; section for a reminder of the main concepts used here.</p>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+
+body {
+    background-color: rgb(185,122,22);
+    font-family: "Avenir Next";
+    color: black;
+}
+
+p {
+    color: rgb(253,224,13);
+}
+
+h1 {
+    color: blue;
+}
+
+blockquote::tag {
+    color: blue;
+}
+
+h2::tag {
+    color: red;
+}
+

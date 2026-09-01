@@ -1,0 +1,14 @@
+body, a::link-text {
+    
+    font-family: "hurme geometric sans 3";
+    color: blue;
+    background-color: rgb(34,34,34);
+}
+
+.lumiere {
+    color: red;
+}
+
+.lumiere ~ p {
+    color: green;
+}

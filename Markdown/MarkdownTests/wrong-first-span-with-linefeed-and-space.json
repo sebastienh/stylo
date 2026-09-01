@@ -1,0 +1,116 @@
+
+[
+    {
+        "type": "paragraph_open",
+        "tag": "p",
+        "attrs": null,
+        "nesting": 1,
+        "level": 0,
+        "children": null,
+        "content": "",
+        "markup": "",
+        "info": "",
+        "meta": null,
+        "block": true,
+        "hidden": false
+    },
+    {
+        "type": "inline",
+        "tag": "",
+        "attrs": null,
+        "nesting": 0,
+        "level": 1,
+        "children": [
+            {
+                "type": "text",
+                "tag": "",
+                "attrs": null,
+                "nesting": 0,
+                "level": 0,
+                "children": null,
+                "content": "[span",
+                "markup": "",
+                "info": "",
+                "meta": null,
+                "block": false,
+                "hidden": false
+            },
+            {
+                "type": "span",
+                "tag": "span",
+                "attrs": null,
+                "nesting": 0,
+                "level": 0,
+                "children": null,
+                "content": " \ntext",
+                "markup": "",
+                "info": "",
+                "meta": null,
+                "block": false,
+                "hidden": false
+            },
+            {
+                "type": "attr-bloc-open",
+                "tag": "attr-bloc",
+                "attrs": null,
+                "nesting": 1,
+                "level": 1,
+                "children": null,
+                "content": "",
+                "markup": "",
+                "info": "",
+                "meta": null,
+                "block": false,
+                "hidden": false
+            },
+            {
+                "type": "class-attr",
+                "tag": "class-attr",
+                "attrs": null,
+                "nesting": 0,
+                "level": 1,
+                "children": null,
+                "content": ".attr",
+                "markup": "",
+                "info": "",
+                "meta": null,
+                "block": false,
+                "hidden": false
+            },
+            {
+                "type": "attr-bloc-close",
+                "tag": "attr-bloc",
+                "attrs": null,
+                "nesting": -1,
+                "level": 0,
+                "children": null,
+                "content": "",
+                "markup": "",
+                "info": "",
+                "meta": null,
+                "block": false,
+                "hidden": false
+            }
+        ],
+        "content": "[span[ \ntext]     {.attr}",
+        "markup": "",
+        "info": "",
+        "meta": null,
+        "block": true,
+        "hidden": false
+    },
+    {
+        "type": "paragraph_close",
+        "tag": "p",
+        "attrs": null,
+        "nesting": -1,
+        "level": 0,
+        "children": null,
+        "content": "",
+        "markup": "",
+        "info": "",
+        "meta": null,
+        "block": true,
+        "hidden": false
+    }
+]

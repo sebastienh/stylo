@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>Markdown header element</title>
+		<meta name="description" content="Description and usage examples of the Markdown header element."></meta>
+		<meta name="KEYWORDS" content="markdown, header, element, h1, h2, h3, h4, h5, h6"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- markdown/mdHeaders.html -->
+<h1>Headers</h1>
+<h2>Syntax</h2>
+<h3>Header level 1</h3>
+<p>A level 1 title can be written in two ways, with a number sign, as in the following example:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown"># title 1
+</code></pre>
+<p>or, with one or more <code>=</code> characters under the header text, like the following:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">title 1
+=======
+</code></pre>
+<p>Both are equivalent to the following HTML:</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;h1&gt;titre 1&lt;/h1&gt;
+</code></pre>
+<h3>Header level 2</h3>
+<p>Markdown:</p>
+<pre><code class="language-markdown">## titre 2 
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;h2&gt;titre 2&lt;/h2&gt;
+</code></pre>
+<p>As for the level 1 title, an <em>underlined</em> syntax exists for the level 2 title. It uses the <code>-</code> character instead:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">Titre 2
+-------
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;h2&gt;titre 2&lt;/h2&gt;
+</code></pre>
+<h3>Other levels</h3>
+<p>The other levels are written with the number of dashes corresponding to the header level wanted:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">### title 3
+#### title 4
+##### title 5
+###### title 6
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;h3&gt;titre 3&lt;/h3&gt;
+&lt;h4&gt;titre 4&lt;/h4&gt;
+&lt;h5&gt;titre 5&lt;/h5&gt;
+&lt;h6&gt;titre 6&lt;/h6&gt;
+</code></pre>
+<h2>Pseudo-elements</h2>
+<p>All titles offer the following pseudo-element:</p>
+<ul>
+<li><code>tag</code>: allows to stylize the region used to define the title, in the case of syntax with <code>#</code>, only sharps will be stylized, and in the case of the <em>underlined</em> syntax, the underline bar will be stylized. For example, the following CSS will color the &quot;tag&quot; part of the &quot;h1&quot; elements with the red color:</li>
+</ul>
+<pre><code class="language-css">h1::tag {
+    color: red;
+}
+</code></pre>
+	</body>
+</html>

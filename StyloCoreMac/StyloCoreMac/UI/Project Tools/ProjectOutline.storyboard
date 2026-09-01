@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Hmn-0B-s1V">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Project Outlines Tab View Controller-->
+        <scene sceneID="a4d-TU-avc">
+            <objects>
+                <tabViewController tabStyle="unspecified" id="Hmn-0B-s1V" customClass="ProjectOutlinesTabViewController" customModule="StyloCoreMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabView key="tabView" type="noTabsNoBorder" translatesAutoresizingMaskIntoConstraints="NO" id="DSt-ap-Xg7">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="system"/>
+                        <connections>
+                            <outlet property="delegate" destination="Hmn-0B-s1V" id="xwj-bD-Khx"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="DSt-ap-Xg7" id="egb-zK-36Q"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="04W-sQ-csv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="87"/>
+        </scene>
+        <!--ProjectOutline-->
+        <scene sceneID="zd7-yX-eCt">
+            <objects>
+                <viewController title="ProjectOutline" storyboardIdentifier="ProjectOutline" id="3Pv-x3-mba" customClass="ProjectOutlineViewController" customModule="StyloCoreMac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" misplaced="YES" id="qMM-oL-LRT">
+                        <rect key="frame" x="0.0" y="0.0" width="348" height="139"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="4Vn-Cf-fWS" customClass="ProjectOutlineHeaderView" customModule="StyloCoreMac" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="110" width="348" height="28"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="xn2-YX-4cp" customClass="MacDisableableButton" customModule="StyloCoreMac" customModuleProvider="target">
+                                        <rect key="frame" x="319" y="13" width="12" height="2"/>
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="file-remove" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="OcX-9D-byQ">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="removeUserSelectedItems:" target="3Pv-x3-mba" id="2wa-9R-c2Y"/>
+                                        </connections>
+                                    </button>
+                                    <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="pad-mf-kXo">
+                                        <rect key="frame" x="290" y="8" width="23" height="14"/>
+                                        <popUpButtonCell key="cell" type="square" bezelStyle="shadowlessSquare" alignment="center" lineBreakMode="truncatingTail" state="on" inset="2" pullsDown="YES" arrowPosition="noArrow" selectedItem="ooK-qs-1it" id="SVY-kt-Zoz">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="menu"/>
+                                            <menu key="menu" id="q36-Ep-Bof">
+                                                <items>
+                                                    <menuItem state="on" image="file-add" hidden="YES" id="ooK-qs-1it"/>
+                                                    <menuItem title="File" id="5PC-Vc-rLz">
+                                                        <connections>
+                                                            <action selector="addText:" target="3Pv-x3-mba" id="0jd-mq-IcC"/>
+                                                            <binding destination="3Pv-x3-mba" name="enabled" keyPath="self.allowsAddingDirectoryAndTexts" id="zmV-eF-fj5"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Directory" id="Mar-h3-sPQ">
+                                                        <connections>
+                                                            <action selector="addDirectory:" target="3Pv-x3-mba" id="W6Y-4L-f4C"/>
+                                                            <binding destination="3Pv-x3-mba" name="enabled" keyPath="self.allowsAddingDirectoryAndTexts" id="vxQ-uP-8p4"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                    <menuItem title="Group" id="5hD-2Z-4JK">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="addGroup:" target="3Pv-x3-mba" id="NbO-Cg-nOR"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </popUpButtonCell>
+                                    </popUpButton>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="xn2-YX-4cp" firstAttribute="centerY" secondItem="4Vn-Cf-fWS" secondAttribute="centerY" id="Aij-Rk-PyR"/>
+                                    <constraint firstItem="pad-mf-kXo" firstAttribute="centerY" secondItem="4Vn-Cf-fWS" secondAttribute="centerY" constant="-1" id="ECy-M8-ccu"/>
+                                    <constraint firstAttribute="trailing" secondItem="xn2-YX-4cp" secondAttribute="trailing" constant="17" id="OKz-gr-0MY"/>
+                                    <constraint firstAttribute="height" constant="28" id="UQs-nq-cUd"/>
+                                    <constraint firstItem="xn2-YX-4cp" firstAttribute="leading" secondItem="pad-mf-kXo" secondAttribute="trailing" constant="6" id="kOk-Yw-Md7"/>
+                                </constraints>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Z3Z-ri-IxZ" userLabel="Sub Section Separator" customClass="ColoredLineView" customModule="StyloCoreMac" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="109" width="348" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="X8R-GH-3ND"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" name="TitleSeparatorColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </customView>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="20" horizontalPageScroll="10" verticalLineScroll="20" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTT-bZ-Joc">
+                                <rect key="frame" x="0.0" y="0.0" width="348" height="109"/>
+                                <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="RZg-vM-M0X">
+                                    <rect key="frame" x="0.0" y="0.0" width="348" height="109"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <outlineView identifier="ProjectOutline" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" tableStyle="plain" columnResizing="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="20" rowSizeStyle="automatic" viewBased="YES" floatsGroupRows="NO" indentationPerLevel="16" outlineTableColumn="vrJ-bL-0J8" id="KnQ-lr-mc0" customClass="ProjectOutlineView" customModule="StyloCoreMac" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="348" height="109"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <size key="intercellSpacing" width="1" height="0.0"/>
+                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="gridColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <tableColumns>
+                                                <tableColumn width="347" minWidth="16" maxWidth="3000" id="vrJ-bL-0J8">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" title="Text Cell" id="u9m-Wn-10G">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                    <prototypeCellViews>
+                                                        <tableCellView identifier="DataCell" id="FxR-uL-OLz" customClass="ProjectOutlineCellView" customModule="StyloCoreMac" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="347" height="20"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <imageView wantsLayer="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzL-eG-Gug">
+                                                                    <rect key="frame" x="0.0" y="3" width="15" height="15"/>
+                                                                    <imageCell key="cell" refusesFirstResponder="YES" image="NSActionTemplate" id="Zga-YP-wBj"/>
+                                                                    <color key="contentTintColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                </imageView>
+                                                                <textField identifier="ProjectOutlineCell" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gMp-ED-ZKj" customClass="ProjectOutlineNameTextField" customModule="StyloCoreMac" customModuleProvider="target">
+                                                                    <rect key="frame" x="18" y="3" width="321" height="15"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" drawsBackground="YES" id="Nr9-Br-CLO">
+                                                                        <font key="font" metaFont="cellTitle"/>
+                                                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="gMp-ED-ZKj" firstAttribute="centerY" secondItem="FxR-uL-OLz" secondAttribute="centerY" id="5fa-kG-hTQ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="gMp-ED-ZKj" secondAttribute="trailing" constant="8" id="Cbj-4Y-Qgi"/>
+                                                                <constraint firstItem="qzL-eG-Gug" firstAttribute="centerY" secondItem="FxR-uL-OLz" secondAttribute="centerY" id="Wez-t5-PXQ"/>
+                                                                <constraint firstItem="qzL-eG-Gug" firstAttribute="leading" secondItem="FxR-uL-OLz" secondAttribute="leading" id="qVZ-5y-aWM"/>
+                                                                <constraint firstItem="gMp-ED-ZKj" firstAttribute="leading" secondItem="FxR-uL-OLz" secondAttribute="leading" constant="18" id="yBW-Sw-27g"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="imageView" destination="qzL-eG-Gug" id="Y1d-Ew-5zE"/>
+                                                                <outlet property="textField" destination="gMp-ED-ZKj" id="HF9-B7-7qr"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                        <tableCellView identifier="HeaderCell" id="01f-XN-BAJ" customClass="GroupProjectOutlineCellView" customModule="StyloCoreMac" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="20" width="347" height="20"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <subviews>
+                                                                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0kW-t8-Cuf" customClass="ProjectOutlineNameTextField" customModule="StyloCoreMac" customModuleProvider="target">
+                                                                    <rect key="frame" x="4" y="3" width="273" height="14"/>
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" truncatesLastVisibleLine="YES" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="Table View Cell" drawsBackground="YES" id="xSI-eY-gnb">
+                                                                        <font key="font" metaFont="smallSystemBold"/>
+                                                                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                                                        <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    </textFieldCell>
+                                                                </textField>
+                                                                <button identifier="ShowHideButton" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ITc-AX-3hh">
+                                                                    <rect key="frame" x="304" y="3" width="35" height="14"/>
+                                                                    <buttonCell key="cell" type="inline" title="Show" alternateTitle="Hide" bezelStyle="inline" alignment="center" inset="2" id="nnr-QZ-Q1q">
+                                                                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                                                        <font key="font" metaFont="smallSystemBold"/>
+                                                                    </buttonCell>
+                                                                    <connections>
+                                                                        <action selector="showHideItem:" target="3Pv-x3-mba" id="Onf-zM-zSU"/>
+                                                                        <binding destination="01f-XN-BAJ" name="title" keyPath="title" id="9UO-av-1S9"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="0kW-t8-Cuf" firstAttribute="leading" secondItem="01f-XN-BAJ" secondAttribute="leading" constant="4" id="3mx-hg-nhD"/>
+                                                                <constraint firstItem="0kW-t8-Cuf" firstAttribute="centerY" secondItem="01f-XN-BAJ" secondAttribute="centerY" id="77P-M3-yjD"/>
+                                                                <constraint firstAttribute="trailing" secondItem="0kW-t8-Cuf" secondAttribute="trailing" constant="70" id="OGm-W4-kvA"/>
+                                                                <constraint firstItem="ITc-AX-3hh" firstAttribute="centerY" secondItem="01f-XN-BAJ" secondAttribute="centerY" id="XWd-yp-8ea"/>
+                                                                <constraint firstAttribute="trailing" secondItem="ITc-AX-3hh" secondAttribute="trailing" constant="8" id="n1G-LR-zNL"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="showHideButton" destination="ITc-AX-3hh" id="ml7-Ur-dN4"/>
+                                                                <outlet property="textField" destination="0kW-t8-Cuf" id="tSz-4S-RUs"/>
+                                                            </connections>
+                                                        </tableCellView>
+                                                    </prototypeCellViews>
+                                                </tableColumn>
+                                            </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="3Pv-x3-mba" id="665-ki-hWq"/>
+                                                <outlet property="delegate" destination="3Pv-x3-mba" id="Yjf-HD-1gM"/>
+                                                <outlet property="menu" destination="8L9-yJ-M7g" id="Pu0-df-K1p"/>
+                                            </connections>
+                                        </outlineView>
+                                    </subviews>
+                                    <nil key="backgroundColor"/>
+                                </clipView>
+                                <edgeInsets key="contentInsets" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="aVM-DJ-qpS">
+                                    <rect key="frame" x="0.0" y="108" width="348" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="ssy-Ii-hkd">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="automaticallyAdjustsContentInsets" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Z3Z-ri-IxZ" firstAttribute="leading" secondItem="qMM-oL-LRT" secondAttribute="leading" id="90g-pm-2eN"/>
+                            <constraint firstAttribute="bottom" secondItem="TTT-bZ-Joc" secondAttribute="bottom" id="HVC-4N-eB8"/>
+                            <constraint firstItem="TTT-bZ-Joc" firstAttribute="top" secondItem="Z3Z-ri-IxZ" secondAttribute="bottom" id="Iud-r7-aHL"/>
+                            <constraint firstAttribute="trailing" secondItem="Z3Z-ri-IxZ" secondAttribute="trailing" id="WFI-y9-sDI"/>
+                            <constraint firstItem="4Vn-Cf-fWS" firstAttribute="top" secondItem="qMM-oL-LRT" secondAttribute="top" id="Ycj-Bh-64r"/>
+                            <constraint firstAttribute="trailing" secondItem="TTT-bZ-Joc" secondAttribute="trailing" id="cBm-OS-gT8"/>
+                            <constraint firstItem="Z3Z-ri-IxZ" firstAttribute="top" secondItem="4Vn-Cf-fWS" secondAttribute="bottom" id="cI5-11-zcw"/>
+                            <constraint firstAttribute="trailing" secondItem="4Vn-Cf-fWS" secondAttribute="trailing" id="d9H-Lj-SyY"/>
+                            <constraint firstItem="TTT-bZ-Joc" firstAttribute="leading" secondItem="qMM-oL-LRT" secondAttribute="leading" id="r51-UT-dOE"/>
+                            <constraint firstItem="4Vn-Cf-fWS" firstAttribute="leading" secondItem="qMM-oL-LRT" secondAttribute="leading" id="wux-a7-Y4V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addItemButton" destination="pad-mf-kXo" id="RyB-4N-seV"/>
+                        <outlet property="contextualMenu" destination="8L9-yJ-M7g" id="vg3-Jj-Nmt"/>
+                        <outlet property="deleteItemButton" destination="xn2-YX-4cp" id="SF7-iD-nVa"/>
+                        <outlet property="projectOutlineView" destination="KnQ-lr-mc0" id="vPN-8q-VZt"/>
+                    </connections>
+                </viewController>
+                <customObject id="moa-Tb-eAA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <menu id="8L9-yJ-M7g">
+                    <items>
+                        <menuItem title="Add Directory" id="VSw-za-Wlx" userLabel="Add Directory">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="addDirectoryUnderRightClickedItem:" target="3Pv-x3-mba" id="Qz9-25-eqT"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem title="Add File" id="5VV-iz-1Wv" userLabel="Add File">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="addTextUnderRightClickedItem:" target="3Pv-x3-mba" id="ZBZ-Zv-p3q"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="AsW-DB-mbg"/>
+                        <menuItem title="Rename" id="bto-Mq-DIa" userLabel="Delete">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="renameRightClickedItem:" target="3Pv-x3-mba" id="VTp-bK-fst"/>
+                                <binding destination="3Pv-x3-mba" name="enabled" keyPath="self.renameContextualMenuEnabled" id="fg4-LW-hNe"/>
+                            </connections>
+                        </menuItem>
+                        <menuItem isSeparatorItem="YES" id="GfT-kY-cTL"/>
+                        <menuItem title="Delete" id="Xqz-ed-C8g" userLabel="Delete">
+                            <modifierMask key="keyEquivalentModifierMask"/>
+                            <connections>
+                                <action selector="removeRightClickedItem:" target="3Pv-x3-mba" id="2Hw-eO-7zg"/>
+                            </connections>
+                        </menuItem>
+                    </items>
+                </menu>
+                <userDefaultsController representsSharedInstance="YES" id="cc3-Zv-yXx"/>
+            </objects>
+            <point key="canvasLocation" x="571" y="30"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSActionTemplate" width="15" height="15"/>
+        <image name="file-add" width="12" height="13"/>
+        <image name="file-remove" width="12" height="2"/>
+        <namedColor name="TitleSeparatorColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.25900000333786011" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

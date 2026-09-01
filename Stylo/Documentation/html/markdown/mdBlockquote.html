@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>Markdown blockquote element</title>
+		<meta name="description" content="Description and usage examples of the Markdown blockquote element."></meta>
+		<meta name="KEYWORDS" content="markdown, blockquote, element"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- markdown/mdBlockquote.html -->
+<h1>Blockquote</h1>
+<p>A quoted block, equivalent to the &quot;blockquote&quot; HTML element, is used to identify a quoted section of text from another source.</p>
+<h2>Syntax</h2>
+<p>Markdown:</p>
+<pre><code class="language-markdown">&gt; citation bloc    
+citation  bloc
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;blockquote&gt;
+    &lt;p&gt;
+        citation bloc&lt;br&gt;
+        citation bloc
+    &lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+<p>The quoted blocks can nest into each other:</p>
+<p>Markdown:</p>
+<pre><code class="language-markdown">&gt; citation bloc    
+&gt; &gt; nested citation block
+&gt; &gt; &gt; second nested citation bloc
+</code></pre>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;blockquote&gt;
+    &lt;p&gt;
+        citation bloc
+    &lt;/p&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;
+            nested citation block
+        &lt;/p&gt;
+        &lt;blockquote&gt;
+            &lt;p&gt;
+                second nested citation bloc
+            &lt;/p&gt;
+        &lt;/blockquote&gt;
+    &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+</code></pre>
+<h2>Pseudo-elements</h2>
+<p>There is one pseudo-element offered by this element:</p>
+<ul>
+<li><code>tag</code>: covers the <code>&gt;</code> (larger) signs used to define the quote blocks.</li>
+</ul>
+	</body>
+</html>

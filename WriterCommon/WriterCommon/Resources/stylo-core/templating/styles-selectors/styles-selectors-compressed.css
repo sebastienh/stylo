@@ -1,0 +1,5044 @@
+
+/********************************************/
+/*                  Source                  */
+/********************************************/
+
+
+body {
+    
+}
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1 {
+    
+}
+
+h2 {
+    
+}
+
+h3 {
+    
+}
+
+h4 {
+    
+}
+
+h5 {
+    
+}
+
+h6 {
+    
+}
+
+h1::tag {
+    
+}
+
+h2::tag {
+    
+}
+
+h3::tag {
+    
+}
+
+h4::tag {
+    
+}
+
+h5::tag {
+    
+}
+
+h6::tag {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong {
+    
+    
+}
+
+em {
+    
+    
+}
+
+s {
+    
+    
+}
+
+strong::tag {
+    
+    
+}
+
+em::tag {
+    
+    
+}
+
+s::tag {
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote {
+    
+    
+}
+
+blockquote::tag {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul {
+    
+}
+
+ol {
+    
+}
+
+li {
+    
+}
+
+li::tag {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code {
+    
+}
+
+code::tag {
+    
+}
+
+code::params {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table {
+    
+}
+
+thead {
+    
+}
+
+tbody {
+    
+    
+}
+
+tr {
+    
+}
+
+td {
+    
+}
+
+table::tag {
+    
+    
+}
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a,
+img,
+ref {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag,
+img::tag,
+ref::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text,
+img::text,
+ref::text {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination,
+img::destination,
+ref::destination {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label,
+img::label,
+ref::label {
+    
+}
+
+/* title: the title of the link */
+a::title,
+img::title,
+ref::title {
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block {
+    
+}
+
+/* attributes */
+
+key-value-attr {
+
+}
+
+key-value-attr::tag {
+    
+}
+
+class-attr {
+
+
+}
+
+class-attr::tag {
+
+}
+
+id-attr {
+
+}
+
+id-attr::tag {
+
+}
+
+/********************************************/
+/*                 highlight                */
+/********************************************/
+
+
+body:highlight {
+    
+}
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:highlight {
+    
+}
+
+h2:highlight {
+    
+}
+
+h3:highlight {
+    
+}
+
+h4:highlight {
+    
+}
+
+h5:highlight {
+    
+}
+
+h6:highlight {
+    
+}
+
+h1::tag:highlight {
+    
+}
+
+h2::tag:highlight {
+    
+}
+
+h3::tag:highlight {
+    
+}
+
+h4::tag:highlight {
+    
+}
+
+h5::tag:highlight {
+    
+}
+
+h6::tag:highlight {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:highlight {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:highlight, em:highlight {
+    
+    
+}
+
+s:highlight {
+    
+    
+}
+
+:highlight strong, :highlight em {
+    
+    
+}
+
+:highlight s {
+    
+    
+}
+
+:highlight strong::tag,
+:highlight em::tag,
+:highlight s::tag {
+    
+    
+}
+
+:highlight strong:highlight,
+:highlight em:highlight {
+    
+    
+}
+
+:highlight s:highlight {
+    
+    
+}
+
+:highlight strong::tag:highlight,
+:highlight em::tag:highlight,
+:highlight s::tag:highlight  {
+    
+    
+}
+
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:highlight {
+    
+    
+}
+
+blockquote::tag:highlight {
+    
+    
+}
+
+:highlight blockquote {
+    
+    
+}
+
+
+:highlight blockquote::tag {
+    
+    
+}
+
+:highlight blockquote {
+    
+    
+}
+
+:highlight blockquote::tag {
+    
+    
+}
+
+:highlight blockquote::tag:highlight {
+    
+    
+}
+
+:highlight blockquote:highlight {
+    
+    
+}
+
+:highlight blockquote::tag:highlight {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:highlight {
+    
+}
+
+ol:highlight {
+    
+}
+
+li:highlight {
+    
+}
+
+li::tag:highlight {
+    
+}
+
+:highlight ul {
+    
+}
+
+:highlight ol {
+    
+}
+
+:highlight li {
+    
+}
+
+:highlight li::tag {
+    
+}
+
+:highlight ul:highlight {
+    
+}
+
+:highlight ol:highlight {
+    
+}
+
+:highlight li:highlight {
+    
+}
+
+:highlight li::tag:highlight {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:highlight {
+    
+}
+
+code::tag:highlight {
+    
+}
+
+code::params:highlight {
+    
+}
+
+:highlight code {
+    
+}
+
+:highlight code::tag {
+    
+}
+
+:highlight code::params {
+    
+}
+
+:highlight code:highlight {
+    
+}
+
+:highlight code::tag:highlight {
+    
+}
+
+:highlight code::params:highlight {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:highlight {
+    
+}
+
+thead:highlight {
+    
+}
+
+tbody:highlight {
+    
+    
+}
+
+tr:highlight {
+    
+}
+
+td:highlight {
+    
+}
+
+:highlight thead {
+    
+}
+
+:highlight tbody {
+    
+    
+}
+
+:highlight tr {
+    
+}
+
+:highlight td {
+    
+}
+
+
+:highlight thead:highlight {
+    
+}
+
+:highlight tbody:highlight {
+    
+    
+}
+
+:highlight tr:highlight {
+    
+}
+
+:highlight td:highlight {
+    
+}
+
+
+/*
+## Links, Images, refs
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:highlight,
+img:highlight,
+ref:highlight {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:highlight,
+img::tag:highlight,
+ref::tag:highlight {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:highlight,
+img::text:highlight,
+ref::text:highlight {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:highlight,
+img::destination:highlight,
+ref::destination:highlight {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:highlight,
+img::label:highlight,
+ref::label:highlight {
+    
+}
+
+/* title: the title of the link */
+a::title:highlight,
+img::title:highlight,
+ref::title:highlight {
+    
+    
+}
+
+:highlight a,
+:highlight img,
+:highlight ref {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag,
+:highlight img::tag,
+:highlight ref::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text,
+:highlight img::text,
+:highlight ref::text {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination,
+:highlight img::destination,
+:highlight ref::destination {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label,
+:highlight img::label,
+:highlight ref::label {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title,
+:highlight img::title,
+:highlight ref::title {
+    
+    
+}
+
+:highlight a:highlight,
+:highlight img:highlight,
+:highlight ref:highlight {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:highlight,
+:highlight img::tag:highlight,
+:highlight ref::tag:highlight {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:highlight,
+:highlight img::text:highlight,
+:highlight ref::text:highlight {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:highlight,
+:highlight img::destination:highlight,
+:highlight ref::destination:highlight {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:highlight,
+:highlight img::label:highlight,
+:highlight ref::label:highlight {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:highlight,
+:highlight img::title:highlight,
+:highlight ref::title:highlight {
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:highlight {
+    
+}
+
+
+/* attributes */
+
+/* :highlight */
+key-value-attr:highlight {
+
+}
+
+key-value-attr::tag:highlight {
+    
+}
+
+class-attr:highlight {
+
+
+}
+
+class-attr::tag:highlight {
+
+}
+
+id-attr:highlight {
+
+}
+
+id-attr::tag:highlight {
+
+}
+
+/* :highlight  */
+
+:highlight key-value-attr,
+:highlight class-attr,
+:highlight id-attr {
+
+}
+
+:highlight key-value-attr::tag,
+:highlight class-attr::tag,
+:highlight id-attr::tag {
+    
+}
+
+/* :highlight :highlight */
+
+:highlight key-value-attr:highlight,
+:highlight class-attr:highlight,
+:highlight id-attr:highlight {
+
+}
+
+:highlight key-value-attr::tag:highlight,
+:highlight class-attr::tag:highlight,
+:highlight id-attr::tag:highlight {
+    
+}
+
+/********************************************/
+/*                 flash                    */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:flash {
+    
+}
+
+h2:flash {
+    
+}
+
+h3:flash {
+    
+}
+
+h4:flash {
+    
+}
+
+h5:flash {
+    
+}
+
+h6:flash {
+    
+}
+
+h1::tag:flash {
+    
+}
+
+h2::tag:flash {
+    
+}
+
+h3::tag:flash {
+    
+}
+
+h4::tag:flash {
+    
+}
+
+h5::tag:flash {
+    
+}
+
+h6::tag:flash {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:flash {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:flash {
+    
+    
+}
+
+em:flash {
+    
+    
+}
+
+s:flash {
+    
+    
+}
+
+:flash strong {
+    
+    
+}
+
+:flash em {
+    
+    
+}
+
+:flash s {
+    
+    
+}
+
+:flash strong::tag {
+    
+    
+}
+
+:flash em::tag {
+    
+    
+}
+
+:flash s::tag {
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:flash {
+    
+    
+}
+
+blockquote::tag:flash {
+    
+    
+}
+
+:flash blockquote {
+    
+    
+}
+
+
+:flash blockquote::tag {
+    
+    
+}
+
+:flash blockquote {
+    
+    
+}
+
+:flash blockquote::tag {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:flash {
+    
+}
+
+ol:flash {
+    
+}
+
+li:flash {
+    
+}
+
+li::tag:flash {
+    
+}
+
+:flash ul {
+    
+}
+
+:flash ol {
+    
+}
+
+:flash li {
+    
+}
+
+:flash li::tag {
+    
+}
+
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax flashing
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:flash {
+    
+}
+
+code::tag:flash {
+    
+}
+
+code::params:flash {
+    
+}
+
+:flash code {
+    
+}
+
+:flash code::tag {
+    
+}
+
+:flash code::params {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:flash {
+    
+}
+
+thead:flash {
+    
+}
+
+tbody:flash {
+    
+    
+}
+
+tr:flash {
+    
+}
+
+td:flash {
+    
+}
+
+:flash thead {
+    
+}
+
+:flash tbody {
+    
+    
+}
+
+:flash tr {
+    
+}
+
+:flash td {
+    
+}
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:flash,
+img:flash,
+ref:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:flash,
+img::tag:flash,
+ref::tag:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:flash,
+img::text:flash,
+ref::text:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:flash,
+img::destination:flash,
+ref::destination:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:flash,
+img::label:flash,
+ref::label:flash {
+    
+}
+
+/* title: the title of the link */
+a::title:flash,
+img::title:flash,
+ref::title:flash {
+    
+    
+}
+
+:flash a,
+:flash img,
+:flash ref {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:flash a::tag,
+:flash img::tag,
+:flash ref::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:flash a::text,
+:flash img::text,
+:flash ref::text {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:flash a::destination,
+:flash img::destination,
+:flash ref::destination {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:flash a::label,
+:flash img::label,
+:flash ref::label {
+    
+}
+
+/* title: the title of the link */
+:flash a::title,
+:flash img::title,
+:flash ref::title {
+    
+    
+}
+
+/*
+    html-block
+*/
+
+html-block:flash {
+    
+}
+
+
+/* attributes */
+
+
+/* :flash */
+key-value-attr:flash ,
+class-attr:flash,
+id-attr:flash {
+
+}
+
+key-value-attr::tag:flash,
+class-attr::tag:flash,
+id-attr::tag:flash {
+    
+}
+
+
+/* :flash normal */
+:flash key-value-attr,
+:flash class-attr,
+:flash id-attr {
+
+}
+
+:flash key-value-attr::tag,
+:flash class-attr::tag,
+:flash id-attr::tag {
+    
+}
+
+
+/********************************************/
+/*                 fade                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:fade {
+    
+}
+
+h2:fade {
+    
+}
+
+h3:fade {
+    
+}
+
+h4:fade {
+    
+}
+
+h5:fade {
+    
+}
+
+h6:fade {
+    
+}
+
+h1::tag:fade {
+    
+}
+
+h2::tag:fade {
+    
+}
+
+h3::tag:fade {
+    
+}
+
+h4::tag:fade {
+    
+}
+
+h5::tag:fade {
+    
+}
+
+h6::tag:fade {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:fade {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:fade {
+    
+    
+}
+
+em:fade {
+    
+    
+}
+
+s:fade {
+    
+    
+}
+
+:fade strong {
+    
+    
+}
+
+:fade em {
+    
+    
+}
+
+:fade s {
+    
+    
+}
+
+:fade strong::tag {
+    
+    
+}
+
+:fade em::tag {
+    
+    
+}
+
+:fade s::tag {
+    
+    
+}
+
+:fade strong:fade {
+    
+    
+}
+
+:fade em:fade {
+    
+    
+}
+
+:fade s:fade {
+    
+    
+}
+
+:fade strong::tag:fade {
+    
+    
+}
+
+:fade em::tag:fade {
+    
+    
+}
+
+:fade s::tag:fade {
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:fade {
+    
+    
+}
+
+blockquote::tag:fade {
+    
+    
+}
+
+:fade blockquote {
+    
+    
+}
+
+
+:fade blockquote::tag {
+    
+    
+}
+
+:fade blockquote {
+    
+    
+}
+
+:fade blockquote::tag {
+    
+    
+}
+
+:fade blockquote::tag:fade {
+    
+    
+}
+
+:fade blockquote:fade {
+    
+    
+}
+
+:fade blockquote::tag:fade {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:fade {
+    
+}
+
+ol:fade {
+    
+}
+
+li:fade {
+    
+}
+
+li::tag:fade {
+    
+}
+
+:fade ul {
+    
+}
+
+:fade ol {
+    
+}
+
+:fade li {
+    
+}
+
+:fade li::tag {
+    
+}
+
+:fade ul:fade {
+    
+}
+
+:fade ol:fade {
+    
+}
+
+:fade li:fade {
+    
+}
+
+:fade li::tag:fade {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax fadeing
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:fade {
+    
+}
+
+code::tag:fade {
+    
+}
+
+code::params:fade {
+    
+}
+
+:fade code {
+    
+}
+
+:fade code::tag {
+    
+}
+
+:fade code::params {
+    
+}
+
+:fade code:fade {
+    
+}
+
+:fade code::tag:fade {
+    
+}
+
+:fade code::params:fade {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:fade {
+    
+}
+
+thead:fade {
+    
+}
+
+tbody:fade {
+    
+    
+}
+
+tr:fade {
+    
+}
+
+td:fade {
+    
+}
+
+:fade thead {
+    
+}
+
+:fade tbody {
+    
+    
+}
+
+:fade tr {
+    
+}
+
+:fade td {
+    
+}
+
+
+:fade thead:fade {
+    
+}
+
+:fade tbody:fade {
+    
+    
+}
+
+:fade tr:fade {
+    
+}
+
+:fade td:fade {
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:fade,
+img:fade,
+ref:fade {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:fade,
+img::tag:fade,
+ref::tag:fade {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:fade,
+img::text:fade,
+ref::text:fade {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:fade,
+img::destination:fade,
+ref::destination:fade {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:fade,
+img::label:fade,
+ref::label:fade {
+    
+}
+
+/* title: the title of the link */
+a::title:fade,
+img::title:fade,
+ref::title:fade {
+    
+    
+}
+
+:fade a,
+:fade img,
+:fade ref {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:fade a::tag,
+:fade img::tag,
+:fade ref::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:fade a::text,
+:fade img::text,
+:fade ref::text {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:fade a::destination,
+:fade img::destination,
+:fade ref::destination {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:fade a::label,
+:fade img::label,
+:fade ref::label {
+    
+}
+
+/* title: the title of the link */
+:fade a::title,
+:fade img::title,
+:fade ref::title {
+    
+    
+}
+
+:fade a:fade,
+:fade img:fade,
+:fade ref:fade {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:fade a::tag:fade,
+:fade img::tag:fade,
+:fade ref::tag:fade {
+    
+}
+
+/* text: the part between the two square braquets */
+:fade a::text:fade,
+:fade img::text:fade,
+:fade ref::text:fade {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:fade a::destination:fade,
+:fade img::destination:fade,
+:fade ref::destination:fade {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:fade a::label:fade,
+:fade img::label:fade,
+:fade ref::label:fade {
+    
+}
+
+/* title: the title of the link */
+:fade a::title:fade,
+:fade img::title:fade,
+:fade ref::title:fade {
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:fade {
+    
+}
+
+
+/* attributes */
+
+
+/* :fade */
+key-value-attr:fade,
+class-attr:fade,
+id-attr:fade  {
+
+}
+
+key-value-attr::tag:fade,
+class-attr::tag:fade,
+id-attr::tag:fade  {
+    
+}
+
+
+/* :fade normal */
+:fade key-value-attr,
+:fade class-attr,
+:fade id-attr  {
+
+}
+
+:fade key-value-attr::tag,
+:fade class-attr::tag,
+:fade id-attr::tag {
+    
+}
+
+/* :fade :fade */
+:fade key-value-attr:fade,
+:fade class-attr:fade,
+:fade id-attr:fade {
+
+}
+
+:fade key-value-attr::tag:fade,
+:fade class-attr::tag:fade,
+:fade id-attr::tag:fade {
+    
+}
+
+/********************************************/
+/*                 focus                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:focus {
+    
+}
+
+h2:focus {
+    
+}
+
+h3:focus {
+    
+}
+
+h4:focus {
+    
+}
+
+h5:focus {
+    
+}
+
+h6:focus {
+    
+}
+
+h1::tag:focus {
+    
+}
+
+h2::tag:focus {
+    
+}
+
+h3::tag:focus {
+    
+}
+
+h4::tag:focus {
+    
+}
+
+h5::tag:focus {
+    
+}
+
+h6::tag:focus {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:focus {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:focus {
+    
+    
+}
+
+em:focus {
+    
+    
+}
+
+s:focus {
+    
+    
+}
+
+:focus strong {
+    
+    
+}
+
+:focus em {
+    
+    
+}
+
+:focus s {
+    
+    
+}
+
+:focus strong::tag {
+    
+    
+}
+
+:focus em::tag {
+    
+    
+}
+
+:focus s::tag {
+    
+    
+}
+
+:focus strong:focus {
+    
+    
+}
+
+:focus em:focus {
+    
+    
+}
+
+:focus s:focus {
+    
+    
+}
+
+:focus strong::tag:focus {
+    
+    
+}
+
+:focus em::tag:focus {
+    
+    
+}
+
+:focus s::tag:focus {
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:focus {
+    
+    
+}
+
+blockquote::tag:focus {
+    
+    
+}
+
+:focus blockquote {
+    
+    
+}
+
+
+:focus blockquote::tag {
+    
+    
+}
+
+:focus blockquote {
+    
+    
+}
+
+:focus blockquote::tag {
+    
+    
+}
+
+:focus blockquote::tag:focus {
+    
+    
+}
+
+:focus blockquote:focus {
+    
+    
+}
+
+:focus blockquote::tag:focus {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:focus {
+    
+}
+
+ol:focus {
+    
+}
+
+li:focus {
+    
+}
+
+li::tag:focus {
+    
+}
+
+:focus ul {
+    
+}
+
+:focus ol {
+    
+}
+
+:focus li {
+    
+}
+
+:focus li::tag {
+    
+}
+
+:focus ul:focus {
+    
+}
+
+:focus ol:focus {
+    
+}
+
+:focus li:focus {
+    
+}
+
+:focus li::tag:focus {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax focusing
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:focus {
+    
+}
+
+code::tag:focus {
+    
+}
+
+code::params:focus {
+    
+}
+
+:focus code {
+    
+}
+
+:focus code::tag {
+    
+}
+
+:focus code::params {
+    
+}
+
+:focus code:focus {
+    
+}
+
+:focus code::tag:focus {
+    
+}
+
+:focus code::params:focus {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:focus {
+    
+}
+
+thead:focus {
+    
+}
+
+tbody:focus {
+    
+    
+}
+
+tr:focus {
+    
+}
+
+td:focus {
+    
+}
+
+:focus thead {
+    
+}
+
+:focus tbody {
+    
+    
+}
+
+:focus tr {
+    
+}
+
+:focus td {
+    
+}
+
+
+:focus thead:focus {
+    
+}
+
+:focus tbody:focus {
+    
+    
+}
+
+:focus tr:focus {
+    
+}
+
+:focus td:focus {
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:focus,
+img:focus,
+ref:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:focus,
+img::tag:focus,
+ref::tag:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:focus,
+img::text:focus,
+ref::text:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:focus,
+img::destination:focus,
+ref::destination:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:focus,
+img::label:focus,
+ref::label:focus {
+    
+}
+
+/* title: the title of the link */
+a::title:focus,
+img::title:focus,
+ref::title:focus {
+    
+    
+}
+
+:focus a,
+:focus a,
+:focus a {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:focus a::tag,
+:focus img::tag,
+:focus ref::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:focus a::text,
+:focus img::text,
+:focus ref::text {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:focus a::destination,
+:focus img::destination,
+:focus ref::destination {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:focus a::label,
+:focus img::label,
+:focus ref::label {
+    
+}
+
+/* title: the title of the link */
+:focus a::title,
+:focus img::title,
+:focus ref::title {
+    
+    
+}
+
+:focus a:focus,
+:focus img:focus,
+:focus ref:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:focus a::tag:focus,
+:focus img::tag:focus,
+:focus ref::tag:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:focus a::text:focus,
+:focus img::text:focus,
+:focus ref::text:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:focus a::destination:focus,
+:focus img::destination:focus,
+:focus ref::destination:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:focus a::label:focus,
+:focus img::label:focus,
+:focus ref::label:focus {
+    
+}
+
+/* title: the title of the link */
+:focus a::title:focus,
+:focus img::title:focus,
+:focus ref::title:focus {
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:focus {
+    
+}
+
+
+/* attributes */
+
+
+/* :focus */
+key-value-attr:focus,
+class-attr:focus,
+id-attr:focus {
+
+}
+
+key-value-attr::tag:focus,
+class-attr::tag:focus,
+id-attr::tag:focus {
+    
+}
+
+/* :focus normal */
+:focus key-value-attr,
+:focus class-attr,
+:focus id-attr {
+
+}
+
+:focus key-value-attr::tag,
+:focus class-attr::tag,
+:focus id-attr::tag {
+    
+}
+
+
+/* :focus :focus */
+:focus key-value-attr:focus,
+:focus class-attr:focus,
+:focus id-attr:focus {
+
+}
+
+:focus key-value-attr::tag:focus,
+:focus class-attr::tag:focus,
+:focus id-attr::tag:focus {
+    
+}
+
+
+/********************************************/
+/*           highlight-fade                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:highlight:fade {
+    
+}
+
+h2:highlight:fade {
+    
+}
+
+h3:highlight:fade {
+    
+}
+
+h4:highlight:fade {
+    
+}
+
+h5:highlight:fade {
+    
+}
+
+h6:highlight:fade {
+    
+}
+
+h1::tag:highlight:fade {
+    
+}
+
+h2::tag:highlight:fade {
+    
+}
+
+h3::tag:highlight:fade {
+    
+}
+
+h4::tag:highlight:fade {
+    
+}
+
+h5::tag:highlight:fade {
+    
+}
+
+h6::tag:highlight:fade {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:highlight:fade {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+/* :highlight:fade */
+strong:highlight:fade {
+    
+    
+}
+
+em:highlight:fade {
+    
+    
+}
+
+s:highlight:fade {
+    
+    
+}
+
+strong::tag:highlight:fade {
+    
+    
+}
+
+em::tag:highlight:fade {
+    
+    
+}
+
+s::tag:highlight:fade {
+    
+
+}
+
+/* :highlight :fade */
+:highlight strong:fade {
+    
+    
+}
+
+:highlight em:fade {
+    
+    
+}
+
+:highlight s:fade {
+    
+    
+}
+
+:highlight strong::tag:fade {
+    
+    
+}
+
+:highlight em::tag:fade {
+    
+    
+}
+
+:highlight s::tag:fade {
+    
+
+}
+
+
+/* :highlight :highlight:fade */
+:highlight strong:highlight:fade {
+    
+    
+}
+
+:highlight em:highlight:fade {
+    
+    
+}
+
+:highlight s:highlight:fade {
+    
+    
+}
+
+:highlight strong::tag:highlight:fade {
+    
+    
+}
+
+:highlight em::tag:highlight:fade {
+    
+    
+}
+
+:highlight s::tag:highlight:fade {
+    
+
+}
+
+/* :highlight:fade :highlight:fade */
+:highlight:fade strong:highlight:fade {
+    
+    
+}
+
+:highlight:fade em:highlight:fade {
+    
+    
+}
+
+:highlight:fade s:highlight:fade {
+    
+    
+}
+
+:highlight:fade strong::tag:highlight:fade {
+    
+    
+}
+
+:highlight:fade em::tag:highlight:fade {
+    
+    
+}
+
+:highlight:fade s::tag:highlight:fade {
+    
+
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+/* :highlight:fade */
+blockquote:highlight:fade {
+    
+    
+}
+
+blockquote::tag:highlight:fade {
+    
+    
+}
+
+/* :highlight :fade */
+:highlight blockquote:fade {
+    
+    
+}
+
+
+:highlight blockquote::tag:fade {
+    
+    
+}
+
+
+/* :highlight :highlight:fade */
+:highlight blockquote:highlight:fade {
+    
+    
+}
+
+
+:highlight blockquote::tag:highlight:fade {
+    
+    
+}
+
+/* :highlight:fade :highlight:fade */
+:highlight:fade blockquote:highlight:fade {
+    
+    
+}
+
+:highlight:fade blockquote::tag:highlight:fade {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+/* :highlight:fade */
+ul:highlight:fade {
+    
+}
+
+ol:highlight:fade {
+    
+}
+
+li:highlight:fade {
+    
+}
+
+li::tag:highlight:fade {
+    
+}
+
+/* :highlight :fade */
+:highlight ul:fade {
+    
+}
+
+:highlight ol:fade {
+    
+}
+
+:highlight li:fade {
+    
+}
+
+:highlight li::tag:fade {
+    
+}
+
+/* :highlight :highlight:fade */
+:highlight ul:highlight:fade {
+    
+}
+
+:highlight ol:highlight:fade {
+    
+}
+
+:highlight li:highlight:fade {
+    
+}
+
+:highlight li::tag:highlight:fade {
+    
+}
+
+/* :highlight:fade :highlight:fade */
+:highlight:fade ul:highlight:fade {
+    
+}
+
+:highlight:fade ol:highlight:fade {
+    
+}
+
+:highlight:fade li:highlight:fade {
+    
+}
+
+:highlight:fade li::tag:highlight:fade {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+/* :highlight:fade */
+code:highlight:fade {
+    
+}
+
+code::tag:highlight:fade {
+    
+}
+
+code::params:highlight:fade {
+    
+}
+
+/* :highlight :fade */
+:highlight code:fade {
+    
+}
+
+:highlight code::tag:fade {
+    
+}
+
+:highlight code::params:fade {
+    
+}
+
+/* :highlight :highlight:fade */
+:highlight code:highlight:fade {
+    
+}
+
+:highlight code::tag:highlight:fade {
+    
+}
+
+:highlight code::params:highlight:fade {
+    
+}
+
+/* :highlight:fade :highlight:fade */
+:highlight:fade code:highlight:fade {
+    
+}
+
+:highlight:fade code::tag:highlight:fade {
+    
+}
+
+:highlight:fade code::params:highlight:fade {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+/* :highlight:fade */
+
+
+table:highlight:fade {
+    
+}
+
+thead:highlight:fade {
+    
+}
+
+tbody:highlight:fade {
+    
+    
+}
+
+tr:highlight:fade {
+    
+}
+
+td:highlight:fade {
+    
+}
+
+/* :highlight :fade */
+:highlight thead:fade {
+    
+}
+
+:highlight tbody:fade {
+    
+    
+}
+
+:highlight tr:fade {
+    
+}
+
+:highlight td:fade {
+    
+}
+
+/* :highlight :highlight:fade */
+:highlight thead:highlight:fade {
+    
+}
+
+:highlight tbody:highlight:fade {
+    
+    
+}
+
+:highlight tr:highlight:fade {
+    
+}
+
+:highlight td :highlight:fade {
+    
+}
+
+/* :highlight:fade :highlight:fade */
+:highlight:fade thead:highlight:fade {
+    
+}
+
+:highlight:fade tbody:highlight:fade {
+    
+    
+}
+
+:highlight:fade tr:highlight:fade {
+    
+}
+
+:highlight:fade td:highlight:fade {
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+/* :highlight:fade */
+
+a:highlight:fade,
+img:highlight:fade,
+ref:highlight:fade {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:highlight:fade,
+img::tag:highlight:fade,
+ref::tag:highlight:fade {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:highlight:fade,
+img::text:highlight:fade,
+ref::text:highlight:fade {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:highlight:fade,
+img::destination:highlight:fade,
+ref::destination:highlight:fade {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:highlight:fade,
+img::label:highlight:fade,
+ref::label:highlight:fade {
+    
+}
+
+/* title: the title of the link */
+a::title:highlight:fade,
+img::title:highlight:fade,
+ref::title:highlight:fade {
+    
+    
+}
+
+/* :highlight :fade */
+:highlight a:fade,
+:highlight img:fade,
+:highlight ref:fade {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:fade,
+:highlight img::tag:fade,
+:highlight ref::tag:fade {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:fade,
+:highlight img::text:fade,
+:highlight ref::text:fade {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:fade,
+:highlight img::destination:fade,
+:highlight ref::destination:fade {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:fade,
+:highlight img::label:fade,
+:highlight ref::label:fade {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:fade,
+:highlight img::title:fade,
+:highlight ref::title:fade {
+    
+    
+}
+
+/* :highlight :highlight:fade */
+:highlight a:highlight:fade,
+:highlight img:highlight:fade,
+:highlight ref:highlight:fade {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:highlight:fade,
+:highlight img::tag:highlight:fade,
+:highlight ref::tag:highlight:fade {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:highlight:fade,
+:highlight img::text:highlight:fade,
+:highlight ref::text:highlight:fade {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:highlight:fade,
+:highlight img::destination:highlight:fade,
+:highlight ref::destination:highlight:fade {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:highlight:fade,
+:highlight img::label:highlight:fade,
+:highlight ref::label:highlight:fade {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:highlight:fade,
+:highlight img::title:highlight:fade,
+:highlight ref::title:highlight:fade {
+    
+    
+}
+
+
+/* :highlight:fade :highlight:fade */
+
+:highlight:fade a:highlight:fade,
+:highlight:fade img:highlight:fade,
+:highlight:fade ref:highlight:fade {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight:fade a::tag:highlight:fade,
+:highlight:fade img::tag:highlight:fade,
+:highlight:fade ref::tag:highlight:fade {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight:fade a::text:highlight:fade,
+:highlight:fade img::text:highlight:fade,
+:highlight:fade ref::text:highlight:fade {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight:fade a::destination:highlight:fade,
+:highlight:fade img::destination:highlight:fade,
+:highlight:fade ref::destination:highlight:fade {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight:fade a::label:highlight:fade,
+:highlight:fade img::label:highlight:fade,
+:highlight:fade ref::label:highlight:fade {
+    
+}
+
+/* title: the title of the link */
+:highlight:fade a::title:highlight:fade,
+:highlight:fade img::title:highlight:fade,
+:highlight:fade ref::title:highlight:fade {
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:highlight:fade {
+    
+}
+
+
+
+/* attributes */
+
+/* :highlight:fade */
+key-value-attr:highlight:fade,
+class-attr:highlight:fade,
+id-attr:highlight:fade {
+
+}
+
+key-value-attr::tag:highlight:fade,
+class-attr::tag:highlight:fade,
+id-attr::tag:highlight:fade {
+    
+}
+
+
+/* :highlight :fade */
+
+:highlight key-value-attr:fade,
+:highlight class-attr:fade,
+:highlight id-attr:fade {
+
+}
+
+:highlight key-value-attr::tag:fade,
+:highlight class-attr::tag:fade,
+:highlight id-attr::tag:fade  {
+    
+}
+
+/* :highlight :highlight:fade */
+
+:highlight key-value-attr:highlight:fade,
+:highlight class-attr:highlight:fade,
+:highlight id-attr:highlight:fade {
+
+}
+
+:highlight key-value-attr::tag:highlight:fade,
+:highlight class-attr::tag:highlight:fade,
+:highlight id-attr::tag:highlight:fade {
+    
+}
+
+/* :highlight:fade :highlight:fade */
+
+:highlight:fade key-value-attr:highlight:fade,
+:highlight:fade class-attr:highlight:fade,
+:highlight:fade id-attr:highlight:fade {
+
+}
+
+:highlight:fade key-value-attr::tag:highlight:fade,
+:highlight:fade class-attr::tag:highlight:fade,
+:highlight:fade id-attr::tag:highlight:fade {
+    
+}
+
+/********************************************/
+/*           highlight-focus                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:highlight:focus {
+    
+}
+
+h2:highlight:focus {
+    
+}
+
+h3:highlight:focus {
+    
+}
+
+h4:highlight:focus {
+    
+}
+
+h5:highlight:focus {
+    
+}
+
+h6:highlight:focus {
+    
+}
+
+h1::tag:highlight:focus {
+    
+}
+
+h2::tag:highlight:focus {
+    
+}
+
+h3::tag:highlight:focus {
+    
+}
+
+h4::tag:highlight:focus {
+    
+}
+
+h5::tag:highlight:focus {
+    
+}
+
+h6::tag:highlight:focus {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:highlight:focus {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+/* :highlight:focus */
+strong:highlight:focus {
+    
+    
+}
+
+em:highlight:focus {
+    
+    
+}
+
+s:highlight:focus {
+    
+    
+}
+
+strong::tag:highlight:focus {
+    
+    
+}
+
+em::tag:highlight:focus {
+    
+    
+}
+
+s::tag:highlight:focus {
+    
+
+}
+
+/* :highlight :focus */
+:highlight strong:focus {
+    
+    
+}
+
+:highlight em:focus {
+    
+    
+}
+
+:highlight s:focus {
+    
+    
+}
+
+:highlight strong::tag:focus {
+    
+    
+}
+
+:highlight em::tag:focus {
+    
+    
+}
+
+:highlight s::tag:focus {
+    
+
+}
+
+
+/* :highlight :highlight:focus */
+:highlight strong:highlight:focus {
+    
+    
+}
+
+:highlight em:highlight:focus {
+    
+    
+}
+
+:highlight s:highlight:focus {
+    
+    
+}
+
+:highlight strong::tag:highlight:focus {
+    
+    
+}
+
+:highlight em::tag:highlight:focus {
+    
+    
+}
+
+:highlight s::tag:highlight:focus {
+    
+
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus strong:highlight:focus {
+    
+    
+}
+
+:highlight:focus em:highlight:focus {
+    
+    
+}
+
+:highlight:focus s:highlight:focus {
+    
+    
+}
+
+:highlight:focus strong::tag:highlight:focus {
+    
+    
+}
+
+:highlight:focus em::tag:highlight:focus {
+    
+    
+}
+
+:highlight:focus s::tag:highlight:focus {
+    
+
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+/* :highlight:focus */
+blockquote:highlight:focus {
+    
+    
+}
+
+blockquote::tag:highlight:focus {
+    
+    
+}
+
+/* :highlight :focus */
+:highlight blockquote:focus {
+    
+    
+}
+
+
+:highlight blockquote::tag:focus {
+    
+    
+}
+
+
+/* :highlight :highlight:focus */
+:highlight blockquote:highlight:focus {
+    
+    
+}
+
+
+:highlight blockquote::tag:highlight:focus {
+    
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus blockquote:highlight:focus {
+    
+    
+}
+
+:highlight:focus blockquote::tag:highlight:focus {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+/* :highlight:focus */
+ul:highlight:focus {
+    
+}
+
+ol:highlight:focus {
+    
+}
+
+li:highlight:focus {
+    
+}
+
+li::tag:highlight:focus {
+    
+}
+
+/* :highlight :focus */
+:highlight ul:focus {
+    
+}
+
+:highlight ol:focus {
+    
+}
+
+:highlight li:focus {
+    
+}
+
+:highlight li::tag:focus {
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight ul:highlight:focus {
+    
+}
+
+:highlight ol:highlight:focus {
+    
+}
+
+:highlight li:highlight:focus {
+    
+}
+
+:highlight li::tag:highlight:focus {
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus ul:highlight:focus {
+    
+}
+
+:highlight:focus ol:highlight:focus {
+    
+}
+
+:highlight:focus li:highlight:focus {
+    
+}
+
+:highlight:focus li::tag:highlight:focus {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+/* :highlight:focus */
+code:highlight:focus {
+    
+}
+
+code::tag:highlight:focus {
+    
+}
+
+code::params:highlight:focus {
+    
+}
+
+/* :highlight :focus */
+:highlight code:focus {
+    
+}
+
+:highlight code::tag:focus {
+    
+}
+
+:highlight code::params:focus {
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight code:highlight:focus {
+    
+}
+
+:highlight code::tag:highlight:focus {
+    
+}
+
+:highlight code::params:highlight:focus {
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus code:highlight:focus {
+    
+}
+
+:highlight:focus code::tag:highlight:focus {
+    
+}
+
+:highlight:focus code::params:highlight:focus {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+/* :highlight:focus */
+
+
+table:highlight:focus {
+    
+}
+
+thead:highlight:focus {
+    
+}
+
+tbody:highlight:focus {
+    
+    
+}
+
+tr:highlight:focus {
+    
+}
+
+td:highlight:focus {
+    
+}
+
+/* :highlight :focus */
+:highlight thead:focus {
+    
+}
+
+:highlight tbody:focus {
+    
+    
+}
+
+:highlight tr:focus {
+    
+}
+
+:highlight td:focus {
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight thead:highlight:focus {
+    
+}
+
+:highlight tbody:highlight:focus {
+    
+    
+}
+
+:highlight tr:highlight:focus {
+    
+}
+
+:highlight td :highlight:focus {
+    
+}
+
+/* :highlight:focus :highlight:focus */
+:highlight:focus thead:highlight:focus {
+    
+}
+
+:highlight:focus tbody:highlight:focus {
+    
+    
+}
+
+:highlight:focus tr:highlight:focus {
+    
+}
+
+:highlight:focus td:highlight:focus {
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+/* :highlight:focus */
+
+a:highlight:focus,
+img:highlight:focus,
+ref:highlight:focus{
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:highlight:focus,
+img::tag:highlight:focus,
+ref::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:highlight:focus,
+img::text:highlight:focus,
+ref::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:highlight:focus,
+img::destination:highlight:focus,
+ref::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:highlight:focus,
+img::label:highlight:focus,
+ref::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+a::title:highlight:focus,
+img::title:highlight:focus,
+ref::title:highlight:focus {
+    
+    
+}
+
+/* :highlight :focus */
+:highlight a:focus,
+:highlight img:focus,
+:highlight ref:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:focus,
+:highlight img::tag:focus,
+:highlight ref::tag:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:focus,
+:highlight img::text:focus,
+:highlight ref::text:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:focus,
+:highlight img::destination:focus,
+:highlight ref::destination:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:focus,
+:highlight img::label:focus,
+:highlight ref::label:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:focus,
+:highlight img::title:focus,
+:highlight ref::title:focus {
+    
+    
+}
+
+/* :highlight :highlight:focus */
+:highlight a:highlight:focus,
+:highlight img:highlight:focus,
+:highlight ref:highlight:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:highlight:focus,
+:highlight img::tag:highlight:focus,
+:highlight ref::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:highlight:focus,
+:highlight img::text:highlight:focus,
+:highlight ref::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:highlight:focus,
+:highlight img::destination:highlight:focus,
+:highlight ref::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:highlight:focus,
+:highlight img::label:highlight:focus,
+:highlight ref::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:highlight:focus,
+:highlight img::title:highlight:focus,
+:highlight ref::title:highlight:focus {
+    
+    
+}
+
+
+/* :highlight:focus :highlight:focus */
+
+:highlight:focus a:highlight::focus,
+:highlight:focus img:highlight::focus,
+:highlight:focus ref:highlight:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight:focus a::tag:highlight::focus,
+:highlight:focus img::tag:highlight::focus,
+:highlight:focus ref::tag:highlight:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight:focus a::text:highlight::focus,
+:highlight:focus img::text:highlight::focus,
+:highlight:focus ref::text:highlight:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight:focus a::destination:highlight::focus,
+:highlight:focus img::destination:highlight::focus,
+:highlight:focus ref::destination:highlight:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight:focus a::label:highlight::focus,
+:highlight:focus img::label:highlight::focus,
+:highlight:focus ref::label:highlight:focus {
+    
+}
+
+/* title: the title of the link */
+:highlight:focus a::title:highlight::focus,
+:highlight:focus img::title:highlight::focus,
+:highlight:focus ref::title:highlight:focus {
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:highlight:focus {
+    
+}
+
+
+/* attributes */
+
+/* :highlight:focus */
+key-value-attr:highlight:focus,
+class-attr:highlight:focus,
+id-attr:highlight:focus {
+
+}
+
+key-value-attr::tag:highlight:focus,
+class-attr::tag:highlight:focus,
+id-attr::tag:highlight:focus {
+    
+}
+
+
+/* :highlight :focus */
+
+:highlight key-value-attr:focus,
+:highlight class-attr:focus,
+:highlight id-attr:focus {
+
+}
+
+:highlight key-value-attr::tag:focus,
+:highlight class-attr::tag:focus,
+:highlight id-attr::tag:focus {
+    
+}
+
+
+/* :highlight :highlight:focus */
+
+:highlight key-value-attr:highlight:focus,
+:highlight class-attr:highlight:focus,
+:highlight id-attr:highlight:focus {
+
+}
+
+:highlight key-value-attr::tag:highlight:focus,
+:highlight class-attr::tag:highlight:focus,
+:highlight id-attr::tag:highlight:focus {
+    
+}
+
+/* :highlight:focus :highlight:focus */
+
+:highlight:focus key-value-attr:highlight:focus,
+:highlight:focus class-attr:highlight:focus,
+:highlight:focus id-attr:highlight:focus {
+
+}
+
+:highlight:focus key-value-attr::tag:highlight:focus,
+:highlight:focus class-attr::tag:highlight:focus,
+:highlight:focus id-attr::tag:highlight:focus {
+    
+}
+
+
+/********************************************/
+/*           highlight-flash                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:highlight:flash {
+    
+}
+
+h2:highlight:flash {
+    
+}
+
+h3:highlight:flash {
+    
+}
+
+h4:highlight:flash {
+    
+}
+
+h5:highlight:flash {
+    
+}
+
+h6:highlight:flash {
+    
+}
+
+h1::tag:highlight:flash {
+    
+}
+
+h2::tag:highlight:flash {
+    
+}
+
+h3::tag:highlight:flash {
+    
+}
+
+h4::tag:highlight:flash {
+    
+}
+
+h5::tag:highlight:flash {
+    
+}
+
+h6::tag:highlight:flash {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:highlight:flash {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+/* :highlight:flash */
+strong:highlight:flash {
+    
+    
+}
+
+em:highlight:flash {
+    
+    
+}
+
+s:highlight:flash {
+    
+    
+}
+
+strong::tag:highlight:flash {
+    
+    
+}
+
+em::tag:highlight:flash {
+    
+    
+}
+
+s::tag:highlight:flash {
+    
+
+}
+
+/* :highlight :flash */
+:highlight strong:flash {
+    
+    
+}
+
+:highlight em:flash {
+    
+    
+}
+
+:highlight s:flash {
+    
+    
+}
+
+:highlight strong::tag:flash {
+    
+    
+}
+
+:highlight em::tag:flash {
+    
+    
+}
+
+:highlight s::tag:flash {
+    
+
+}
+
+
+/* :highlight :highlight:flash */
+:highlight strong:highlight:flash {
+    
+    
+}
+
+:highlight em:highlight:flash {
+    
+    
+}
+
+:highlight s:highlight:flash {
+    
+    
+}
+
+:highlight strong::tag:highlight:flash {
+    
+    
+}
+
+:highlight em::tag:highlight:flash {
+    
+    
+}
+
+:highlight s::tag:highlight:flash {
+    
+
+}
+
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+/* :highlight:flash */
+blockquote:highlight:flash {
+    
+    
+}
+
+blockquote::tag:highlight:flash {
+    
+    
+}
+
+/* :highlight :flash */
+:highlight blockquote:flash {
+    
+    
+}
+
+
+:highlight blockquote::tag:flash {
+    
+    
+}
+
+
+/* :highlight :highlight:flash */
+:highlight blockquote:highlight:flash {
+    
+    
+}
+
+
+:highlight blockquote::tag:highlight:flash {
+    
+    
+}
+
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+/* :highlight:flash */
+ul:highlight:flash {
+    
+}
+
+ol:highlight:flash {
+    
+}
+
+li:highlight:flash {
+    
+}
+
+li::tag:highlight:flash {
+    
+}
+
+/* :highlight :flash */
+:highlight ul:flash {
+    
+}
+
+:highlight ol:flash {
+    
+}
+
+:highlight li:flash {
+    
+}
+
+:highlight li::tag:flash {
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight ul:highlight:flash {
+    
+}
+
+:highlight ol:highlight:flash {
+    
+}
+
+:highlight li:highlight:flash {
+    
+}
+
+:highlight li::tag:highlight:flash {
+    
+}
+
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax highlighting
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+/* :highlight:flash */
+code:highlight:flash {
+    
+}
+
+code::tag:highlight:flash {
+    
+}
+
+code::params:highlight:flash {
+    
+}
+
+/* :highlight :flash */
+:highlight code:flash {
+    
+}
+
+:highlight code::tag:flash {
+    
+}
+
+:highlight code::params:flash {
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight code:highlight:flash {
+    
+}
+
+:highlight code::tag:highlight:flash {
+    
+}
+
+:highlight code::params:highlight:flash {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+/* :highlight:flash */
+
+
+table:highlight:flash {
+    
+}
+
+thead:highlight:flash {
+    
+}
+
+tbody:highlight:flash {
+    
+    
+}
+
+tr:highlight:flash {
+    
+}
+
+td:highlight:flash {
+    
+}
+
+/* :highlight :flash */
+:highlight thead:flash {
+    
+}
+
+:highlight tbody:flash {
+    
+    
+}
+
+:highlight tr:flash {
+    
+}
+
+:highlight td:flash {
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight thead:highlight:flash {
+    
+}
+
+:highlight tbody:highlight:flash {
+    
+    
+}
+
+:highlight tr:highlight:flash {
+    
+}
+
+:highlight td :highlight:flash {
+    
+}
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+/* :highlight:flash */
+
+a:highlight:flash,
+img:highlight:flash,
+ref:highlight:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:highlight:flash,
+img::tag:highlight:flash,
+ref::tag:highlight:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:highlight:flash,
+img::text:highlight:flash,
+ref::text:highlight:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:highlight:flash,
+img::destination:highlight:flash,
+ref::destination:highlight:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:highlight:flash,
+img::label:highlight:flash,
+ref::label:highlight:flash {
+    
+}
+
+/* title: the title of the link */
+a::title:highlight:flash,
+img::title:highlight:flash,
+ref::title:highlight:flash {
+    
+    
+}
+
+/* :highlight :flash */
+:highlight a:flash,
+:highlight img:flash,
+:highlight ref:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:flash,
+:highlight img::tag:flash,
+:highlight ref::tag:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:flash,
+:highlight img::text:flash,
+:highlight ref::text:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:flash,
+:highlight img::destination:flash,
+:highlight ref::destination:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:flash,
+:highlight img::label:flash,
+:highlight ref::label:flash {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:flash,
+:highlight img::title:flash,
+:highlight ref::title:flash {
+    
+    
+}
+
+/* :highlight :highlight:flash */
+:highlight a:highlight:flash,
+:highlight img:highlight:flash,
+:highlight ref:highlight:flash {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:highlight a::tag:highlight:flash,
+:highlight img::tag:highlight:flash,
+:highlight ref::tag:highlight:flash {
+    
+}
+
+/* text: the part between the two square braquets */
+:highlight a::text:highlight:flash,
+:highlight img::text:highlight:flash,
+:highlight ref::text:highlight:flash {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:highlight a::destination:highlight:flash,
+:highlight img::destination:highlight:flash,
+:highlight ref::destination:highlight:flash {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:highlight a::label:highlight:flash,
+:highlight img::label:highlight:flash,
+:highlight ref::label:highlight:flash {
+    
+}
+
+/* title: the title of the link */
+:highlight a::title:highlight:flash,
+:highlight img::title:highlight:flash,
+:highlight ref::title:highlight:flash {
+    
+    
+}
+
+
+/*
+    html-block
+*/
+
+html-block:highlight:flash {
+    
+}
+
+
+/* attributes */
+
+/* :highlight:flash */
+key-value-attr:highlight:flash,
+class-attr:highlight:flash,
+id-attr:highlight:flash {
+
+}
+
+key-value-attr::tag:highlight:flash,
+class-attr::tag:highlight:flash,
+id-attr::tag:highlight:flash {
+    
+}
+
+/* :highlight :flash */
+
+:highlight key-value-attr:flash,
+:highlight class-attr:flash,
+:highlight id-attr:flash {
+
+}
+
+:highlight key-value-attr::tag:flash,
+:highlight class-attr::tag:flash,
+:highlight id-attr::tag:flash  {
+    
+}
+
+/* :highlight :highlight:flash */
+
+:highlight key-value-attr:highlight:flash,
+:highlight class-attr:highlight:flash,
+:highlight id-attr:highlight:flash {
+
+}
+
+:highlight key-value-attr::tag:highlight:flash,
+:highlight class-attr::tag:highlight:flash,
+:highlight id-attr::tag:highlight:flash {
+    
+}
+
+

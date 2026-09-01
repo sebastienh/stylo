@@ -1,0 +1,21 @@
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+    font-family: Menlo;
+    color: black;
+}
+
+property-name {
+    
+    color: rgba(23, 15, 221, 0.2);
+}
+
+property-value {
+    
+    color: #b3ce4e;
+}
+
+pseudo-element-selector {
+    
+    color: rgba(54,65,211,0.6);
+}

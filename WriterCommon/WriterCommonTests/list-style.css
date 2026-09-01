@@ -1,0 +1,20 @@
+body {
+    color: black;
+}
+
+ol {
+    color: green;
+}
+
+ul {
+    color: red;
+}
+
+ul ol {
+    color: pink;
+}
+
+li::tag {
+    color: blue;
+}
+

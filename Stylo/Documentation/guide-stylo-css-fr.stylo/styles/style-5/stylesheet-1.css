@@ -1,0 +1,43 @@
+
+body {
+    background-color: rgb(85,22,222);
+    font-family: "Avenir Next";
+    color: black;
+}
+
+p {
+    color: rgb(253,224,13);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: rgba(145,234,234, 1);
+}
+
+blockquote::tag {
+    color: blue;
+}
+
+h2::tag {
+    color: red;
+}
+
+a, code {
+	color: orange;
+}
+
+a::tag {
+	color: red;
+}
+
+table {
+	
+	color: rgba(225,54,234, 1);
+}
+
+table::tag {
+	color: orange;
+}
+
+td::tag {
+	color: orange;
+}

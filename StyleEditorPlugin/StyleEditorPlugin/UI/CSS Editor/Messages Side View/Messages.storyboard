@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="LTi-Ro-EX3">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14295.6"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MessagesViewController-->
+        <scene sceneID="C07-qQ-b0D">
+            <objects>
+                <viewController title="MessagesViewController" storyboardIdentifier="MessagesViewController" id="LTi-Ro-EX3" customClass="MessagesViewController" customModule="Nebula_Writer" customModuleProvider="target" sceneMemberID="viewController">
+                    <scrollView key="view" borderType="none" horizontalLineScroll="0.0" horizontalPageScroll="0.0" verticalLineScroll="0.0" verticalPageScroll="0.0" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" id="aEe-9C-Xt4" customClass="MessageScrollView" customModule="Nebula_Writer" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <clipView key="contentView" id="KCQ-kH-pSb" customClass="MessageClipView" customModule="Nebula_Writer" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TQ1-Ex-DIl">
+                                    <rect key="frame" x="0.0" y="0.0" width="435" height="285"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                            </subviews>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="1IR-I5-R8r">
+                            <rect key="frame" x="-100" y="-100" width="450" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="qPw-HG-T6Q">
+                            <rect key="frame" x="-100" y="-100" width="16" height="300"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <connections>
+                        <outlet property="messagesScrollView" destination="aEe-9C-Xt4" id="1Ya-BA-bRA"/>
+                    </connections>
+                </viewController>
+                <customObject id="L55-J7-v6z" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="163"/>
+        </scene>
+    </scenes>
+</document>

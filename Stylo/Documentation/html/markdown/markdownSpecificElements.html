@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>Markdown specific elements</title>
+		<meta name="description" content="A list of Stylo Markdown specific elements and their description."></meta>
+		<meta name="KEYWORDS" content="markdown, specific, elements"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- markdown/markdownSpecificElements.html -->
+<h1>Mardkown specific elements</h1>
+<p>In Stylo, CSS is used to stylize the Markdown text. Some Markdown elements have no correspondent HTML elements, so two elements were added specificifically for Markdown*: <code>html-block</code> and <code>reference</code>.</p>
+<ul>
+<li><code>html-block</code>: An <code>html-block</code> defines any HTML block in a Markdown source.</li>
+</ul>
+<pre><code class="language-markdown">
+# title level 1 
+ 
+&lt;p&gt;A simple paragraph.&lt;/p&gt;
+
+</code></pre>
+<p>In the last Markdown extract, the region delimited by <code>&lt;p&gt;</code> and <code>&lt;/p&gt;</code> is an <code>html-block</code>. We could give it a red color using the following CSS:</p>
+<pre><code class="language-css">html-block {
+    color: red;
+}
+</code></pre>
+<ul>
+<li><code>reference</code>: A <code>reference</code> is used to create a label that represents an URI. This label can then be used in the links and images in a Markdown document to refer to this URI, see the <a href="mdReference.html">Reference</a> section for a complete description. When converting a Markdown document to HTML, the links and images using reference are populated with the real URI defined in the references and the references are removed since they are no longer needed. For styling purpose, in Stylo, these references are kept. When exporting a document to HTML or previewing it, all <code>reference</code> elements are removed as they don't serve any purpose.</li>
+</ul>
+<p>We could, for example, style a reference with the blue color using the following CSS:</p>
+<pre><code class="language-css">reference {
+    color: blue; 
+}
+</code></pre>
+<p>*The namespace for these elements is defined as: <code>https://commonmark.org</code>.</p>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+```````````````````````````````` example
+::: class :::
+Some text.
+:::
+.
+<div class="class"><p>Some text.</p></div>
+````````````````````````````````
+
+```````````````````````````````` example
+:::: { key=value } :::::
+
+# level one
+
+::::
+.
+<div key="value"><h1>level one</h1>\n</div>
+````````````````````````````````

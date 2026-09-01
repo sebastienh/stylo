@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Build Styles</h1>
+<p>The CSS standard is used in Stylo to define the text/markdown styles. This allows for knowledge transfer from CSS standard to Stylo style editing and vice-versa.</p>
+<h2>Style</h2>
+<p>A <em>style</em> comes in two appearances (light, dark) and is defined by a group of stylesheets. Each stylesheet can be applied to one appearance (light or dark) or both appearances (light and dark). To evaluate a style for a certain appearance, the algorithm will first collect all applicable stylesheets for the current appearance. To do so, it will go from top to bottom in the stylesheets list order (as defined in the <a href="../styleEditor#styleInspector%5D"><em>style inspector</em></a> and will evaluate the if the stylesheet applies to the desired appearance or not, if yes, it will add the stylesheet to the <em>style assembly</em>. Once the <em>style assembly</em> contains all the stylesheets, it will be evaluated, again, from top to bottom, and associated with the result of the evaluation in the form of a <em>css style</em> which will be used to evaluate the style of each element in the Markdown source text.</p>
+<p>For all operations related to style and stylesheet, see the <a href="#styleEditor">style editor</a> documentation.</p>
+<h2>CSS</h2>
+<h3>Style States</h3>
+<p>In Stylo, each element can be in many <em>style state</em> s, all defined based on the possiblity for an element to be faded, normal, focused, highlight and/or flashed. Here are the 10 <em>style states</em> an element can be:</p>
+<ol>
+<li>fade (<code>sts1</code>)</li>
+<li>highlight-fade (<code>sts2</code>)</li>
+<li>normal, highlight-highlight-fade (these two are at the same level) (<code>sts3</code>)</li>
+<li>highlight (<code>sts4</code>)</li>
+<li>highlight-highlight (<code>sts5</code>)</li>
+<li>focus (<code>sts6</code>)</li>
+<li>highlight-focus (<code>sts7</code>)</li>
+<li>highlight-highlight-focus (<code>sts8</code>)</li>
+<li>highlight-flash (<code>sts9</code>)</li>
+<li>highlight-flash-highlight (<code>sts10</code>)</li>
+</ol>
+<p>To be complete, a style needs to define a style value for each properties in each of these <em>styling states</em>. In CSS these states are represented by CSS pseudo-classes, e.g. if an <code>h1</code> element is in <em>focus</em>, we can target that specific state using the following CSS:</p>
+<pre><code class="language-css">h1:focus {
+	color: red;
+}
+</code></pre>
+<p>A stylesheet to target all the elements different states could be challenging to define. That's why Stylo comes with a default stylesheet (the user-agent stylesheet) that defines all the selectors to target all the possible states of an element. This stylesheet uses <a href="../css/customVariables">CSS custom variables</a> to define the different <em>styling states</em> values a element can take. For example, coming for the default stylesheet, the style for <code>hx</code> in <code>fade</code> mode is defined by:</p>
+<pre><code class="language-css">h1:fade,
+h2:fade,
+h3:fade,
+h4:fade,
+h5:fade,
+h6:fade {
+    color: var(--h-sts1, black);
+}
+</code></pre>
+<p>To define a style for all the headers (<code>hx</code>) in focus mode, a stylesheet needs just to define a value for this variable for the desired property and this value will picked up by the styling engine when a header element is in this state (sts1: style state 1).</p>
+<pre><code class="language-css">--h-sts1: red;
+</code></pre>
+<h3>Predefined Elements Style States</h3>
+<p>The predefined styles in Stylo, are a good starting point when trying to define new styles. So, to get you started, choose a style which is close to the one you have in mind and <a href="#addStyle">copy it</a>.</p>
+<p>If you decide to start from zero, here are the list of predefined color variables that you can use in your styles:</p>
+<ul>
+<li>Headers colors: <code>--h-sts&lt;1-10&gt;</code></li>
+<li>Headers's tags colors:<code>--h-tag-sts&lt;1-10&gt;</code></li>
+<li>Horizontal rule colors: <code>--hr-sts&lt;1-10&gt;</code></li>
+<li>Strong and emphasis colors:  <code>--strong-em-sts&lt;1-10&gt;</code></li>
+<li>Strong and emphasis tag colors:  <code>--strong-em-tag-sts&lt;1-10&gt;</code></li>
+<li>Strikethrough colors: <code>--s-sts&lt;1-10&gt;</code></li>
+<li>Strikethrough's text under headers colors: <code>--h-s-sts&lt;1-10&gt;</code></li>
+<li>Strikethrough's text tag under headers colors: <code>--h-s-tag-sts&lt;1-10&gt;</code></li>
+<li>Strikethrough's line under headers colors: <code>--h-s-strikethrough-sts&lt;1-10&gt;</code></li>
+<li>Strikethrough's line colors: <code>--s-strikethrough-sts&lt;1-10&gt;</code></li>
+<li>Strikethrough's text tag colors: <code>--s-tag-sts&lt;1-10&gt;</code></li>
+<li>Strong and emphasis under header colors: <code>--h-strong-em-sts&lt;1-10&gt;</code></li>
+<li>Strong and emphasis tag under header colors: <code>--h-strong-em-tag-sts&lt;1-10&gt;</code></li>
+<li>Blockquote colors: <code>--blockquote-sts&lt;1-10&gt;</code></li>
+<li>Blockquote tag colors: <code>--blockquote-tag-sts&lt;1-10&gt;</code></li>
+<li>Unordered list colors: <code>--ul-sts&lt;1-10&gt;</code></li>
+<li>Ordered list colors: <code>--ol-sts&lt;1-10&gt;</code></li>
+<li>List element colors: <code>--li-sts&lt;1-10&gt;</code></li>
+<li>List element tag colors: <code>--li-tag-sts&lt;1-10&gt;</code></li>
+<li>Code colors: <code>--code-sts&lt;1-10&gt;</code></li>
+<li>Code tag colors: <code>--code-tag-sts&lt;1-10&gt;</code></li>
+<li>Code params colors: <code>--code-params-sts&lt;1-10&gt;</code></li>
+<li>Table colors: <code>--table-sts&lt;1-10&gt;</code></li>
+<li>Table tag colors: <code>--table-tag-sts&lt;1-10&gt;</code></li>
+<li>Table head colors: <code>--thead-sts&lt;1-10&gt;</code></li>
+<li>Table body colors: <code>--tbody-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference colors: <code>--a-img-ref-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference under header colors: <code>--h-a-img-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference tag colors: <code>--a-img-ref-tag-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference tag under header colors: <code>--h-a-img-tag-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference title colors: <code>--a-img-ref-title-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference title under header colors: <code>--h-a-img-title-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference lable colors: <code>--a-img-ref-lbl-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference lable under header colors: <code>--h-a-img-lbl-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference text colors: <code>--a-img-ref-text-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference text under header colors: <code>--h-a-img-text-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference destination colors: <code>--a-img-ref-dest-sts&lt;1-10&gt;</code></li>
+<li>Image, link, reference destination under header colors: <code>--h-a-img-dest-sts&lt;1-10&gt;</code></li>
+<li>HTML block colors: <code>--html-block-sts&lt;1-10&gt;</code></li>
+<li>Attributes bloc colors: <code>--attr-bloc-tag-sts&lt;1-10&gt;</code></li>
+<li>Attribute colors: <code>--key-value-attr-class-attr-id-attr-sts&lt;1-10&gt;</code></li>
+<li>Attribute tag colors: <code>--key-value-attr-class-attr-id-attr-tag-sts&lt;1-10&gt;</code></li>
+</ul>
+
+    </body>
+</html>

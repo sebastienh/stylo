@@ -1,0 +1,72 @@
+
+/**
+ Yellow
+ https://coolors.co/f7cb15-083d77-e84855-3185fc-686868
+*/
+
+body, th {
+    
+    background-color: #F7CB15;
+    color: #083D77;
+    font-family: Arial;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #E84855;
+}
+
+::tag {
+    color: #3185FC;
+}
+
+a::destination,
+img::destination,
+table,
+td,
+ref::destination,
+a::label,
+img::label,
+ref::title,
+code,
+hr,
+blockquote,
+html-block {
+    color: #686868;
+}
+
+hr {
+    color: #3185FC;
+}
+
+code, html-block {
+    font-family: "Hack";
+    font-size: 90%;
+}
+
+em {
+    font-style: italic;
+}
+
+strong {
+    font-weight: bold;
+}
+
+th {
+    font-weight: 500;
+}
+
+s {
+    text-decoration-style: solid;
+    text-decoration-line: line-through;
+    text-decoration-color: #3185FC;
+}
+
+s::tag {
+    text-decoration-line: none;
+}
+

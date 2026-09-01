@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Stylo/Stylo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TagsPlugin/TagsPlugin.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:StyleEditorPlugin/StyleEditorPlugin.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:StyloAudioPlugin/StyloAudioPlugin.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TextExportPlugin/TextExportPlugin.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:PdfExportPlugin/PdfExportPlugin.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MarkdownExportPlugin/MarkdownExportPlugin.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:WordExportPlugin/WordExportPlugin.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:HtmlExportPlugin/HtmlExportPlugin.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ThemeEditorPlugin/ThemeEditorPlugin.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:StyloCoreMac/StyloCoreMac.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:WriterCommon/WriterCommon.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Web/Web.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Markdown/Markdown.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Web/../Common/Common.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../Igloo/Igloo.xcodeproj">
+   </FileRef>
+</Workspace>

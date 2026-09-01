@@ -1,0 +1,224 @@
+
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+    
+    font-family: var(--theme-foreground-fontFamily, NotoSansMono-Light);
+    font-size: var(--theme-foreground-fontSize, 11pt);
+    font-style: var(--theme-foreground-fontStyle, normal);
+    font-weight: var(--theme-foreground-fontWeight, normal);
+    color: var(--theme-foreground-color, black);
+    background-color: var(--theme-background-color, white);
+    caret-color: var(--theme-caret-color, black);
+}
+
+at-rule-name {
+    
+    color: var(--theme-atRuleName-color, black);
+}
+
+namespace-prefix {
+    
+    color: var(--theme-namespacePrefix-color, black);
+}
+
+namespace-uri {
+    
+    color: var(--theme-namespaceUri-color, black);
+}
+
+
+
+type-selector {
+
+    color: var(--theme-typeSelector-color, black);
+    font-style: var(--theme-typeSelector-fontStyle, normal);
+}
+
+.comment-token {
+
+    color: var(--theme-comment-color, black);
+    font-style: var(--theme-comment-fontStyle, normal);
+}
+
+.ident-token {
+
+    color: var(--theme-ident-token-color, black);
+    font-style: var(--theme-ident-fontStyle, normal);
+}
+
+.ident-token.custom-variable {
+
+    color: var(--theme-custom-var-color, black);
+    font-style: var(--theme-custom-var-fontStyle, normal);
+}
+
+.number-token {
+
+    color: var(--theme-number-color, black);
+    font-style: var(--theme-number-fontStyle, normal);
+}
+
+.string-token {
+
+    color: var(--theme-string-color, black);
+    font-style: var(--theme-string-fontStyle, normal);
+}
+
+complexe-selector selector-combinator {
+
+    color: var(--theme-combinator-color, black);
+    font-style: var(--theme-combinator-fontStyle, normal);
+}
+
+css-token.left-curly-brace-token, css-token.right-curly-brace-token {
+
+    color: var(--theme-foreground-color, black);
+    font-style: var(--theme-foreground-fontStyle, normal);
+}
+css-token.left-square-bracket-token, css-token.right-square-bracket-token {
+
+    color: var(--theme-foreground-color, black);
+    font-style: var(--theme-foreground-fontStyle, normal);
+}
+
+css-token.delim-token {
+
+    color: var(--theme-foreground-color, black);
+    font-style: var(--theme-foreground-fontStyle, normal);
+}
+
+function {
+
+    color: var(--theme-function-color, black);
+    font-style: var(--theme-function-fontStyle, normal);
+}
+
+function-start, function .left-parenthesis-token, function .comma-token {
+
+    color: var(--theme-function-tag-color, black);
+}
+
+font-style-value css-token.ident-token {
+    color: var(--theme-fontStyle-color, black);
+}
+
+attribute-match {
+
+    color: var(--theme-attributeMatch-color, black);
+    font-style: var(--theme-attributeMatch-fontStyle, normal);
+}
+
+pseudo-element-selector .colon-token {
+
+    color: var(--theme-pseudoSelectorOperator-color, black);
+    font-style: var(--theme-pseudoSelectorOperator-fontStyle, normal);
+}
+
+pseudo-element-selector .ident-token {
+
+    color: var(--theme-pseudoSelectorValue-color, black);
+    font-style: var(--theme-pseudoSelectorValue-fontStyle, normal);
+}
+
+color-value color-keyword {
+
+    color: var(--theme-colorKeyword-color, black);
+    font-style: var(--theme-colorKeyword-fontStyle, normal);
+}
+
+color-value color-hash {
+
+    color: var(--theme-colorHash-color, black);
+    font-style: var(--theme-colorHash-fontStyle, normal);
+}
+
+css-token.dimension-token {
+
+    color: var(--theme-dimension-color, black);
+    font-style: var(--theme-dimension-fontStyle, normal);
+    
+}
+
+attribute-name css-token.ident-token {
+
+    color: var(--theme-attributeName-color, black);
+    font-style: var(--theme-attributeName-fontStyle, normal);
+    
+}
+
+class-selector css-token.delim-token, class-selector css-token.ident-token {
+    color: var(--theme-classSelector-color, black);
+    font-style: var(--theme-classSelector-fontStyle, normal);
+    
+}
+
+property-name .string-token {
+
+    color: var(--theme-propertyName-color, red) !important;
+    font-style: var(--theme-propertyName-fontStyle, normal);
+    
+}
+
+important-declaration css-token.delim-token {
+
+    color: var(--theme-importantExclamationPoint-color, red) !important;
+    font-style: var(--theme-importantExclamationPoint-fontStyle, normal);
+    
+}
+
+important-declaration css-token.identToken {
+
+    color: var(--theme-importantText-color, red) !important;
+    font-style: var(--theme-importantText-fontStyle, normal);
+    
+}
+
+[nw-message-id] {
+
+    color: var(--theme-invalid-color, red) !important;
+    font-style: var(--theme-invalid-fontStyle, normal);
+    
+}
+
+[code~="invalidDeclaration"] {
+
+    color: var(--theme-invalid-color, red) !important;
+    font-style: var(--theme-invalid-fontStyle, normal);
+    
+}
+
+[code~="invalidDeclaration"] property-name .string-token {
+
+    color: var(--theme-invalid-color, red) !important;
+    font-style: var(--theme-invalid-fontStyle, normal);
+    
+}
+
+[code~="invalidDeclaration"] property-value {
+
+    color: var(--theme-invalid-color, red) !important;
+    font-style: var(--theme-invalid-fontStyle, normal);
+    
+}
+
+[code~="invalidDeclaration"] property-value .number-token {
+
+    color: var(--theme-invalid-color, red) !important;
+    font-style: var(--theme-invalid-fontStyle, normal);
+    
+}
+
+[code~="invalidDeclaration"] property-value .dimension-token {
+
+    color: var(--theme-invalid-color, red) !important;
+    font-style: var(--theme-invalid-fontStyle, normal);
+    
+}
+
+[code~="invalidDeclaration"] color-value color-keyword {
+
+    color: var(--theme-invalid-color, red) !important;
+    font-style: var(--theme-invalid-fontStyle, normal);
+    
+}

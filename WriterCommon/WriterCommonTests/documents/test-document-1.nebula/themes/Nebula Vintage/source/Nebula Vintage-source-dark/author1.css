@@ -1,0 +1,13 @@
+
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+    font-family: SF Mono Regular;
+    color: lightblue;
+}
+
+[nw-message-id] {
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: red;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS universal selector</title>
+			<meta name="description" content="CSS universal selector (*) description along with some examples."></meta>
+		<meta name="KEYWORDS" content="universal, selector, css"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- css/universalSelector.html -->
+<h1>Universal selector</h1>
+<p>The universal selector matches all elements. It takes the form of a star: <code>*</code>.</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Title 1&lt;/h1&gt;
+        &lt;h2&gt;Title 2&lt;/h2&gt;
+        &lt;p&gt;
+            A paragraph with &lt;strong&gt;bold text&lt;/strong&gt;.
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>We could apply the red color to all elements in this document with the following style declaration:</p>
+<p>CSS:</p>
+<pre><code class="language-css">* {
+    color: red;
+}
+</code></pre>
+<p>We could have achieved the same effect by using the body element type selector since all the visible elements are its descendants.</p>
+<p>CSS:</p>
+<pre><code class="language-css">body {
+    color: red;
+}
+</code></pre>
+<p>The difference between the two will not be important in most cases, but for performance reasons it is better to avoid the use of the universal selector.</p>
+	</body>
+</html>

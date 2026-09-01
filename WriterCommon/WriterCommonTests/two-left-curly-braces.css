@@ -1,0 +1,12 @@
+
+body {
+    font-family: Menlo;
+}
+
+table { {
+    font-family: Inconsolata;
+}
+
+blockquote::tag {
+    font-weight: 500;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS Cascading</title>
+		<meta name="description" content="High level overview of the CSS cascading process."></meta>
+		<meta name="KEYWORDS" content=""></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- css/cascading.html -->
+<h1>Cascading</h1>
+<p>The purpose of the cascade process is to assign a value to all the properties supported by each element, and this, for all document's elements.</p>
+<p>An element can get a particular value for a property in three ways:</p>
+<ol>
+<li>One or more styles declarations, whose selector matches this element, define a value for this property.</li>
+<li>An element <em>ancestor</em> defines a value for this property.</li>
+<li>None of the above, the property then gets its default value.</li>
+</ol>
+<p>If all properties of element have their value defined after the first step (1), the process stops here. Otherwise, for the values ​​that support the inheritance, we will get the values ​​to assign to the properties without values ​​in the ancestors of this element(2). If an ancestor sets a value for the property, the value will be assigned. For the remaining properties, the default values (3) ​​defined by the properties themselves will be used.</p>
+<p>This is the cascade process!</p>
+	</body>
+</html>

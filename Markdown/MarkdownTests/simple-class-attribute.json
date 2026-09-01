@@ -1,0 +1,45 @@
+[
+    {
+        "type": "attr-bloc-open",
+        "tag": "attr-bloc",
+        "attrs": null,
+        "nesting": 1,
+        "level": 0,
+        "children": null,
+        "content": "",
+        "markup": "",
+        "info": "",
+        "meta": null,
+        "block": true,
+        "hidden": false
+    },
+    {
+        "type": "class-attr",
+        "tag": "class-attr",
+        "attrs": null,
+        "nesting": 0,
+        "level": 1,
+        "children": null,
+        "content": ".classname",
+        "markup": "",
+        "info": "",
+        "meta": null,
+        "block": true,
+        "hidden": false
+    },
+    {
+        "type": "attr-bloc-close",
+        "tag": "attr-bloc",
+        "attrs": null,
+        "nesting": -1,
+        "level": 0,
+        "children": null,
+        "content": "",
+        "markup": "",
+        "info": "",
+        "meta": null,
+        "block": true,
+        "hidden": false
+    }
+]
+

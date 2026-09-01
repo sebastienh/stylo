@@ -1,0 +1,12 @@
+
+# Stylo Essentials
+
+Essentials operations that need to be performed b all Stylo users
+
+- [New document](#newDocument)
+- [Save a document](#saveDocument)
+- [Save as](#saveAs)
+- [Open a document](#openDocument)
+- [Export a document](#exportDocument)
+- [Print a document](#printDocument)
+

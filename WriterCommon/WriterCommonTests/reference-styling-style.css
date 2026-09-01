@@ -1,0 +1,19 @@
+body {
+    color: black;
+}
+
+reference::tag {
+    color: blue;
+}
+
+reference::label {
+    color: yellow;
+}
+
+reference::destination {
+    color: red;
+}
+
+reference::title {
+    color: pink;
+}

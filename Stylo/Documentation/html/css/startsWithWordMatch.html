@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>
+		<link rel="stylesheet" href="../../css/help.css"></link>
+		<title>CSS attribute selector, starts with word match.</title>
+		<meta name="description" content="Description of the text match expression &quot;starts with word match&quot; of CSS attribute selector."></meta>
+		<meta name="KEYWORDS" content="attribute, starts, word, match, selector, css"></meta>
+	</head>
+	<body id="help">
+		<a class="link-img" href="../index.html"><img class="logo help-logo" src="../../images/icon_128x128.png" width="64" height="64" /></a>
+<!-- css/startsWithWordMatch.html -->
+<h1>Starts with word match</h1>
+<p><em>[attribute_name|=&quot;value&quot;]</em> matches the elements whose attribute &quot;attribute_name&quot; <em>starts with</em> &quot;match_text&quot;. The value must be an entire word, alone or followed by a hyphen &quot;-&quot;. Here again we are matching a value's complete substring. For example, in the following HTML source:</p>
+<p>HTML:</p>
+<pre><code class="language-html">&lt;h1 authors=&quot;john marc&quot;&gt;Title 1&lt;/h1&gt;
+&lt;h2 authors=&quot;anne-marie marc&quot;&gt;Title 2&lt;/h1&gt;
+</code></pre>
+<p>With the attribute selector below, we could select the <code>h1</code> element:</p>
+<p>CSS:</p>
+<pre><code class="language-css">[authors|=&quot;john&quot;] {
+    ...
+}
+</code></pre>
+<p>With the attribute selector below, we could select the <code>h2</code> element:</p>
+<p>CSS:</p>
+<pre><code class="language-css">[authors|=&quot;anne&quot;] {
+    ...
+}
+</code></pre>
+<p>or</p>
+<p>CSS:</p>
+<pre><code class="language-css">[authors|=&quot;anne-marie&quot;] {
+    ...
+}
+</code></pre>
+<p>Note that the following CSS would <em>not</em> work:</p>
+<pre><code class="language-css">[authors|=&quot;ann&quot;] {
+    ...
+}
+</code></pre>
+<p>because the <em>starts with word</em>  text selection expression addresses a complete word inside the attribute's value.</p>
+	</body>
+</html>

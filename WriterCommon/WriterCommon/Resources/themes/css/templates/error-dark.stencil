@@ -1,0 +1,347 @@
+
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+
+    {# font-family #}
+    {% if theme.css.errors.dark.foreground.fontFamily %}
+        font-family: {{ theme.css.errors.dark.foreground.fontFamily }};
+    {% elif theme.css.errors.foreground.fontFamily %}
+        font-family: {{ theme.css.errors.foreground.fontFamily }};
+    {% elif theme.css.dark.foreground.fontFamily %}
+        font-family: {{ theme.css.dark.foreground.fontFamily }};
+    {% elif theme.css.foreground.fontFamily %}
+        font-family: {{ theme.css.foreground.fontFamily }};
+    {% elif theme.dark.foreground.fontFamily %}
+        font-family: {{ theme.dark.foreground.fontFamily }};
+    {% elif theme.foreground.fontFamily %} 
+        font-family: {{ theme.foreground.fontFamily }};
+    {% else %}
+        font-family: "Hack";
+    {% endif %}
+
+    {# font-size #}
+    {% if theme.css.errors.dark.foreground.fontSize %}
+        font-size: {{ theme.css.errors.dark.foreground.fontSize }};
+    {% elif theme.css.errors.foreground.fontSize %}
+        font-size: {{ theme.css.errors.foreground.fontSize }};
+    {% elif theme.css.dark.foreground.fontSize %}
+        font-size: {{ theme.css.dark.foreground.fontSize }};
+    {% elif theme.css.foreground.fontSize %}
+        font-size: {{ theme.css.foreground.fontSize }};
+    {% elif theme.dark.foreground.fontSize %} 
+        font-size: {{ theme.dark.foreground.fontSize }};
+    {% elif theme.foreground.fontSize %} 
+        font-size: {{ theme.foreground.fontSize }};
+    {% else %}
+        font-size: 10pt;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.errors.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.errors.dark.foreground.fontStyle }};
+    {% elif theme.css.errors.foreground.fontStyle %}
+        font-style: {{ theme.css.errors.foreground.fontStyle }};
+    {% elif theme.css.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.dark.foreground.fontStyle }};
+    {% elif theme.css.foreground.fontStyle %}
+        font-style: {{ theme.css.foreground.fontStyle }};
+    {% elif theme.dark.foreground.fontStyle %}
+        font-style: {{ theme.dark.foreground.fontStyle }};
+    {% elif theme.foreground.fontStyle %}
+        font-style: {{ theme.foreground.fontStyle }};
+    {% else %}
+        font-style: normal;
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.errors.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.errors.dark.foreground.fontWeight }};
+    {% elif theme.css.errors.foreground.fontWeight %}
+        font-weight: {{ theme.css.errors.foreground.fontWeight }};
+    {% elif theme.css.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.dark.foreground.fontWeight }};
+    {% elif theme.css.foreground.fontWeight %}
+        font-weight: {{ theme.css.foreground.fontWeight }};
+    {% elif theme.dark.foreground.fontWeight %}
+        font-weight: {{ theme.dark.foreground.fontWeight }};
+    {% elif theme.foreground.fontWeight %}
+        font-weight: {{ theme.foreground.fontWeight }};
+    {% else %}
+        font-weight: normal;
+    {% endif %}
+
+    {# color #}
+    {% if theme.css.errors.dark.foreground.color %}
+        color: {{ theme.css.errors.dark.foreground.color }};
+    {% elif theme.css.errors.foreground.color %}
+        color: {{ theme.css.errors.foreground.color }};
+    {% elif theme.css.dark.foreground.color %}
+        color: {{ theme.css.dark.foreground.color }};
+    {% elif theme.css.foreground.color %} 
+        color: {{ theme.css.foreground.color }};
+    {% elif theme.dark.foreground.color %} 
+        color: {{ theme.dark.foreground.color }};
+    {% elif theme.foreground.color %} 
+        color: {{ theme.foreground.color }};
+    {% else %}
+        color: gray;
+    {% endif %}
+
+    {# background-color #}
+    {% if theme.css.errors.dark.background.color %}
+        background-color: {{ theme.css.errors.dark.background.color }};
+    {% elif theme.css.errors.background.color %}
+        background-color: {{ theme.css.errors.background.color }};
+    {% elif theme.css.dark.background.color %}
+        background-color: {{ theme.css.dark.background.color }};
+    {% elif theme.css.background.color %} 
+        background-color: {{ theme.css.background.color }};
+    {% elif theme.dark.background.color %} 
+        background-color: {{ theme.dark.background.color }};
+    {% elif theme.background.color %} 
+        background-color: {{ theme.background.color }};
+    {% else %}
+        background-color: black;
+    {% endif %}
+}
+
+[nw-message-id] {
+
+	{# color #}
+ 	{% if theme.css.errors.dark.unselectedErrorMessage.color %}
+        color: {{ theme.css.errors.dark.unselectedErrorMessage.color }} !important;
+    {% elif theme.css.errors.unselectedErrorMessage.color %}
+    	color: {{ theme.css.errors.unselectedErrorMessage.color }} !important;
+    {% elif theme.css.dark.unselectedErrorMessage.color %}
+    	color: {{ theme.css.dark.unselectedErrorMessage.color }} !important;
+    {% elif theme.css.unselectedErrorMessage.color %} 
+    	color: {{ theme.css.unselectedErrorMessage.color }} !important;
+    {% elif theme.dark.unselectedErrorMessage.color %} 
+        color: {{ theme.dark.unselectedErrorMessage.color }} !important;
+    {% elif theme.unselectedErrorMessage.color %} 
+        color: {{ theme.unselectedErrorMessage.color }} !important;
+    {% else %}
+    	color: rgba(255,0,0,0.5) !important;
+    {% endif %}
+
+    {# font-size #}
+    {% if theme.css.errors.dark.unselectedErrorMessage.fontSize %}
+        font-size: {{ theme.css.errors.dark.unselectedErrorMessage.fontSize }};
+    {% elif theme.css.errors.unselectedErrorMessage.fontSize %}
+        font-size: {{ theme.css.errors.unselectedErrorMessage.fontSize }};
+    {% elif theme.css.dark.unselectedErrorMessage.fontSize %}
+        font-size: {{ theme.css.dark.unselectedErrorMessage.fontSize }};
+    {% elif theme.css.unselectedErrorMessage.fontSize %} 
+        font-size: {{ theme.css.unselectedErrorMessage.fontSize }};
+    {% elif theme.dark.unselectedErrorMessage.fontSize %} 
+        font-size: {{ theme.dark.unselectedErrorMessage.fontSize }};
+    {% elif theme.unselectedErrorMessage.fontSize %} 
+        font-size: {{ theme.unselectedErrorMessage.fontSize }};
+    {% else %}
+        font-size: 10pt;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.errors.dark.unselectedErrorMessage.fontStyle %}
+        font-style: {{ theme.css.errors.dark.unselectedErrorMessage.fontStyle }};
+    {% elif theme.css.errors.unselectedErrorMessage.fontStyle %}
+        font-style: {{ theme.css.errors.unselectedErrorMessage.fontStyle }};
+    {% elif theme.css.dark.unselectedErrorMessage.fontStyle %}
+        font-style: {{ theme.css.dark.unselectedErrorMessage.fontStyle }};
+    {% elif theme.css.unselectedErrorMessage.fontStyle %}
+        font-style: {{ theme.css.unselectedErrorMessage.fontStyle }};
+    {% elif theme.dark.unselectedErrorMessage.fontStyle %}
+        font-style: {{ theme.dark.unselectedErrorMessage.fontStyle }};
+    {% elif theme.unselectedErrorMessage.fontStyle %}
+        font-style: {{ theme.unselectedErrorMessage.fontStyle }};
+    {% else %}
+        font-style: normal;
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.errors.dark.unselectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.css.errors.dark.unselectedErrorMessage.fontWeight }};
+    {% elif theme.css.errors.unselectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.css.errors.unselectedErrorMessage.fontWeight }};
+    {% elif theme.css.dark.unselectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.css.dark.unselectedErrorMessage.fontWeight }};
+    {% elif theme.css.unselectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.css.unselectedErrorMessage.fontWeight }};
+    {% elif theme.dark.unselectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.dark.unselectedErrorMessage.fontWeight }};
+    {% elif theme.unselectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.unselectedErrorMessage.fontWeight }};
+    {% else %}
+        font-weight: normal;
+    {% endif %}
+}
+
+/* the later will select only the error to highdark */
+
+/***********
+ 
+ Important Note: This rule should always be the last rule
+ 
+ ***********/
+[nw-message-id=""].error {
+
+	{# color #}
+ 	{% if theme.css.errors.dark.selectedErrorMessage.color %}
+        color: {{ theme.css.errors.dark.selectedErrorMessage.color }} !important;
+    {% elif theme.css.errors.selectedErrorMessage.color %}
+    	color: {{ theme.css.errors.selectedErrorMessage.color }} !important;
+    {% elif theme.css.dark.selectedErrorMessage.color %}
+    	color: {{ theme.css.dark.selectedErrorMessage.color }} !important;
+    {% elif theme.css.selectedErrorMessage.color %}
+    	color: {{ theme.css.selectedErrorMessage.color }} !important;
+    {% elif theme.dark.selectedErrorMessage.color %} 
+        color: {{ theme.dark.selectedErrorMessage.color }} !important;
+    {% elif theme.selectedErrorMessage.color %} 
+        color: {{ theme.selectedErrorMessage.color }} !important;
+    {% else %}
+    	color: red !important;
+    {% endif %}
+
+    {# font-size #}
+    {% if theme.css.errors.dark.selectedErrorMessage.fontSize %}
+        font-size: {{ theme.css.errors.dark.selectedErrorMessage.fontSize }};
+    {% elif theme.css.errors.selectedErrorMessage.fontSize %}
+        font-size: {{ theme.css.errors.selectedErrorMessage.fontSize }};
+    {% elif theme.css.dark.selectedErrorMessage.fontSize %}
+        font-size: {{ theme.css.dark.selectedErrorMessage.fontSize }};
+    {% elif theme.css.selectedErrorMessage.fontSize %}
+        font-size: {{ theme.css.selectedErrorMessage.fontSize }};
+    {% elif theme.dark.selectedErrorMessage.fontSize %} 
+        font-size: {{ theme.dark.selectedErrorMessage.fontSize }};
+    {% elif theme.selectedErrorMessage.fontSize %} 
+        font-size: {{ theme.selectedErrorMessage.fontSize }};
+    {% else %}
+        font-size: 10pt;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.errors.dark.selectedErrorMessage.fontStyle %}
+        font-style: {{ theme.css.errors.dark.selectedErrorMessage.fontStyle }};
+    {% elif theme.css.errors.selectedErrorMessage.fontStyle %}
+        font-style: {{ theme.css.errors.selectedErrorMessage.fontStyle }};
+    {% elif theme.css.dark.selectedErrorMessage.fontStyle %}
+        font-style: {{ theme.css.dark.selectedErrorMessage.fontStyle }};
+    {% elif theme.css.selectedErrorMessage.fontStyle %}
+        font-style: {{ theme.css.selectedErrorMessage.fontStyle }};
+    {% elif theme.dark.selectedErrorMessage.fontStyle %}
+        font-style: {{ theme.dark.selectedErrorMessage.fontStyle }};
+    {% elif theme.selectedErrorMessage.fontStyle %}
+        font-style: {{ theme.selectedErrorMessage.fontStyle }};
+    {% else %}
+        font-style: normal;
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.errors.dark.selectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.css.errors.dark.selectedErrorMessage.fontWeight }};
+    {% elif theme.css.errors.selectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.css.errors.selectedErrorMessage.fontWeight }};
+    {% elif theme.css.dark.selectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.css.dark.selectedErrorMessage.fontWeight }};
+    {% elif theme.css.selectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.css.selectedErrorMessage.fontWeight }};
+    {% elif theme.dark.selectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.dark.selectedErrorMessage.fontWeight }};
+    {% elif theme.selectedErrorMessage.fontWeight %}
+        font-weight: {{ theme.selectedErrorMessage.fontWeight }};
+    {% else %}
+        font-weight: normal;
+    {% endif %}
+}
+
+[nw-message-id=""].warning {
+
+	{# color #}
+ 	{% if theme.css.errors.dark.selectedWarningMessage.color %}
+        color: {{ theme.css.errors.dark.selectedWarningMessage.color }} !important;
+    {% elif theme.css.errors.selectedWarningMessage.color %}
+    	color: {{ theme.css.errors.selectedWarningMessage.color }} !important;
+    {% elif theme.css.dark.selectedWarningMessage.color %}
+    	color: {{ theme.css.dark.selectedWarningMessage.color }} !important;
+    {% elif theme.css.selectedWarningMessage.color %}
+    	color: {{ theme.css.selectedWarningMessage.color }} !important;
+    {% elif theme.dark.selectedWarningMessage.color %}
+        color: {{ theme.dark.selectedWarningMessage.color }} !important;
+    {% elif theme.selectedWarningMessage.color %}
+        color: {{ theme.selectedWarningMessage.color }} !important;
+    {% else %}
+    	color: yellow !important;
+    {% endif %}
+
+    {# font-size #}
+    {% if theme.css.errors.dark.selectedWarningMessage.fontSize %}
+        font-size: {{ theme.css.errors.dark.selectedWarningMessage.fontSize }};
+    {% elif theme.css.errors.selectedWarningMessage.fontSize %}
+        font-size: {{ theme.css.errors.selectedWarningMessage.fontSize }};
+    {% elif theme.css.dark.selectedWarningMessage.fontSize %}
+        font-size: {{ theme.css.dark.selectedWarningMessage.fontSize }};
+    {% elif theme.css.selectedWarningMessage.fontSize %}
+        font-size: {{ theme.css.selectedWarningMessage.fontSize }};
+    {% elif theme.dark.selectedWarningMessage.fontSize %}
+        font-size: {{ theme.dark.selectedWarningMessage.fontSize }};
+    {% elif theme.selectedWarningMessage.fontSize %}
+        font-size: {{ theme.selectedWarningMessage.fontSize }};
+    {% else %}
+        font-size: 10pt;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.errors.dark.selectedWarningMessage.fontStyle %}
+        font-style: {{ theme.css.errors.dark.selectedWarningMessage.fontStyle }};
+    {% elif theme.css.errors.selectedWarningMessage.fontStyle %}
+        font-style: {{ theme.css.errors.selectedWarningMessage.fontStyle }};
+    {% elif theme.css.dark.selectedWarningMessage.fontStyle %}
+        font-style: {{ theme.css.dark.selectedWarningMessage.fontStyle }};
+    {% elif theme.css.selectedWarningMessage.fontStyle %}
+        font-style: {{ theme.css.selectedWarningMessage.fontStyle }};
+    {% elif theme.dark.selectedWarningMessage.fontStyle %}
+        font-style: {{ theme.dark.selectedWarningMessage.fontStyle }};
+    {% elif theme.selectedWarningMessage.fontStyle %}
+        font-style: {{ theme.selectedWarningMessage.fontStyle }};
+    {% else %}
+        font-style: normal;
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.errors.dark.selectedWarningMessage.fontWeight %}
+        font-weight: {{ theme.css.errors.dark.selectedWarningMessage.fontWeight }};
+    {% elif theme.css.errors.selectedWarningMessage.fontWeight %}
+        font-weight: {{ theme.css.errors.selectedWarningMessage.fontWeight }};
+    {% elif theme.css.dark.selectedWarningMessage.fontWeight %}
+        font-weight: {{ theme.css.dark.selectedWarningMessage.fontWeight }};
+    {% elif theme.css.selectedWarningMessage.fontWeight %}
+        font-weight: {{ theme.css.selectedWarningMessage.fontWeight }};
+    {% elif theme.dark.selectedWarningMessage.fontWeight %}
+        font-weight: {{ theme.dark.selectedWarningMessage.fontWeight }};
+    {% elif theme.selectedWarningMessage.fontWeight %}
+        font-weight: {{ theme.selectedWarningMessage.fontWeight }};
+    {% else %}
+        font-weight: normal;
+    {% endif %}
+}
+
+[nw-message-id=""].warning * {
+
+	{# color #}
+ 	{% if theme.css.errors.dark.selectedWarningMessage.color %}
+        color: {{ theme.css.errors.dark.selectedWarningMessage.color }} !important;
+    {% elif theme.css.errors.selectedWarningMessage.color %}
+    	color: {{ theme.css.errors.selectedWarningMessage.color }} !important;
+    {% elif theme.css.dark.selectedWarningMessage.color %}
+    	color: {{ theme.css.dark.selectedWarningMessage.color }} !important;
+    {% elif theme.css.selectedWarningMessage.color %}
+    	color: {{ theme.css.selectedWarningMessage.color }} !important;
+    {% elif theme.dark.selectedWarningMessage.color %}
+        color: {{ theme.dark.selectedWarningMessage.color }} !important;
+    {% elif theme.selectedWarningMessage.color %}
+        color: {{ theme.selectedWarningMessage.color }} !important;
+    {% else %}
+    	color: yellow !important;
+    {% endif %}
+}

@@ -1,0 +1,59 @@
+
+@namespace "http://www.w3.org/Style/CSS/";
+
+:root {
+    
+    --pink-1: #f04273;
+    --pink-2: #ed1d58;
+    --pink-3: #d11149;
+    --pink-4: #aa0e3a;
+    
+    --gray-1: #cccccc;
+    --gray-2: #b8b8b8;
+    --gray-3: #a3a3a3;
+    --gray-4: #8f8f8f;
+    --gray-5: #7a7a7a;
+    
+    --teal-1: #4082A0;
+    --teal-2: #2f5f75;
+    --teal-3: #234758;
+    --teal-4: #172f3a;
+    
+    --teal-gray-1: #8f9da3;
+    --teal-gray-2: #73858c;
+    --teal-gray-3: #5c6970;
+    --teal-gray-4: #49565a;
+    
+    --theme-caret-color: --teal-4;
+    --theme-foreground-color: var(--gray-4);
+    --theme-background-color: rgb(255,255,255);
+    --theme-atRuleName-color: var(--gray-2);
+    --theme-namespacePrefix-color: var(--gray-3);
+    --theme-namespaceUri-color: var(--teal-gray-1);
+    --theme-typeSelector-color: var(--teal-1);
+    --theme-comment-color: var(--teal-4);
+    --theme-number-color: var(--teal-3);
+    --theme-string-color: var(--teal-1);
+    --theme-combinator-color: var(--teal-gray-2);
+    --theme-function-color: var(--teal-gray-1);
+    --theme-fontStyle-color: var(--teal-gray-1);
+    --theme-attributeMatch-color: var(--teal-gray-2);
+    --theme-pseudoSelectorOperator-color: var(--gray-2);
+    --theme-pseudoSelectorValue-color: var(--gray-4);
+    --theme-colorKeyword-color: var(--teal-gray-4);
+    --theme-colorHash-color: var(--teal-gray-4);
+    --theme-dimension-color: var(--teal-3);
+    --theme-attributeName-color: var(--teal-gray-3);
+    --theme-classSelector-color: var(--gray-2);
+    --theme-propertyName-color: var(--teal-gray-1);
+    --theme-importantExclamationPoint-color: var(--gray-2);
+    --theme-importantText-color !important: var(--gray-2);
+    --theme-invalid-color: var(--red);
+    --theme-function-tag-color: var(--gray-2);
+    --theme-ident-token-color: var(--teal-2);
+    --theme-ident-fontStyle: normal;
+    --theme-custom-var-color: var(--teal-2);
+    --theme-custom-var-fontStyle: italic;
+    
+
+}

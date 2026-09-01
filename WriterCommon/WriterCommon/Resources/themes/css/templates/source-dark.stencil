@@ -1,0 +1,1580 @@
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+
+    {# font-family #}
+    {% if theme.css.source.dark.foreground.fontFamily %}
+        font-family: {{ theme.css.source.dark.foreground.fontFamily }};
+    {% elif theme.css.source.foreground.fontFamily %} 
+        font-family: {{ theme.css.source.foreground.fontFamily }};
+    {% elif theme.css.dark.foreground.fontFamily %} 
+        font-family: {{ theme.css.dark.foreground.fontFamily }};
+    {% elif theme.css.foreground.fontFamily %} 
+        font-family: {{ theme.css.foreground.fontFamily }};
+    {% elif theme.dark.foreground.fontFamily %} 
+        font-family: {{ theme.dark.foreground.fontFamily }};
+    {% elif theme.foreground.fontFamily %} 
+        font-family: {{ theme.foreground.fontFamily }};
+    {% else %}
+        font-family: Menlo;
+    {% endif %}
+
+    {# font-size #}
+    {% if theme.css.source.dark.foreground.fontSize %}
+        font-size: {{ theme.css.source.dark.foreground.fontSize }};
+    {% elif theme.css.source.foreground.fontSize %} 
+        font-size: {{ theme.css.source.foreground.fontSize }};
+    {% elif theme.css.dark.foreground.fontSize %} 
+        font-size: {{ theme.css.dark.foreground.fontSize }};
+    {% elif theme.css.foreground.fontSize %} 
+        font-size: {{ theme.css.foreground.fontSize }};
+    {% elif theme.dark.foreground.fontSize %} 
+        font-size: {{ theme.dark.foreground.fontSize }};
+    {% elif theme.foreground.fontSize %} 
+        font-size: {{ theme.foreground.fontSize }};
+    {% else %}
+        font-size: 10pt;
+    {% endif %}
+
+
+    {# font-style #}
+    {% if theme.css.source.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.source.dark.foreground.fontStyle }};
+    {% elif theme.css.source.foreground.fontStyle %}
+        font-style: {{ theme.css.source.foreground.fontStyle }};
+    {% elif theme.css.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.dark.foreground.fontStyle }};
+    {% elif theme.css.foreground.fontStyle %}
+        font-style: {{ theme.css.foreground.fontStyle }};
+    {% elif theme.dark.foreground.fontStyle %}
+        font-style: {{ theme.dark.foreground.fontStyle }};
+    {% elif theme.foreground.fontStyle %}
+        font-style: {{ theme.foreground.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.dark.foreground.fontWeight }};
+    {% elif theme.css.source.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.foreground.fontWeight }};
+    {% elif theme.css.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.dark.foreground.fontWeight }};
+    {% elif theme.css.foreground.fontWeight %}
+        font-weight: {{ theme.css.foreground.fontWeight }};
+    {% elif theme.dark.foreground.fontWeight %}
+        font-weight: {{ theme.dark.foreground.fontWeight }};
+    {% elif theme.foreground.fontWeight %}
+        font-weight: {{ theme.foreground.fontWeight }};
+    {% endif %}
+
+    {# color #}
+    {% if theme.css.source.dark.foreground.color %}
+        color: {{ theme.css.source.dark.foreground.color }};
+    {% elif theme.css.source.foreground.color %} 
+        color: {{ theme.css.source.foreground.color }};
+    {% elif theme.css.dark.foreground.color %} 
+        color: {{ theme.css.dark.foreground.color }};
+    {% elif theme.css.foreground.color %} 
+        color: {{ theme.css.foreground.color }};
+    {% elif theme.dark.foreground.color %} 
+        color: {{ theme.dark.foreground.color }};
+    {% elif theme.foreground.color %} 
+        color: {{ theme.foreground.color }};        
+    {% endif %}
+
+    {# background-color #}
+    {% if theme.css.source.dark.background.color %}
+        background-color: {{ theme.css.source.dark.background.color }};
+    {% elif theme.css.source.background.color %} 
+        background-color: {{ theme.css.source.background.color }};
+    {% elif theme.css.dark.background.color %} 
+        background-color: {{ theme.css.dark.background.color }};
+    {% elif theme.css.background.color %} 
+        background-color: {{ theme.css.background.color }};
+    {% elif theme.dark.background.color %} 
+        background-color: {{ theme.dark.background.color }};
+    {% elif theme.background.color %} 
+        background-color: {{ theme.background.color }};
+    {% else %}
+        background-color: black;
+    {% endif %}
+}
+
+at-rule-name {
+
+    {# color #}
+    {% if theme.css.source.dark.atRuleName.color %}
+        color: {{ theme.css.source.dark.atRuleName.color }};
+    {% elif theme.css.source.atRuleName.color %}
+        color: {{ theme.css.source.atRuleName.color }};
+    {% elif theme.css.dark.atRuleName.color %}
+        color: {{ theme.css.dark.atRuleName.color }};
+    {% elif theme.css.atRuleName.color %}
+        color: {{ theme.css.atRuleName.color }};
+    {% elif theme.dark.atRuleName.color %}
+        color: {{ theme.dark.atRuleName.color }};
+    {% elif theme.atRuleName.color %}
+        color: {{ theme.atRuleName.color }};
+    {% endif %}
+}
+
+namespace-prefix {
+
+    {# color #}
+    {% if theme.css.source.dark.namespacePrefix.color %}
+    color: {{ theme.css.source.dark.namespacePrefix.color }};
+    {% elif theme.css.source.namespacePrefix.color %}
+    color: {{ theme.css.source.namespacePrefix.color }};
+    {% elif theme.css.dark.namespacePrefix.color %}
+    color: {{ theme.css.dark.namespacePrefix.color }};
+    {% elif theme.css.namespacePrefix.color %}
+    color: {{ theme.css.namespacePrefix.color }};
+    {% elif theme.dark.namespacePrefix.color %}
+    color: {{ theme.dark.namespacePrefix.color }};
+    {% elif theme.namespacePrefix.color %}
+    color: {{ theme.namespacePrefix.color }};
+    {% endif %}
+}
+
+namespace-uri {
+
+    {# color #}
+    {% if theme.css.source.dark.namespaceUri.color %}
+    color: {{ theme.css.source.dark.namespaceUri.color }};
+    {% elif theme.css.source.namespaceUri.color %}
+    color: {{ theme.css.source.namespaceUri.color }};
+    {% elif theme.css.dark.namespaceUri.color %}
+    color: {{ theme.css.dark.namespaceUri.color }};
+    {% elif theme.css.namespaceUri.color %}
+    color: {{ theme.css.namespaceUri.color }};
+    {% elif theme.dark.namespaceUri.color %}
+    color: {{ theme.dark.namespaceUri.color }};
+    {% elif theme.namespaceUri.color %}
+    color: {{ theme.namespaceUri.color }};
+    {% endif %}
+}
+
+type-selector {
+
+    {# color #}
+    {% if theme.css.source.dark.typeSelector.color %}
+        color: {{ theme.css.source.dark.typeSelector.color }};
+    {% elif theme.css.source.typeSelector.color %} 
+        color: {{ theme.css.source.typeSelector.color }};
+    {% elif theme.css.dark.typeSelector.color %} 
+        color: {{ theme.css.dark.typeSelector.color }};
+    {% elif theme.css.typeSelector.color %} 
+        color: {{ theme.css.typeSelector.color }};
+    {% elif theme.dark.typeSelector.color %} 
+        color: {{ theme.dark.typeSelector.color }};
+    {% elif theme.typeSelector.color %} 
+        color: {{ theme.typeSelector.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.typeSelector.fontStyle %}
+        font-style: {{ theme.css.source.dark.typeSelector.fontStyle }};
+    {% elif theme.css.source.typeSelector.fontStyle %}
+        font-style: {{ theme.css.source.typeSelector.fontStyle }};
+    {% elif theme.css.dark.typeSelector.fontStyle %}
+        font-style: {{ theme.css.dark.typeSelector.fontStyle }};
+    {% elif theme.css.typeSelector.fontStyle %}
+        font-style: {{ theme.css.typeSelector.fontStyle }};
+    {% elif theme.dark.typeSelector.fontStyle %}
+        font-style: {{ theme.dark.typeSelector.fontStyle }};
+    {% elif theme.typeSelector.fontStyle %}
+        font-style: {{ theme.typeSelector.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.typeSelector.fontWeight %}
+        font-weight: {{ theme.css.source.dark.typeSelector.fontWeight }};
+    {% elif theme.css.source.typeSelector.fontWeight %}
+        font-weight: {{ theme.css.source.typeSelector.fontWeight }};
+    {% elif theme.css.dark.typeSelector.fontWeight %}
+        font-weight: {{ theme.css.dark.typeSelector.fontWeight }};
+    {% elif theme.css.typeSelector.fontWeight %}
+        font-weight: {{ theme.css.typeSelector.fontWeight }};
+    {% elif theme.dark.typeSelector.fontWeight %}
+        font-weight: {{ theme.dark.typeSelector.fontWeight }};
+    {% elif theme.typeSelector.fontWeight %}
+        font-weight: {{ theme.typeSelector.fontWeight }};
+    {% endif %}
+
+}
+
+.comment-token {
+
+    {# color #}
+    {% if theme.css.source.dark.comment.color %}
+        color: {{ theme.css.source.dark.comment.color }};
+    {% elif theme.css.source.comment.color %} 
+        color: {{ theme.css.source.comment.color }};
+    {% elif theme.css.dark.comment.color %} 
+        color: {{ theme.css.dark.comment.color }};
+    {% elif theme.css.comment.color %} 
+        color: {{ theme.css.comment.color }};
+    {% elif theme.dark.comment.color %} 
+        color: {{ theme.dark.comment.color }};
+    {% elif theme.comment.color %} 
+        color: {{ theme.comment.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.comment.fontStyle %}
+        font-style: {{ theme.css.source.dark.comment.fontStyle }};
+    {% elif theme.css.source.comment.fontStyle %}
+        font-style: {{ theme.css.source.comment.fontStyle }};
+    {% elif theme.css.dark.comment.fontStyle %}
+        font-style: {{ theme.css.dark.comment.fontStyle }};
+    {% elif theme.css.comment.fontStyle %}
+        font-style: {{ theme.css.comment.fontStyle }};
+    {% elif theme.dark.comment.fontStyle %}
+        font-style: {{ theme.dark.comment.fontStyle }};
+    {% elif theme.comment.fontStyle %}
+        font-style: {{ theme.comment.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.comment.fontWeight %}
+        font-weight: {{ theme.css.source.dark.comment.fontWeight }};
+    {% elif theme.css.source.comment.fontWeight %}
+        font-weight: {{ theme.css.source.comment.fontWeight }};
+    {% elif theme.css.dark.comment.fontWeight %}
+        font-weight: {{ theme.css.dark.comment.fontWeight }};
+    {% elif theme.css.comment.fontWeight %}
+        font-weight: {{ theme.css.comment.fontWeight }};
+    {% elif theme.dark.comment.fontWeight %}
+        font-weight: {{ theme.dark.comment.fontWeight }};
+    {% elif theme.comment.fontWeight %}
+        font-weight: {{ theme.comment.fontWeight }};
+    {% endif %}
+
+}
+
+.number-token {
+
+    {# color #}
+    {% if theme.css.source.dark.number.color %}
+        color: {{ theme.css.source.dark.number.color }};
+    {% elif theme.css.source.number.color %} 
+        color: {{ theme.css.source.number.color }};
+    {% elif theme.css.dark.number.color %} 
+        color: {{ theme.css.dark.number.color }};
+    {% elif theme.css.number.color %} 
+        color: {{ theme.css.number.color }};
+    {% elif theme.dark.number.color %} 
+        color: {{ theme.dark.number.color }};
+    {% elif theme.number.color %} 
+        color: {{ theme.number.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.number.fontStyle %}
+        font-style: {{ theme.css.source.dark.number.fontStyle }};
+    {% elif theme.css.source.number.fontStyle %}
+        font-style: {{ theme.css.source.number.fontStyle }};
+    {% elif theme.css.dark.number.fontStyle %}
+        font-style: {{ theme.css.dark.number.fontStyle }};
+    {% elif theme.css.number.fontStyle %}
+        font-style: {{ theme.css.number.fontStyle }};
+    {% elif theme.dark.number.fontStyle %}
+        font-style: {{ theme.dark.number.fontStyle }};
+    {% elif theme.number.fontStyle %}
+        font-style: {{ theme.number.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.number.fontWeight %}
+        font-weight: {{ theme.css.source.dark.number.fontWeight }};
+    {% elif theme.css.source.number.fontWeight %}
+        font-weight: {{ theme.css.source.number.fontWeight }};
+    {% elif theme.css.dark.number.fontWeight %}
+        font-weight: {{ theme.css.dark.number.fontWeight }};
+    {% elif theme.css.number.fontWeight %}
+        font-weight: {{ theme.css.number.fontWeight }};
+    {% elif theme.dark.number.fontWeight %}
+        font-weight: {{ theme.dark.number.fontWeight }};
+    {% elif theme.number.fontWeight %}
+        font-weight: {{ theme.number.fontWeight }};
+    {% endif %}
+
+}
+
+.string-token {
+
+    {# color #}
+    {% if theme.css.source.dark.string.color %}
+        color: {{ theme.css.source.dark.string.color }};
+    {% elif theme.css.source.string.color %} 
+        color: {{ theme.css.source.string.color }};
+    {% elif theme.css.dark.string.color %} 
+        color: {{ theme.css.dark.string.color }};
+    {% elif theme.css.string.color %} 
+        color: {{ theme.css.string.color }};
+    {% elif theme.dark.string.color %} 
+        color: {{ theme.dark.string.color }};
+    {% elif theme.string.color %} 
+        color: {{ theme.string.color }};
+    {% endif %}
+
+
+    {# font-style #}
+    {% if theme.css.source.dark.string.fontStyle %}
+        font-style: {{ theme.css.source.dark.string.fontStyle }};
+    {% elif theme.css.source.string.fontStyle %}
+        font-style: {{ theme.css.source.string.fontStyle }};
+    {% elif theme.css.dark.string.fontStyle %}
+        font-style: {{ theme.css.dark.string.fontStyle }};
+    {% elif theme.css.string.fontStyle %}
+        font-style: {{ theme.css.string.fontStyle }};
+    {% elif theme.dark.string.fontStyle %}
+        font-style: {{ theme.dark.string.fontStyle }};
+    {% elif theme.string.fontStyle %}
+        font-style: {{ theme.string.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.string.fontWeight %}
+        font-weight: {{ theme.css.source.dark.string.fontWeight }};
+    {% elif theme.css.source.string.fontWeight %}
+        font-weight: {{ theme.css.source.string.fontWeight }};
+    {% elif theme.css.dark.string.fontWeight %}
+        font-weight: {{ theme.css.dark.string.fontWeight }};
+    {% elif theme.css.string.fontWeight %}
+        font-weight: {{ theme.css.string.fontWeight }};
+    {% elif theme.dark.string.fontWeight %}
+        font-weight: {{ theme.dark.string.fontWeight }};
+    {% elif theme.string.fontWeight %}
+        font-weight: {{ theme.string.fontWeight }};
+    {% endif %}
+}
+
+complexe-selector selector-combinator {
+
+    {# color #}
+    {% if theme.css.source.dark.combinator.color %}
+        color: {{ theme.css.source.dark.combinator.color }};
+    {% elif theme.css.source.combinator.color %} 
+        color: {{ theme.css.source.combinator.color }};
+    {% elif theme.css.dark.combinator.color %} 
+        color: {{ theme.css.dark.combinator.color }};
+    {% elif theme.css.combinator.color %} 
+        color: {{ theme.css.combinator.color }};
+    {% elif theme.dark.combinator.color %} 
+        color: {{ theme.dark.combinator.color }};
+    {% elif theme.combinator.color %} 
+        color: {{ theme.combinator.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.combinator.fontStyle %}
+        font-style: {{ theme.css.source.dark.combinator.fontStyle }};
+    {% elif theme.css.source.combinator.fontStyle %}
+        font-style: {{ theme.css.source.combinator.fontStyle }};
+    {% elif theme.css.dark.combinator.fontStyle %}
+        font-style: {{ theme.css.dark.combinator.fontStyle }};
+    {% elif theme.css.combinator.fontStyle %}
+        font-style: {{ theme.css.combinator.fontStyle }};
+    {% elif theme.dark.combinator.fontStyle %}
+        font-style: {{ theme.dark.combinator.fontStyle }};
+    {% elif theme.combinator.fontStyle %}
+        font-style: {{ theme.combinator.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.combinator.fontWeight %}
+        font-weight: {{ theme.css.source.dark.combinator.fontWeight }};
+    {% elif theme.css.source.combinator.fontWeight %}
+        font-weight: {{ theme.css.source.combinator.fontWeight }};
+    {% elif theme.css.dark.combinator.fontWeight %}
+        font-weight: {{ theme.css.dark.combinator.fontWeight }};
+    {% elif theme.css.combinator.fontWeight %}
+        font-weight: {{ theme.css.combinator.fontWeight }};
+    {% elif theme.dark.combinator.fontWeight %}
+        font-weight: {{ theme.dark.combinator.fontWeight }};
+    {% elif theme.combinator.fontWeight %}
+        font-weight: {{ theme.combinator.fontWeight }};
+    {% endif %}
+
+}
+
+css-token[text-value~="{"] {
+
+    {# color #}
+    {% if theme.css.source.dark.foreground.color %}
+        color: {{ theme.css.source.dark.foreground.color }};
+    {% elif theme.css.source.foreground.color %} 
+        color: {{ theme.css.source.foreground.color }};
+    {% elif theme.css.dark.foreground.color %} 
+        color: {{ theme.css.dark.foreground.color }};
+    {% elif theme.css.foreground.color %} 
+        color: {{ theme.css.foreground.color }};
+    {% elif theme.dark.foreground.color %} 
+        color: {{ theme.dark.foreground.color }};
+    {% elif theme.foreground.color %} 
+        color: {{ theme.foreground.color }};
+    {% endif %}
+
+
+    {# font-style #}
+    {% if theme.css.source.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.source.dark.foreground.fontStyle }};
+    {% elif theme.css.source.foreground.fontStyle %}
+        font-style: {{ theme.css.source.foreground.fontStyle }};
+    {% elif theme.css.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.dark.foreground.fontStyle }};
+    {% elif theme.css.foreground.fontStyle %}
+        font-style: {{ theme.css.foreground.fontStyle }};
+    {% elif theme.dark.foreground.fontStyle %}
+        font-style: {{ theme.dark.foreground.fontStyle }};
+    {% elif theme.foreground.fontStyle %}
+        font-style: {{ theme.foreground.fontStyle }};        
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.dark.foreground.fontWeight }};
+    {% elif theme.css.source.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.foreground.fontWeight }};
+    {% elif theme.css.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.dark.foreground.fontWeight }};
+    {% elif theme.css.foreground.fontWeight %}
+        font-weight: {{ theme.css.foreground.fontWeight }};
+    {% elif theme.dark.foreground.fontWeight %}
+        font-weight: {{ theme.dark.foreground.fontWeight }};
+    {% elif theme.foreground.fontWeight %}
+        font-weight: {{ theme.foreground.fontWeight }};
+    {% endif %}
+
+}
+
+css-token[text-value="}"] {
+
+    {# color #}
+    {% if theme.css.source.dark.foreground.color %}
+        color: {{ theme.css.source.dark.foreground.color }};
+    {% elif theme.css.source.foreground.color %} 
+        color: {{ theme.css.source.foreground.color }};
+    {% elif theme.css.dark.foreground.color %} 
+        color: {{ theme.css.dark.foreground.color }};
+    {% elif theme.css.foreground.color %} 
+        color: {{ theme.css.foreground.color }};
+    {% elif theme.dark.foreground.color %} 
+        color: {{ theme.dark.foreground.color }};
+    {% elif theme.foreground.color %} 
+        color: {{ theme.foreground.color }};
+    {% endif %}
+
+
+    {# font-style #}
+    {% if theme.css.source.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.source.dark.foreground.fontStyle }};
+    {% elif theme.css.source.foreground.fontStyle %}
+        font-style: {{ theme.css.source.foreground.fontStyle }};
+    {% elif theme.css.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.dark.foreground.fontStyle }};
+    {% elif theme.css.foreground.fontStyle %}
+        font-style: {{ theme.css.foreground.fontStyle }};
+    {% elif theme.dark.foreground.fontStyle %}
+        font-style: {{ theme.dark.foreground.fontStyle }};
+    {% elif theme.foreground.fontStyle %}
+        font-style: {{ theme.foreground.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.dark.foreground.fontWeight }};
+    {% elif theme.css.source.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.foreground.fontWeight }};
+    {% elif theme.css.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.dark.foreground.fontWeight }};
+    {% elif theme.css.foreground.fontWeight %}
+        font-weight: {{ theme.css.foreground.fontWeight }};
+    {% elif theme.dark.foreground.fontWeight %}
+        font-weight: {{ theme.dark.foreground.fontWeight }};
+    {% elif theme.foreground.fontWeight %}
+        font-weight: {{ theme.foreground.fontWeight }};    
+    {% endif %}
+
+}
+
+css-token[text-value="["] {
+
+    {# color #}
+    {% if theme.css.source.dark.foreground.color %}
+        color: {{ theme.css.source.dark.foreground.color }};
+    {% elif theme.css.source.foreground.color %} 
+        color: {{ theme.css.source.foreground.color }};
+    {% elif theme.css.dark.foreground.color %} 
+        color: {{ theme.css.dark.foreground.color }};
+    {% elif theme.css.foreground.color %} 
+        color: {{ theme.css.foreground.color }};
+    {% elif theme.dark.foreground.color %} 
+        color: {{ theme.dark.foreground.color }};
+    {% elif theme.foreground.color %} 
+        color: {{ theme.foreground.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.source.dark.foreground.fontStyle }};
+    {% elif theme.css.source.foreground.fontStyle %}
+        font-style: {{ theme.css.source.foreground.fontStyle }};
+    {% elif theme.css.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.dark.foreground.fontStyle }};
+    {% elif theme.css.foreground.fontStyle %}
+        font-style: {{ theme.css.foreground.fontStyle }};
+    {% elif theme.dark.foreground.fontStyle %}
+        font-style: {{ theme.dark.foreground.fontStyle }};
+    {% elif theme.foreground.fontStyle %}
+        font-style: {{ theme.foreground.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.dark.foreground.fontWeight }};
+    {% elif theme.css.source.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.foreground.fontWeight }};
+    {% elif theme.css.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.dark.foreground.fontWeight }};
+    {% elif theme.css.foreground.fontWeight %}
+        font-weight: {{ theme.css.foreground.fontWeight }};
+    {% elif theme.dark.foreground.fontWeight %}
+        font-weight: {{ theme.dark.foreground.fontWeight }};
+    {% elif theme.foreground.fontWeight %}
+        font-weight: {{ theme.foreground.fontWeight }};
+    {% endif %}
+}
+
+
+css-token[text-value="]"] {
+
+    {# color #}
+    {% if theme.css.source.dark.foreground.color %}
+        color: {{ theme.css.source.dark.foreground.color }};
+    {% elif theme.css.source.foreground.color %} 
+        color: {{ theme.css.source.foreground.color }};
+    {% elif theme.css.dark.foreground.color %} 
+        color: {{ theme.css.dark.foreground.color }};
+    {% elif theme.css.foreground.color %} 
+        color: {{ theme.css.foreground.color }};
+    {% elif theme.dark.foreground.color %} 
+        color: {{ theme.dark.foreground.color }};
+    {% elif theme.foreground.color %} 
+        color: {{ theme.foreground.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.source.dark.foreground.fontStyle }};
+    {% elif theme.css.source.foreground.fontStyle %}
+        font-style: {{ theme.css.source.foreground.fontStyle }};
+    {% elif theme.css.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.dark.foreground.fontStyle }};
+    {% elif theme.css.foreground.fontStyle %}
+        font-style: {{ theme.css.foreground.fontStyle }};
+    {% elif theme.dark.foreground.fontStyle %}
+        font-style: {{ theme.dark.foreground.fontStyle }};
+    {% elif theme.foreground.fontStyle %}
+        font-style: {{ theme.foreground.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.dark.foreground.fontWeight }};
+    {% elif theme.css.source.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.foreground.fontWeight }};
+    {% elif theme.css.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.dark.foreground.fontWeight }};
+    {% elif theme.css.foreground.fontWeight %}
+        font-weight: {{ theme.css.foreground.fontWeight }};
+    {% elif theme.dark.foreground.fontWeight %}
+        font-weight: {{ theme.dark.foreground.fontWeight }};
+    {% elif theme.foreground.fontWeight %}
+        font-weight: {{ theme.foreground.fontWeight }};
+    {% endif %}
+
+}
+
+css-token[text-value="."] {
+
+    {# color #}
+    {% if theme.css.source.dark.foreground.color %}
+        color: {{ theme.css.source.dark.foreground.color }};
+    {% elif theme.css.source.foreground.color %} 
+        color: {{ theme.css.source.foreground.color }};
+    {% elif theme.css.dark.foreground.color %} 
+        color: {{ theme.css.dark.foreground.color }};
+    {% elif theme.css.foreground.color %} 
+        color: {{ theme.css.foreground.color }};
+    {% elif theme.dark.foreground.color %} 
+        color: {{ theme.dark.foreground.color }};
+    {% elif theme.foreground.color %} 
+        color: {{ theme.foreground.color }};
+    {% endif %}
+
+
+    {# font-style #}
+    {% if theme.css.source.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.source.dark.foreground.fontStyle }};
+    {% elif theme.css.source.foreground.fontStyle %}
+        font-style: {{ theme.css.source.foreground.fontStyle }};
+    {% elif theme.css.dark.foreground.fontStyle %}
+        font-style: {{ theme.css.dark.foreground.fontStyle }};
+    {% elif theme.css.foreground.fontStyle %}
+        font-style: {{ theme.css.foreground.fontStyle }};
+    {% elif theme.dark.foreground.fontStyle %}
+        font-style: {{ theme.dark.foreground.fontStyle }};
+    {% elif theme.foreground.fontStyle %}
+        font-style: {{ theme.foreground.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.dark.foreground.fontWeight }};
+    {% elif theme.css.source.foreground.fontWeight %}
+        font-weight: {{ theme.css.source.foreground.fontWeight }};
+    {% elif theme.css.dark.foreground.fontWeight %}
+        font-weight: {{ theme.css.dark.foreground.fontWeight }};
+    {% elif theme.css.foreground.fontWeight %}
+        font-weight: {{ theme.css.foreground.fontWeight }};
+    {% elif theme.dark.foreground.fontWeight %}
+        font-weight: {{ theme.dark.foreground.fontWeight }};
+    {% elif theme.foreground.fontWeight %}
+        font-weight: {{ theme.foreground.fontWeight }};
+    {% endif %}
+}
+
+function {
+
+    {# color #}
+    {% if theme.css.source.dark.function.color %}
+        color: {{ theme.css.source.dark.function.color }};
+    {% elif theme.css.source.function.color %} 
+        color: {{ theme.css.source.function.color }};
+    {% elif theme.css.dark.function.color %} 
+        color: {{ theme.css.dark.function.color }};
+    {% elif theme.css.function.color %} 
+        color: {{ theme.css.function.color }};
+    {% elif theme.dark.function.color %} 
+        color: {{ theme.dark.function.color }};
+    {% elif theme.function.color %} 
+        color: {{ theme.function.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.function.fontStyle %}
+        font-style: {{ theme.css.source.dark.function.fontStyle }};
+    {% elif theme.css.source.function.fontStyle %}
+        font-style: {{ theme.css.source.function.fontStyle }};
+    {% elif theme.css.dark.function.fontStyle %}
+        font-style: {{ theme.css.dark.function.fontStyle }};
+    {% elif theme.css.function.fontStyle %}
+        font-style: {{ theme.css.function.fontStyle }};
+    {% elif theme.dark.function.fontStyle %}
+        font-style: {{ theme.dark.function.fontStyle }};
+    {% elif theme.function.fontStyle %}
+        font-style: {{ theme.function.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.function.fontWeight %}
+        font-weight: {{ theme.css.source.dark.function.fontWeight }};
+    {% elif theme.css.source.function.fontWeight %}
+        font-weight: {{ theme.css.source.function.fontWeight }};
+    {% elif theme.css.dark.function.fontWeight %}
+        font-weight: {{ theme.css.dark.function.fontWeight }};
+    {% elif theme.css.function.fontWeight %}
+        font-weight: {{ theme.css.function.fontWeight }};
+    {% elif theme.dark.function.fontWeight %}
+        font-weight: {{ theme.dark.function.fontWeight }};
+    {% elif theme.function.fontWeight %}
+        font-weight: {{ theme.function.fontWeight }};
+    {% endif %}
+
+}
+
+font-style-value css-token.ident-token {
+    
+    {# color #}
+    {% if theme.css.source.dark.fontStyle.color %}
+        color: {{ theme.css.source.dark.fontStyle.color }};
+    {% elif theme.css.source.fontStyle.color %} 
+        color: {{ theme.css.source.fontStyle.color }};
+    {% elif theme.css.dark.fontStyle.color %} 
+        color: {{ theme.css.dark.fontStyle.color }};
+    {% elif theme.css.fontStyle.color %} 
+        color: {{ theme.css.fontStyle.color }};
+    {% elif theme.dark.fontStyle.color %} 
+        color: {{ theme.dark.fontStyle.color }};
+    {% elif theme.fontStyle.color %} 
+        color: {{ theme.fontStyle.color }};
+    {% endif %}
+}
+
+attribute-match {
+
+    {# color #}
+    {% if theme.css.source.dark.attributeMatch.color %}
+        color: {{ theme.css.source.dark.attributeMatch.color }};
+    {% elif theme.css.source.attributeMatch.color %} 
+        color: {{ theme.css.source.attributeMatch.color }};
+    {% elif theme.css.dark.attributeMatch.color %} 
+        color: {{ theme.css.dark.attributeMatch.color }};
+    {% elif theme.css.attributeMatch.color %} 
+        color: {{ theme.css.attributeMatch.color }};
+    {% elif theme.dark.attributeMatch.color %} 
+        color: {{ theme.dark.attributeMatch.color }};
+    {% elif theme.attributeMatch.color %} 
+        color: {{ theme.attributeMatch.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.attributeMatch.fontStyle %}
+        font-style: {{ theme.css.source.dark.attributeMatch.fontStyle }};
+    {% elif theme.css.source.attributeMatch.fontStyle %}
+        font-style: {{ theme.css.source.attributeMatch.fontStyle }};
+    {% elif theme.css.dark.attributeMatch.fontStyle %}
+        font-style: {{ theme.css.dark.attributeMatch.fontStyle }};
+    {% elif theme.css.attributeMatch.fontStyle %}
+        font-style: {{ theme.css.attributeMatch.fontStyle }};
+    {% elif theme.dark.attributeMatch.fontStyle %}
+        font-style: {{ theme.dark.attributeMatch.fontStyle }};
+    {% elif theme.attributeMatch.fontStyle %}
+        font-style: {{ theme.attributeMatch.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.attributeMatch.fontWeight %}
+        font-weight: {{ theme.css.source.dark.attributeMatch.fontWeight }};
+    {% elif theme.css.source.attributeMatch.fontWeight %}
+        font-weight: {{ theme.css.source.attributeMatch.fontWeight }};
+    {% elif theme.css.dark.attributeMatch.fontWeight %}
+        font-weight: {{ theme.css.dark.attributeMatch.fontWeight }};
+    {% elif theme.css.attributeMatch.fontWeight %}
+        font-weight: {{ theme.css.attributeMatch.fontWeight }};
+    {% elif theme.dark.attributeMatch.fontWeight %}
+        font-weight: {{ theme.dark.attributeMatch.fontWeight }};
+    {% elif theme.attributeMatch.fontWeight %}
+        font-weight: {{ theme.attributeMatch.fontWeight }};
+    {% endif %}
+}
+
+pseudo-element-selector .colon-token {
+
+    {# color #}
+    {% if theme.css.source.dark.pseudoSelectorOperator.color %}
+        color: {{ theme.css.source.dark.pseudoSelectorOperator.color }};
+    {% elif theme.css.source.pseudoSelectorOperator.color %} 
+        color: {{ theme.css.source.pseudoSelectorOperator.color }};
+    {% elif theme.css.dark.pseudoSelectorOperator.color %} 
+        color: {{ theme.css.dark.pseudoSelectorOperator.color }};
+    {% elif theme.css.pseudoSelectorOperator.color %} 
+        color: {{ theme.css.pseudoSelectorOperator.color }};
+    {% elif theme.dark.pseudoSelectorOperator.color %} 
+        color: {{ theme.dark.pseudoSelectorOperator.color }};
+    {% elif theme.pseudoSelectorOperator.color %} 
+        color: {{ theme.pseudoSelectorOperator.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.pseudoSelectorOperator.fontStyle %}
+        font-style: {{ theme.css.source.dark.pseudoSelectorOperator.fontStyle }};
+    {% elif theme.css.source.pseudoSelectorOperator.fontStyle %}
+        font-style: {{ theme.css.source.pseudoSelectorOperator.fontStyle }};
+    {% elif theme.css.dark.pseudoSelectorOperator.fontStyle %}
+        font-style: {{ theme.css.dark.pseudoSelectorOperator.fontStyle }};
+    {% elif theme.css.pseudoSelectorOperator.fontStyle %}
+        font-style: {{ theme.css.pseudoSelectorOperator.fontStyle }};
+    {% elif theme.dark.pseudoSelectorOperator.fontStyle %}
+        font-style: {{ theme.dark.pseudoSelectorOperator.fontStyle }};
+    {% elif theme.pseudoSelectorOperator.fontStyle %}
+        font-style: {{ theme.pseudoSelectorOperator.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.pseudoSelectorOperator.fontWeight %}
+        font-weight: {{ theme.css.source.dark.pseudoSelectorOperator.fontWeight }};
+    {% elif theme.css.source.pseudoSelectorOperator.fontWeight %}
+        font-weight: {{ theme.css.source.pseudoSelectorOperator.fontWeight }};
+    {% elif theme.css.dark.pseudoSelectorOperator.fontWeight %}
+        font-weight: {{ theme.css.dark.pseudoSelectorOperator.fontWeight }};
+    {% elif theme.css.pseudoSelectorOperator.fontWeight %}
+        font-weight: {{ theme.css.pseudoSelectorOperator.fontWeight }};
+    {% elif theme.dark.pseudoSelectorOperator.fontWeight %}
+        font-weight: {{ theme.dark.pseudoSelectorOperator.fontWeight }};
+    {% elif theme.pseudoSelectorOperator.fontWeight %}
+        font-weight: {{ theme.pseudoSelectorOperator.fontWeight }};
+    {% endif %}
+}
+
+pseudo-element-selector .ident-token {
+
+    {# color #}
+    {% if theme.css.source.dark.pseudoSelectorValue.color %}
+        color: {{ theme.css.source.dark.pseudoSelectorValue.color }};
+    {% elif theme.css.source.pseudoSelectorValue.color %} 
+        color: {{ theme.css.source.pseudoSelectorValue.color }};
+    {% elif theme.css.dark.pseudoSelectorValue.color %} 
+        color: {{ theme.css.dark.pseudoSelectorValue.color }};
+    {% elif theme.css.pseudoSelectorValue.color %} 
+        color: {{ theme.css.pseudoSelectorValue.color }};
+    {% elif theme.dark.pseudoSelectorValue.color %} 
+        color: {{ theme.dark.pseudoSelectorValue.color }};
+    {% elif theme.pseudoSelectorValue.color %} 
+        color: {{ theme.pseudoSelectorValue.color }};
+    {% endif %}
+
+
+    {# font-style #}
+    {% if theme.css.source.dark.pseudoSelectorValue.fontStyle %}
+        font-style: {{ theme.css.source.dark.pseudoSelectorValue.fontStyle }};
+    {% elif theme.css.source.pseudoSelectorValue.fontStyle %}
+        font-style: {{ theme.css.source.pseudoSelectorValue.fontStyle }};
+    {% elif theme.css.dark.pseudoSelectorValue.fontStyle %}
+        font-style: {{ theme.css.dark.pseudoSelectorValue.fontStyle }};
+    {% elif theme.css.pseudoSelectorValue.fontStyle %}
+        font-style: {{ theme.css.pseudoSelectorValue.fontStyle }};
+    {% elif theme.dark.pseudoSelectorValue.fontStyle %}
+        font-style: {{ theme.dark.pseudoSelectorValue.fontStyle }};
+    {% elif theme.pseudoSelectorValue.fontStyle %}
+        font-style: {{ theme.pseudoSelectorValue.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.pseudoSelectorValue.fontWeight %}
+        font-weight: {{ theme.css.source.dark.pseudoSelectorValue.fontWeight }};
+    {% elif theme.css.source.pseudoSelectorValue.fontWeight %}
+        font-weight: {{ theme.css.source.pseudoSelectorValue.fontWeight }};
+    {% elif theme.css.dark.pseudoSelectorValue.fontWeight %}
+        font-weight: {{ theme.css.dark.pseudoSelectorValue.fontWeight }};
+    {% elif theme.css.pseudoSelectorValue.fontWeight %}
+        font-weight: {{ theme.css.pseudoSelectorValue.fontWeight }};
+    {% elif theme.dark.pseudoSelectorValue.fontWeight %}
+        font-weight: {{ theme.dark.pseudoSelectorValue.fontWeight }};
+    {% elif theme.pseudoSelectorValue.fontWeight %}
+        font-weight: {{ theme.pseudoSelectorValue.fontWeight }};
+    {% endif %}
+}
+
+color-value color-keyword {
+
+    {# color #}
+    {% if theme.css.source.dark.colorKeyword.color %}
+        color: {{ theme.css.source.dark.colorKeyword.color }};
+    {% elif theme.css.source.colorKeyword.color %} 
+        color: {{ theme.css.source.colorKeyword.color }};
+    {% elif theme.css.dark.colorKeyword.color %} 
+        color: {{ theme.css.dark.colorKeyword.color }};
+    {% elif theme.css.colorKeyword.color %} 
+        color: {{ theme.css.colorKeyword.color }};
+    {% elif theme.dark.colorKeyword.color %} 
+        color: {{ theme.dark.colorKeyword.color }};
+    {% elif theme.colorKeyword.color %} 
+        color: {{ theme.colorKeyword.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.colorKeyword.fontStyle %}
+        font-style: {{ theme.css.source.dark.colorKeyword.fontStyle }};
+    {% elif theme.css.source.colorKeyword.fontStyle %}
+        font-style: {{ theme.css.source.colorKeyword.fontStyle }};
+    {% elif theme.css.dark.colorKeyword.fontStyle %}
+        font-style: {{ theme.css.dark.colorKeyword.fontStyle }};
+    {% elif theme.css.colorKeyword.fontStyle %}
+        font-style: {{ theme.css.colorKeyword.fontStyle }};
+    {% elif theme.dark.colorKeyword.fontStyle %}
+        font-style: {{ theme.dark.colorKeyword.fontStyle }};
+    {% elif theme.colorKeyword.fontStyle %}
+        font-style: {{ theme.colorKeyword.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.colorKeyword.fontWeight %}
+        font-weight: {{ theme.css.source.dark.colorKeyword.fontWeight }};
+    {% elif theme.css.source.colorKeyword.fontWeight %}
+        font-weight: {{ theme.css.source.colorKeyword.fontWeight }};
+    {% elif theme.css.dark.colorKeyword.fontWeight %}
+        font-weight: {{ theme.css.dark.colorKeyword.fontWeight }};
+    {% elif theme.css.colorKeyword.fontWeight %}
+        font-weight: {{ theme.css.colorKeyword.fontWeight }};
+    {% elif theme.dark.colorKeyword.fontWeight %}
+        font-weight: {{ theme.dark.colorKeyword.fontWeight }};
+    {% elif theme.colorKeyword.fontWeight %}
+        font-weight: {{ theme.colorKeyword.fontWeight }};
+    {% endif %}
+}
+
+color-value color-hash {
+
+    {# color #}
+    {% if theme.css.source.dark.colorHash.color %}
+        color: {{ theme.css.source.dark.colorHash.color }};
+    {% elif theme.css.source.colorHash.color %}
+        color: {{ theme.css.source.colorHash.color }};
+    {% elif theme.css.dark.colorHash.color %}
+        color: {{ theme.css.dark.colorHash.color }};
+    {% elif theme.css.colorHash.color %}
+        color: {{ theme.css.colorHash.color }};
+    {% elif theme.dark.colorHash.color %}
+        color: {{ theme.dark.colorHash.color }};
+    {% elif theme.colorHash.color %}
+        color: {{ theme.colorHash.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.colorHash.fontStyle %}
+        font-style: {{ theme.css.source.dark.colorHash.fontStyle }};
+    {% elif theme.css.source.colorHash.fontStyle %}
+        font-style: {{ theme.css.source.colorHash.fontStyle }};
+    {% elif theme.css.dark.colorHash.fontStyle %}
+        font-style: {{ theme.css.dark.colorHash.fontStyle }};
+    {% elif theme.css.colorHash.fontStyle %}
+        font-style: {{ theme.css.colorHash.fontStyle }};
+    {% elif theme.dark.colorHash.fontStyle %}
+        font-style: {{ theme.dark.colorHash.fontStyle }};
+    {% elif theme.colorHash.fontStyle %}
+        font-style: {{ theme.colorHash.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.colorHash.fontWeight %}
+        font-weight: {{ theme.css.source.dark.colorHash.fontWeight }};
+    {% elif theme.css.source.colorHash.fontWeight %}
+        font-weight: {{ theme.css.source.colorHash.fontWeight }};
+    {% elif theme.css.dark.colorHash.fontWeight %}
+        font-weight: {{ theme.css.dark.colorHash.fontWeight }};
+    {% elif theme.css.colorHash.fontWeight %}
+        font-weight: {{ theme.css.colorHash.fontWeight }};
+    {% elif theme.dark.colorHash.fontWeight %}
+        font-weight: {{ theme.dark.colorHash.fontWeight }};
+    {% elif theme.colorHash.fontWeight %}
+        font-weight: {{ theme.colorHash.fontWeight }};
+    {% endif %}
+}
+
+css-token.dimension-token {
+
+    {# color #}
+    {% if theme.css.source.dark.dimension.color %}
+        color: {{ theme.css.source.dark.dimension.color }};
+    {% elif theme.css.source.dimension.color %} 
+        color: {{ theme.css.source.dimension.color }};
+    {% elif theme.css.dark.dimension.color %} 
+        color: {{ theme.css.dark.dimension.color }};
+    {% elif theme.css.dimension.color %} 
+        color: {{ theme.css.dimension.color }};
+    {% elif theme.dark.dimension.color %} 
+        color: {{ theme.dark.dimension.color }};
+    {% elif theme.dimension.color %} 
+        color: {{ theme.dimension.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.dimension.fontStyle %}
+        font-style: {{ theme.css.source.dark.dimension.fontStyle }};
+    {% elif theme.css.source.dimension.fontStyle %}
+        font-style: {{ theme.css.source.dimension.fontStyle }};
+    {% elif theme.css.dark.dimension.fontStyle %}
+        font-style: {{ theme.css.dark.dimension.fontStyle }};
+    {% elif theme.css.dimension.fontStyle %}
+        font-style: {{ theme.css.dimension.fontStyle }};
+    {% elif theme.dark.dimension.fontStyle %}
+        font-style: {{ theme.dark.dimension.fontStyle }};
+    {% elif theme.dimension.fontStyle %}
+        font-style: {{ theme.dimension.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.dimension.fontWeight %}
+        font-weight: {{ theme.css.source.dark.dimension.fontWeight }};
+    {% elif theme.css.source.dimension.fontWeight %}
+        font-weight: {{ theme.css.source.dimension.fontWeight }};
+    {% elif theme.css.dark.dimension.fontWeight %}
+        font-weight: {{ theme.css.dark.dimension.fontWeight }};
+    {% elif theme.css.dimension.fontWeight %}
+        font-weight: {{ theme.css.dimension.fontWeight }};
+    {% elif theme.dark.dimension.fontWeight %}
+        font-weight: {{ theme.dark.dimension.fontWeight }};
+    {% elif theme.dimension.fontWeight %}
+        font-weight: {{ theme.dimension.fontWeight }};
+    {% endif %}
+}
+
+attribute-name css-token.ident-token {
+
+    {# color #}
+    {% if theme.css.source.dark.attributeName.color %}
+        color: {{ theme.css.source.dark.attributeName.color }};
+    {% elif theme.css.source.attributeName.color %} 
+        color: {{ theme.css.source.attributeName.color }};
+    {% elif theme.css.dark.attributeName.color %} 
+        color: {{ theme.css.dark.attributeName.color }};
+    {% elif theme.css.attributeName.color %} 
+        color: {{ theme.css.attributeName.color }};
+    {% elif theme.dark.attributeName.color %} 
+        color: {{ theme.dark.attributeName.color }};
+    {% elif theme.attributeName.color %} 
+        color: {{ theme.attributeName.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.attributeName.fontStyle %}
+        font-style: {{ theme.css.source.dark.attributeName.fontStyle }};
+    {% elif theme.css.source.attributeName.fontStyle %}
+        font-style: {{ theme.css.source.attributeName.fontStyle }};
+    {% elif theme.css.dark.attributeName.fontStyle %}
+        font-style: {{ theme.css.dark.attributeName.fontStyle }};
+    {% elif theme.css.attributeName.fontStyle %}
+        font-style: {{ theme.css.attributeName.fontStyle }};
+    {% elif theme.dark.attributeName.fontStyle %}
+        font-style: {{ theme.dark.attributeName.fontStyle }};
+    {% elif theme.attributeName.fontStyle %}
+        font-style: {{ theme.attributeName.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.attributeName.fontWeight %}
+        font-weight: {{ theme.css.source.dark.attributeName.fontWeight }};
+    {% elif theme.css.source.attributeName.fontWeight %}
+        font-weight: {{ theme.css.source.attributeName.fontWeight }};
+    {% elif theme.css.dark.attributeName.fontWeight %}
+        font-weight: {{ theme.css.dark.attributeName.fontWeight }};
+    {% elif theme.css.attributeName.fontWeight %}
+        font-weight: {{ theme.css.attributeName.fontWeight }};
+    {% elif theme.dark.attributeName.fontWeight %}
+        font-weight: {{ theme.dark.attributeName.fontWeight }};
+    {% elif theme.attributeName.fontWeight %}
+        font-weight: {{ theme.attributeName.fontWeight }};
+    {% endif %}
+}
+
+class-selector css-token.delim-token, class-selector css-token.ident-token {
+
+    {# color #}
+    {% if theme.css.source.dark.classSelector.color %}
+        color: {{ theme.css.source.dark.classSelector.color }};
+    {% elif theme.css.source.classSelector.color %} 
+        color: {{ theme.css.source.classSelector.color }};
+    {% elif theme.css.dark.classSelector.color %} 
+        color: {{ theme.css.dark.classSelector.color }};
+    {% elif theme.css.classSelector.color %} 
+        color: {{ theme.css.classSelector.color }};
+    {% elif theme.dark.classSelector.color %} 
+        color: {{ theme.dark.classSelector.color }};
+    {% elif theme.classSelector.color %} 
+        color: {{ theme.classSelector.color }};
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.classSelector.fontStyle %}
+        font-style: {{ theme.css.source.dark.classSelector.fontStyle }};
+    {% elif theme.css.source.classSelector.fontStyle %}
+        font-style: {{ theme.css.source.classSelector.fontStyle }};
+    {% elif theme.css.dark.classSelector.fontStyle %}
+        font-style: {{ theme.css.dark.classSelector.fontStyle }};
+    {% elif theme.css.classSelector.fontStyle %}
+        font-style: {{ theme.css.classSelector.fontStyle }};
+    {% elif theme.dark.classSelector.fontStyle %}
+        font-style: {{ theme.dark.classSelector.fontStyle }};
+    {% elif theme.classSelector.fontStyle %}
+        font-style: {{ theme.classSelector.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.classSelector.fontWeight %}
+        font-weight: {{ theme.css.source.dark.classSelector.fontWeight }};
+    {% elif theme.css.source.classSelector.fontWeight %}
+        font-weight: {{ theme.css.source.classSelector.fontWeight }};
+    {% elif theme.css.dark.classSelector.fontWeight %}
+        font-weight: {{ theme.css.dark.classSelector.fontWeight }};
+    {% elif theme.css.classSelector.fontWeight %}
+        font-weight: {{ theme.css.classSelector.fontWeight }};
+    {% elif theme.dark.classSelector.fontWeight %}
+        font-weight: {{ theme.dark.classSelector.fontWeight }};
+    {% elif theme.classSelector.fontWeight %}
+        font-weight: {{ theme.classSelector.fontWeight }};
+    {% endif %}
+}
+
+property-name .string-token {
+
+    {# color #}
+    {% if theme.css.source.dark.propertyName.color %}
+        color: {{ theme.css.source.dark.propertyName.color }} !important;
+    {% elif theme.css.source.propertyName.color %} 
+        color: {{ theme.css.source.propertyName.color }} !important;
+    {% elif theme.css.dark.propertyName.color %} 
+        color: {{ theme.css.dark.propertyName.color }} !important;
+    {% elif theme.css.propertyName.color %} 
+        color: {{ theme.css.propertyName.color }} !important;
+    {% elif theme.dark.propertyName.color %} 
+        color: {{ theme.dark.propertyName.color }} !important;
+    {% elif theme.propertyName.color %} 
+        color: {{ theme.propertyName.color }} !important;
+    {% endif %}
+
+
+    {# font-style #}
+    {% if theme.css.source.dark.propertyName.fontStyle %}
+        font-style: {{ theme.css.source.dark.propertyName.fontStyle }};
+    {% elif theme.css.source.propertyName.fontStyle %}
+        font-style: {{ theme.css.source.propertyName.fontStyle }};
+    {% elif theme.css.dark.propertyName.fontStyle %}
+        font-style: {{ theme.css.dark.propertyName.fontStyle }};
+    {% elif theme.css.propertyName.fontStyle %}
+        font-style: {{ theme.css.propertyName.fontStyle }};
+    {% elif theme.dark.propertyName.fontStyle %}
+        font-style: {{ theme.dark.propertyName.fontStyle }};
+    {% elif theme.propertyName.fontStyle %}
+        font-style: {{ theme.propertyName.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.propertyName.fontWeight %}
+        font-weight: {{ theme.css.source.dark.propertyName.fontWeight }};
+    {% elif theme.css.source.propertyName.fontWeight %}
+        font-weight: {{ theme.css.source.propertyName.fontWeight }};
+    {% elif theme.css.dark.propertyName.fontWeight %}
+        font-weight: {{ theme.css.dark.propertyName.fontWeight }};
+    {% elif theme.css.propertyName.fontWeight %}
+        font-weight: {{ theme.css.propertyName.fontWeight }};
+    {% elif theme.dark.propertyName.fontWeight %}
+        font-weight: {{ theme.dark.propertyName.fontWeight }};
+    {% elif theme.propertyName.fontWeight %}
+        font-weight: {{ theme.propertyName.fontWeight }};
+    {% endif %}
+}
+
+important-declaration css-token.delim-token[text-value="!"] {
+
+    {# color #}
+    {% if theme.css.source.dark.importantExclamationPoint.color %}
+        color: {{ theme.css.source.dark.importantExclamationPoint!.color }} !important;
+    {% elif theme.css.source.importantExclamationPoint.color %} 
+        color: {{ theme.css.source.importantExclamationPoint.color }} !important;
+    {% elif theme.css.dark.importantExclamationPoint.color %} 
+        color: {{ theme.css.dark.importantExclamationPoint.color }} !important;
+    {% elif theme.css.importantExclamationPoint.color %} 
+        color: {{ theme.css.importantExclamationPoint.color }} !important;
+    {% elif theme.dark.importantExclamationPoint.color %} 
+        color: {{ theme.dark.importantExclamationPoint.color }} !important;
+    {% elif theme.importantExclamationPoint.color %} 
+        color: {{ theme.importantExclamationPoint.color }} !important;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.importantExclamationPoint.fontStyle %}
+        font-style: {{ theme.css.source.dark.importantExclamationPoint.fontStyle }};
+    {% elif theme.css.source.importantExclamationPoint.fontStyle %}
+        font-style: {{ theme.css.source.importantExclamationPoint.fontStyle }};
+    {% elif theme.css.dark.importantExclamationPoint.fontStyle %}
+        font-style: {{ theme.css.dark.importantExclamationPoint.fontStyle }};
+    {% elif theme.css.importantExclamationPoint.fontStyle %}
+        font-style: {{ theme.css.importantExclamationPoint.fontStyle }};
+    {% elif theme.dark.importantExclamationPoint.fontStyle %}
+        font-style: {{ theme.dark.importantExclamationPoint.fontStyle }};
+    {% elif theme.importantExclamationPoint.fontStyle %}
+        font-style: {{ theme.importantExclamationPoint.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.importantExclamationPoint.fontWeight %}
+        font-weight: {{ theme.css.source.dark.importantExclamationPoint.fontWeight }};
+    {% elif theme.css.source.importantExclamationPoint.fontWeight %}
+        font-weight: {{ theme.css.source.importantExclamationPoint.fontWeight }};
+    {% elif theme.css.dark.importantExclamationPoint.fontWeight %}
+        font-weight: {{ theme.css.dark.importantExclamationPoint.fontWeight }};
+    {% elif theme.css.importantExclamationPoint.fontWeight %}
+        font-weight: {{ theme.css.importantExclamationPoint.fontWeight }};
+    {% elif theme.dark.importantExclamationPoint.fontWeight %}
+        font-weight: {{ theme.dark.importantExclamationPoint.fontWeight }};
+    {% elif theme.importantExclamationPoint.fontWeight %}
+        font-weight: {{ theme.importantExclamationPoint.fontWeight }};
+    {% endif %}
+}
+
+important-declaration css-token.delim-token[text-value="important"] {
+
+    {# color #}
+    {% if theme.css.source.dark.importantText.color %}
+        color: {{ theme.css.source.dark.importantText.color }} !important;
+    {% elif theme.css.source.importantText.color %} 
+        color: {{ theme.css.source.importantText.color }} !important;
+    {% elif theme.css.dark.importantText.color %} 
+        color: {{ theme.css.dark.importantText.color }} !important;
+    {% elif theme.css.importantText.color %} 
+        color: {{ theme.css.importantText.color }} !important;
+    {% elif theme.dark.importantText.color %} 
+        color: {{ theme.dark.importantText.color }} !important;
+    {% elif theme.importantText.color %} 
+        color: {{ theme.importantText.color }} !important;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.importantText.fontStyle %}
+        font-style: {{ theme.css.source.dark.importantText.fontStyle }};
+    {% elif theme.css.source.importantText.fontStyle %}
+        font-style: {{ theme.css.source.importantText.fontStyle }};
+    {% elif theme.css.dark.importantText.fontStyle %}
+        font-style: {{ theme.css.dark.importantText.fontStyle }};
+    {% elif theme.css.importantText.fontStyle %}
+        font-style: {{ theme.css.importantText.fontStyle }};
+    {% elif theme.dark.importantText.fontStyle %}
+        font-style: {{ theme.dark.importantText.fontStyle }};
+    {% elif theme.importantText.fontStyle %}
+        font-style: {{ theme.importantText.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.importantText.fontWeight %}
+        font-weight: {{ theme.css.source.dark.importantText.fontWeight }};
+    {% elif theme.css.source.importantText.fontWeight %}
+        font-weight: {{ theme.css.source.importantText.fontWeight }};
+    {% elif theme.css.dark.importantText.fontWeight %}
+        font-weight: {{ theme.css.dark.importantText.fontWeight }};
+    {% elif theme.css.importantText.fontWeight %}
+        font-weight: {{ theme.css.importantText.fontWeight }};
+    {% elif theme.dark.importantText.fontWeight %}
+        font-weight: {{ theme.dark.importantText.fontWeight }};
+    {% elif theme.importantText.fontWeight %}
+        font-weight: {{ theme.importantText.fontWeight }};
+    {% endif %}
+}
+
+[nw-message-id] {
+
+    {# color #}
+    {% if theme.css.source.dark.invalid.color %}
+        color: {{ theme.css.source.dark.invalid.color }} !important;
+    {% elif theme.css.source.invalid.color %} 
+        color: {{ theme.css.source.invalid.color }} !important;
+    {% elif theme.css.dark.invalid.color %} 
+        color: {{ theme.css.dark.invalid.color }} !important;
+    {% elif theme.css.invalid.color %} 
+        color: {{ theme.css.invalid.color }} !important;
+    {% elif theme.dark.invalid.color %} 
+        color: {{ theme.dark.invalid.color }} !important;
+    {% elif theme.invalid.color %} 
+        color: {{ theme.invalid.color }} !important;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.source.dark.invalid.fontStyle }};
+    {% elif theme.css.source.invalid.fontStyle %}
+        font-style: {{ theme.css.source.invalid.fontStyle }};
+    {% elif theme.css.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.dark.invalid.fontStyle }};
+    {% elif theme.css.invalid.fontStyle %}
+        font-style: {{ theme.css.invalid.fontStyle }};
+    {% elif theme.dark.invalid.fontStyle %}
+        font-style: {{ theme.dark.invalid.fontStyle }};
+    {% elif theme.invalid.fontStyle %}
+        font-style: {{ theme.invalid.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.dark.invalid.fontWeight }};
+    {% elif theme.css.source.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.invalid.fontWeight }};
+    {% elif theme.css.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.dark.invalid.fontWeight }};
+    {% elif theme.css.invalid.fontWeight %}
+        font-weight: {{ theme.css.invalid.fontWeight }};
+    {% elif theme.dark.invalid.fontWeight %}
+        font-weight: {{ theme.dark.invalid.fontWeight }};
+    {% elif theme.invalid.fontWeight %}
+        font-weight: {{ theme.invalid.fontWeight }};
+    {% endif %}
+}
+
+[code~="invalidDeclaration"] {
+
+    {# color #}
+    {% if theme.css.source.dark.invalid.color %}
+        color: {{ theme.css.source.dark.invalid.color }} !important;
+    {% elif theme.css.source.invalid.color %} 
+        color: {{ theme.css.source.invalid.color }} !important;
+    {% elif theme.css.dark.invalid.color %} 
+        color: {{ theme.css.dark.invalid.color }} !important;
+    {% elif theme.css.invalid.color %} 
+        color: {{ theme.css.invalid.color }} !important;
+    {% elif theme.dark.invalid.color %} 
+        color: {{ theme.dark.invalid.color }} !important;
+    {% elif theme.invalid.color %} 
+        color: {{ theme.invalid.color }} !important;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.source.dark.invalid.fontStyle }};
+    {% elif theme.css.source.invalid.fontStyle %}
+        font-style: {{ theme.css.source.invalid.fontStyle }};
+    {% elif theme.css.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.dark.invalid.fontStyle }};
+    {% elif theme.css.invalid.fontStyle %}
+        font-style: {{ theme.css.invalid.fontStyle }};
+    {% elif theme.dark.invalid.fontStyle %}
+        font-style: {{ theme.dark.invalid.fontStyle }};
+    {% elif theme.invalid.fontStyle %}
+        font-style: {{ theme.invalid.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.dark.invalid.fontWeight }};
+    {% elif theme.css.source.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.invalid.fontWeight }};
+    {% elif theme.css.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.dark.invalid.fontWeight }};
+    {% elif theme.css.invalid.fontWeight %}
+        font-weight: {{ theme.css.invalid.fontWeight }};
+    {% elif theme.dark.invalid.fontWeight %}
+        font-weight: {{ theme.dark.invalid.fontWeight }};
+    {% elif theme.invalid.fontWeight %}
+        font-weight: {{ theme.invalid.fontWeight }};
+    {% endif %}
+}
+
+[code~="invalidDeclaration"] property-name .string-token {
+
+    {# color #}
+    {% if theme.css.source.dark.invalid.color %}
+        color: {{ theme.css.source.dark.invalid.color }} !important;
+    {% elif theme.css.source.invalid.color %} 
+        color: {{ theme.css.source.invalid.color }} !important;
+    {% elif theme.css.dark.invalid.color %} 
+        color: {{ theme.css.dark.invalid.color }} !important;
+    {% elif theme.css.invalid.color %} 
+        color: {{ theme.css.invalid.color }} !important;
+    {% elif theme.dark.invalid.color %} 
+        color: {{ theme.dark.invalid.color }} !important;
+    {% elif theme.invalid.color %} 
+        color: {{ theme.invalid.color }} !important;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.source.dark.invalid.fontStyle }};
+    {% elif theme.css.source.invalid.fontStyle %}
+        font-style: {{ theme.css.source.invalid.fontStyle }};
+    {% elif theme.css.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.dark.invalid.fontStyle }};
+    {% elif theme.css.invalid.fontStyle %}
+        font-style: {{ theme.css.invalid.fontStyle }};
+    {% elif theme.dark.invalid.fontStyle %}
+        font-style: {{ theme.dark.invalid.fontStyle }};
+    {% elif theme.invalid.fontStyle %}
+        font-style: {{ theme.invalid.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.dark.invalid.fontWeight }};
+    {% elif theme.css.source.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.invalid.fontWeight }};
+    {% elif theme.css.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.dark.invalid.fontWeight }};
+    {% elif theme.css.invalid.fontWeight %}
+        font-weight: {{ theme.css.invalid.fontWeight }};
+    {% elif theme.dark.invalid.fontWeight %}
+        font-weight: {{ theme.dark.invalid.fontWeight }};
+    {% elif theme.invalid.fontWeight %}
+        font-weight: {{ theme.invalid.fontWeight }};
+    {% endif %}
+}
+
+[code~="invalidDeclaration"] property-value {
+
+    {# color #}
+    {% if theme.css.source.dark.invalid.color %}
+        color: {{ theme.css.source.dark.invalid.color }} !important;
+    {% elif theme.css.source.invalid.color %} 
+        color: {{ theme.css.source.invalid.color }} !important;
+    {% elif theme.css.dark.invalid.color %} 
+        color: {{ theme.css.dark.invalid.color }} !important;
+    {% elif theme.css.invalid.color %} 
+        color: {{ theme.css.invalid.color }} !important;
+    {% elif theme.dark.invalid.color %} 
+        color: {{ theme.dark.invalid.color }} !important;
+    {% elif theme.invalid.color %} 
+        color: {{ theme.invalid.color }} !important;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.source.dark.invalid.fontStyle }};
+    {% elif theme.css.source.invalid.fontStyle %}
+        font-style: {{ theme.css.source.invalid.fontStyle }};
+    {% elif theme.css.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.dark.invalid.fontStyle }};
+    {% elif theme.css.invalid.fontStyle %}
+        font-style: {{ theme.css.invalid.fontStyle }};
+    {% elif theme.dark.invalid.fontStyle %}
+        font-style: {{ theme.dark.invalid.fontStyle }};
+    {% elif theme.invalid.fontStyle %}
+        font-style: {{ theme.invalid.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.dark.invalid.fontWeight }};
+    {% elif theme.css.source.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.invalid.fontWeight }};
+    {% elif theme.css.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.dark.invalid.fontWeight }};
+    {% elif theme.css.invalid.fontWeight %}
+        font-weight: {{ theme.css.invalid.fontWeight }};
+    {% elif theme.dark.invalid.fontWeight %}
+        font-weight: {{ theme.dark.invalid.fontWeight }};
+    {% elif theme.invalid.fontWeight %}
+        font-weight: {{ theme.invalid.fontWeight }};    
+    {% endif %}
+}
+
+[code~="invalidDeclaration"] property-value .number-token {
+
+    {# color #}
+    {% if theme.css.source.dark.invalid.color %}
+        color: {{ theme.css.source.dark.invalid.color }} !important;
+    {% elif theme.css.source.invalid.color %} 
+        color: {{ theme.css.source.invalid.color }} !important;
+    {% elif theme.css.dark.invalid.color %} 
+        color: {{ theme.css.dark.invalid.color }} !important;
+    {% elif theme.css.invalid.color %} 
+        color: {{ theme.css.invalid.color }} !important;
+    {% elif theme.dark.invalid.color %} 
+        color: {{ theme.dark.invalid.color }} !important;
+    {% elif theme.invalid.color %} 
+        color: {{ theme.invalid.color }} !important;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.source.dark.invalid.fontStyle }};
+    {% elif theme.css.source.invalid.fontStyle %}
+        font-style: {{ theme.css.source.invalid.fontStyle }};
+    {% elif theme.css.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.dark.invalid.fontStyle }};
+    {% elif theme.css.invalid.fontStyle %}
+        font-style: {{ theme.css.invalid.fontStyle }};
+    {% elif theme.dark.invalid.fontStyle %}
+        font-style: {{ theme.dark.invalid.fontStyle }};
+    {% elif theme.invalid.fontStyle %}
+        font-style: {{ theme.invalid.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.dark.invalid.fontWeight }};
+    {% elif theme.css.source.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.invalid.fontWeight }};
+    {% elif theme.css.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.dark.invalid.fontWeight }};
+    {% elif theme.css.invalid.fontWeight %}
+        font-weight: {{ theme.css.invalid.fontWeight }};
+    {% elif theme.dark.invalid.fontWeight %}
+        font-weight: {{ theme.dark.invalid.fontWeight }};
+    {% elif theme.invalid.fontWeight %}
+        font-weight: {{ theme.invalid.fontWeight }};
+    {% endif %}
+}
+
+[code~="invalidDeclaration"] property-value .dimension-token {
+
+    {# color #}
+    {% if theme.css.source.dark.invalid.color %}
+        color: {{ theme.css.source.dark.invalid.color }} !important;
+    {% elif theme.css.source.invalid.color %} 
+        color: {{ theme.css.source.invalid.color }} !important;
+    {% elif theme.css.dark.invalid.color %} 
+        color: {{ theme.css.dark.invalid.color }} !important;
+    {% elif theme.css.invalid.color %} 
+        color: {{ theme.css.invalid.color }} !important;
+    {% elif theme.dark.invalid.color %} 
+        color: {{ theme.dark.invalid.color }} !important;
+    {% elif theme.invalid.color %} 
+        color: {{ theme.invalid.color }} !important;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.source.dark.invalid.fontStyle }};
+    {% elif theme.css.source.invalid.fontStyle %}
+        font-style: {{ theme.css.source.invalid.fontStyle }};
+    {% elif theme.css.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.dark.invalid.fontStyle }};
+    {% elif theme.css.invalid.fontStyle %}
+        font-style: {{ theme.css.invalid.fontStyle }};
+    {% elif theme.dark.invalid.fontStyle %}
+        font-style: {{ theme.dark.invalid.fontStyle }};
+    {% elif theme.invalid.fontStyle %}
+        font-style: {{ theme.invalid.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.dark.invalid.fontWeight }};
+    {% elif theme.css.source.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.invalid.fontWeight }};
+    {% elif theme.css.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.dark.invalid.fontWeight }};
+    {% elif theme.css.invalid.fontWeight %}
+        font-weight: {{ theme.css.invalid.fontWeight }};
+    {% elif theme.dark.invalid.fontWeight %}
+        font-weight: {{ theme.dark.invalid.fontWeight }};
+    {% elif theme.invalid.fontWeight %}
+        font-weight: {{ theme.invalid.fontWeight }};
+    {% endif %}
+}
+
+[code~="invalidDeclaration"] color-value color-keyword {
+
+    {# color #}
+    {% if theme.css.source.dark.invalid.color %}
+        color: {{ theme.css.source.dark.invalid.color }} !important;
+    {% elif theme.css.source.invalid.color %} 
+        color: {{ theme.css.source.invalid.color }} !important;
+    {% elif theme.css.dark.invalid.color %} 
+        color: {{ theme.css.dark.invalid.color }} !important;
+    {% elif theme.css.invalid.color %} 
+        color: {{ theme.css.invalid.color }} !important;
+    {% elif theme.dark.invalid.color %} 
+        color: {{ theme.dark.invalid.color }} !important;
+    {% elif theme.invalid.color %} 
+        color: {{ theme.invalid.color }} !important;
+    {% endif %}
+
+    {# font-style #}
+    {% if theme.css.source.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.source.dark.invalid.fontStyle }};
+    {% elif theme.css.source.invalid.fontStyle %}
+        font-style: {{ theme.css.source.invalid.fontStyle }};
+    {% elif theme.css.dark.invalid.fontStyle %}
+        font-style: {{ theme.css.dark.invalid.fontStyle }};
+    {% elif theme.css.invalid.fontStyle %}
+        font-style: {{ theme.css.invalid.fontStyle }};
+    {% elif theme.dark.invalid.fontStyle %}
+        font-style: {{ theme.dark.invalid.fontStyle }};
+    {% elif theme.invalid.fontStyle %}
+        font-style: {{ theme.invalid.fontStyle }};
+    {% endif %}
+
+    {# font-weight #}
+    {% if theme.css.source.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.dark.invalid.fontWeight }};
+    {% elif theme.css.source.invalid.fontWeight %}
+        font-weight: {{ theme.css.source.invalid.fontWeight }};
+    {% elif theme.css.dark.invalid.fontWeight %}
+        font-weight: {{ theme.css.dark.invalid.fontWeight }};
+    {% elif theme.css.invalid.fontWeight %}
+        font-weight: {{ theme.css.invalid.fontWeight }};
+    {% elif theme.dark.invalid.fontWeight %}
+        font-weight: {{ theme.dark.invalid.fontWeight }};
+    {% elif theme.invalid.fontWeight %}
+        font-weight: {{ theme.invalid.fontWeight }};
+    {% endif %}
+}

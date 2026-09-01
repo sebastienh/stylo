@@ -1,0 +1,39 @@
+* text=auto
+
+*.swift text
+*.h text
+*.m text
+*.mm text
+*.c text
+*.cpp text
+*.plist text
+*.entitlements text
+*.pbxproj text
+*.xcworkspacedata text
+*.storyboard text
+*.xib text
+*.md text
+*.html text
+*.css text
+*.js text
+*.json text
+*.xml text
+*.txt text
+
+*.bat text eol=crlf
+*.eml -text
+*.qps -text
+Libraries/mailcore2/unittest/data/** -text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.icns binary
+*.pdf binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.afdesign binary
+*.bundle binary

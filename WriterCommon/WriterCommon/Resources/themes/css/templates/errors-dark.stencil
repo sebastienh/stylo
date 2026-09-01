@@ -1,0 +1,26 @@
+
+/* errors-dark */
+@namespace "http://www.w3.org/Style/CSS/";
+
+css-style-sheet {
+
+    font-family: var(--theme-foreground-fontFamily, "Menlo");
+    font-size: var(--theme-foreground-fontSize, 12pt);
+    font-style: var(--theme-foreground-fontStyle, normal);
+    font-weight: var(--theme-foreground-fontWeight, normal);
+    color: var(--theme-foreground-color, gray);
+    background-color: var(--theme-background-color, black);
+}
+
+[nw-message-id].error {
+
+    color: var(--theme-selectedErrorMessage-color, red) !important;
+    font-weight: var(--theme-selectedErrorMessage-fontWeight, normal);
+}
+
+[nw-message-id].warning {
+
+    color: var(--theme-selectedWarningMessage-color, yellow) !important;
+    font-style: var(--theme-selectedWarningMessage-fontStyle, normal);
+    font-weight: var(--theme-selectedWarningMessage-fontWeight, normal);
+}

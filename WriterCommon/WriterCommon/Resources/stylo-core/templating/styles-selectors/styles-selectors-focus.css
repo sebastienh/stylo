@@ -1,0 +1,821 @@
+
+/********************************************/
+/*                 focus                */
+/********************************************/
+
+/*
+ ## Headers:
+
+ # h1 Heading
+ ## h2 Heading
+ ### h3 Heading
+ #### h4 Heading
+ ##### h5 Heading
+ ###### h6 Heading
+ 
+*/
+
+h1:focus {
+    
+}
+
+h2:focus {
+    
+}
+
+h3:focus {
+    
+}
+
+h4:focus {
+    
+}
+
+h5:focus {
+    
+}
+
+h6:focus {
+    
+}
+
+h1::tag:focus {
+    
+}
+
+h2::tag:focus {
+    
+}
+
+h3::tag:focus {
+    
+}
+
+h4::tag:focus {
+    
+}
+
+h5::tag:focus {
+    
+}
+
+h6::tag:focus {
+    
+}
+
+/*
+ ## Horizontal rule
+ 
+ ___
+
+ ---
+
+ ***
+ 
+*/
+
+hr:focus {
+    
+}
+
+/*
+ ## Emphasis:
+ 
+ **This is bold text**
+
+ __This is bold text__
+
+ *This is italic text*
+
+ _This is italic text_
+
+ ~~Strikethrough~~
+*/
+
+strong:focus {
+    
+    
+}
+
+em:focus {
+    
+    
+}
+
+s:focus {
+    
+    
+}
+
+:focus strong {
+    
+    
+}
+
+:focus em {
+    
+    
+}
+
+:focus s {
+    
+    
+}
+
+:focus strong::tag {
+    
+    
+}
+
+:focus em::tag {
+    
+    
+}
+
+:focus s::tag {
+    
+    
+}
+
+:focus strong:focus {
+    
+    
+}
+
+:focus em:focus {
+    
+    
+}
+
+:focus s:focus {
+    
+    
+}
+
+:focus strong::tag:focus {
+    
+    
+}
+
+:focus em::tag:focus {
+    
+    
+}
+
+:focus s::tag:focus {
+    
+    
+}
+
+/*
+ ## Blockquotes:
+ 
+ > Blockquotes can also be nested...
+ >> ...by using additional greater-than signs right next to each other...
+ > > > ...or with spaces between arrows.
+ 
+*/
+
+blockquote:focus {
+    
+    
+}
+
+blockquote::tag:focus {
+    
+    
+}
+
+:focus blockquote {
+    
+    
+}
+
+
+:focus blockquote::tag {
+    
+    
+}
+
+:focus blockquote {
+    
+    
+}
+
+:focus blockquote::tag {
+    
+    
+}
+
+:focus blockquote::tag:focus {
+    
+    
+}
+
+:focus blockquote:focus {
+    
+    
+}
+
+:focus blockquote::tag:focus {
+    
+    
+}
+
+/*
+ 
+
+ ## Lists:
+
+ Unordered
+
+ + Create a list by starting a line with `+`, `-`, or `*`
+ + Sub-lists are made by indenting 2 spaces:
+   - Marker character change forces new list start:
+     * Ac tristique libero volutpat at
+     + Facilisis in pretium nisl aliquet
+     - Nulla volutpat aliquam velit
+ + Very easy!
+
+ Ordered
+
+ 1. Lorem ipsum dolor sit amet
+ 2. Consectetur adipiscing elit
+ 3. Integer molestie lorem at massa
+
+
+ 1. You can use sequential numbers...
+ 1. ...or keep all the numbers as `1.`
+
+ Start numbering with offset:
+
+ 57. foo
+ 1. bar
+ 
+*/
+
+ul:focus {
+    
+}
+
+ol:focus {
+    
+}
+
+li:focus {
+    
+}
+
+li::tag:focus {
+    
+}
+
+:focus ul {
+    
+}
+
+:focus ol {
+    
+}
+
+:focus li {
+    
+}
+
+:focus li::tag {
+    
+}
+
+:focus ul:focus {
+    
+}
+
+:focus ol:focus {
+    
+}
+
+:focus li:focus {
+    
+}
+
+:focus li::tag:focus {
+    
+}
+
+/*
+ ## Code:
+
+ Inline `code`
+
+ Indented code
+
+     // Some comments
+     line 1 of code
+     line 2 of code
+     line 3 of code
+
+
+ Block code "fences"
+
+ ```
+ Sample text here...
+ ```
+
+ Syntax focusing
+
+ ``` js
+ var foo = function (bar) {
+   return bar++;
+ };
+
+ console.log(foo(5));
+ ```
+*/
+
+code:focus {
+    
+}
+
+code::tag:focus {
+    
+}
+
+code::params:focus {
+    
+}
+
+:focus code {
+    
+}
+
+:focus code::tag {
+    
+}
+
+:focus code::params {
+    
+}
+
+:focus code:focus {
+    
+}
+
+:focus code::tag:focus {
+    
+}
+
+:focus code::params:focus {
+    
+}
+
+
+/*
+
+ ## Tables
+
+ | Option | Description |
+ | ------ | ----------- |
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+ Right aligned columns
+
+ | Option | Description |
+ | ------:| -----------:|
+ | data   | path to data files to supply the data that will be passed into templates. |
+ | engine | engine to be used for processing templates. Handlebars is the default. |
+ | ext    | extension to be used for dest files. |
+
+*/
+
+table:focus {
+    
+}
+
+thead:focus {
+    
+}
+
+tbody:focus {
+    
+    
+}
+
+tr:focus {
+    
+}
+
+td:focus {
+    
+}
+
+:focus thead {
+    
+}
+
+:focus tbody {
+    
+    
+}
+
+:focus tr {
+    
+}
+
+:focus td {
+    
+}
+
+
+:focus thead:focus {
+    
+}
+
+:focus tbody:focus {
+    
+    
+}
+
+:focus tr:focus {
+    
+}
+
+:focus td:focus {
+    
+}
+
+
+/*
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+*/
+
+a:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+a::tag:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+a::text:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+a::destination:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+a::label:focus {
+    
+}
+
+/* title: the title of the link */
+a::title:focus {
+    
+    
+}
+
+:focus a {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:focus a::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:focus a::text {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:focus a::destination {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:focus a::label {
+    
+}
+
+/* title: the title of the link */
+:focus a::title {
+    
+    
+}
+
+:focus a:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:focus a::tag:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:focus a::text:focus {
+    
+}
+
+/* destination: the destination URI if the link does not point to a ref */
+:focus a::destination:focus {
+    
+}
+
+/* label: the destination ref if the link points to a ref */
+:focus a::label:focus {
+    
+}
+
+/* title: the title of the link */
+:focus a::title:focus {
+    
+    
+}
+
+
+/*
+
+## Images
+
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Like links, Images also have a footnote style syntax
+
+![Alt text][id]
+
+With a ref later in the document defining the URL location:
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+*/
+
+img:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+img::tag:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+img::text:focus {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+img::destination:focus {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+img::label:focus {
+    
+}
+
+/* title: the title of the image link */
+img::title:focus {
+    
+}
+
+:focus img {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:focus img::tag {
+    
+}
+
+/* text: the part between the two square braquets */
+:focus img::text {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:focus img::destination {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:focus img::label {
+    
+}
+
+/* title: the title of the image link */
+:focus img::title {
+    
+}
+
+
+:focus img:focus {
+    
+}
+
+/* tag: the region that includes the start and end square braquet( "[", "]") and the two parenthesis ("(", ")") */
+:focus img::tag:focus {
+    
+}
+
+/* text: the part between the two square braquets */
+:focus img::text:focus {
+    
+}
+
+/* destination: the destination URI if the image link does not point to a ref */
+:focus img::destination:focus {
+    
+}
+
+/* label: the destination ref if the image link points to a ref */
+:focus img::label:focus {
+    
+}
+
+/* title: the title of the image link */
+:focus img::title:focus {
+    
+}
+
+/*
+    html-block
+*/
+
+html-block:focus {
+    
+}
+
+/*
+    ref
+*/
+
+ref:focus {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+ref::tag:focus {
+    
+}
+
+/* label: the part between the two square braquets */
+ref::label:focus {
+    
+}
+
+
+/* destination: the destination URI */
+ref::destination:focus {
+    
+}
+
+/* title: the ref title */
+ref::title:focus {
+    
+}
+
+:focus ref {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:focus ref::tag {
+    
+}
+
+/* label: the part between the two square braquets */
+:focus ref::label {
+    
+}
+
+
+/* destination: the destination URI */
+:focus ref::destination {
+    
+}
+
+/* title: the ref title */
+:focus ref::title {
+    
+}
+
+:focus ref:focus {
+    
+}
+
+/* tag: the region with the start and end square braquet( "[", "]") and the colon */
+:focus ref::tag:focus {
+    
+}
+
+/* label: the part between the two square braquets */
+:focus ref::label:focus {
+    
+}
+
+
+/* destination: the destination URI */
+:focus ref::destination:focus {
+    
+}
+
+/* title: the ref title */
+:focus ref::title:focus {
+    
+}
+
+/* attributes */
+
+
+/* :focus */
+key-value-attr:focus {
+
+}
+
+key-value-attr::tag:focus {
+    
+}
+
+class-attr:focus {
+
+
+}
+
+class-attr::tag:focus {
+
+}
+
+id-attr:focus {
+
+}
+
+id-attr::tag:focus {
+
+}
+
+/* :focus normal */
+:focus key-value-attr {
+
+}
+
+:focus key-value-attr::tag {
+    
+}
+
+:focus class-attr {
+
+
+}
+
+:focus class-attr::tag {
+
+}
+
+:focus id-attr {
+
+}
+
+:focus id-attr::tag {
+
+}
+
+/* :focus :focus */
+:focus key-value-attr:focus {
+
+}
+
+:focus key-value-attr::tag:focus {
+    
+}
+
+:focus class-attr:focus {
+
+
+}
+
+:focus class-attr::tag:focus {
+
+}
+
+:focus id-attr:focus {
+
+}
+
+:focus id-attr::tag:focus {
+
+}
